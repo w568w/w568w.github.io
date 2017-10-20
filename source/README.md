@@ -1,3 +1,9 @@
+title: "我與世界"
+date: 2017-10-20 12:34:00 +0800
+author: w568w
+preview: 自我介紹
+
+---
 # This is w568w.
 一个热衷于Android开发的高中生，Life is short , I choose Geek.
 # 你的博客呢？  
