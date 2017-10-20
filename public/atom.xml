@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>行雲小站</title>
+  <id>http://w568w.ml</id>
+  <updated>2017-10-20T12:34:45+08:00</updated>
+  <subtitle>Say hello to you!</subtitle>
+  <link href="http://w568w.ml"></link>
+  <author>
+    <name>行雲小站</name>
+  </author>
+  <entry>
+    <title>我與世界</title>
+    <updated>2017-10-20T12:34:00+08:00</updated>
+    <id>tag:w568w.ml,2017-10-20:/readme.html</id>
+    <content type="html">&lt;p&gt;自我介紹&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/readme.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>简洁的静态博客构建工具 —— 纸小墨（InkPaper）</title>
+    <updated>2016-07-11T17:00:00+08:00</updated>
+    <id>tag:w568w.ml,2016-07-11:/ink-blog-tool.html</id>
+    <content type="html">&lt;p&gt;纸小墨（InkPaper）是一个GO语言编写的开源静态博客构建工具，可以快速搭建博客网站。它无依赖跨平台，配置简单构建快速，注重简洁易用与更优雅的排版。&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/ink-blog-tool.html"></link>
+  </entry>
+  <entry>
+    <title>An Elegant Static Blog Generator —— InkPaper</title>
+    <updated>2016-07-11T17:00:00+08:00</updated>
+    <id>tag:w568w.ml,2016-07-11:/ink-blog-tool-en.html</id>
+    <content type="html">&lt;p&gt;InkPaper is an static blog generator developed by Golang, No dependencies, Cross platform, Easy use, Fast build, Elegant theme.&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/ink-blog-tool-en.html"></link>
+  </entry>
+</feed>
