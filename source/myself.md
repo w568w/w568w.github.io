@@ -1,7 +1,7 @@
 title: "我與世界"
 date: 2017-10-20 12:34:00 +0800
 author: w568w
-preview: 自我介紹
+preview: 新的博客，新的開始
 
 ---
 # This is w568w.

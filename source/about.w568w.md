@@ -14,6 +14,6 @@ author: w568w
 Linux內核：4.10.0-32-generic  
 桌面：LXDE  
 CPU：AMD Athlon II X4 635 (4) @ 2.900GHz  
-GPU：NVIDIA GeForce 7025 / nForce 630a
+GPU：NVIDIA GeForce 7025 / nForce 630a  
 記憶體：Kingston DDR3 1333MHz @ 2048MiB *2  
 開發工具：Android Studio 2.3.3 Stable  
