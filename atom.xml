@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2017-12-02T17:58:23+08:00</updated>
+  <updated>2017-12-03T00:15:50+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
     <name>行雲小站</name>
   </author>
+  <entry>
+    <title>一起由重装Windows系统引发的血案</title>
+    <updated>2017-11-18T12:18:00+08:00</updated>
+    <id>tag:w568w.ml,2017-11-18:/terrible-accident-of-linux.html</id>
+    <content type="html">&lt;p&gt;隨着一鍵Ghost的開始，一切變得索然無味&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/terrible-accident-of-linux.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
   <entry>
     <title>我與世界</title>
     <updated>2017-10-20T12:34:00+08:00</updated>
