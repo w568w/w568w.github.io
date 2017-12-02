@@ -1,4 +1,4 @@
-type: page
+﻿type: page
 title: "关于作者"
 author: w568w
 
@@ -8,9 +8,9 @@ author: w568w
 
 一個夢想改變自己的瘋子。  
 
-高一學生 安卓開發者  
+安徽 高一學生 安卓開發者  
 
-使用系統：Linux Mint 18.2 Sonya (備用Windows 7 SP1 Ultimate)  
+使用系統：Linux Mint 18.2 Sonya (備用Windows XP SP3 Professional)  
 Linux內核：4.10.0-32-generic  
 桌面：LXDE  
 CPU：AMD Athlon II X4 635 (4) @ 2.900GHz  
