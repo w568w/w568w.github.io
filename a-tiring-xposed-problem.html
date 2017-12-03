@@ -46,9 +46,9 @@
 
 
         <meta name="keywords" content="">
-        <meta name="description" content="一起由重装Windows系统引发的血案">
+        <meta name="description" content="Xposed模塊本體向Hook類傳遞信息的研究">
         <meta name="author" content="w568w">
-        <title>一起由重装Windows系统引发的血案</title>
+        <title>Xposed模塊本體向Hook類傳遞信息的研究</title>
     </head>
     <body>
         <article class="container">
@@ -65,17 +65,45 @@
 </header>
 
             <article class="main article">
-                <h1 class="title">一起由重装Windows系统引发的血案</h1>
+                <h1 class="title">Xposed模塊本體向Hook類傳遞信息的研究</h1>
                 <section class="info">
                     <span class="avatar" style="background-image: url(/images/avatar.gif);"></span>
                     <a class="name" href="/about.w568w.html">w568w</a>
                     
-                    <span class="date" data-time="1510978680"><span class="from"></span></span>
+                    <span class="date" data-time="1512234000"><span class="from"></span></span>
                     
                     <span class="tags"></span>
                 </section>
-                <article class="content"><p>一切要從一次Windows宕機說起。今天Windows不知爲何Booom了，我習慣地用一鍵Ghost重裝系統。<br />
-裝完才發現不對勁，開機的啓動引導被Windows覆蓋了，進不去Linux了。</p>
+                <article class="content"><h1>引子</h1>
+
+<p>在寫淨眼(一個Xposed模塊)時，遇到一個問題，App本體的設置參數如何傳給Hook類？<br />
+之前我一直用的是文件讀寫的方式，但在調試中我發現：如果被Hook的應用本身無此權限，那麼就無法讀到這個文件。<br />
+經過多次(兩三個小時而已)的查找，找到了一個解決方案。</p>
+
+<h1>XSharedPreferences</h1>
+
+<p>XSharedPreferences是XposedBridge的一部分。它可以讀取任意應用的SharedPreferences。<br />
+於是就可以在App本體中寫入SharedPreferences，然後從Hook類中讀取&hellip;<br />
+程序本體中：</p>
+
+<pre><code>        SharedPreferences mSharedPreferences = getSharedPreferences(&quot;data&quot;, Context.MODE_WORLD_READABLE);
+        data.edit().putString(&quot;test&quot;,&quot;something&quot;);
+</code></pre>
+
+<p>Xposed Hook類中：</p>
+
+<pre><code>        XSharedPreferences xSP=new XSharedPreferences(&quot;ml.w568w.test&quot;,&quot;data&quot;);
+        xSP.reload();
+        xSP.makeWorldReadable();
+        String test = xSP.getString(&quot;test&quot;, &quot;&quot;);
+</code></pre>
+
+<h1>注意</h1>
+
+<ol>
+<li><strong>必須</strong>使用<code>Context.MODE_WORLD_READABLE</code>得到的<code>SharedPreferences</code>，<code>makeWorldReadable()</code>並不能讓你可以隨意限定<code>SharedPreferences</code>的讀取權限。<br /></li>
+<li>儘可能地不使用<code>PreferenceManager.getDefaultSharedPreferences(this);</code>或者<code>PreferenceActivity</code>得到的<code>SharedPreferences</code>（我在這裏被坑了好久&hellip;）<br /></li>
+</ol>
 </article>
                 <section class="author">
                     <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
