@@ -1,5 +1,5 @@
 title: "Xposed模塊本體向Hook類傳遞信息的研究"
-date: 2017-12-03 01:00:00 +0800
+date: 2017-12-16 11:00:00 +0800
 author: w568w
 preview: Xposed是無底的巨坑
 ---
@@ -25,3 +25,4 @@ Xposed Hook類中：
 # 注意
 1. **必須**使用`Context.MODE_WORLD_READABLE`得到的`SharedPreferences`，`makeWorldReadable()`並不能讓你可以隨意限定`SharedPreferences`的讀取權限。  
 2. 儘可能地不使用`PreferenceManager.getDefaultSharedPreferences(this);`或者`PreferenceActivity`得到的`SharedPreferences`（我在這裏被坑了好久...）  
+3. 即便這麼做，獲得的`XSharedPreferences`仍然是只讀的...因此，Hook類依舊不能向模塊本體傳遞信息...

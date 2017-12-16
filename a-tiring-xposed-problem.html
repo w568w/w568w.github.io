@@ -70,7 +70,7 @@
                     <span class="avatar" style="background-image: url(/images/avatar.gif);"></span>
                     <a class="name" href="/about.w568w.html">w568w</a>
                     
-                    <span class="date" data-time="1512234000"><span class="from"></span></span>
+                    <span class="date" data-time="1513393200"><span class="from"></span></span>
                     
                     <span class="tags"></span>
                 </section>
@@ -103,6 +103,7 @@
 <ol>
 <li><strong>必須</strong>使用<code>Context.MODE_WORLD_READABLE</code>得到的<code>SharedPreferences</code>，<code>makeWorldReadable()</code>並不能讓你可以隨意限定<code>SharedPreferences</code>的讀取權限。<br /></li>
 <li>儘可能地不使用<code>PreferenceManager.getDefaultSharedPreferences(this);</code>或者<code>PreferenceActivity</code>得到的<code>SharedPreferences</code>（我在這裏被坑了好久&hellip;）<br /></li>
+<li>即便這麼做，獲得的<code>XSharedPreferences</code>仍然是只讀的&hellip;因此，Hook類依舊不能向模塊本體傳遞信息&hellip;</li>
 </ol>
 </article>
                 <section class="author">
