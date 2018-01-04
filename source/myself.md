@@ -35,5 +35,5 @@ GitHub：@w568w
 Email：1278297578(at)qq.com   
 # 友情链接
 只是做个备忘~~  
-[wendao123.cn](http://wendao123.cn/)
-[blog.853lab.com](http://blog.853lab.com/)
+[聞道博客](http://wendao123.cn/)
+[853](http://blog.853lab.com/)

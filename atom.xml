@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2017-12-17T11:33:28+08:00</updated>
+  <updated>2018-01-04T14:22:17+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
     <name>行雲小站</name>
   </author>
+  <entry>
+    <title>酷安API的相關研究和整理</title>
+    <updated>2018-01-04T14:20:00+08:00</updated>
+    <id>tag:w568w.ml,2018-01-04:/research-on-coolapk-api.html</id>
+    <content type="html">&lt;p&gt;祝各位新年快樂！&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/research-on-coolapk-api.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
   <entry>
     <title>Xposed模塊本體向Hook類傳遞信息的研究</title>
     <updated>2017-12-16T11:00:00+08:00</updated>
