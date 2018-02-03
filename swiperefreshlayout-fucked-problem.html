@@ -46,9 +46,9 @@
 
 
         <meta name="keywords" content="">
-        <meta name="description" content="博主的Todo List">
+        <meta name="description" content="SwipeRefreshLayout下拉不顯示進度圈">
         <meta name="author" content="w568w">
-        <title>博主的Todo List</title>
+        <title>SwipeRefreshLayout下拉不顯示進度圈</title>
     </head>
     <body>
         <article class="container">
@@ -65,41 +65,69 @@
 </header>
 
             <article class="main article">
-                <h1 class="title">博主的Todo List</h1>
+                <h1 class="title">SwipeRefreshLayout下拉不顯示進度圈</h1>
                 <section class="info">
                     <span class="avatar" style="background-image: url(/images/avatar.gif);"></span>
                     <a class="name" href="/about.w568w.html">w568w</a>
                     
-                    <span class="date" data-time="1515057600"><span class="from"></span></span>
+                    <span class="date" data-time="1517627400"><span class="from"></span></span>
                     
                     <span class="tags"></span>
                 </section>
-                <article class="content"><h1>List</h1>
+                <article class="content"><h1>問題</h1>
 
-<ul>
-<li>寫<a href="https://github.com/w568w/CoolapkSDK">酷安SDK</a></li>
-<li>研究酷安Token生成方式</li>
-<li>給<a href="https://www.coolapk.com/apk/149408">淨眼</a>補<a href="https://github.com/w568w/fuckView">坑</a></li>
-<li>整好Linux上的Wine QQ</li>
+<p>最近做的一個項目裏用到了<code>SwipeRefreshLayout</code>，佈局大概是這樣的：</p>
 
-<li><p>備戰期末聯考</p>
+<pre><code>&lt;android.support.v4.widget.SwipeRefreshLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;&gt;
+    &lt;ScrollView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:padding=&quot;16dp&quot;&gt;
+    &lt;RelativeLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;&gt;
+        &lt;TextView
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot; /&gt;
+    &lt;/RelativeLayout&gt;
+    &lt;/ScrollView&gt;
+&lt;/android.support.v4.widget.SwipeRefreshLayout&gt;
+</code></pre>
+
+<p>但是！下拉時啥都沒有顯示，根據Debugger顯示，<code>OnRefresh</code>方法<strong>幾乎</strong>也不被調用。<br />
+這TM就很鬧心了。。。各種調試無果，只好求助度娘。</p>
+
+<h1>解決</h1>
+
+<p>網上的解決方法也是種類繁多。。。總的來說有這幾種：<br />
+1. 用<code>ScrollView</code>或者<code>ListView</code>作爲<code>SwipeRefreshLayout</code>的子控件。<br />
+2. 導入了兩個不同版本<code>android.support.v4</code>支持包，用<code>resolutionStrategy</code>強制指定版本。(<a href="https://www.jianshu.com/p/2a1897fdc041">原文章在這裏</a>)<br />
+3. 給子佈局設置<code>onTouchEvent</code>，屏蔽事件。</p>
 
 <hr />
 
-<h1>妄想部分</h1></li>
+<p>前兩種壓根沒遇到。。。所以果斷選擇第3種，嘿，還真有效！<br />
+<a href="http://blog.csdn.net/u013673799/article/details/70755747">原文章</a>裏是這麼說的:<br />
+<blockquote>
+当使用ListView，下拉刷新时，<code>SwipeRefreshLayout</code>的down事件被子View消费了，当Move时，才会调用自身的<code>onTouchEvent</code>方法。<br />
+而不使用ListView，显示<code>TextView</code>时，<code>SwipeRefreshLayout</code>的down事件没有被子View消费，需要调用自己的<code>onTouchEvent</code>方法 。这个就是导致问题的原因。<br />
+根据上面的原因，可以有一种解决方式，如下:</p>
 
-<li><p>寫酷安Web版</p></li>
+<pre><code>mTextView.setOnTouchListener(new View.OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        if(event.getAction() == MotionEvent.ACTION_DOWN){
+            return true;
+        }
+        return false;
+    }
+});
+</code></pre>
 
-<li><p><a href="https://www.coolapk.com/apk/149408">淨眼</a>達到20w下載量</p></li>
-
-<li><p>寫一部Android入門教程</p></li>
-
-<li><p>學習深度學習課程</p></li>
-
-<li><p>寫一個Android上的IDE，妄圖超越AIDE</p></li>
-</ul>
-
-<p>要了解我更多？輕點下面昵稱(/ ω \)</p>
+<p></blockquote><br />
+於是這個問題就解決了。。。浪費了我半個小時的時間QAQ</p>
 </article>
                 <section class="author">
                     <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
@@ -108,10 +136,15 @@
                 </section>
                 <section class="recommend">
                     
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/todo-list.html">博主的Todo List</a>
+                    </section>
                     
-                    <section class="nav next">
+                    
+                    <section class="nav next more">
                         <div class="head">下篇文章</div>
-                        <a class="link" href="/swiperefreshlayout-fucked-problem.html">SwipeRefreshLayout下拉不顯示進度圈</a>
+                        <a class="link" href="/research-on-coolapk-api.html">酷安API的相關研究和整理</a>
                     </section>
                     
                 </section>

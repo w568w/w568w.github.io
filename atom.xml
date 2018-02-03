@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-01-05T08:22:58+08:00</updated>
+  <updated>2018-02-03T11:23:22+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -13,6 +13,16 @@
     <id>tag:w568w.ml,2018-01-04:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看這傢伙最近在搞什麼大新聞？&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/todo-list.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>SwipeRefreshLayout下拉不顯示進度圈</title>
+    <updated>2018-02-03T11:10:00+08:00</updated>
+    <id>tag:w568w.ml,2018-02-03:/swiperefreshlayout-fucked-problem.html</id>
+    <content type="html">&lt;p&gt;SwipeRefreshLayout坑真tm多&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/swiperefreshlayout-fucked-problem.html"></link>
     <author>
       <name>w568w</name>
     </author>
