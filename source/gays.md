@@ -17,3 +17,6 @@ author: w568w
 目前就读某二中高一/姓黄...
 # [一块小板子](https://oboard.github.io/index.html)  
 就是一块小板子，目前博客是空的。
+# [imlk](https://imlk.ink/)  
+快要成年/有女票脱单/伪程序员/就读于BUPT
+
