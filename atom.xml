@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-04-05T23:40:34+08:00</updated>
+  <updated>2018-04-28T21:58:05+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -13,6 +13,16 @@
     <id>tag:w568w.ml,2018-03-25:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看這傢伙最近在搞什麼大新聞？&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/todo-list.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Git的高級玩法——花式撤回誤操作</title>
+    <updated>2018-04-28T21:58:00+08:00</updated>
+    <id>tag:w568w.ml,2018-04-28:/powerful-git.html</id>
+    <content type="html">&lt;p&gt;你可以用git撤回任何操作!&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/powerful-git.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -70,7 +80,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:20fb0522-1256-4d6b-9fd9-b80f9edff8bd</id>
+    <id>urn:uuid:ed7b5851-6427-4c24-9c57-e4c5580c74ec</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>
