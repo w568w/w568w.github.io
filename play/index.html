@@ -1,0 +1,96 @@
+<h1>
+	萌化器
+</h1>
+<div>
+	<p>
+		<span style="font-size:16px;">输入一段话。。。尝试把它变萌。</span> 
+	</p>
+	<p>
+		<span style="font-size:16px;"></span> 
+	</p>
+	<textarea warp="virtual" id="textbox"></textarea>
+	<button onclick="foo()">Magic!</button>
+	<div id="result"></div>
+	<script>
+		        function Dictionary() {  
+            var items = {};  
+   
+            this.has = function (key) {  
+                return key in items;  
+            };  
+   
+            this.set = function (key, value) {  
+                items[key] = value;  
+				return this;
+            };  
+   
+            this.remove = function (key) {  
+                if (this.has(key)) {  
+                    delete items[key];  
+                    return true;  
+                }  
+                return false;  
+            };  
+   
+            this.get = function (key) {  
+                return this.has(key) ? items[key] : undefined;  
+            };  
+   
+            this.values = function () {  
+                var values = [];  
+                for (var k in items) {  
+                    if (this.has(k)) {  
+                        values.push(items[k]);  
+                    }  
+                }  
+                return values;  
+            };  
+   
+            this.clear = function () {  
+                items = {};  
+            };  
+   
+            this.size = function () {  
+                var count = 0;  
+                for (var prop in items) {  
+                    if (items.hasOwnProperty(prop)) {  
+                        ++count;  
+                    }  
+                }  
+                return count;  
+            };  
+   
+            this.getItems = function () {  
+                return items;  
+            };  
+        }  
+		function $(id){
+			return document.getElementById(id);
+		}
+		 var dict = new Dictionary();  
+		dict.set("我","窝")
+			.set("呢","捏")
+		.set("(了$)|(了(?=[a-zA-Z0-9]))","了呢")
+			.set("这个","介个")
+		.set("(好的$)|(好的(?=[a-zA-Z0-9]))","好哒")
+		.set("很","炒鸡")
+		.set("非常","灰常")
+		.set("可爱","可耐")
+		.set("可爱","可耐")
+		.set("超级","炒鸡")
+		.set("哥哥","哦尼酱");
+		
+		function foo(){
+			str=$("textbox").value;
+			for(var k in dict.getItems()){
+					str=str.replace(new RegExp(k,"g"),dict.get(k));
+				
+			}
+			$("result").innerHTML="--->"+str;
+		}
+	</script>
+	<p>
+		<br />
+		By w568w
+	</p>
+</div> 
