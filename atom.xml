@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-06-23T23:39:23+08:00</updated>
+  <updated>2018-06-23T23:40:08+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -80,7 +80,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:3245137b-a784-4241-af27-31afe2f06134</id>
+    <id>urn:uuid:ea596aef-fc03-4218-ac72-9078aac1bdc1</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>

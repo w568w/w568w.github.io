@@ -8,7 +8,7 @@ author: w568w
 
 一個夢想改變自己的瘋子。  
 
-安徽 高一學生 安卓開發者  
+安徽 高一學生 安卓業餘開發者  
 
 使用系統：Linux Mint 18.3 Sylvia (備用Windows XP SP3 Professional)  
 Linux內核：4.10.0-42-generic  
