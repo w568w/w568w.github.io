@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-05-15T00:25:05+08:00</updated>
+  <updated>2018-06-23T23:39:23+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -9,8 +9,8 @@
   </author>
   <entry>
     <title>博主的Todo List</title>
-    <updated>2018-03-25T13:05:00+08:00</updated>
-    <id>tag:w568w.ml,2018-03-25:/todo-list.html</id>
+    <updated>2018-06-23T23:39:00+08:00</updated>
+    <id>tag:w568w.ml,2018-06-23:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看這傢伙最近在搞什麼大新聞？&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/todo-list.html"></link>
     <author>
@@ -80,7 +80,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:96b78fbe-99a7-4269-896c-947a36b293f4</id>
+    <id>urn:uuid:3245137b-a784-4241-af27-31afe2f06134</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>
