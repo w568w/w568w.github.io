@@ -5,10 +5,9 @@ top: true
 preview: 看看這傢伙最近在搞什麼大新聞？
 ---
 # List
-+ 寫一個[關於微積分的入門教程](https://zybuluo.com/w568w/note/1081202)<span style="color:grey;">(稍微放一放)</span>
++ ~~寫一個[關於微積分的入門教程](https://zybuluo.com/w568w/note/1081202)~~<span style="color:grey;">(終止)</span>
 + 學習<span style="color:red;">(進行中)</span>
-+ 備戰期末考試<span style="color:red;">(進行中)</span>
-+ 寫一個叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App<span style="color:red;">(進行中)</span>
++ ~~寫一個叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:grey;">(終止)</span>
 
 # 妄想部分
 + 寫酷安Web版
