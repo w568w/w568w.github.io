@@ -1,11 +1,11 @@
 title: "博主的Todo List"
-date: 2018-06-23 23:39:00 +0800
+date: 2018-08-31 09:30:00 +0800
 author: w568w
 top: true
 preview: 看看這傢伙最近在搞什麼大新聞？
 ---
 # List
-+ ~~寫一個[關於微積分的入門教程](https://zybuluo.com/w568w/note/1081202)~~<span style="color:grey;">(終止)</span>
++ 寫一個[關於微積分的入門教程](https://zybuluo.com/w568w/note/1081202)<span style="color:red;">(進行中)</span>
 + 學習<span style="color:red;">(進行中)</span>
 + ~~寫一個叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:grey;">(終止)</span>
 
