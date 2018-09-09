@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-09-09T07:35:06+08:00</updated>
+  <updated>2018-09-09T10:21:01+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -13,6 +13,16 @@
     <id>tag:w568w.ml,2018-08-31:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看這傢伙最近在搞什麼大新聞？&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/todo-list.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>從一次新聞統計概覽我國新聞關注熱點</title>
+    <updated>2018-09-09T09:00:00+08:00</updated>
+    <id>tag:w568w.ml,2018-09-09:/fenhuang_stat.html</id>
+    <content type="html">&lt;p&gt;一次Python練手&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/fenhuang_stat.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -80,7 +90,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:ad1b5c67-4765-4df0-8df6-c7b897ca5950</id>
+    <id>urn:uuid:2c729487-69a3-4034-9207-93aa7c695914</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>
