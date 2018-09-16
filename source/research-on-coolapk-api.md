@@ -1,34 +1,34 @@
-title: "酷安API的相關研究和整理"
+title: "酷安API的相关研究和整理"
 date: 2018-01-04 14:20:00 +0800
 author: w568w
-preview: 祝各位新年快樂！
+preview: 祝各位新年快乐！
 ---
-# 廢話
-新年要到了...在這裏祝各位新年快樂，順便分享一堆乾貨  
-這裏參考了[bjzhou/Coolapk-kotlin這個項目](https://github.com/bjzhou/Coolapk-kotlin)，看起來似乎是官方人員做的，非常感謝！  
-（雖然整理了兩天時間...但是一想到可以實現寫酷安第三方版的願望就激動得要she的說）
-# API 說明
-_前排提示：該 API 由於用到了 native 代碼，只能在 Linux i686 或者 Android ARM/x86 平臺上使用 !_   
+# 废话
+新年要到了...在这里祝各位新年快乐，顺便分享一堆干货  
+这里参考了[bjzhou/Coolapk-kotlin这个项目](https://github.com/bjzhou/Coolapk-kotlin)，看起来似乎是官方人员做的，非常感谢！  
+（虽然整理了两天时间...但是一想到可以实现写酷安第三方版的愿望就激动得要she的说）
+# API 说明
+_前排提示：该 API 由于用到了 native 代码，只能在 Linux i686 或者 Android ARM/x86 平台上使用 !_   
   
 所有接口使用统一的前缀： https://api.coolapk.com/v6/  
-所有接口使用统一的 HTTP 头（有特殊說明的除外）：
+所有接口使用统一的 HTTP 头（有特殊说明的除外）：
 ```
 User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; Nexus 4 Build/LMY48T) (#Build; google; Nexus 4; LMY48T; 5.1.1) +CoolMarket/7.3
 X-Requested-With: XMLHttpRequest
 X-Sdk-Int: 22
 X-Sdk-Locale: zh-CN
 X-App-Id: coolmarket
-X-App-Token: [見下面方法]
+X-App-Token: [见下面方法]
 X-App-Version: 7.3
 X-App-Code: 1701135
 X-Api-Version: 7
 ```
-對於X-App-Token，首先你需要從酷安7.x中獲得 so 文件，這裏提供一個[下載鏈接](uploads/jniLibs.zip).  
-然後，把它放在你的項目中，這裏提供一個例子：![Android Studio在這裏放文件夾](images/android_studio_so.png)
+对于X-App-Token，首先你需要从酷安7.x中获得 so 文件，这里提供一个[下载链接](uploads/jniLibs.zip).  
+然后，把它放在你的项目中，这里提供一个例子：![Android Studio在这里放文件夹](images/android_studio_so.png)
 接着，新建文件：
 ```
 //:AuthUtils.java
-//這裏的包名不可隨意更改！
+//这里的包名不可随意更改！
 package com.coolapk.market.util;
 import android.content.Context;
 public class AuthUtils {
@@ -38,16 +38,16 @@ public class AuthUtils {
 
     /**
      * @param paramContext Application上下文
-     * @param paramString 一個UUID
-     * @return 用於請求的Token
+     * @param paramString 一个UUID
+     * @return 用于请求的Token
      */
     @SuppressWarnings("JniMissingFunction")
     public static native String getAS(Context application, String uuid);
 }
 ```
-獲取Token，調用`AuthUtils.getAS(getApplication(),UUID.randomUUID().toString())`就行了。  
-**需要注意的是**，這個so庫爲了防止盜用API，調用了`application.getPackageName()`方法，並將它與`com.coolapk.market`作比較，如果不同則返回null。  
-因此，我們需要"欺騙"它，這裏寫了一個`ApplicationProxy`來解決這個問題：  
+获取Token，调用`AuthUtils.getAS(getApplication(),UUID.randomUUID().toString())`就行了。  
+**需要注意的是**，这个so库为了防止盗用API，调用了`application.getPackageName()`方法，并将它与`com.coolapk.market`作比较，如果不同则返回null。  
+因此，我们需要"欺骗"它，这里写了一个`ApplicationProxy`来解决这个问题：  
 ```
 package ml.w568w.coolapksdk.util;
 
@@ -446,11 +446,11 @@ public class ApplicationProxy extends Application {
 }
 
 ```
-然後調用`AuthUtils.getAS(new ApplicationProxy(application), UUID.randomUUID().toString())`就沒有問題了。  
+然后调用`AuthUtils.getAS(new ApplicationProxy(application), UUID.randomUUID().toString())`就没有问题了。  
 # API List
-## 獲得指定用戶信息
-未完待續...~~(其實是博主懶得寫)~~  
-如果你等不及要試用一下酷安的api，請[關注這個項目](https://github.com/w568w/CoolapkSDK)
+## 获得指定用户信息
+未完待续...~~(其实是博主懒得写)~~  
+如果你等不及要试用一下酷安的api，请[关注这个项目](https://github.com/w568w/CoolapkSDK)
 
 
 

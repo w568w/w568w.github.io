@@ -2,18 +2,18 @@ title: "博主的Todo List"
 date: 2018-08-31 09:30:00 +0800
 author: w568w
 top: true
-preview: 看看這傢伙最近在搞什麼大新聞？
+preview: 看看这家伙最近在搞什么大新闻？
 ---
 # List
-+ 寫一個[關於微積分的入門教程](https://zybuluo.com/w568w/note/1081202)<span style="color:red;">(進行中)</span>
-+ 學習<span style="color:red;">(進行中)</span>
-+ ~~寫一個叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:grey;">(終止)</span>
++ 写一个[关于微积分的入门教程](https://zybuluo.com/w568w/note/1081202)<span style="color:red;">(进行中)</span>
++ 学习<span style="color:red;">(进行中)</span>
++ ~~写一个叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:grey;">(终止)</span>
 
 # 妄想部分
-+ 寫酷安Web版
-+ [淨眼](https://www.coolapk.com/apk/149408)達到20w下載量
-+ 寫一部Android入門教程
-- ~~學習深度學習課程~~<span style="color:green;">(Get!)</span>
-+ 寫一個Android上的IDE，妄圖超越AIDE  
++ 写酷安Web版
++ [净眼](https://www.coolapk.com/apk/149408)达到20w下载量
++ 写一部Android入门教程
+- ~~学习深度学习课程~~<span style="color:green;">(Get!)</span>
++ 写一个Android上的IDE，妄图超越AIDE  
   
-要了解我更多？輕點下面昵稱(/ ω \\)
+要了解我更多？轻点下面昵称(/ ω \\)

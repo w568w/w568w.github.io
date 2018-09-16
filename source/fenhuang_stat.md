@@ -1,27 +1,27 @@
-title: "從一次新聞統計概覽我國新聞關注熱點"
+title: "从一次新闻统计概览我国新闻关注热点"
 date: 2018-09-09 09:00:00 +0800
 author: w568w
-preview: 一次Python練手
+preview: 一次Python练手
 ---
 # 前因
-最近學習不是很忙沒，閒得蛋疼，決定完成一下學校佈置的調查報告，順便玩玩數據分析...  
-所以就有了這麼一次關於新聞評論的簡單調查。嗯我的編程水平蒟蒻，各位大佬輕噴(/ ω \\)
-# 數據收集
+最近学习不是很忙没，闲得蛋疼，决定完成一下学校布置的调查报告，顺便玩玩数据分析...  
+所以就有了这么一次关于新闻评论的简单调查。嗯我的编程水平蒟蒻，各位大佬轻喷(/ ω \\)
+# 数据收集
 
-第一件事當然是要收集到需要分析的新聞數據啦！  
-打算抓取[鳳凰網](http://news.ifeng.com/)的評論，因爲這裏的人比較多，評論量比較大。  
-![鳳凰網評論](images/fenghuang_comments.png)
-下一個問題是運行數據抓取程式的設備。  
-用自己的電腦跑Python腳本心疼電費，用手機跑的話需要下載[QPython](http://www.qpython.com/)，略顯得有些麻煩...  
+第一件事当然是要收集到需要分析的新闻数据啦！  
+打算抓取[凤凰网](http://news.ifeng.com/)的评论，因为这里的人比较多，评论量比较大。  
+![凤凰网评论](images/fenghuang_comments.png)
+下一个问题是运行数据抓取程式的设备。  
+用自己的电脑跑Python脚本心疼电费，用手机跑的话需要下载[QPython](http://www.qpython.com/)，略显得有些麻烦...  
   
-所幸，百度了一會兒，找到了一個[雲爬蟲平臺](https://www.shenjian.io/)(我真的不是來打廣告的！我發誓！)  
-註冊後默認是個人免費版，贈送一個**永久免費爬蟲節點**(不是SSR那種節點啊)以及1GB的儲存空間，還支持**爬取中驗證碼識別、POST數據、自定義請求頭部、自動更換代理、抗反爬蟲**...  
-總的來說比較實惠...  
-![神箭手雲平臺-爬蟲界面](images/shenjianshou_page1.png)
-這個平臺裏的爬蟲邏輯是需要自己用編寫的。提供了一個網頁的代碼編輯器，支持代碼智能補全和高亮格式化。  
-開發文檔也比較完善，而且預置了很多的API和回調函數，對於熟悉JavaScript語法的人來說，開發難度不大。   
-![神箭手雲平臺-開發界面](images/shenjianshou_page2.png)
-配合FireFox可以獲得XPath，所以很快就寫完了一個爬蟲...
+所幸，百度了一会儿，找到了一个[云爬虫平台](https://www.shenjian.io/)(我真的不是来打广告的！我发誓！)  
+注册后默认是个人免费版，赠送一个**永久免费爬虫节点**(不是SSR那种节点啊)以及1GB的储存空间，还支持**爬取中验证码识別、POST数据、自定义请求头部、自动更换代理、抗反爬虫**...  
+总的来说比较实惠...  
+![神箭手云平台-爬虫界面](images/shenjianshou_page1.png)
+这个平台里的爬虫逻辑是需要自己用编写的。提供了一个网页的代码编辑器，支持代码智能补全和高亮格式化。  
+开发文档也比较完善，而且预置了很多的API和回调函数，对于熟悉JavaScript语法的人来说，开发难度不大。   
+![神箭手云平台-开发界面](images/shenjianshou_page2.png)
+配合FireFox可以获得XPath，所以很快就写完了一个爬虫...
 ```javascript
 var configs = {
   domains: ["ifeng.com"],
@@ -41,22 +41,22 @@ var configs = {
       name: "talk",
       selector: "//*[@class=\"mod-articleCommentList\"]", 
       required: false, 
-      repeated: true,//表示可以爬取多項
+      repeated: true,//表示可以爬取多项
       children: [
         {
           name: "name",
-		  alias:"用戶名",
+		  alias:"用户名",
           selector: "//*[@class=\"w-location\"]"
         },
         {
           name: "content",
-		  alias:"評論內容",
+		  alias:"评论内容",
           selector: "//*[@class=\"w-contentTxt\"]"
         },
         {
           name: "goods",
           type: "int",
-		  alias:"點讚數",
+		  alias:"点讚数",
           selector: "//*[@class=\"w-rep-num\"]"
         }
       ]
@@ -65,21 +65,21 @@ var configs = {
 };
 
 var crawler = new Crawler(configs);
-crawler.start();//啓動爬蟲
+crawler.start();//启动爬虫
 ```
-接下來就是漫長的等待。  
-不過代碼是在雲端分佈式節點上運行的，所以可以放心地去關機睡覺...
-# 數據處理
-第二天一大早就開機看看爬蟲努力一晚上的結果。總的來說還可以，獲取到了2000多條新聞的評論。  
-![神箭手雲平臺-爬取結果](images/shenjianshou_page3.png)  
-數據可以直接全部導出爲 **XLSX(Microsoft Excel)、CSV(純文本，用逗號分隔的表格)或者SQL (MySql數據庫)文件，也可以選擇直接發佈到Word Press、Discuz、typecho、Phpwind、微信公衆號、遠程MySql數據庫**等網絡平臺，甚至提供了獲取數據的**Rest API**和**GraphGL API**。  
-哭了，對開發者這樣良心的網站真的不多.....   
+接下来就是漫长的等待。  
+不过代码是在云端分布式节点上运行的，所以可以放心地去关机睡觉...
+# 数据处理
+第二天一大早就开机看看爬虫努力一晚上的结果。总的来说还可以，获取到了2000多条新闻的评论。  
+![神箭手云平台-爬取结果](images/shenjianshou_page3.png)  
+数据可以直接全部导出为 **XLSX(Microsoft Excel)、CSV(纯文本，用逗号分隔的表格)或者SQL (MySql数据库)文件，也可以选择直接发佈到Word Press、Discuz、typecho、Phpwind、微信公众号、远程MySql数据库**等网络平台，甚至提供了获取数据的**Rest API**和**GraphGL API**。  
+哭了，对开发者这样良心的网站真的不多.....   
   
-由於我要用Python分析，因此選擇導出數據爲CSV。文件不大，才9MB不到的體積。  
-![神箭手雲平臺-導出數據](images/shenjianshou_page4.png)  
-很快地打開AS，把數據導入進去。
+由于我要用Python分析，因此选择导出数据为CSV。文件不大，才9MB不到的体积。  
+![神箭手云平台-导出数据](images/shenjianshou_page4.png)  
+很快地打开AS，把数据导入进去。
 ![CSV文件](images/data_csv.png)  
-接下來是數據的預處理，直接貼代碼吧：
+接下来是数据的预处理，直接贴代码吧：
 ```python
 # coding:utf8
 import csv
@@ -96,7 +96,7 @@ def contains(l, item):
             return True
     return False
 
-#去除重複
+#去除重复
 def del_repeated(liebiao):
     new_list = []
     for item in liebiao:
@@ -110,30 +110,30 @@ def read_list():
         lines = csv.reader(f)
         csv_list = []
         for l in lines:
-		#檢查空項&解碼UTF-8的編碼
+		#检查空项&解码UTF-8的编码
             if l[2].decode('utf8') != '':
                 csv_list.append([l[0].decode('utf8'), l[1].decode('utf8'), l[2].decode('utf8')])
         del csv_list[0]
         return del_repeated(csv_list)
 
 
-data_list = read_list()#讀取數據
+data_list = read_list()#读取数据
 print 'Data Size:', len(data_list)
 ```
-輸出:
+输出:
 ```
 Data Size: 1831
 ```
   
-然後，就可以使用`jieba`、`Counter`之類的工具來分析數據啦！  
+然后，就可以使用`jieba`、`Counter`之类的工具来分析数据啦！  
   
-你可能沒耐心看我的弱智代碼，那就直接上——
-# 分析結果
-先給出分詞結果排行，已經去除了單字和無意義字符（如"我"、"我們"、"這個"、"的"）：
+你可能没耐心看我的弱智代码，那就直接上——
+# 分析结果
+先给出分词结果排行，已经去除了单字和无意义字符（如"我"、"我们"、"这个"、"的"）：
 ```python 
 # 格式：
-# [詞語] [詞語頻數]
-Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不規範轉載
+# [词语] [词语频数]
+Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不规范转载
 ------------
 
 中国 560
@@ -207,11 +207,11 @@ Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不規範�
 中俄 21
 人员 21
 ```
-順便統計了一下地域分佈：
+顺便统计了一下地域分布：
 ```python 
 # 格式：
-# [地區] [地區頻數]
-Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不規範轉載
+# [地区] [地区频数]
+Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不规范转载
 ------------
 [广东省广州市网友] 140
 [北京市网友] 131
@@ -266,27 +266,27 @@ Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不規範�
 [湖南省衡阳市网友] 5
 [山西省晋城市网友] 5
 ```
-根據以上數據，我總結出了：
-# 關注熱點Top5
-## 1. 中美關係
-無論啥時候，川普的小動作都是個大新聞..中美關係是個永恆不變的國際話題。
-## 2. 中日關係
-中日關係由於歷史原因一直非常緊張，更不要說各種"愛國主義教育"薰陶下的我國人民了...  
-這裏稍微看了一下評論，有一些比較偏激：
+根据以上数据，我总结出了：
+# 关注热点Top5
+## 1. 中美关系
+无论啥时候，川普的小动作都是个大新闻..中美关系是个永恒不变的国际话题。
+## 2. 中日关系
+中日关系由于历史原因一直非常紧张，更不要说各种"爱国主义教育"薰陶下的我国人民了...  
+这里稍微看了一下评论，有一些比较偏激：
 ```
-那个核弹，干脆給日本使上吧！！！
+那个核弹，干脆给日本使上吧！！！
 跟日本绝交！还废什末话友好下去，最好定出法律不准去日本！不准购日货！！
 日本人一说总是感觉到猥琐，下流。
 什么是大个儿的？？？意思小日本充当王八！
 日本就是美国圈养的一条狗！美国到哪它都跟随在后面吠
 ```
-不作評論。
-## 3.臺灣問題
-主要是有關於蔡英文的報道...感覺還是比較客觀冷靜的，沒有那麼多不堪入耳的人身攻擊。
-## 4.中印衝突
-評論中多以"阿三"稱印度反動勢力。我不是特別關心這方面的問題，中國應該是佔絕對優勢吧。
-## 5.軍事力量
-果然大家關心比較多的還是我國的軍事勢力，主要圍繞航母、導彈力量展開。  
-[這裏](https://www.globalfirepower.com/countries-listing.asp)有一個比較權威的世界軍事力量排名。
-# 最後...
-講個笑話，寫爬蟲、分析數據花了我30分鐘，但是寫這篇文章花了我2個小時....大概這就是打字速度慢的痛苦吧(笑)
+不作评论。
+## 3.台湾问题
+主要是有关于蔡英文的报道...感觉还是比较客观冷静的，没有那么多不堪入耳的人身攻击。
+## 4.中印冲突
+评论中多以"阿三"称印度反动势力。我不是特別关心这方面的问题，中国应该是佔绝对优势吧。
+## 5.军事力量
+果然大家关心比较多的还是我国的军事势力，主要围绕航母、导弹力量展开。  
+[这里](https://www.globalfirepower.com/countries-listing.asp)有一个比较权威的世界军事力量排名。
+# 最后...
+讲个笑话，写爬虫、分析数据花了我30分钟，但是写这篇文章花了我2个小时....大概这就是打字速度慢的痛苦吧(笑)

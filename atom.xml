@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-09-16T08:29:51+08:00</updated>
+  <updated>2018-09-16T08:35:21+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -11,7 +11,7 @@
     <title>博主的Todo List</title>
     <updated>2018-08-31T09:30:00+08:00</updated>
     <id>tag:w568w.ml,2018-08-31:/todo-list.html</id>
-    <content type="html">&lt;p&gt;看看這傢伙最近在搞什麼大新聞？&lt;/p&gt;&#xA;</content>
+    <content type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/todo-list.html"></link>
     <author>
       <name>w568w</name>
@@ -28,17 +28,17 @@
     </author>
   </entry>
   <entry>
-    <title>從一次新聞統計概覽我國新聞關注熱點</title>
+    <title>从一次新闻统计概览我国新闻关注热点</title>
     <updated>2018-09-09T09:00:00+08:00</updated>
     <id>tag:w568w.ml,2018-09-09:/fenhuang_stat.html</id>
-    <content type="html">&lt;p&gt;一次Python練手&lt;/p&gt;&#xA;</content>
+    <content type="html">&lt;p&gt;一次Python练手&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/fenhuang_stat.html"></link>
     <author>
       <name>w568w</name>
     </author>
   </entry>
   <entry>
-    <title>Git的高級玩法——花式撤回誤操作</title>
+    <title>Git的高级玩法——花式撤回误操作</title>
     <updated>2018-04-28T21:58:00+08:00</updated>
     <id>tag:w568w.ml,2018-04-28:/powerful-git.html</id>
     <content type="html">&lt;p&gt;你可以用git撤回任何操作!&lt;/p&gt;&#xA;</content>
@@ -48,7 +48,7 @@
     </author>
   </entry>
   <entry>
-    <title>SwipeRefreshLayout下拉不顯示進度圈</title>
+    <title>SwipeRefreshLayout下拉不显示进度圈</title>
     <updated>2018-02-03T11:10:00+08:00</updated>
     <id>tag:w568w.ml,2018-02-03:/swiperefreshlayout-fucked-problem.html</id>
     <content type="html">&lt;p&gt;SwipeRefreshLayout坑真tm多&lt;/p&gt;&#xA;</content>
@@ -58,20 +58,20 @@
     </author>
   </entry>
   <entry>
-    <title>酷安API的相關研究和整理</title>
+    <title>酷安API的相关研究和整理</title>
     <updated>2018-01-04T14:20:00+08:00</updated>
     <id>tag:w568w.ml,2018-01-04:/research-on-coolapk-api.html</id>
-    <content type="html">&lt;p&gt;祝各位新年快樂！&lt;/p&gt;&#xA;</content>
+    <content type="html">&lt;p&gt;祝各位新年快乐！&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/research-on-coolapk-api.html"></link>
     <author>
       <name>w568w</name>
     </author>
   </entry>
   <entry>
-    <title>Xposed模塊本體向Hook類傳遞信息的研究</title>
+    <title>Xposed模块本体向Hook类传递信息的研究</title>
     <updated>2017-12-16T11:00:00+08:00</updated>
     <id>tag:w568w.ml,2017-12-16:/a-tiring-xposed-problem.html</id>
-    <content type="html">&lt;p&gt;Xposed是無底的巨坑&lt;/p&gt;&#xA;</content>
+    <content type="html">&lt;p&gt;Xposed是无底的巨坑&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/a-tiring-xposed-problem.html"></link>
     <author>
       <name>w568w</name>
@@ -90,7 +90,7 @@
   <entry>
     <title>网站统计</title>
     <updated></updated>
-    <id>urn:uuid:b680ca74-5a0f-4660-b8e3-5001e2bf4f37</id>
+    <id>urn:uuid:8fd154c9-f4d9-4e3a-99b8-6638dc4d1836</id>
     <content type="html"></content>
     <link href="http://w568w.ml/stats.html"></link>
     <author>
@@ -100,7 +100,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:89335a42-895d-4b5b-9878-25e0bd07d31b</id>
+    <id>urn:uuid:880e81bf-f694-4210-9a45-717c9db24403</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>
