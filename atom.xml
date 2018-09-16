@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-09-16T08:27:30+08:00</updated>
+  <updated>2018-09-16T08:27:59+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -90,7 +90,7 @@
   <entry>
     <title>网站统计</title>
     <updated></updated>
-    <id>urn:uuid:4295dfc9-38b9-4b38-af1a-2a981bd3c571</id>
+    <id>urn:uuid:977a6ad2-5c57-49e3-b800-0d9bc0df82df</id>
     <content type="html"></content>
     <link href="http://w568w.ml/stats.html"></link>
     <author>
@@ -100,7 +100,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:b1dc535e-288b-4158-b443-dd40c48793ef</id>
+    <id>urn:uuid:5ea9f23f-6060-4c7c-a49a-910d8c148c8c</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>
