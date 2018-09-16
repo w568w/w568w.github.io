@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行雲小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-09-15T14:16:29+08:00</updated>
+  <updated>2018-09-16T08:27:13+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -18,21 +18,21 @@
     </author>
   </entry>
   <entry>
-    <title>從一次新聞統計概覽我國新聞關注熱點</title>
-    <updated>2018-09-09T09:00:00+08:00</updated>
-    <id>tag:w568w.ml,2018-09-09:/fenhuang_stat.html</id>
-    <content type="html">&lt;p&gt;一次Python練手&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/fenhuang_stat.html"></link>
+    <title>零基础微积分入门基本教程（一）</title>
+    <updated>2018-09-16T08:26:00+08:00</updated>
+    <id>tag:w568w.ml,2018-09-16:/calculus-1st.html</id>
+    <content type="html">&lt;p&gt;可能是最简单易懂的微积分打开方式&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/calculus-1st.html"></link>
     <author>
       <name>w568w</name>
     </author>
   </entry>
   <entry>
-    <title>零基础微积分入门基本教程（一）</title>
-    <updated>2018-05-12T22:15:00+08:00</updated>
-    <id>tag:w568w.ml,2018-05-12:/calculus-1st.html</id>
-    <content type="html">&lt;p&gt;微積分麼，數的靈魂。&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/calculus-1st.html"></link>
+    <title>從一次新聞統計概覽我國新聞關注熱點</title>
+    <updated>2018-09-09T09:00:00+08:00</updated>
+    <id>tag:w568w.ml,2018-09-09:/fenhuang_stat.html</id>
+    <content type="html">&lt;p&gt;一次Python練手&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/fenhuang_stat.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -90,7 +90,7 @@
   <entry>
     <title>网站统计</title>
     <updated></updated>
-    <id>urn:uuid:f5aa7bb8-78a5-414d-b69f-c33b36cd06aa</id>
+    <id>urn:uuid:b255d00d-920f-4c87-a590-11c89acbcebc</id>
     <content type="html"></content>
     <link href="http://w568w.ml/stats.html"></link>
     <author>
@@ -100,7 +100,7 @@
   <entry>
     <title>我的朋友们</title>
     <updated></updated>
-    <id>urn:uuid:2af0f227-8ed1-405b-b0b3-de1bc1bb4239</id>
+    <id>urn:uuid:c4b593df-e429-4c6a-a7db-d397ba5af3ae</id>
     <content type="html"></content>
     <link href="http://w568w.ml/gays.html"></link>
     <author>
