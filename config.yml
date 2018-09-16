@@ -1,5 +1,5 @@
 site:
-    title: "行雲小站"
+    title: "行云小站"
     subtitle: "Say hello to you!"
     limit: 10
     theme: theme
@@ -13,7 +13,7 @@ site:
 authors:
     w568w:
         name: "w568w"
-        intro: "夢想改變自己的瘋子。"
+        intro: "梦想改变自己的疯子。"
         avatar: "-/images/avatar.gif"
 
 build:
