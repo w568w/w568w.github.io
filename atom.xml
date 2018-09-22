@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>http://w568w.ml</id>
-  <updated>2018-09-22T12:51:20+08:00</updated>
+  <updated>2018-09-22T13:09:52+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -100,7 +100,7 @@
   <entry>
     <title>网站统计</title>
     <updated></updated>
-    <id>urn:uuid:5bed89dd-8b15-432f-a4f7-6600bef3dbc3</id>
+    <id>urn:uuid:61695776-0a8f-4ad9-8d90-85169a3c104c</id>
     <content type="html"></content>
     <link href="http://w568w.ml/stats.html"></link>
     <author>
