@@ -1,8 +1,10 @@
 title: "对于Android MP3解码为PCM的一些研究"
 date: 2018-09-22 12:46:00 +0800
 author: w568w
+cover: -/images/pathum-danthanarayana-466070-unsplash.jpg
 preview: Android上的媒体文件解码/编码并不是一件复杂的事。
 ---
+![Photo by Pathum Danthanarayana on Unsplash](images/pathum-danthanarayana-466070-unsplash.jpg)
 # 前因
 最近在写一个项目，需要对大量MP3文件进行解码，并输出PCM文件。  
 百度了一下，发现Android上提供了一些可以直接进行解码的类，很方便。

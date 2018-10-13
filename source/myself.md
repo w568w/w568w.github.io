@@ -1,9 +1,11 @@
 title: "我與世界"
 date: 2017-10-20 12:34:00 +0800
 author: w568w
+cover: images/brett-ritchie-550788-unsplash.jpg
 preview: 新的博客，新的開始
 
 ---
+![Photo by Brett Ritchie on Unsplash](images/brett-ritchie-550788-unsplash.jpg)
 # This is w568w.
 一个热衷于Android开发的高中生，Life is short , I choose Geek.
 # 你的博客呢？  

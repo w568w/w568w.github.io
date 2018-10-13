@@ -1,8 +1,10 @@
 title: "从一次新闻统计概览我国新闻关注热点"
 date: 2018-09-09 09:00:00 +0800
+cover: -/images/chris-ried-512801-unsplash.jpg
 author: w568w
 preview: 一次Python练手
 ---
+![Photo by Chris Ried on Unsplash](images/chris-ried-512801-unsplash.jpg)
 # 前因
 最近学习不是很忙没，闲得蛋疼，决定完成一下学校布置的调查报告，顺便玩玩数据分析...  
 所以就有了这么一次关于新闻评论的简单调查。嗯我的编程水平蒟蒻，各位大佬轻喷(/ ω \\)

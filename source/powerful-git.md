@@ -1,8 +1,10 @@
 title: "Git的高级玩法——花式撤回误操作"
 date: 2018-04-28 21:58:00 +0800
 author: w568w
+cover: images/sai-kiran-anagani-555972-unsplash.jpg
 preview: 你可以用git撤回任何操作!
 ---
+![Photo by Sai Kiran Anagani on Unsplash](images/sai-kiran-anagani-555972-unsplash.jpg)
 # 引子
 今天作死Commit的时候，不小心把自己的Ket Store和密码push到Github上去了...  
 发现Github上没有回滚Commit选项时，吓了一跳，以为撤回不了自己的骚操作了，遂百度之，  
