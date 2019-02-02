@@ -18,6 +18,8 @@ type: page
 
 
 # 200 OK
+## [小姜饼V的个人主页](https://dogou.ga/)
+某一中高一学生/啥也不会的萌新小白白
 ## [Tsuasahi](https://blog.tsuasahi.com/)  
 静海一中高二学生/大概是一条咸鱼了吧...  
 ## [Lorem Walker](https://loremwalker.github.io/)   
@@ -27,7 +29,7 @@ type: page
 ## [这是个小博客](http://fols.top/)  
 嗯，这就是个小博客。
 ## [仲孙星河](https://www.zsxh.me/)  
-不务正业的高中生的个人技术博客。
+不务正业的高中生。
 ## [悠闲の时光](https://blog.yaerin.com/)  
 简介什么的最难写了.
 ## [Cerasus](http://cerasus.ml/)  

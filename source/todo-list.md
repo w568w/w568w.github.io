@@ -1,5 +1,5 @@
 title: "博主的Todo List"
-date: 2018-12-16 12:58:04 +0800
+date: 2019-01-05 22:27:04 +0800
 author: w568w
 top: true
 cover: -/images/nikita-kachanovsky-445394-unsplash.jpg
@@ -15,7 +15,7 @@ preview: 看看这家伙最近在搞什么大新闻？
 # 任务列表
 + 写一个[关于微积分的入门教程](https://zybuluo.com/w568w/note/1081202)<span style="color:red;">(暂停)</span>
 + 学习<span style="color:red;">(进行中)</span>
-+ 写一个Android上的IDE  <span style="color:red;">(暂停)</span>
++ 写一个Android上的IDE  <span style="color:red;">(心有余而力不足，弃坑)</span>
 + ~~写一个叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:grey;">(终止)</span>
 
 
