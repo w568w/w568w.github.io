@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>http://w568w.ml</id>
-  <updated>2019-03-09T20:41:03+08:00</updated>
+  <updated>2019-03-22T12:25:18+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
     <name>行云小站</name>
   </author>
+  <entry>
+    <title>如何联系到失联的博主</title>
+    <updated>2019-03-21T22:18:29+08:00</updated>
+    <id>tag:w568w.ml,2019-03-21:/how-to-contact-me.html</id>
+    <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/how-to-contact-me.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
   <entry>
     <title>博主的Todo List</title>
     <updated>2019-03-09T20:40:37+08:00</updated>
@@ -93,16 +103,6 @@
     <id>tag:w568w.ml,2017-12-16:/a-tiring-xposed-problem.html</id>
     <content type="html">&lt;p&gt;Xposed是无底的巨坑&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/a-tiring-xposed-problem.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>我與世界</title>
-    <updated>2017-10-20T12:34:00+08:00</updated>
-    <id>tag:w568w.ml,2017-10-20:/myself.html</id>
-    <content type="html">&lt;p&gt;新的博客，新的開始&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/myself.html"></link>
     <author>
       <name>w568w</name>
     </author>
