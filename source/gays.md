@@ -30,8 +30,6 @@ type: page
 嗯，这就是个小博客。
 ## [仲孙星河](https://www.zsxh.me/)  
 不务正业的高中生。
-## [悠闲の时光](https://blog.yaerin.com/)  
-简介什么的最难写了.
 ## [Cerasus](http://cerasus.ml/)  
 愿给予你的灵魂一个栖息之地.
 ## [imlk](https://imlk.ink/)  
@@ -39,6 +37,9 @@ type: page
 
 ---
 # 404 Not Found
+## [悠闲の时光](https://blog.yaerin.com/)  
+简介什么的最难写了.
+(博主已关停该站)
 ## [一块小板子](https://oboard.github.io/index.html)  
 就是一块小板子，目前博客是空的。  
 (到现在为止不能访问，可能正在整修)
