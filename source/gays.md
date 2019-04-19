@@ -20,7 +20,7 @@ type: page
 # 200 OK
 ## [小姜饼V的个人主页](https://dogou.ga/)
 某一中高一学生/啥也不会的萌新小白白
-## [Tsuasahi](https://blog.tsuasahi.com/)  
+## [Tsuasahi](http://blog.tsuasahi.com/)  
 静海一中高二学生/大概是一条咸鱼了吧...  
 ## [Lorem Walker](https://loremwalker.github.io/)   
 自然卷/近视/较单调/某不知名非营利图书馆馆员/作家/写代码的
@@ -28,23 +28,27 @@ type: page
 目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。
 ## [这是个小博客](http://fols.top/)  
 嗯，这就是个小博客。
-## [仲孙星河](https://www.zsxh.me/)  
+## [仲孙星河](http://www.zsxh.me/)  
 不务正业的高中生。
-## [Cerasus](http://cerasus.ml/)  
-愿给予你的灵魂一个栖息之地.
 ## [imlk](https://imlk.ink/)  
-快要成年/有女票脱单/伪程序员/就读于北邮
+快要成年/有女票脱单/伪程序员/就读于北邮  
+(可能无法不科学访问，请自备梯子)
 
 ---
 # 404 Not Found
-## [悠闲の时光](https://blog.yaerin.com/)  
-简介什么的最难写了.
+> PS:这里记录的是一些已经无法正常访问的友链。
+
+## [Cerasus](http://acandroid.top/)  
+愿给予你的灵魂一个栖息之地.  
+(博主已清空该站全部文章)
+## [悠闲の时光](http://blog.yaerin.com/)  
+简介什么的最难写了.  
 (博主已关停该站)
 ## [一块小板子](https://oboard.github.io/index.html)  
 就是一块小板子，目前博客是空的。  
-(到现在为止不能访问，可能正在整修)
+(博主的博客已被wodemo收回)
 ## [顾世](http://butlife.cn/)  
 目前就读某二中高一/姓黄...    
-(到现在为止不能访问，可能正在整修)
+(博主的域名已过期，未有续期打算)
 ## [闻道博客](http://wendao123.cn/)  
-(到现在为止不能访问，可能正在整修)
+(由于未知原因，到现在为止不能访问，无法联系到博主)
