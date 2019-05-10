@@ -17,13 +17,13 @@ author: w568w
   
 [在Github上找我](https://github.com/w568w/)   
 [在Gitlab上找我](https://gitlab.com/w568w)  
-[在QQ上找我](http://wpa.qq.com/msgrd?V=1&Uin=1278297578&Site=ioshenmue&Menu=yes)(QQ: 1278297578)  
+[在QQ上找我](javascript:alert(\"直接复制QQ号吧...\"))(QQ: 1278297578)  
 [在酷安上找我](https://www.coolapk.com/n/w568w)  
 [在网易云音乐上找我](https://music.163.com/#/user/home?id=322083123)  
 
 # 一个怎样的人?
 忙碌的高二狗，每天过着15小时学习，6小时睡眠的痛苦生活...  
-所以博客也只能一两周更新一次....
+所以博客也只能一两周更新一次(事实上已经很久没有更新过了)....
 # w568w是什么意思?
 (/ ω \\)这个嘛  
 以前脸滚键盘打出来的，我也不知道有什么含义在里面...
