@@ -9,10 +9,10 @@ author: w568w
 
 一个梦想改变自己的疯子。  
 
-安徽 高二学生 Android业余开发者  
+安徽 高三学生 Android业余开发者  
 
-使用系统：Linux Mint 18.3 Sylvia + Windows XP SP3 Professional  
-开发工具：Android Studio 2.3.3 Stable  
+使用系统：Windows 7 SP1 Ulimate x86  
+开发工具：Android Studio 3.5 Stable  
 
   
 [在Github上找我](https://github.com/w568w/)   
