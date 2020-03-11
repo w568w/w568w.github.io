@@ -16,11 +16,13 @@ after_script:
   - git config user.name "w568w"
   - git config user.email "1278297578@qq.com"
   - rm -rf ink_linux_386.tar.gz
+  - rm -rf ink_linux_386.tar.gz.1
+  - rm -rf ink_linux_386.tar.gz.2
   - rm -rf ./blog/
   - rm -rf ./ink
   - git add .
   - git commit -m "Update"
-  - git push "https://${ttoken}@${GH_REF}" HEAD:master
+  - if [ `git log -1 | grep Update` != ""  ];then git push "https://${ttoken}@${GH_REF}" HEAD:master;fi;
 # E: Build LifeCycle
 
 branches:
