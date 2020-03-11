@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>http://w568w.ml</id>
-  <updated>2020-03-11T04:00:43Z</updated>
+  <updated>2020-03-11T04:56:59Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -9,8 +9,8 @@
   </author>
   <entry>
     <title>博主的Todo List</title>
-    <updated>2019-09-21T18:11:25+08:00</updated>
-    <id>tag:w568w.ml,2019-09-21:/todo-list.html</id>
+    <updated>2020-03-11T12:13:25+08:00</updated>
+    <id>tag:w568w.ml,2020-03-11:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/todo-list.html"></link>
     <author>
@@ -23,6 +23,16 @@
     <id>tag:w568w.ml,2019-04-19:/how-to-contact-me.html</id>
     <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/how-to-contact-me.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>2020年，展望</title>
+    <updated>2020-03-11T12:16:25+08:00</updated>
+    <id>tag:w568w.ml,2020-03-11:/2020-hopes.html</id>
+    <content type="html">&lt;p&gt;为什么我在今年高考？！！&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/2020-hopes.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.ml,2018-01-04:/research-on-coolapk-api.html</id>
     <content type="html">&lt;p&gt;祝各位新年快乐！&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/research-on-coolapk-api.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>Xposed模块本体向Hook类传递信息的研究</title>
-    <updated>2017-12-16T11:00:00+08:00</updated>
-    <id>tag:w568w.ml,2017-12-16:/a-tiring-xposed-problem.html</id>
-    <content type="html">&lt;p&gt;Xposed是无底的巨坑&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/a-tiring-xposed-problem.html"></link>
     <author>
       <name>w568w</name>
     </author>
