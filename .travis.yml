@@ -1,0 +1,28 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+before_install:
+  - wget https://imeoer.github.io/release/ink_linux_386.tar.gz
+  - tar -zxvf ink_linux_386.tar.gz
+  - mv ./ink /usr/local/bin/
+ 
+
+script:
+  - ink build
+
+after_script:
+  - git init
+  - git config user.name "w568w"
+  - git config user.email "1278297578@qq.com"
+  - git add .
+  - git commit -m "Update"
+  - git push --force --quiet "https://${ttoken}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com/w568w/w568w.github.io.git
