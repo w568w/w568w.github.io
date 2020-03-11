@@ -5,7 +5,7 @@ type: page
 ---
 > 远来即是客，朋友，加个友链？  
   
-> *  第一步：在你的博客里加上[https://w568w.ml/](https://w568w.ml/)  
+> *  第一步：在你的博客里加上[https://w568w.github.io](https://w568w.github.io/)  
 > *  第二步:<ul>
 > <li>方式一:发送你的博客的一句话简介与链接到`1278297578@qq.com`即可。  </li>
 > <li>方式二:在本文下评论，发送你的博客的一句话简介与链接即可。 </li>
@@ -22,8 +22,7 @@ type: page
 啥也不懂的萌新
 ## [小姜饼V的个人主页](https://dogou.ga/)
 某一中高一学生/啥也不会的萌新小白白
-## [Tsuasahi](http://blog.tsuasahi.com/)  
-静海一中高二学生/大概是一条咸鱼了吧...  
+
 ## [Lorem Walker](https://loremwalker.github.io/)   
 自然卷/近视/较单调/某不知名非营利图书馆馆员/作家/写代码的
 ## [853](http://blog.853lab.com/)   
@@ -39,7 +38,11 @@ type: page
 ---
 # 404 Not Found
 > PS:这里记录的是一些已经无法正常访问的友链。
+## [Tsuasahi](http://blog.tsuasahi.com/)
 
+静海一中高二学生/大概是一条咸鱼了吧...  
+(已超过一年未更新内容)
+ 
 ## [Cerasus](http://acandroid.top/)  
 愿给予你的灵魂一个栖息之地.  
 (博主已清空该站全部文章)
