@@ -20,7 +20,7 @@ type: page
 # 200 OK
 ## [UNKNOW date](https://n-a.date/)
 啥也不懂的萌新
-## [小姜饼V的个人主页](https://dogou.ga/)
+## [小姜饼](https://jambing.cn/)
 某一中高一学生/啥也不会的萌新小白白
 
 ## [Lorem Walker](https://loremwalker.github.io/)   
