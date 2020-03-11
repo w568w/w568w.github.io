@@ -22,7 +22,7 @@ after_script:
   - rm -rf ./ink
   - git add .
   - git commit -m "Update"
-  - if [ $(git log -1 | grep -c "Update") -gt 1 ]; then echo "true";else git push "https://${ttoken}@${GH_REF}" HEAD:master;fi
+  - if [ $(git log -1 | grep -c "Update") -gt 0 ]; then echo "true";else git push "https://${ttoken}@${GH_REF}" HEAD:master;fi
 # E: Build LifeCycle
 
 branches:
