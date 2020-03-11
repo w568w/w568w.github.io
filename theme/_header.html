@@ -1,4 +1,12 @@
- <div style="display: block;width: 100%;background-color:red;color:white">由于基于 GIthub Pages 服务，图片可能无法加载，请见谅！</div>
+ <div style="display: block;width: 100%;background-color:red;color:white"></div>
+  	<script src="./toast.js"></script>
+	<script>
+	var toast = new Toast({
+	showText:"由于基于 Github Pages 服务，图片可能无法加载，请见谅！",
+	timeout: 3000
+	});
+	toast.show();
+	</script>
 <header class="header-wrap">
    <a class="index" href="{{.Site.Root}}/">
     {{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
