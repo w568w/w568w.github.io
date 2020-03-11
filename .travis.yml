@@ -5,7 +5,8 @@ node_js: stable
 before_install:
   - wget https://imeoer.github.io/release/ink_linux_386.tar.gz
   - tar -zxvf ink_linux_386.tar.gz
-  - mv ./ink /usr/local/bin/
+  - ls
+  - sudo mv ./ink /usr/local/bin/
  
 
 script:
