@@ -13,12 +13,11 @@ script:
   - ink build
 
 after_script:
-  - git init
   - git config user.name "w568w"
   - git config user.email "1278297578@qq.com"
   - git add .
   - git commit -m "Update"
-  - git push --force "https://${ttoken}@${GH_REF}" master:master
+  - git push --force "https://${ttoken}@${GH_REF}"
 # E: Build LifeCycle
 
 branches:
