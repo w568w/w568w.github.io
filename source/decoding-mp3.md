@@ -5,6 +5,9 @@ cover: -/images/pathum-danthanarayana-466070-unsplash.jpg
 preview: Android上的媒体文件解码/编码并不是一件复杂的事。
 ---
 ![Photo by Pathum Danthanarayana on Unsplash](images/pathum-danthanarayana-466070-unsplash.jpg)
+# 2020年更新！
+注意，经测试发现，该方法必须在每一次调用`queueInputBuffer`方法时，写入的恰好是**一个或多个**完整的 mp3 帧，否则该数据块的解析结果将是空的，因此**这个方案根本不能用！可以不用往下看了，直接用`lame`库解决吧！**
+ 
 # 前因
 最近在写一个项目，需要对大量MP3文件进行解码，并输出PCM文件。  
 百度了一下，发现Android上提供了一些可以直接进行解码的类，很方便。
