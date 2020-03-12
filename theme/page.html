@@ -48,7 +48,7 @@
 					
 					<div class="mdui-card-header">
 						<img class="mdui-card-header-avatar" src="{{.Author.Avatar}}"/>
-						<a href="{{.Site.Root}}/about.{{.Author.Id}}.html"><div class="mdui-card-header-title">{{.Author.Name}}</div></a>
+						<div class="mdui-card-header-title">{{.Author.Name}}</div>
 							{{if .Update}}
                             <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from"></span></span>
                             {{else}}
