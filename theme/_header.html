@@ -1,35 +1,123 @@
- <div style="display: block;width: 100%;background-color:red;color:white"></div>
- <script>
-var _hmt = _hmt || [];
+<script>
+	var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
- 		<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-  	<script src="./toast.js"></script>
-	<script>
-	$(function () {
-           var toast = new Toast({
-	showText:"因基于 Github Pages ，图片可能无法加载，请见谅！",
-	timeout: 3000
-	});
-	toast.show();
-        })
-	</script>
-<header class="header-wrap">
-   <a class="index" href="{{.Site.Root}}/">
-    {{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
-    {{.Site.Title}}
-  </a>
-  <ul class="menu">
-      <li class="menu-item"><a href="{{.Site.Root}}/archive.html">{{i18n "archive"}}</a></li>
-      <li class="menu-item"><a href="{{.Site.Root}}/tag.html">{{i18n "tag"}}</a></li>
-	  <li class="menu-item"><a href="{{.Site.Root}}/gays.html">基友</a></li>
-	  <li class="menu-item"><a href="{{.Site.Root}}/about.w568w.html">关于</a></li>
-      {{if .Site.Url}}<li class="menu-item"><a href="{{.Site.Root}}/atom.xml">{{i18n "rss"}}</a></li>{{end}}
-  </ul>
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js">
+</script>
+<script src="./toast.js">
+</script>
+<script>
+	$(function() {
+    var toast = new Toast({
+        showText: "因基于 Github Pages ，图片可能无法加载，请见谅！",
+        timeout: 3000
+    });
+    toast.show();
+})
+</script>
+<header>
+	<!-- <a class="index" href="{{.Site.Root}}/">
+	{{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
+	{{.Site.Title}}
+	</a> -->
+	<div class="mdui-appbar mdui-appbar-scroll-hide">
+		<div class="mdui-toolbar mdui-color-theme">
+			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+				<i class="mdui-icon material-icons">
+					menu
+				</i>
+			</a>
+			<a href="{{.Site.Root}}" class="mdui-typo-title">
+				{{.Site.Title}}
+			</a>
+			<div class="mdui-toolbar-spacer">
+			</div>
+			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+				<i class="mdui-icon material-icons">
+					refresh
+				</i>
+			</a>
+		</div>
+	</div>
 </header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+<div class="mdui-grid-tile">
+  <a href="javascript:;"><img src="/images/sidebar_header.png"/></a>
+  <div class="mdui-grid-tile-actions">
+    <div class="mdui-grid-tile-text">
+      <div class="mdui-grid-tile-title">{{.Site.Title}}</div>
+	  <div class="mdui-grid-tile-subtitle">{{.Site.Subtitle}}</div>
+    </div>
+  </div>
+</div>
+	<div class="mdui-list " style="margin-bottom: 76px;">
+	<a href="{{.Site.Root}}/archive.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "archive"}}
+				
+			</div>
+		</li>
+		</a>
+		<a href="{{.Site.Root}}/tag.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "tag"}}
+				
+			</div>
+		</li>
+		</a>
+		<a href="{{.Site.Root}}/gays.html">
+		<li class="mdui-list-item mdui-ripple">
+		
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					基友
+				
+			</div>
+			
+		</li>
+		</a>
+		<a href="{{.Site.Root}}/about.w568w.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					关于
+				
+			</div>
+		</li>
+		</a>
+		{{if .Site.Url}}
+		<a href="{{.Site.Root}}/atom.xml">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "rss"}}
+				
+			</div>
+		</li>
+		</a>
+		{{end}}
+		</li>
+	</div>
+<!-- 	<button class="mdui-btn" mdui-drawer-close>
+		close
+	</button> -->
+</div>

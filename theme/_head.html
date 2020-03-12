@@ -40,6 +40,9 @@
     };
     var root = '{{.Site.Root}}';
 </script>
+<!--MDUI加载-->
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 {{if .Develop}}
 <script type="text/javascript">
     var conn, reloadTimer, connectTimer;
@@ -62,4 +65,5 @@
     };
     connect();
 </script>
+
 {{end}}

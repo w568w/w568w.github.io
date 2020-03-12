@@ -1,11 +1,11 @@
 {
-  "name": "InkPaperDefaultTheme",
+  "name": "InkMaterialTheme",
   "version": "0.0.1",
   "scripts": {
     "start": "./node_modules/.bin/webpack --progress --colors --watch",
     "build": "./node_modules/.bin/webpack --progress --colors"
   },
-  "description": "InkPaper Default Theme",
+  "description": "InkPaper Material Theme By w568w(github.com/w568w)",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "css-loader": "^0.22.0",

@@ -44,50 +44,158 @@
     var root = '';
 </script>
 
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
         <meta name="keywords" content="">
         <meta name="description" content="零基础微积分入门基本教程（一）">
         <meta name="author" content="w568w">
         <title>零基础微积分入门基本教程（一）</title>
     </head>
-    <body>
+    <body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
         <article class="container">
-             <div style="display: block;width: 100%;background-color:red;color:white"></div>
- <script>
-var _hmt = _hmt || [];
+            <script>
+	var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
- 		<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-  	<script src="./toast.js"></script>
-	<script>
-	$(function () {
-           var toast = new Toast({
-	showText:"因基于 Github Pages ，图片可能无法加载，请见谅！",
-	timeout: 3000
-	});
-	toast.show();
-        })
-	</script>
-<header class="header-wrap">
-   <a class="index" href="/">
-    <img class="logo" src="/images/avatar.gif" />
-    行云小站
-  </a>
-  <ul class="menu">
-      <li class="menu-item"><a href="/archive.html">归档</a></li>
-      <li class="menu-item"><a href="/tag.html">标签</a></li>
-	  <li class="menu-item"><a href="/gays.html">基友</a></li>
-	  <li class="menu-item"><a href="/about.w568w.html">关于</a></li>
-      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
-  </ul>
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js">
+</script>
+<script src="./toast.js">
+</script>
+<script>
+	$(function() {
+    var toast = new Toast({
+        showText: "因基于 Github Pages ，图片可能无法加载，请见谅！",
+        timeout: 3000
+    });
+    toast.show();
+})
+</script>
+<header>
+	
+	<div class="mdui-appbar mdui-appbar-scroll-hide">
+		<div class="mdui-toolbar mdui-color-theme">
+			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+				<i class="mdui-icon material-icons">
+					menu
+				</i>
+			</a>
+			<a href="" class="mdui-typo-title">
+				行云小站
+			</a>
+			<div class="mdui-toolbar-spacer">
+			</div>
+			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+				<i class="mdui-icon material-icons">
+					refresh
+				</i>
+			</a>
+		</div>
+	</div>
 </header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+<div class="mdui-grid-tile">
+  <a href="javascript:;"><img src="/images/sidebar_header.png"/></a>
+  <div class="mdui-grid-tile-actions">
+    <div class="mdui-grid-tile-text">
+      <div class="mdui-grid-tile-title">行云小站</div>
+	  <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+    </div>
+  </div>
+</div>
+	<div class="mdui-list " style="margin-bottom: 76px;">
+	<a href="/archive.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					归档
+				
+			</div>
+		</li>
+		</a>
+		<a href="/tag.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					标签
+				
+			</div>
+		</li>
+		</a>
+		<a href="/gays.html">
+		<li class="mdui-list-item mdui-ripple">
+		
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					基友
+				
+			</div>
+			
+		</li>
+		</a>
+		<a href="/about.w568w.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					关于
+				
+			</div>
+		</li>
+		</a>
+		
+		<a href="/atom.xml">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon">
+			</i>
+			<div class="mdui-list-item-content">
+				
+					订阅
+				
+			</div>
+		</li>
+		</a>
+		
+		</li>
+	</div>
 
+</div>
             <article class="main article">
                 <h1 class="title">零基础微积分入门基本教程（一）</h1>
                 <section class="info">
