@@ -26,7 +26,7 @@
                 </header>
                 <ul class="article-list">
                     {{range .Articles}}
-                    <li class="article">
+                    <!-- <li class="article">
                         <a class="title" href="{{$.Site.Root}}/{{.Link}}">{{if .Top}}<span class="top">[{{i18n "top"}}]</span>{{end}}{{.Title}}</a>
                         {{if .Cover}}<div class="cover" style="background-image:url({{.Cover}});"></div>{{end}}
                         {{if .Preview}}<section class="preview content">{{.Preview}}</section>{{end}}
@@ -42,7 +42,37 @@
                             {{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}
                             </span>
                         </section>
-                    </li>
+                    </li> -->
+					
+					<div class="mdui-card" >
+					
+					<div class="mdui-card-header">
+						<img class="mdui-card-header-avatar" src="{{.Author.Avatar}}"/>
+						<a href="{{.Site.Root}}/about.{{.Author.Id}}.html"><div class="mdui-card-header-title">{{.Author.Name}}</div></a>
+							{{if .Update}}
+                            <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from"></span></span>
+                            {{else}}
+                            <span class="date mdui-card-header-subtitle" data-time="{{.Date}}"><span class="from"></span></span>
+                            {{end}}
+						
+					  </div>
+					  <a href="{{$.Site.Root}}/{{.Link}}">
+					  <div class="mdui-card-media">
+						{{if .Cover}}<img src="{{.Cover}}"/>
+						{{else}}
+						<img src="/images/sidebar_header.png"/>
+						{{end}}
+						<div class="mdui-card-media-covered mdui-card-media-covered">
+						  <div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">{{.Title}}</div>
+							<div class="mdui-card-primary-subtitle">{{.Preview}}</div>
+						  </div>
+						</div>
+					  </div>
+					  </a>
+					</div>
+					<div  style="height:24px"></div>
+					
                     {{end}}
                 </ul>
                 <section class="page-nav">
