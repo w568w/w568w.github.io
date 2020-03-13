@@ -47,29 +47,6 @@
 <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
 <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
-
-
 
         <meta name="keywords" content="">
         <meta name="description" content="从一次新闻统计概览我国新闻关注热点">
@@ -263,18 +240,18 @@
       children: [
         {
           name: &quot;name&quot;,
-          alias:&quot;用户名&quot;,
+		  alias:&quot;用户名&quot;,
           selector: &quot;//*[@class=\&quot;w-location\&quot;]&quot;
         },
         {
           name: &quot;content&quot;,
-          alias:&quot;评论内容&quot;,
+		  alias:&quot;评论内容&quot;,
           selector: &quot;//*[@class=\&quot;w-contentTxt\&quot;]&quot;
         },
         {
           name: &quot;goods&quot;,
           type: &quot;int&quot;,
-          alias:&quot;点讚数&quot;,
+		  alias:&quot;点讚数&quot;,
           selector: &quot;//*[@class=\&quot;w-rep-num\&quot;]&quot;
         }
       ]
@@ -331,7 +308,7 @@ def read_list():
         lines = csv.reader(f)
         csv_list = []
         for l in lines:
-        #检查空项&amp;解码UTF-8的编码
+		#检查空项&amp;解码UTF-8的编码
             if l[2].decode('utf8') != '':
                 csv_list.append([l[0].decode('utf8'), l[1].decode('utf8'), l[2].decode('utf8')])
         del csv_list[0]
