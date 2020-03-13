@@ -32,10 +32,15 @@
 					menu
 				</i>
 			</a>
-			<a href="{{.Site.Root}}" class="mdui-typo-title">
+			<a href="{{.Site.Root}}/" class="mdui-typo-title">
 				{{.Site.Title}}
 			</a>
 			<div class="mdui-toolbar-spacer">
+			</div>
+			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索"/>
+			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
 			</div>
 			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
 				<i class="mdui-icon material-icons">
@@ -58,7 +63,8 @@
 	<div class="mdui-list " style="margin-bottom: 76px;">
 	<a href="{{.Site.Root}}/archive.html">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			archive
 			</i>
 			<div class="mdui-list-item-content">
 				
@@ -69,7 +75,8 @@
 		</a>
 		<a href="{{.Site.Root}}/tag.html">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			apps
 			</i>
 			<div class="mdui-list-item-content">
 				
@@ -81,11 +88,12 @@
 		<a href="{{.Site.Root}}/gays.html">
 		<li class="mdui-list-item mdui-ripple">
 		
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			people
 			</i>
 			<div class="mdui-list-item-content">
 				
-					基友
+					好基友
 				
 			</div>
 			
@@ -93,11 +101,12 @@
 		</a>
 		<a href="{{.Site.Root}}/about.w568w.html">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			account_circle
 			</i>
 			<div class="mdui-list-item-content">
 				
-					关于
+					关于我
 				
 			</div>
 		</li>
@@ -105,7 +114,9 @@
 		{{if .Site.Url}}
 		<a href="{{.Site.Root}}/atom.xml">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+		
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			rss_feed
 			</i>
 			<div class="mdui-list-item-content">
 				

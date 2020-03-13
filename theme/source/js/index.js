@@ -72,6 +72,7 @@ var initSearch = function() {
       title = title.replace(reg, wrap)
       preview = preview.replace(reg, wrap)
     }
+	
     return searchTpl
     .replace('{{title}}', title)
     .replace('{{link}}', link)

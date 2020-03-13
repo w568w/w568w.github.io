@@ -47,6 +47,29 @@
 <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
 <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
         <meta name="keywords" content="">
         <meta name="description" content="零基础微积分入门基本教程（一）">
@@ -86,10 +109,15 @@
 					menu
 				</i>
 			</a>
-			<a href="" class="mdui-typo-title">
+			<a href="/" class="mdui-typo-title">
 				行云小站
 			</a>
 			<div class="mdui-toolbar-spacer">
+			</div>
+			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索"/>
+			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
 			</div>
 			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
 				<i class="mdui-icon material-icons">
@@ -112,7 +140,8 @@
 	<div class="mdui-list " style="margin-bottom: 76px;">
 	<a href="/archive.html">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			archive
 			</i>
 			<div class="mdui-list-item-content">
 				
@@ -123,7 +152,8 @@
 		</a>
 		<a href="/tag.html">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			apps
 			</i>
 			<div class="mdui-list-item-content">
 				
@@ -135,11 +165,12 @@
 		<a href="/gays.html">
 		<li class="mdui-list-item mdui-ripple">
 		
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			people
 			</i>
 			<div class="mdui-list-item-content">
 				
-					基友
+					好基友
 				
 			</div>
 			
@@ -147,11 +178,12 @@
 		</a>
 		<a href="/about.w568w.html">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			account_circle
 			</i>
 			<div class="mdui-list-item-content">
 				
-					关于
+					关于我
 				
 			</div>
 		</li>
@@ -159,7 +191,9 @@
 		
 		<a href="/atom.xml">
 		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-list-item-icon">
+		
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			rss_feed
 			</i>
 			<div class="mdui-list-item-content">
 				
