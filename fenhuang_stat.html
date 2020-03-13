@@ -47,6 +47,29 @@
 <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
 <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
         <meta name="keywords" content="">
         <meta name="description" content="从一次新闻统计概览我国新闻关注热点">
@@ -240,18 +263,18 @@
       children: [
         {
           name: &quot;name&quot;,
-		  alias:&quot;用户名&quot;,
+          alias:&quot;用户名&quot;,
           selector: &quot;//*[@class=\&quot;w-location\&quot;]&quot;
         },
         {
           name: &quot;content&quot;,
-		  alias:&quot;评论内容&quot;,
+          alias:&quot;评论内容&quot;,
           selector: &quot;//*[@class=\&quot;w-contentTxt\&quot;]&quot;
         },
         {
           name: &quot;goods&quot;,
           type: &quot;int&quot;,
-		  alias:&quot;点讚数&quot;,
+          alias:&quot;点讚数&quot;,
           selector: &quot;//*[@class=\&quot;w-rep-num\&quot;]&quot;
         }
       ]
@@ -308,7 +331,7 @@ def read_list():
         lines = csv.reader(f)
         csv_list = []
         for l in lines:
-		#检查空项&amp;解码UTF-8的编码
+        #检查空项&amp;解码UTF-8的编码
             if l[2].decode('utf8') != '':
                 csv_list.append([l[0].decode('utf8'), l[1].decode('utf8'), l[2].decode('utf8')])
         del csv_list[0]
@@ -559,7 +582,7 @@ Copyright (C) w568w，遵循Creative Commons BY-NC 4.0协议，禁止不规范�
         </script>
 		使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh">Creative Commons BY-NC 4.0协议</a>
     </span>
-    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a></span>
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a>和<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a><img src="/images/upyun.png" style="height:20px;"></span>
 </footer>
 
         <script src="/bundle/index.js"></script>
