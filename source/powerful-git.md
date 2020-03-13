@@ -1,7 +1,7 @@
 title: "Git的高级玩法——花式撤回误操作"
 date: 2018-04-28 21:58:00 +0800
 author: w568w
-cover: images/sai-kiran-anagani-555972-unsplash.jpg
+cover: https://i.loli.net/2020/03/13/X29z7qgZdjyUTmo.jpg
 preview: 你可以用git撤回任何操作!
 ---
 ![Photo by Sai Kiran Anagani on Unsplash](images/sai-kiran-anagani-555972-unsplash.jpg)

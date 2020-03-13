@@ -2,10 +2,10 @@
 date: 2020-03-11 12:13:25 +0800
 author: w568w
 top: true
-cover: -/images/nikita-kachanovsky-445394-unsplash.jpg
+cover: https://i.loli.net/2020/03/13/lbiJWAXks296uLZ.jpg
 preview: 看看这家伙最近在搞什么大新闻？
 ---
-![Photo by Nikita Kachanovsky on Unsplash](images/nikita-kachanovsky-445394-unsplash.jpg)
+![Photo by Nikita Kachanovsky on Unsplash](https://i.loli.net/2020/03/13/lbiJWAXks296uLZ.jpg)
 
 > ## 博主存活状态指示器
 > (用不怎么熟的JavaScript做的... 可以检查博主是不是弃坑了)

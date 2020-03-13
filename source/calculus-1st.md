@@ -1,7 +1,7 @@
 title: "零基础微积分入门基本教程（一）"
 date: 2018-10-19 18:26:00 +0800
 author: w568w
-cover: -/images/roman-mager-59976-unsplash.jpg
+cover: https://i.loli.net/2020/03/13/qxsIg1ZNnei26bT.jpg
 preview: 可能是最简单易懂的微积分打开方式
 ---
 （收到了1800次阅读，有点小开心呐\~\~\~\~）    

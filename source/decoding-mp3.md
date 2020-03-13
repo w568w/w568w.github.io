@@ -1,7 +1,7 @@
 title: "对于Android MP3解码为PCM的一些研究"
 date: 2018-09-22 12:46:00 +0800
 author: w568w
-cover: -/images/pathum-danthanarayana-466070-unsplash.jpg
+cover: https://i.loli.net/2020/03/13/T5z3nyOjNSbXIVg.jpg
 preview: Android上的媒体文件解码/编码并不是一件复杂的事。
 ---
 ![Photo by Pathum Danthanarayana on Unsplash](images/pathum-danthanarayana-466070-unsplash.jpg)
