@@ -1,6 +1,7 @@
 title: "用 Travis CI 实现博客持续集成"
 date: 2020-03-13 18:13:00 +0800
 author: w568w
+cover:https://i.loli.net/2020/03/14/EkCfwX7ISRQxBGc.jpg
 preview: …实在懒得build静态网页了…
 ---
 # 什么是CI？
