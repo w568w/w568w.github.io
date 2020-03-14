@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>http://w568w.ml</id>
-  <updated>2020-03-14T01:52:27Z</updated>
+  <updated>2020-03-14T03:32:41Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="http://w568w.ml"></link>
   <author>
@@ -23,6 +23,16 @@
     <id>tag:w568w.ml,2019-04-19:/how-to-contact-me.html</id>
     <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/how-to-contact-me.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>用 Travis CI 实现博客持续集成</title>
+    <updated>2020-03-13T18:13:00+08:00</updated>
+    <id>tag:w568w.ml,2020-03-13:/travis-ci-for-blog.html</id>
+    <content type="html">&lt;p&gt;…实在懒得build静态网页了…&lt;/p&gt;&#xA;</content>
+    <link href="http://w568w.ml/travis-ci-for-blog.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.ml,2018-02-03:/swiperefreshlayout-fucked-problem.html</id>
     <content type="html">&lt;p&gt;SwipeRefreshLayout坑真tm多&lt;/p&gt;&#xA;</content>
     <link href="http://w568w.ml/swiperefreshlayout-fucked-problem.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>酷安API的相关研究和整理</title>
-    <updated>2018-01-04T14:20:00+08:00</updated>
-    <id>tag:w568w.ml,2018-01-04:/research-on-coolapk-api.html</id>
-    <content type="html">&lt;p&gt;祝各位新年快乐！&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/research-on-coolapk-api.html"></link>
     <author>
       <name>w568w</name>
     </author>
