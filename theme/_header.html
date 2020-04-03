@@ -6,19 +6,27 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
+
 </script>
 <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js">
 </script>
 <script src="./toast.js">
 </script>
 <script>
-	$(function() {
+/*	$(function() {
     var toast = new Toast({
         showText: "因基于 Github Pages ，图片可能无法加载，请见谅！",
         timeout: 3000
     });
     toast.show();
-})
+})*/
+$(function() {
+	var now = new Date();
+	if ((now.getMonth() == 11 && now.getDate() == 13) 
+		|| (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
+		document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
+	}
+});
 </script>
 <header>
 	<!-- <a class="index" href="{{.Site.Root}}/">
