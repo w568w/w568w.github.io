@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
-  <id>http://w568w.ml</id>
-  <updated>2020-04-03T11:58:34Z</updated>
+  <id>https://w568w.github.io</id>
+  <updated>2020-04-09T04:40:27Z</updated>
   <subtitle>Say hello to you!</subtitle>
-  <link href="http://w568w.ml"></link>
+  <link href="https://w568w.github.io"></link>
   <author>
     <name>行云小站</name>
   </author>
   <entry>
     <title>博主的Todo List</title>
     <updated>2020-03-11T12:13:25+08:00</updated>
-    <id>tag:w568w.ml,2020-03-11:/todo-list.html</id>
+    <id>tag:w568w.github.io,2020-03-11:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/todo-list.html"></link>
+    <link href="https://w568w.github.io/todo-list.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -20,9 +20,9 @@
   <entry>
     <title>如何联系到失联的博主</title>
     <updated>2019-04-19T15:49:19+08:00</updated>
-    <id>tag:w568w.ml,2019-04-19:/how-to-contact-me.html</id>
+    <id>tag:w568w.github.io,2019-04-19:/how-to-contact-me.html</id>
     <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/how-to-contact-me.html"></link>
+    <link href="https://w568w.github.io/how-to-contact-me.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -30,9 +30,9 @@
   <entry>
     <title>我心中的最佳软件合集</title>
     <updated>2020-03-19T07:46:00+08:00</updated>
-    <id>tag:w568w.ml,2020-03-19:/my-best-software.html</id>
+    <id>tag:w568w.github.io,2020-03-19:/my-best-software.html</id>
     <content type="html">&lt;p&gt;闲来无事也整理一下吧~&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/my-best-software.html"></link>
+    <link href="https://w568w.github.io/my-best-software.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -40,9 +40,9 @@
   <entry>
     <title>用 Travis CI 实现博客持续集成</title>
     <updated>2020-03-13T18:13:00+08:00</updated>
-    <id>tag:w568w.ml,2020-03-13:/travis-ci-for-blog.html</id>
+    <id>tag:w568w.github.io,2020-03-13:/travis-ci-for-blog.html</id>
     <content type="html">&lt;p&gt;…实在懒得build静态网页了…&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/travis-ci-for-blog.html"></link>
+    <link href="https://w568w.github.io/travis-ci-for-blog.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -50,9 +50,9 @@
   <entry>
     <title>2020年，展望</title>
     <updated>2020-03-11T14:56:25+08:00</updated>
-    <id>tag:w568w.ml,2020-03-11:/2020-hopes.html</id>
+    <id>tag:w568w.github.io,2020-03-11:/2020-hopes.html</id>
     <content type="html">&lt;p&gt;为什么我在今年高考？！！&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/2020-hopes.html"></link>
+    <link href="https://w568w.github.io/2020-hopes.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -60,9 +60,9 @@
   <entry>
     <title>Hello 2019</title>
     <updated>2019-01-05T22:48:04+08:00</updated>
-    <id>tag:w568w.ml,2019-01-05:/2019-new-year.html</id>
+    <id>tag:w568w.github.io,2019-01-05:/2019-new-year.html</id>
     <content type="html">&lt;p&gt;新的一年，新的开始&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/2019-new-year.html"></link>
+    <link href="https://w568w.github.io/2019-new-year.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -70,9 +70,9 @@
   <entry>
     <title>零基础微积分入门基本教程（一）</title>
     <updated>2018-10-19T18:26:00+08:00</updated>
-    <id>tag:w568w.ml,2018-10-19:/calculus-1st.html</id>
+    <id>tag:w568w.github.io,2018-10-19:/calculus-1st.html</id>
     <content type="html">&lt;p&gt;可能是最简单易懂的微积分打开方式&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/calculus-1st.html"></link>
+    <link href="https://w568w.github.io/calculus-1st.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -80,9 +80,9 @@
   <entry>
     <title>对于Android MP3解码为PCM的一些研究</title>
     <updated>2018-09-22T12:46:00+08:00</updated>
-    <id>tag:w568w.ml,2018-09-22:/decoding-mp3.html</id>
+    <id>tag:w568w.github.io,2018-09-22:/decoding-mp3.html</id>
     <content type="html">&lt;p&gt;Android上的媒体文件解码/编码并不是一件复杂的事。&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/decoding-mp3.html"></link>
+    <link href="https://w568w.github.io/decoding-mp3.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -90,9 +90,9 @@
   <entry>
     <title>从一次新闻统计概览我国新闻关注热点</title>
     <updated>2018-09-09T09:00:00+08:00</updated>
-    <id>tag:w568w.ml,2018-09-09:/fenhuang_stat.html</id>
+    <id>tag:w568w.github.io,2018-09-09:/fenhuang_stat.html</id>
     <content type="html">&lt;p&gt;一次Python练手&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/fenhuang_stat.html"></link>
+    <link href="https://w568w.github.io/fenhuang_stat.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -100,9 +100,9 @@
   <entry>
     <title>Git的高级玩法——花式撤回误操作</title>
     <updated>2018-04-28T21:58:00+08:00</updated>
-    <id>tag:w568w.ml,2018-04-28:/powerful-git.html</id>
+    <id>tag:w568w.github.io,2018-04-28:/powerful-git.html</id>
     <content type="html">&lt;p&gt;你可以用git撤回任何操作!&lt;/p&gt;&#xA;</content>
-    <link href="http://w568w.ml/powerful-git.html"></link>
+    <link href="https://w568w.github.io/powerful-git.html"></link>
     <author>
       <name>w568w</name>
     </author>
