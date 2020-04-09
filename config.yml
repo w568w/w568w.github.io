@@ -4,7 +4,7 @@ site:
     limit: 10
     theme: theme
     lang: zh
-    url: "http://w568w.ml"
+    url: "https://w568w.github.io/"
     comment: username
     logo: "-/images/avatar.gif"
     # link: "{category}/{year}/{month}/{day}/{title}.html"
