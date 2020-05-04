@@ -39,7 +39,8 @@ author: w568w
 - 英语(English): 约 CET4 水平
 - 日语(日本語): 约 N5 水平
 - 世界语(Esperanto): 仅基本语法
-- 塔语(Hymmnos): 仅基本语法(想音句)
+- 塔语(Hymmnos): 仅基本语法(想音句)    
+   
 ## 计算机语种
 - Java(Android): 中高阶，但对 Android 6.0 之后的 API 不甚熟悉
 - 易语言: 中阶

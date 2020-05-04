@@ -5,7 +5,7 @@ type: page
 ---
 > 远来即是客，朋友，加个友链？  
   
-> *  第一步：在你的博客里加上[https://w568w.github.io](https://w568w.github.io/)  
+> *  第一步：在你的博客里加上[https://w568w.github.io](https://w568w.github.io/)  或 [https://w568w.eu.org/](https://w568w.eu.org/) (前者较稳定，后者不易被墙。请根据网络环境自行选择)
 > *  第二步:<ul>
 > <li>方式一:发送你的博客的一句话简介与链接到`1278297578@qq.com`即可。  </li>
 > <li>方式二:在本文下评论，发送你的博客的一句话简介与链接即可。 </li>
@@ -24,13 +24,14 @@ type: page
 啥也不懂的萌新
 ## [小姜饼](https://jambing.cn/)
 某一中高一学生/啥也不会的萌新小白白  
-## [Tsuasahi](http://blog.tsuasahi.com/)
+## [Tsuasahi](http://tsuasahi.com/)
 静海一中高二学生/大概是一条咸鱼了吧...  
 (__PS:已超过一年未更新内容__)  
 ## [853](http://blog.853lab.com/)   
 目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。
 ## [这是个小博客](http://fols.top/)  
-嗯，这就是个小博客。
+嗯，这就是个小博客。  
+(**PS:无博客，仅个人主页**)
   
 ---
   
@@ -39,7 +40,7 @@ type: page
 
 ## [imlk](https://imlk.ink/)  
 快要成年/有女票脱单/伪程序员/就读于北邮  
-(可能无法不科学访问，请自备梯子)
+(可能无法不科学访问，请自备梯子)  
 (域名已过期，且未有续费打算)
 ## [Lorem Walker](https://loremwalker.github.io/)   
 自然卷/近视/较单调/某不知名非营利图书馆馆员/作家/写代码的  
