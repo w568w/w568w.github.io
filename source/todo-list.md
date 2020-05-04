@@ -15,7 +15,7 @@ preview: 看看这家伙最近在搞什么大新闻？
 # 任务列表
 + 写一个[关于微积分的入门教程](https://zybuluo.com/w568w/note/1081202)<span style="color:red;">(暂停)</span>
 + 学习，备战高考<span style="color:red;">(进行中)</span>
-+ 写一个夜间模式App<span style="color:red;">(进行中)</span>
++ ~~写一个夜间模式App~~<span style="color:green;">(已初步完成，尚未发布)</span>
 + 写一个Android上的IDE  <span style="color:red;">(心有余而力不足，弃坑)</span>
 + 写一个叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App<span style="color:red;">(弃坑)</span>
 
