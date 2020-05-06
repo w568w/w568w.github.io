@@ -14,11 +14,10 @@
             <article class="main page">
                 <header class="header site">
                     {{if .TagName}}
-                        {{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
+                        
                         <h1 class="tag">{{.TagName}}</h1>
                         <h2 class="tag-sub">{{.TagCount}} {{i18n "articles"}}</h2>
                     {{else}}
-                        {{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
                         <h1 class="title">{{.Site.Title}}</h1>
                         <h2 class="subtitle">{{.Site.Subtitle}}</h2>
                         {{template "search" .}}
