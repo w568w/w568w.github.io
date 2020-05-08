@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-05-06T05:29:44Z</updated>
+  <updated>2020-05-08T15:37:21Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -23,6 +23,16 @@
     <id>tag:w568w.github.io,2019-04-19:/how-to-contact-me.html</id>
     <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/how-to-contact-me.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>纸小墨的 Material Design 主题 0.1版发布</title>
+    <updated>2020-05-08T23:36:00+08:00</updated>
+    <id>tag:w568w.github.io,2020-05-08:/ink-material-theme.html</id>
+    <content type="html">&lt;p&gt;过气 Blog Generator 也要整 MD 主题.jpg&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.github.io/ink-material-theme.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.github.io,2018-09-09:/fenhuang_stat.html</id>
     <content type="html">&lt;p&gt;一次Python练手&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/fenhuang_stat.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>Git的高级玩法——花式撤回误操作</title>
-    <updated>2018-04-28T21:58:00+08:00</updated>
-    <id>tag:w568w.github.io,2018-04-28:/powerful-git.html</id>
-    <content type="html">&lt;p&gt;你可以用git撤回任何操作!&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.github.io/powerful-git.html"></link>
     <author>
       <name>w568w</name>
     </author>
