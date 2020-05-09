@@ -79,6 +79,13 @@ $(function() {
 		document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
 	}
 });
+function search_close(){
+s=$("#search")[0];
+var ev = new Event('input', { bubbles: true});
+ev.simulated = true;
+s.value = '';
+s.dispatchEvent(ev);
+}
 </script>
 <header>
 	
@@ -96,8 +103,8 @@ $(function() {
 			</div>
 			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
 			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索"/>
-			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
 			</div>
 			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
 				<i class="mdui-icon material-icons">
@@ -109,11 +116,13 @@ $(function() {
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
 <div class="mdui-grid-tile">
-  <a href="javascript:;"><img src="https://source.unsplash.com/random"/></a>
+  <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600"/></a>
   <div class="mdui-grid-tile-actions">
     <div class="mdui-grid-tile-text">
       <div class="mdui-grid-tile-title">行云小站</div>
 	  <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+	  <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+	  
     </div>
   </div>
 </div>
@@ -137,7 +146,7 @@ $(function() {
 			</i>
 			<div class="mdui-list-item-content">
 				
-					归档
+					所有文章
 				
 			</div>
 		</li>
@@ -238,9 +247,7 @@ $(function() {
                 
 <style>
 .ThanksForInvitingLabel {
-	padding-left: 12px;
-	
-	line-height: 42px;
+	padding: 12px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -252,16 +259,17 @@ $(function() {
 	font-size: 14px;
 	border-radius: 6px;
 	overflow: hidden;
-	white-space: nowrap;
+	
 }
 .ThanksForInvitingLabel-icon {
+white-space: nowrap;
 	margin-right: 4px;
 	font-weight: 600;
 	font-synthesis: style;
 }
 </style>
 <br/>
-<div class="ThanksForInvitingLabel"><span class="ThanksForInvitingLabel-icon"><span style="display: inline-flex; align-items: center;">​<svg  fill="currentColor" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="877" width="20" height="20"><path d="M896 213.333333v281.6l-128-128-170.666667 170.666667-170.666666-170.666667-170.666667 170.666667-128-128V213.333333c0-46.933333 38.4-85.333333 85.333333-85.333333h597.333334c46.933333 0 85.333333 38.4 85.333333 85.333333z m-128 273.066667l128 128V810.666667c0 46.933333-38.4 85.333333-85.333333 85.333333H213.333333c-46.933333 0-85.333333-38.4-85.333333-85.333333V529.066667l128 128 170.666667-170.666667 170.666666 170.666667 170.666667-170.666667z" p-id="878"></path></svg></span>&nbsp;Warning!&nbsp;</span>&nbsp;LiveRe&nbsp;评论系统在部分华为设备上无法使用。如果您遇到该问题，请考虑换用其他设备登陆。</div>
+<div class="ThanksForInvitingLabel"><span class="ThanksForInvitingLabel-icon"><span style="display: inline-flex; align-items: center;">​<svg  fill="currentColor" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="877" width="20" height="20"><path d="M896 213.333333v281.6l-128-128-170.666667 170.666667-170.666666-170.666667-170.666667 170.666667-128-128V213.333333c0-46.933333 38.4-85.333333 85.333333-85.333333h597.333334c46.933333 0 85.333333 38.4 85.333333 85.333333z m-128 273.066667l128 128V810.666667c0 46.933333-38.4 85.333333-85.333333 85.333333H213.333333c-46.933333 0-85.333333-38.4-85.333333-85.333333V529.066667l128 128 170.666667-170.666667 170.666666 170.666667 170.666667-170.666667z" p-id="878"></path></svg></span>&nbsp;Warning!&nbsp;</span>已经发现&nbsp;LiveRe&nbsp;评论系统在部分华为设备上无法加载。如果下方没有显示评论系统或评论按钮无法点击，请考虑换用其他设备浏览。</div>
 
 <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTg5Ni8xNjQyMw==">
 	<script type="text/javascript">

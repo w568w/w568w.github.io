@@ -78,6 +78,13 @@ $(function() {
 		document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
 	}
 });
+function search_close(){
+s=$("#search")[0];
+var ev = new Event('input', { bubbles: true});
+ev.simulated = true;
+s.value = '';
+s.dispatchEvent(ev);
+}
 </script>
 <header>
 	
@@ -95,8 +102,8 @@ $(function() {
 			</div>
 			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
 			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索"/>
-			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
 			</div>
 			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
 				<i class="mdui-icon material-icons">
@@ -108,11 +115,13 @@ $(function() {
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
 <div class="mdui-grid-tile">
-  <a href="javascript:;"><img src="https://source.unsplash.com/random"/></a>
+  <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600"/></a>
   <div class="mdui-grid-tile-actions">
     <div class="mdui-grid-tile-text">
       <div class="mdui-grid-tile-title">行云小站</div>
 	  <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+	  <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+	  
     </div>
   </div>
 </div>
@@ -136,7 +145,7 @@ $(function() {
 			</i>
 			<div class="mdui-list-item-content">
 				
-					归档
+					所有文章
 				
 			</div>
 		</li>
