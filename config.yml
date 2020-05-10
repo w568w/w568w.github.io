@@ -25,5 +25,5 @@ build:
     # Excuted command when use 'ink publish'
     publish: |
         git add . -A
-        git commit -m "update"
+        git commit -m "a"
         git push origin
