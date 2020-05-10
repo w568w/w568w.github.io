@@ -1,8 +1,8 @@
-title: "纸小墨的 Material Design 主题 0.1版发布"
+title: "纸小墨的 MD 主题 0.1版发布"
 date: 2020-05-08 23:36:00 +0800
 author: w568w
 cover: /images/example-en.png
-preview: 过气 Blog Generator 也要整 MD 主题.jpg
+preview: 过气 Blog Generator 也要整MD.jpg
 ---
 
 # 前言
