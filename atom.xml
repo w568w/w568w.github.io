@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-05-09T10:38:24Z</updated>
+  <updated>2020-05-10T02:43:33Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -28,10 +28,10 @@
     </author>
   </entry>
   <entry>
-    <title>纸小墨的 Material Design 主题 0.1版发布</title>
+    <title>纸小墨的 MD 主题 0.1版发布</title>
     <updated>2020-05-08T23:36:00+08:00</updated>
     <id>tag:w568w.github.io,2020-05-08:/ink-material-theme.html</id>
-    <content type="html">&lt;p&gt;过气 Blog Generator 也要整 MD 主题.jpg&lt;/p&gt;&#xA;</content>
+    <content type="html">&lt;p&gt;过气 Blog Generator 也要整MD.jpg&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/ink-material-theme.html"></link>
     <author>
       <name>w568w</name>
