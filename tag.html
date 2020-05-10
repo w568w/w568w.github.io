@@ -66,13 +66,13 @@
 })();
 
 </script>
-<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 <script src="./toast.js">
 </script>
+<script src="./cdn.js">
+</script>
 <script>
-
-
 $(function() {
 	var now = new Date();
 	if ((now.getMonth() == 11 && now.getDate() == 13) 
@@ -205,6 +205,15 @@ s.dispatchEvent(ev);
 		</li>
 		</a>
 		
+		<li class="mdui-list-item mdui-ripple">
+		
+			
+			<div class="mdui-list-item-content">
+				
+					您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
+				
+			</div>
+		</li>
 		</li>
 	</div>
 
