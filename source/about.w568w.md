@@ -32,7 +32,22 @@ author: w568w
 高中生当然是学习学习学习啊！  
 唔，偶尔会写点代码自娱自乐一下...  
 虽然周围的同龄人都在看番、刷抖音、刷微博、刷B站、买手办，但是我一个也不喜欢(/ ω \\)  
-~~可能我已经步入老年了吧~~
+~~可能我已经步入老年了吧~~  
+# 有啥作品么？
+有的有的！ 
+
+[净眼](https://github.com/w568w/fuckView): Xposed模块，类似于`Android`中的`AdBlocker`，可以手动标记、屏蔽 _任意_ App中的指定`View(控件)`，就像屏蔽网页中的广告一样容易。**但是…由于作品年久失修，暂不支持`Android 7.1`之后的系统。**  
+  
+[Xposed Checker](https://www.coolapk.com/apk/190247): 一个小工具，从抖音、微信等等热门app中截取出了`Xposed`检测的代码片段，可以检测你的`Xposed隐藏、屏蔽模块`究竟能不能起到隐藏作用。  
+  
+[绿色应用评测](https://www.coolapk.com/apk/ml.qingsu.greenrunner): 评估某应用是否完全符合[绿色应用公约](https://green-android.org/)的要求。从多个方面对应用进行测试，包括隐私、优化、省电等方面。(`UI`是大佬`Trumeet`写的…我这种蒟蒻只配写程序逻辑啦…)  
+   
+[Direct tool](http://mip.mdpda.com/app/apk7234235.html)(源码: [github.com/w568w/DirectTool](https://github.com/w568w/DirectTool)): 最早的早期作品，一个多功能的工具箱…  
+(~~实际上大部分功能都没有什么卵用~~)  
+(~~据说[一个木函](https://www.coolapk.com/apk/com.One.WoodenLetter)的灵感来源也包括本App呢🙈~~)  
+  
+[Github Star](https://github.com/w568w/GitHubStar): 早期写给猿友们的`Github`互刷`Star`小工具。不过后来刷赞服务器挂了就没太在意了，就当`Python`练手的吧…  
+
 # 掌握哪些语言？
 ## 人类语种
 - 中文: 母语
