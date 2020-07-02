@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-05-20T14:01:54Z</updated>
+  <updated>2020-07-02T15:54:22Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -23,6 +23,16 @@
     <id>tag:w568w.github.io,2019-04-19:/how-to-contact-me.html</id>
     <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/how-to-contact-me.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>向往的彼方</title>
+    <updated>2020-07-02T23:52:00+08:00</updated>
+    <id>tag:w568w.github.io,2020-07-02:/before-ncee.html</id>
+    <content type="html">&lt;p&gt;写于高考前夜&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.github.io/before-ncee.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.github.io,2018-09-22:/decoding-mp3.html</id>
     <content type="html">&lt;p&gt;Android上的媒体文件解码/编码并不是一件复杂的事。&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/decoding-mp3.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>从一次新闻统计概览我国新闻关注热点</title>
-    <updated>2018-09-09T09:00:00+08:00</updated>
-    <id>tag:w568w.github.io,2018-09-09:/fenhuang_stat.html</id>
-    <content type="html">&lt;p&gt;一次Python练手&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.github.io/fenhuang_stat.html"></link>
     <author>
       <name>w568w</name>
     </author>
