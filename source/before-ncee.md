@@ -108,3 +108,5 @@ preview: 写于高考前夜
   <br />
    <br />
   离开阳台时，我心里一阵酸楚——这个40多岁就谢顶的中年男人，大概再也无法叫我上黑板写数学问题的解答了。
+  
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=458004314&auto=0&height=66"></iframe>
