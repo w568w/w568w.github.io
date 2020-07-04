@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-07-03T14:59:26Z</updated>
+  <updated>2020-07-04T15:09:25Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -29,8 +29,8 @@
   </entry>
   <entry>
     <title>向往的彼方</title>
-    <updated>2020-07-03T22:50:00+08:00</updated>
-    <id>tag:w568w.github.io,2020-07-03:/before-ncee.html</id>
+    <updated>2020-07-04T23:00:00+08:00</updated>
+    <id>tag:w568w.github.io,2020-07-04:/before-ncee.html</id>
     <content type="html">&lt;p&gt;写于高考前夜&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/before-ncee.html"></link>
     <author>
