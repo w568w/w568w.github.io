@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>无标题文档</title>
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+</head>
+
+<body>
+    <script src="data.js"></script>
+    <style>
+        .fadeout {
+            transition: all 0.2s;
+            opacity: 0;
+        }
+        .fadein {
+            transition: all 0.2s;
+            opacity: 1;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="mdui-appbar">
+            <div class="mdui-toolbar mdui-color-deep-purple">
+                <a href="javascript:;" class="mdui-typo-headline">How many softwares do you know?</a>
+            </div>
+        </div>
+        <div class="mdui-card" style="padding: 16px;margin-top:8px">
+            <div class="row">
+                <div class="col">
+                    <h1 id="soft" class="text-center">Photoshop</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">难度系数（越大越生僻）
+                    <div id="difficulty" class="font-weight-bold">3</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align:center">
+                    <button class="mdui-btn mdui-color-deep-purple-400 mdui-ripple" onclick="onKnow()">认识</button>
+                </div>
+                <div class="col" style="text-align:center">
+                    <button class="mdui-btn mdui-color-deep-purple-400 mdui-ripple" onclick="onNotKnow()">不认识</button>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-card" style="padding: 16px;margin-top:8px">
+            <h3>你知道吗？</h3>
+            <small>截止2019年底，国内APP上架数目约为 449 万，而 Google Play 约为 400 万(结合 2018 年数据推算)。  
+PC 平台上的软件则要多几个数量级，预估在 100,000,000 左右。</small><br />
+<small>我们从 Alternativeto.net 抽取了 3000 款左右常见 PC 软件，测试一下，看一看你能认识多少！</small>
+        </div>
+    </div>
+    <script>
+        const STEP_LONG = 500;
+
+        const START_VALUE = 4000;
+
+        var currentSoft = {};
+        var currentLike = START_VALUE;
+        var knownOnes = [];
+        var unknownOnes = [];
+
+        function initClear() {
+            $("#soft")[0].innerText = "";
+            knownOnes = [];
+            unknownOnes = [];
+            currentSoft = {};
+            currentLike = START_VALUE;
+            loadSoft(currentLike);
+        }
+
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function arrayIncludes(arr, v) {
+            var contains = false;
+            arr.forEach(function (value, index, array) {
+                if (value["soft_name"] == v["soft_name"])
+                    contains = true;
+            });
+            return contains;
+        }
+
+        function loadSoft(minLikeNum) {
+            var selectSofts = [];
+            while (selectSofts.length == 0) {
+                softData.forEach(function (value, index, array) {
+                    if (parseInt(value["likes"]) >= minLikeNum && !arrayIncludes(knownOnes, value) && !arrayIncludes(unknownOnes, value))
+                        selectSofts.push(value);
+                });
+                minLikeNum -= STEP_LONG;
+            }
+            currentSoft = selectSofts[getRandomInteger(0, selectSofts.length - 1)];
+            var newSoft = currentSoft["soft_name"];
+            $("#soft")[0].className = "text-center fadeout";
+            setTimeout(function () {
+                $("#soft")[0].className = "text-center fadein";
+                $("#soft")[0].innerText = newSoft;
+                $("#difficulty")[0].innerText = (8000 / parseInt(currentSoft["likes"])).toFixed(3);
+            }, 200);
+
+        }
+
+        function onKnow() {
+			currentLike -= STEP_LONG;
+            knownOnes.push(currentSoft);
+            onAnswered();
+        }
+
+        function onNotKnow() {
+			
+            unknownOnes.push(currentSoft);
+            onAnswered();
+        }
+
+        function calcResult() {
+
+        }
+
+        function onAnswered() {
+            
+            var totalAnswers = knownOnes.length + unknownOnes.length;
+            if (totalAnswers > 20) {
+                mdui.dialog({
+                    title: '测试结果',
+                    content: '您大约认识 ' + (knownOnes.length / totalAnswers * 100).toFixed(2) + " %的软件。\n换言之，您在软件库中大约知道 " + Math.round(knownOnes.length / totalAnswers * softData.length) + " 款软件。",
+                    buttons: [{
+                        text: '再测一次',
+                        onClick: function (inst) {
+                            initClear();
+                        }
+                    }]
+
+                });
+            } else {
+                loadSoft(currentLike);
+            }
+        }
+        initClear();
+    </script>
+</body>
+
+</html>
