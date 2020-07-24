@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-07-18T08:06:01Z</updated>
+  <updated>2020-07-24T13:06:00Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -28,21 +28,21 @@
     </author>
   </entry>
   <entry>
-    <title>一些相当棒的Java游戏</title>
-    <updated>2020-07-15T18:50:25+08:00</updated>
-    <id>tag:w568w.github.io,2020-07-15:/my-j2me-game.html</id>
-    <content type="html">&lt;p&gt;扔掉老年机前，对过往的追念&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.github.io/my-j2me-game.html"></link>
+    <title>向往的彼方</title>
+    <updated>2020-07-24T21:04:00+08:00</updated>
+    <id>tag:w568w.github.io,2020-07-24:/before-ncee.html</id>
+    <content type="html">&lt;p&gt;写于高考前夜…以及高考后&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.github.io/before-ncee.html"></link>
     <author>
       <name>w568w</name>
     </author>
   </entry>
   <entry>
-    <title>向往的彼方</title>
-    <updated>2020-07-06T12:21:00+08:00</updated>
-    <id>tag:w568w.github.io,2020-07-06:/before-ncee.html</id>
-    <content type="html">&lt;p&gt;写于高考前夜&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.github.io/before-ncee.html"></link>
+    <title>一些相当棒的Java游戏</title>
+    <updated>2020-07-15T18:50:25+08:00</updated>
+    <id>tag:w568w.github.io,2020-07-15:/my-j2me-game.html</id>
+    <content type="html">&lt;p&gt;扔掉老年机前，对过往的追念&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.github.io/my-j2me-game.html"></link>
     <author>
       <name>w568w</name>
     </author>
