@@ -44,10 +44,10 @@
     var root = '';
 </script>
 
-<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css"/>
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"/>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
+<script src="lazysizes.min.js" async></script>
 
 
         <meta name="keywords" content="Say hello to you!">
@@ -118,7 +118,7 @@ s.dispatchEvent(ev);
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
 <div class="mdui-grid-tile">
-  <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600"/></a>
+  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
   <div class="mdui-grid-tile-actions">
     <div class="mdui-grid-tile-text">
       <div class="mdui-grid-tile-title">行云小站</div>
@@ -248,8 +248,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/todo-list.html">
 					  <div class="mdui-card-media">
-						<img src="https://i.loli.net/2020/03/13/lbiJWAXks296uLZ.jpg"/>
-						
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/lbiJWAXks296uLZ.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title"><span class="top">[置顶]</span>博主的Todo List</div>
@@ -277,8 +278,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/how-to-contact-me.html">
 					  <div class="mdui-card-media">
-						<img src="/images/kristina-tripkovic-602495-unsplash.jpg"/>
-						
+                        
+                        <img data-src="/images/kristina-tripkovic-602495-unsplash.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title"><span class="top">[置顶]</span>如何联系到失联的博主</div>
@@ -306,8 +308,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/before-ncee.html">
 					  <div class="mdui-card-media">
-						<img src="images/gaokao.jpg"/>
-						
+                        
+                        <img data-src="images/gaokao.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">向往的彼方</div>
@@ -335,8 +338,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/my-j2me-game.html">
 					  <div class="mdui-card-media">
-						<img src="images/nokia-2617880_1280.jpg"/>
-						
+                        
+                        <img data-src="images/nokia-2617880_1280.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">一些相当棒的Java游戏</div>
@@ -364,8 +368,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/ink-material-theme.html">
 					  <div class="mdui-card-media">
-						<img src="/images/example-en.png"/>
-						
+                        
+                        <img data-src="/images/example-en.png" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">纸小墨的 MD 主题 0.1版发布</div>
@@ -393,8 +398,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/my-best-software.html">
 					  <div class="mdui-card-media">
-						<img src="/images/my-software.jpg"/>
-						
+                        
+                        <img data-src="/images/my-software.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">我心中的最佳软件合集</div>
@@ -422,8 +428,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/travis-ci-for-blog.html">
 					  <div class="mdui-card-media">
-						<img src="https://i.loli.net/2020/03/14/EkCfwX7ISRQxBGc.jpg"/>
-						
+                        
+                        <img data-src="https://i.loli.net/2020/03/14/EkCfwX7ISRQxBGc.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">用 Travis CI 实现博客持续集成</div>
@@ -451,8 +458,8 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/2020-hopes.html">
 					  <div class="mdui-card-media">
-						
-						<img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg"/>
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
 						
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
@@ -481,8 +488,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/2019-new-year.html">
 					  <div class="mdui-card-media">
-						<img src="https://i.loli.net/2020/03/13/p3ez7k6XlgTLK15.jpg"/>
-						
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/p3ez7k6XlgTLK15.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">Hello 2019</div>
@@ -510,8 +518,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/calculus-1st.html">
 					  <div class="mdui-card-media">
-						<img src="https://i.loli.net/2020/03/13/qxsIg1ZNnei26bT.jpg"/>
-						
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/qxsIg1ZNnei26bT.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">零基础微积分入门基本教程（一）</div>
