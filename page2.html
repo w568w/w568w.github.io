@@ -44,10 +44,33 @@
     var root = '';
 </script>
 
-<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css"/>
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"/>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
+<script src="lazysizes.min.js" async></script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
 </script>
+
 
 
         <meta name="keywords" content="Say hello to you!">
@@ -118,7 +141,7 @@ s.dispatchEvent(ev);
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
 <div class="mdui-grid-tile">
-  <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600"/></a>
+  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
   <div class="mdui-grid-tile-actions">
     <div class="mdui-grid-tile-text">
       <div class="mdui-grid-tile-title">行云小站</div>
@@ -248,8 +271,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/decoding-mp3.html">
 					  <div class="mdui-card-media">
-						<img src="https://i.loli.net/2020/03/13/T5z3nyOjNSbXIVg.jpg"/>
-						
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/T5z3nyOjNSbXIVg.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">对于Android MP3解码为PCM的一些研究</div>
@@ -277,8 +301,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/fenhuang_stat.html">
 					  <div class="mdui-card-media">
-						<img src="/images/chris-ried-512801-unsplash.jpg"/>
-						
+                        
+                        <img data-src="/images/chris-ried-512801-unsplash.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">从一次新闻统计概览我国新闻关注热点</div>
@@ -306,8 +331,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/powerful-git.html">
 					  <div class="mdui-card-media">
-						<img src="https://i.loli.net/2020/03/13/X29z7qgZdjyUTmo.jpg"/>
-						
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/X29z7qgZdjyUTmo.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">Git的高级玩法——花式撤回误操作</div>
@@ -335,8 +361,8 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/swiperefreshlayout-fucked-problem.html">
 					  <div class="mdui-card-media">
-						
-						<img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg"/>
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
 						
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
@@ -365,8 +391,8 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/research-on-coolapk-api.html">
 					  <div class="mdui-card-media">
-						
-						<img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg"/>
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
 						
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
@@ -395,8 +421,8 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/a-tiring-xposed-problem.html">
 					  <div class="mdui-card-media">
-						
-						<img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg"/>
+                        
+                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
 						
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
@@ -425,8 +451,9 @@ s.dispatchEvent(ev);
 					  </div>
 					  <a href="/myself.html">
 					  <div class="mdui-card-media">
-						<img src="images/brett-ritchie-550788-unsplash.jpg"/>
-						
+                        
+                        <img data-src="images/brett-ritchie-550788-unsplash.jpg" class="lazyload" alt=""/>
+                        
 						<div class="mdui-card-media-covered mdui-card-media-covered">
 						  <div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">我與世界</div>

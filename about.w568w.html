@@ -44,10 +44,33 @@
     var root = '';
 </script>
 
-<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css"/>
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"/>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
+<script src="lazysizes.min.js" async></script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
 </script>
+
 
 
         <meta name="keywords" content="">
@@ -118,7 +141,7 @@ s.dispatchEvent(ev);
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
 <div class="mdui-grid-tile">
-  <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600"/></a>
+  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
   <div class="mdui-grid-tile-actions">
     <div class="mdui-grid-tile-text">
       <div class="mdui-grid-tile-title">行云小站</div>
@@ -252,17 +275,20 @@ s.dispatchEvent(ev);
 
 <h1>一个怎样的人?</h1>
 
-<p>刚刚高考结束的准大一狗，正在忙着准备上大学&hellip;
-- <a href="https://en.wikipedia.org/wiki/Progressive_conservatism">进步保守主义</a>者<font size=1 >（<a href="javascript:alert(&quot;进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。&quot;)">这是什么？</a>） </font>
-- 轻度焦虑症、重度拖延症患者
-- <a href="https://baike.baidu.com/item/%E4%B8%8A%E7%BD%91%E6%97%A0%E8%81%8A%E7%97%87">上网无聊症</a>重度患者
-- 虚假的<code>OIer</code><font size=1 >（从来没有学过算法 <del>但是敢于在真正的<code>OIer</code>面前吹牛逼</del>）</font>
-- 高度近视<font size=1 >（真的很高的那种）</font>
-- 极客主义<font size=1 >（什么东西都想捣鼓捣鼓）</font>
-- 不擅长体育<font size=1 >（从各种意义上来说都是）</font>
-- <a href="https://www.psychspace.com/psych/viewnews-14274">轻度囤积障碍</a><font size=1 >（从各种意义上来说都是）</font>
-- 段子手<font size=1 >（无论是线上还是线下）</font>
-- 胆小<font size=1 >（从来不敢一个人看鬼片 <del>白天也不行！</del>）</font></p>
+<p>刚刚高考结束的准大一狗，正在忙着准备上大学&hellip;</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Progressive_conservatism">进步保守主义</a>者<font size=1 >（<a href="javascript:alert(&quot;进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。&quot;)">这是什么？</a>） </font></li>
+<li>轻度焦虑症、重度拖延症患者</li>
+<li><a href="https://baike.baidu.com/item/%E4%B8%8A%E7%BD%91%E6%97%A0%E8%81%8A%E7%97%87">上网无聊症</a>重度患者</li>
+<li>虚假的<code>OIer</code><font size=1 >（从来没有学过算法 <del>但是敢于在真正的<code>OIer</code>面前吹牛逼</del>）</font></li>
+<li>高度近视<font size=1 >（真的很高的那种）</font></li>
+<li>极客主义<font size=1 >（什么东西都想捣鼓捣鼓）</font></li>
+<li>不擅长体育<font size=1 >（从各种意义上来说都是）</font></li>
+<li><a href="https://www.psychspace.com/psych/viewnews-14274">轻度囤积障碍</a><font size=1 >（从各种意义上来说都是）</font></li>
+<li>段子手<font size=1 >（无论是线上还是线下）</font></li>
+<li>胆小<font size=1 >（从来不敢一个人看鬼片 <del>白天也不行！</del>）</font></li>
+</ul>
 
 <h1>w568w是什么意思?</h1>
 

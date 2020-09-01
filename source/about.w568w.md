@@ -23,7 +23,8 @@ author: w568w
 [在网易云音乐上找我](https://music.163.com/#/user/home?id=322083123)  
 
 # 一个怎样的人?
-刚刚高考结束的准大一狗，正在忙着准备上大学... 
+刚刚高考结束的准大一狗，正在忙着准备上大学...   
+  
 - [进步保守主义](https://en.wikipedia.org/wiki/Progressive_conservatism)者<font size=1 >（[这是什么？](javascript:alert(\"进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。\"))） </font>
 - 轻度焦虑症、重度拖延症患者 
 - [上网无聊症](https://baike.baidu.com/item/%E4%B8%8A%E7%BD%91%E6%97%A0%E8%81%8A%E7%97%87)重度患者
@@ -34,6 +35,7 @@ author: w568w
 - [轻度囤积障碍](https://www.psychspace.com/psych/viewnews-14274)<font size=1 >（从各种意义上来说都是）</font>
 - 段子手<font size=1 >（无论是线上还是线下）</font>
 - 胆小<font size=1 >（从来不敢一个人看鬼片 ~~白天也不行！~~）</font>
+
 # w568w是什么意思?
 (/ ω \\)这个嘛  
 以前脸滚键盘打出来的，我也不知道有什么含义在里面...
