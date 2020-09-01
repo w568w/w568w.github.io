@@ -50,7 +50,6 @@
 <script src="lazysizes.min.js" async></script>
 
 
-
         <meta name="keywords" content="">
         <meta name="description" content="对于Android MP3解码为PCM的一些研究">
         <meta name="author" content="w568w">
@@ -544,7 +543,7 @@ public class MP3ToPCMTest extends AndroidTestCase {
         public void run() {
             try {
                 PCMdata = new MP3ToPCM()
-                        .convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
+						.convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
                 System.out.println(&quot;size:&quot; + PCMdata.length);
             } catch (IOException e) {
                 e.printStackTrace();
