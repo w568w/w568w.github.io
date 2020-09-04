@@ -32,6 +32,11 @@
 <link rel="shortcut icon" href="/favicon.png">
 <link rel="apple-itouch-icon" href="/favicon.png">
 <link rel="stylesheet" href="/bundle/index.css">
+
+<link rel="preconnect" href="https://cdn.bootcdn.net">
+<link rel="preconnect" href="https://busuanzi.ibruce.info">
+<link rel="dns-prefetch" href="https://cdn.bootcdn.net">
+<link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
 <script type="text/javascript">
     var timeSinceLang = {
         year: '年前',
@@ -543,7 +548,7 @@ public class MP3ToPCMTest extends AndroidTestCase {
         public void run() {
             try {
                 PCMdata = new MP3ToPCM()
-						.convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
+                        .convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
                 System.out.println(&quot;size:&quot; + PCMdata.length);
             } catch (IOException e) {
                 e.printStackTrace();
