@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
+<style>
+
+</style>
+
+<head>
+    <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="Cache-Control" content="no-siteapp">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
@@ -54,23 +58,46 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
 <script src="lazysizes.min.js" async></script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
 
-        <meta name="keywords" content="Say hello to you!">
-        <meta name="description" content="Say hello to you!">
-        <title>行云小站</title>
-    </head>
-    <body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
-	
-        <article class="container">
-            <script>
-	var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
 
+
+    <meta name="keywords" content="Say hello to you!">
+    <meta name="description" content="Say hello to you!">
+    <title>行云小站</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
@@ -79,385 +106,378 @@
 <script src="./cdn.js">
 </script>
 <script>
-$(function() {
-	var now = new Date();
-	if ((now.getMonth() == 11 && now.getDate() == 13) 
-		|| (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
-		document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
-	}
-});
-function search_close(){
-s=$("#search")[0];
-var ev = new Event('input', { bubbles: true});
-ev.simulated = true;
-s.value = '';
-s.dispatchEvent(ev);
-}
+    $(function() {
+        var now = new Date();
+        if ((now.getMonth() == 11 && now.getDate() == 13) ||
+            (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
+            document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
+        }
+    });
+
+    function search_close() {
+        s = $("#search")[0];
+        var ev = new Event('input', {
+            bubbles: true
+        });
+        ev.simulated = true;
+        s.value = '';
+        s.dispatchEvent(ev);
+    }
 </script>
 <header>
-	
-	<div class="mdui-appbar mdui-appbar-scroll-hide">
-		<div class="mdui-toolbar mdui-color-theme">
-			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
-				<i class="mdui-icon material-icons">
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
 					menu
 				</i>
-			</a>
-			<a href="/" class="mdui-typo-title">
+            </a>
+            <a href="/" class="mdui-typo-title">
 				行云小站
 			</a>
-			<div class="mdui-toolbar-spacer">
-			</div>
-			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
-			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
-			</div>
-			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
-				<i class="mdui-icon material-icons">
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange="" />
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
 					refresh
 				</i>
-			</a>
-		</div>
-	</div>
+            </a>
+        </div>
+    </div>
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
-<div class="mdui-grid-tile">
-  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
-  <div class="mdui-grid-tile-actions">
-    <div class="mdui-grid-tile-text">
-      <div class="mdui-grid-tile-title">行云小站</div>
-	  <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
-	  <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
-	  
+    <div class="mdui-grid-tile">
+        <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600" loading="lazy" alt="" /></a>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-	<div class="mdui-list " style="margin-bottom: 76px;">
-	<a href="/">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+    <div class="mdui-list " style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			home
 			</i>
-			<div class="mdui-list-item-content">
-				
-					主页
-				
-			</div>
-		</li>
-		</a>
-	<a href="/archive.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			archive
 			</i>
-			<div class="mdui-list-item-content">
-				
-					所有文章
-				
-			</div>
-		</li>
-		</a>
-		<a href="/tag.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			apps
 			</i>
-			<div class="mdui-list-item-content">
-				
-					标签
-				
-			</div>
-		</li>
-		</a>
-		<a href="/gays.html">
-		<li class="mdui-list-item mdui-ripple">
-		
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			people
 			</i>
-			<div class="mdui-list-item-content">
-				
-					好基友
-				
-			</div>
-			
-		</li>
-		</a>
-		<a href="/about.w568w.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			account_circle
 			</i>
-			<div class="mdui-list-item-content">
-				
-					关于我
-				
-			</div>
-		</li>
-		</a>
-		
-		<a href="/atom.xml">
-		<li class="mdui-list-item mdui-ripple">
-		
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			rss_feed
 			</i>
-			<div class="mdui-list-item-content">
-				
-					订阅
-				
-			</div>
-		</li>
-		</a>
-		
-		<li class="mdui-list-item mdui-ripple">
-		
-			
-			<div class="mdui-list-item-content" style="font-size:12px">
-				
-					您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
-				
-			</div>
-		</li>
-		</li>
-	</div>
+                <div class="mdui-list-item-content">
 
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
+
+            </div>
+        </li>
+        </li>
+    </div>
+    
 </div>
-			
-            <article class="main page">
-                <header class="header site">
-                    
-                        <h1 class="title">行云小站</h1>
-                        <h2 class="subtitle">Say hello to you!</h2>
-                        <div class="search-wrap">
+
+        <article class="main page">
+            <header class="header site">
+                
+                <h1 class="title" style="color: whitesmoke;">行云小站</h1>
+                <h2 class="subtitle" style="color: white;">Say hello to you!</h2>
+                <div class="search-wrap">
   
   
 </div>
+ 
+            </header>
+            <ul class="article-list">
+                
+                
 
-                    
-                </header>
-                <ul class="article-list">
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1537591560"><span class="from"></span></span>
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1537591560"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/decoding-mp3.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/decoding-mp3.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="https://i.loli.net/2020/03/13/T5z3nyOjNSbXIVg.jpg" class="lazyload" alt=""/>
-                        
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">对于Android MP3解码为PCM的一些研究</div>
-							<div class="mdui-card-primary-subtitle"><p>Android上的媒体文件解码/编码并不是一件复杂的事。</p>
+                            <img src="https://i.loli.net/2020/03/13/T5z3nyOjNSbXIVg.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">对于Android MP3解码为PCM的一些研究</div>
+                                    <div class="mdui-card-primary-subtitle"><p>Android上的媒体文件解码/编码并不是一件复杂的事。</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1536454800"><span class="from"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1536454800"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/fenhuang_stat.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/fenhuang_stat.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="/images/chris-ried-512801-unsplash.jpg" class="lazyload" alt=""/>
-                        
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">从一次新闻统计概览我国新闻关注热点</div>
-							<div class="mdui-card-primary-subtitle"><p>一次Python练手</p>
+                            <img src="/images/chris-ried-512801-unsplash.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">从一次新闻统计概览我国新闻关注热点</div>
+                                    <div class="mdui-card-primary-subtitle"><p>一次Python练手</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1524923880"><span class="from"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1524923880"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/powerful-git.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/powerful-git.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="https://i.loli.net/2020/03/13/X29z7qgZdjyUTmo.jpg" class="lazyload" alt=""/>
-                        
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">Git的高级玩法——花式撤回误操作</div>
-							<div class="mdui-card-primary-subtitle"><p>你可以用git撤回任何操作!</p>
+                            <img src="https://i.loli.net/2020/03/13/X29z7qgZdjyUTmo.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">Git的高级玩法——花式撤回误操作</div>
+                                    <div class="mdui-card-primary-subtitle"><p>你可以用git撤回任何操作!</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1517627400"><span class="from"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1517627400"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/swiperefreshlayout-fucked-problem.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/swiperefreshlayout-fucked-problem.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
-						
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">SwipeRefreshLayout下拉不显示进度圈</div>
-							<div class="mdui-card-primary-subtitle"><p>SwipeRefreshLayout坑真tm多</p>
+                            <img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">SwipeRefreshLayout下拉不显示进度圈</div>
+                                    <div class="mdui-card-primary-subtitle"><p>SwipeRefreshLayout坑真tm多</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1515046800"><span class="from"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1515046800"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/research-on-coolapk-api.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/research-on-coolapk-api.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
-						
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">酷安API的相关研究和整理</div>
-							<div class="mdui-card-primary-subtitle"><p>祝各位新年快乐！</p>
+                            <img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">酷安API的相关研究和整理</div>
+                                    <div class="mdui-card-primary-subtitle"><p>祝各位新年快乐！</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1513393200"><span class="from"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1513393200"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/a-tiring-xposed-problem.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/a-tiring-xposed-problem.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" class="lazyload" alt=""/>
-						
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">Xposed模块本体向Hook类传递信息的研究</div>
-							<div class="mdui-card-primary-subtitle"><p>Xposed是无底的巨坑</p>
+                            <img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">Xposed模块本体向Hook类传递信息的研究</div>
+                                    <div class="mdui-card-primary-subtitle"><p>Xposed是无底的巨坑</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                    
-					
-					<div class="mdui-card" >
-					
-					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="/images/avatar.gif"/>
-						<div class="mdui-card-header-title">w568w</div>
-							
-                            <span class="date mdui-card-header-subtitle" data-time="1508474040"><span class="from"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
+                        <span class="date mdui-card-header-subtitle" data-time="1508474040"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/myself.html">
+                        <div class="mdui-card-media">
                             
-						
-					  </div>
-					  <a href="/myself.html">
-					  <div class="mdui-card-media">
-                        
-                        <img data-src="images/brett-ritchie-550788-unsplash.jpg" class="lazyload" alt=""/>
-                        
-						<div class="mdui-card-media-covered mdui-card-media-covered">
-						  <div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">我與世界</div>
-							<div class="mdui-card-primary-subtitle"><p>新的博客，新的開始</p>
+                            <img src="images/brett-ritchie-550788-unsplash.jpg" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">我與世界</div>
+                                    <div class="mdui-card-primary-subtitle"><p>新的博客，新的開始</p>
 </div>
-						  </div>
-						</div>
-					  </div>
-					  </a>
-					</div>
-					<div  style="height:24px"></div>
-					
-                    
-                </ul>
-                <section class="page-nav">
-                    <a class="prev" href="/index.html">上一页</a>
-                    <span class="nav">2 / 2</span>
-                    
-                </section>
-            </article>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+            </ul>
+            <section class="page-nav">
+                <a class="prev" href="/index.html">上一页</a> <span class="nav">2 / 2</span> 
+            </section>
         </article>
-        <footer class="footer">
+    </article>
+    <footer class="footer">
     <span class="copyright">
         行云小站 © 2016 - 
         <script type="text/javascript">
@@ -470,6 +490,7 @@ s.dispatchEvent(ev);
     <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a> 和 <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a><img src="./images/upyun.png" style="height:15px;"> </span>
 </footer>
 
-    </body>
-    <script src="/bundle/index.js"></script>
+</body>
+<script src="/bundle/index.js"></script>
+
 </html>

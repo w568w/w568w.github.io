@@ -62,14 +62,13 @@
     <body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
         <article class="container">
             <script>
-	var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
-
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
@@ -78,150 +77,153 @@
 <script src="./cdn.js">
 </script>
 <script>
-$(function() {
-	var now = new Date();
-	if ((now.getMonth() == 11 && now.getDate() == 13) 
-		|| (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
-		document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
-	}
-});
-function search_close(){
-s=$("#search")[0];
-var ev = new Event('input', { bubbles: true});
-ev.simulated = true;
-s.value = '';
-s.dispatchEvent(ev);
-}
+    $(function() {
+        var now = new Date();
+        if ((now.getMonth() == 11 && now.getDate() == 13) ||
+            (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
+            document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
+        }
+    });
+
+    function search_close() {
+        s = $("#search")[0];
+        var ev = new Event('input', {
+            bubbles: true
+        });
+        ev.simulated = true;
+        s.value = '';
+        s.dispatchEvent(ev);
+    }
 </script>
 <header>
-	
-	<div class="mdui-appbar mdui-appbar-scroll-hide">
-		<div class="mdui-toolbar mdui-color-theme">
-			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
-				<i class="mdui-icon material-icons">
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
 					menu
 				</i>
-			</a>
-			<a href="/" class="mdui-typo-title">
+            </a>
+            <a href="/" class="mdui-typo-title">
 				行云小站
 			</a>
-			<div class="mdui-toolbar-spacer">
-			</div>
-			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
-			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
-			</div>
-			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
-				<i class="mdui-icon material-icons">
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange="" />
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
 					refresh
 				</i>
-			</a>
-		</div>
-	</div>
+            </a>
+        </div>
+    </div>
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
-<div class="mdui-grid-tile">
-  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
-  <div class="mdui-grid-tile-actions">
-    <div class="mdui-grid-tile-text">
-      <div class="mdui-grid-tile-title">行云小站</div>
-	  <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
-	  <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
-	  
+    <div class="mdui-grid-tile">
+        <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600" loading="lazy" alt="" /></a>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-	<div class="mdui-list " style="margin-bottom: 76px;">
-	<a href="/">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+    <div class="mdui-list " style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			home
 			</i>
-			<div class="mdui-list-item-content">
-				
-					主页
-				
-			</div>
-		</li>
-		</a>
-	<a href="/archive.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			archive
 			</i>
-			<div class="mdui-list-item-content">
-				
-					所有文章
-				
-			</div>
-		</li>
-		</a>
-		<a href="/tag.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			apps
 			</i>
-			<div class="mdui-list-item-content">
-				
-					标签
-				
-			</div>
-		</li>
-		</a>
-		<a href="/gays.html">
-		<li class="mdui-list-item mdui-ripple">
-		
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			people
 			</i>
-			<div class="mdui-list-item-content">
-				
-					好基友
-				
-			</div>
-			
-		</li>
-		</a>
-		<a href="/about.w568w.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			account_circle
 			</i>
-			<div class="mdui-list-item-content">
-				
-					关于我
-				
-			</div>
-		</li>
-		</a>
-		
-		<a href="/atom.xml">
-		<li class="mdui-list-item mdui-ripple">
-		
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			rss_feed
 			</i>
-			<div class="mdui-list-item-content">
-				
-					订阅
-				
-			</div>
-		</li>
-		</a>
-		
-		<li class="mdui-list-item mdui-ripple">
-		
-			
-			<div class="mdui-list-item-content" style="font-size:12px">
-				
-					您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
-				
-			</div>
-		</li>
-		</li>
-	</div>
+                <div class="mdui-list-item-content">
 
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
+
+            </div>
+        </li>
+        </li>
+    </div>
+    
 </div>
             <article class="main tag">
                 <header class="site">

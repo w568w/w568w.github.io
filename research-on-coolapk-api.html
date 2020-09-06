@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="Cache-Control" content="no-siteapp">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
@@ -54,23 +55,46 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
 <script src="lazysizes.min.js" async></script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
 
-        <meta name="keywords" content="">
-        <meta name="description" content="酷安API的相关研究和整理">
-        <meta name="author" content="w568w">
-        <title>酷安API的相关研究和整理</title>
-    </head>
-    <body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
-        <article class="container">
-            <script>
-	var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
 
+
+    <meta name="keywords" content="">
+    <meta name="description" content="酷安API的相关研究和整理">
+    <meta name="author" content="w568w">
+    <title>酷安API的相关研究和整理</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
@@ -79,165 +103,175 @@
 <script src="./cdn.js">
 </script>
 <script>
-$(function() {
-	var now = new Date();
-	if ((now.getMonth() == 11 && now.getDate() == 13) 
-		|| (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
-		document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
-	}
-});
-function search_close(){
-s=$("#search")[0];
-var ev = new Event('input', { bubbles: true});
-ev.simulated = true;
-s.value = '';
-s.dispatchEvent(ev);
-}
+    $(function() {
+        var now = new Date();
+        if ((now.getMonth() == 11 && now.getDate() == 13) ||
+            (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
+            document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
+        }
+    });
+
+    function search_close() {
+        s = $("#search")[0];
+        var ev = new Event('input', {
+            bubbles: true
+        });
+        ev.simulated = true;
+        s.value = '';
+        s.dispatchEvent(ev);
+    }
 </script>
 <header>
-	
-	<div class="mdui-appbar mdui-appbar-scroll-hide">
-		<div class="mdui-toolbar mdui-color-theme">
-			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
-				<i class="mdui-icon material-icons">
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
 					menu
 				</i>
-			</a>
-			<a href="/" class="mdui-typo-title">
+            </a>
+            <a href="/" class="mdui-typo-title">
 				行云小站
 			</a>
-			<div class="mdui-toolbar-spacer">
-			</div>
-			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
-			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
-			</div>
-			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
-				<i class="mdui-icon material-icons">
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange="" />
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
 					refresh
 				</i>
-			</a>
-		</div>
-	</div>
+            </a>
+        </div>
+    </div>
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
-<div class="mdui-grid-tile">
-  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
-  <div class="mdui-grid-tile-actions">
-    <div class="mdui-grid-tile-text">
-      <div class="mdui-grid-tile-title">行云小站</div>
-	  <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
-	  <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
-	  
+    <div class="mdui-grid-tile">
+        <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600" loading="lazy" alt="" /></a>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-	<div class="mdui-list " style="margin-bottom: 76px;">
-	<a href="/">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+    <div class="mdui-list " style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			home
 			</i>
-			<div class="mdui-list-item-content">
-				
-					主页
-				
-			</div>
-		</li>
-		</a>
-	<a href="/archive.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			archive
 			</i>
-			<div class="mdui-list-item-content">
-				
-					所有文章
-				
-			</div>
-		</li>
-		</a>
-		<a href="/tag.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			apps
 			</i>
-			<div class="mdui-list-item-content">
-				
-					标签
-				
-			</div>
-		</li>
-		</a>
-		<a href="/gays.html">
-		<li class="mdui-list-item mdui-ripple">
-		
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			people
 			</i>
-			<div class="mdui-list-item-content">
-				
-					好基友
-				
-			</div>
-			
-		</li>
-		</a>
-		<a href="/about.w568w.html">
-		<li class="mdui-list-item mdui-ripple">
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			account_circle
 			</i>
-			<div class="mdui-list-item-content">
-				
-					关于我
-				
-			</div>
-		</li>
-		</a>
-		
-		<a href="/atom.xml">
-		<li class="mdui-list-item mdui-ripple">
-		
-			<i class="mdui-icon material-icons mdui-list-item-icon">
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
 			rss_feed
 			</i>
-			<div class="mdui-list-item-content">
-				
-					订阅
-				
-			</div>
-		</li>
-		</a>
-		
-		<li class="mdui-list-item mdui-ripple">
-		
-			
-			<div class="mdui-list-item-content" style="font-size:12px">
-				
-					您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
-				
-			</div>
-		</li>
-		</li>
-	</div>
+                <div class="mdui-list-item-content">
 
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">Unknown</span>&nbsp;提供
+
+            </div>
+        </li>
+        </li>
+    </div>
+    
 </div>
+
+        <div class="mdui-card" style="width: max-content; position: relative;margin: 5% auto;">
+            <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                <span id="date" class="date mdui-card-header-subtitle" data-time="1515046800"><span class="from"></span></span>
+                
+
+            </div>
             <article class="main article">
-                <h1 class="title">酷安API的相关研究和整理</h1>
-                <section class="info">
-                    <span class="avatar" style="background-image: url(/images/avatar.gif);"></span>
-                    <a class="name" href="/about.w568w.html">w568w</a>
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">酷安API的相关研究和整理</div>
+                    <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                    </span>
+                </div>
+                <div class="mdui-card-content">
                     
-                    <span id="date" class="date" data-time="1515046800"><span class="from"></span></span>
-                    
-                    <span id="busuanzi_container_page_pv">
-本文已被读<span id="busuanzi_value_page_pv"></span>次
-</span>
-                    <span class="tags"></span>
-                </section>
-                <article class="content"><h1>废话</h1>
+                    <section class="info">
+                        <span class="tags"></span>
+                    </section>
+                    <article class="content"><h1>废话</h1>
 
 <p>新年要到了&hellip;在这里祝各位新年快乐，顺便分享一堆干货<br />
 这里参考了<a href="https://github.com/bjzhou/Coolapk-kotlin">bjzhou/Coolapk-kotlin这个项目</a>，看起来似乎是官方人员做的，非常感谢！<br />
@@ -695,26 +729,26 @@ public class ApplicationProxy extends Application {
 <p>未完待续&hellip;<del>(其实是博主懒得写)</del><br />
 如果你等不及要试用一下酷安的api，请<a href="https://github.com/w568w/CoolapkSDK">关注这个项目</a></p>
 </article>
-                <section class="author">
-                    <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
-                    <a class="name" href="/about.w568w.html">w568w</a>
-                    <div class="intro">梦想改变自己的疯子。</div>
-                </section>
-                <section class="recommend">
-                    
-                    <section class="nav prev more">
-                        <div class="head">上篇文章</div>
-                        <a class="link" href="/swiperefreshlayout-fucked-problem.html">SwipeRefreshLayout下拉不显示进度圈</a>
+                    <section class="author">
+                        
+                        <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                        <a class="name" href="/about.w568w.html">w568w</a>
+                        <div class="intro">梦想改变自己的疯子。</div>
+                    </section>
+                    <section class="recommend">
+                        
+                        <section class="nav prev more">
+                            <div class="head">上篇文章</div>
+                            <a class="link" href="/swiperefreshlayout-fucked-problem.html">SwipeRefreshLayout下拉不显示进度圈</a>
+                        </section>
+                         
+                        <section class="nav next more">
+                            <div class="head">下篇文章</div>
+                            <a class="link" href="/a-tiring-xposed-problem.html">Xposed模块本体向Hook类传递信息的研究</a>
+                        </section>
+                        
                     </section>
                     
-                    
-                    <section class="nav next more">
-                        <div class="head">下篇文章</div>
-                        <a class="link" href="/a-tiring-xposed-problem.html">Xposed模块本体向Hook类传递信息的研究</a>
-                    </section>
-                    
-                </section>
-                
 <style>
 .ThanksForInvitingLabel {
 	padding: 12px;
@@ -760,8 +794,10 @@ white-space: nowrap;
 
 
             </article>
-        </article>
-        <footer class="footer">
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
     <span class="copyright">
         行云小站 © 2016 - 
         <script type="text/javascript">
@@ -774,6 +810,7 @@ white-space: nowrap;
     <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a> 和 <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a><img src="./images/upyun.png" style="height:15px;"> </span>
 </footer>
 
-        <script src="/bundle/index.js"></script>
-    </body>
+    <script src="/bundle/index.js"></script>
+</body>
+
 </html>
