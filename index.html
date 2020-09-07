@@ -58,29 +58,6 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
 </script>
 
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
-
-
 
     <meta name="keywords" content="Say hello to you!">
     <meta name="description" content="Say hello to you!">
@@ -327,6 +304,35 @@
                         <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
                         <div class="mdui-card-header-title">w568w</div>
                         
+                        <span class="date mdui-card-header-subtitle" data-time="1599480900"><span class="from"></span></span>
+                        
+
+                    </div>
+                    <a href="/atri-galgame.html">
+                        <div class="mdui-card-media">
+                            
+                            <img src="images/atri-wp.webp" loading="lazy" alt="" /> 
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">《ATRI -My Dear Moments-》通关后感想</div>
+                                    <div class="mdui-card-primary-subtitle"><p>无剧透评价，放心观看</p>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="height:24px"></div>
+
+                
+                
+
+                <div class="mdui-card">
+
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                        <div class="mdui-card-header-title">w568w</div>
+                        
                         <span class="date mdui-card-header-subtitle" data-time="1595595840"><span class="from"></span></span>
                         
 
@@ -513,35 +519,6 @@
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">Hello 2019</div>
                                     <div class="mdui-card-primary-subtitle"><p>新的一年，新的开始</p>
-</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div style="height:24px"></div>
-
-                
-                
-
-                <div class="mdui-card">
-
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1539944760"><span class="from"></span></span>
-                        
-
-                    </div>
-                    <a href="/calculus-1st.html">
-                        <div class="mdui-card-media">
-                            
-                            <img src="https://i.loli.net/2020/03/13/qxsIg1ZNnei26bT.jpg" loading="lazy" alt="" /> 
-                            <div class="mdui-card-media-covered mdui-card-media-covered">
-                                <div class="mdui-card-primary">
-                                    <div class="mdui-card-primary-title">零基础微积分入门基本教程（一）</div>
-                                    <div class="mdui-card-primary-subtitle"><p>可能是最简单易懂的微积分打开方式</p>
 </div>
                                 </div>
                             </div>

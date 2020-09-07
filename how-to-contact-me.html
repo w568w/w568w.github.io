@@ -55,29 +55,6 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"/>
 </script>
 
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
-
-
 
     <meta name="keywords" content="">
     <meta name="description" content="如何联系到失联的博主">
@@ -311,7 +288,7 @@
                          
                         <section class="nav next more">
                             <div class="head">下篇文章</div>
-                            <a class="link" href="/before-ncee.html">向往的彼方</a>
+                            <a class="link" href="/atri-galgame.html">《ATRI -My Dear Moments-》通关后感想</a>
                         </section>
                         
                     </section>

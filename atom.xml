@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-09-07T07:44:46+08:00</updated>
+  <updated>2020-09-07T20:16:23+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -23,6 +23,16 @@
     <id>tag:w568w.github.io,2019-04-19:/how-to-contact-me.html</id>
     <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/how-to-contact-me.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>《ATRI -My Dear Moments-》通关后感想</title>
+    <updated>2020-09-07T20:15:00+08:00</updated>
+    <id>tag:w568w.github.io,2020-09-07:/atri-galgame.html</id>
+    <content type="html">&lt;p&gt;无剧透评价，放心观看&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.github.io/atri-galgame.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.github.io,2019-01-05:/2019-new-year.html</id>
     <content type="html">&lt;p&gt;新的一年，新的开始&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/2019-new-year.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>零基础微积分入门基本教程（一）</title>
-    <updated>2018-10-19T18:26:00+08:00</updated>
-    <id>tag:w568w.github.io,2018-10-19:/calculus-1st.html</id>
-    <content type="html">&lt;p&gt;可能是最简单易懂的微积分打开方式&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.github.io/calculus-1st.html"></link>
     <author>
       <name>w568w</name>
     </author>
