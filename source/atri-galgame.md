@@ -1,6 +1,6 @@
 title: "《ATRI -My Dear Moments-》通关后感想"
 date: 2020-09-07 20:15:00 +0800
-update: 2020-09-08 13:55:00 +8000
+update: 2020-09-08 13:55:00 +0800
 author: w568w
 cover: images/atri-wp.webp
 preview: 无剧透评价，放心观看
