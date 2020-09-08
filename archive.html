@@ -65,6 +65,19 @@
         <meta name="description" content="Say hello to you!">
         <meta name="author" content="">
         <title>行云小站</title>
+        <style>
+            @media (max-width: 767px) {
+                .mdui-card {
+                    width: auto;
+                }
+            }
+    
+            @media only screen and (min-width: 768px) {
+                .mdui-card {
+                    width: max-content;
+                }
+            }
+        </style>
     </head>
     <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
 	
@@ -226,15 +239,17 @@
     </div>
     
 </div>
-            <article class="main archive">
-                <header class="site">
-                    <h1 class="title">行云小站</h1>
-                    <h2 class="subtitle">Say hello to you!</h2>
-                </header>
-                <header class="header">
-                    <span class="title">所有文章 -</span>
-                    <span class="subtitle">18 篇文章</span>
-                </header>
+            <div class="mdui-card" style="position: relative;margin: 5% auto;">
+                <div class="mdui-card-header">
+                    
+                        <span class="mdui-card-header-title">所有文章</span>
+                        <span class="mdui-card-header-subtitle">18 篇文章</span>
+                    
+                </div>
+            <article class="main archive" style="padding: 0;">
+                
+                
+            <div class="mdui-card-content">
                 <ul class="archive-list">
                     
                     <li class="archive-item">
@@ -356,7 +371,9 @@
                     </li>
                     
                 </ul>
+            </div>
             </article>
+        </div>
         </article>
         <footer class="footer">
     <span class="copyright">
@@ -368,7 +385,8 @@
 		 <a href="https://icp.gov.moe" target="_blank">萌えサイトの記録</a><a href="https://icp.gov.moe/?keyword=20203115" target="_blank"> #20203115</a>
     </span>
    
-    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a> 和 <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a><img src="./images/upyun.png" style="height:15px;"> </span>
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a> 和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank">InkMaterial</a>主题</span>
+    
 </footer>
 
     </body>

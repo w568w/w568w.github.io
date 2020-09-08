@@ -30,11 +30,12 @@
             <div class="mdui-card-header">
                 {{if .Author.Avatar}}<img class="mdui-card-header-avatar" src="{{.Author.Avatar}}" />{{end}}
                 {{if .Author.Name}}<a class="mdui-card-header-title"
-                    href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}} {{if .Update}}
-                <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from"></span></span>
+                    href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}} 
+                {{if .Update}}
+                <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from">创建时间被隐藏</span></span>
                 {{else}}
                 <span id="date" class="date mdui-card-header-subtitle" data-time="{{.Date}}"><span
-                        class="from"></span></span>
+                        class="from">创建时间被隐藏</span></span>
                 {{end}}
 
             </div>

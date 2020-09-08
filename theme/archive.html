@@ -6,20 +6,38 @@
         <meta name="description" content="{{.Site.Subtitle}}">
         <meta name="author" content="{{.Author.Name}}">
         <title>{{.Site.Title}}</title>
+        <style>
+            @media (max-width: 767px) {
+                .mdui-card {
+                    width: auto;
+                }
+            }
+    
+            @media only screen and (min-width: 768px) {
+                .mdui-card {
+                    width: max-content;
+                }
+            }
+        </style>
     </head>
     <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
 	
         <article class="container">
             {{template "header" .}}
-            <article class="main archive">
-                <header class="site">
-                    <h1 class="title">{{.Site.Title}}</h1>
-                    <h2 class="subtitle">{{.Site.Subtitle}}</h2>
-                </header>
-                <header class="header">
-                    <span class="title">{{i18n "archive"}} -</span>
-                    <span class="subtitle">{{.Total}} {{i18n "articles"}}</span>
-                </header>
+            <div class="mdui-card" style="position: relative;margin: 5% auto;">
+                <div class="mdui-card-header">
+                    <!-- <header class="header"> -->
+                        <span class="mdui-card-header-title">{{i18n "archive"}}</span>
+                        <span class="mdui-card-header-subtitle">{{.Total}} {{i18n "articles"}}</span>
+                    <!-- </header> -->
+                </div>
+            <article class="main archive" style="padding: 0;">
+                <!-- <header class="site">
+                    <h1 class="title" style="color: whitesmoke;">{{.Site.Title}}</h1>
+                    <h2 class="subtitle" style="color: white;">{{.Site.Subtitle}}</h2>
+                </header> -->
+                
+            <div class="mdui-card-content">
                 <ul class="archive-list">
                     {{range .Archive}}
                     <li class="archive-item">
@@ -35,7 +53,9 @@
                     </li>
                     {{end}}
                 </ul>
+            </div>
             </article>
+        </div>
         </article>
         {{template "footer" .}}
     </body>

@@ -61,6 +61,29 @@
 
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
     <meta name="keywords" content="">
     <meta name="description" content="酷安API的相关研究和整理">
@@ -246,8 +269,9 @@
                 <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
                 <a class="mdui-card-header-title"
                     href="/about.w568w.html">w568w</a> 
+                
                 <span id="date" class="date mdui-card-header-subtitle" data-time="1515046800"><span
-                        class="from"></span></span>
+                        class="from">创建时间被隐藏</span></span>
                 
 
             </div>
@@ -799,7 +823,8 @@ white-space: nowrap;
 		 <a href="https://icp.gov.moe" target="_blank">萌えサイトの記録</a><a href="https://icp.gov.moe/?keyword=20203115" target="_blank"> #20203115</a>
     </span>
    
-    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a> 和 <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">又拍云</a><img src="./images/upyun.png" style="height:15px;"> </span>
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank">Ink</a> 和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank">InkMaterial</a>主题</span>
+    
 </footer>
 
     <script src="/bundle/index.js"></script>
