@@ -18,6 +18,8 @@ type: page
 
 
 # 200 OK
+## [残页的小博客](https://blog.canyie.top/)
+16岁的少年，喜欢编程，喜欢航空。  
 ## [欢迎委员](https://hywy.baklib.com/)  
 这个人很懒，什么都没有留下  
 ## [PasserBlog](https://takuron.top/)  
