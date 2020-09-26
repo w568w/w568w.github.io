@@ -9,10 +9,10 @@ author: w568w
 
 一个梦想改变自己的疯子。  
 
-安徽 准FDU大一学生 Android业余开发者  
+安徽 复旦大一学生 Android业余开发者  
 
-使用系统：Windows 10 Home Edition 
-开发工具：Android Studio 4.0.1 Stable
+使用系统：Windows 10 Home Edition  
+开发工具：Android Studio 4.0.1 Stable  
 
   
 [在Github上找我](https://github.com/w568w/)   
@@ -23,7 +23,7 @@ author: w568w
 [在网易云音乐上找我](https://music.163.com/#/user/home?id=322083123)  
 
 # 一个怎样的人?
-刚刚高考结束的准大一狗，正在忙着准备上大学...   
+刚刚高考结束的大一狗，正在忙着上大学...   
   
 - [进步保守主义](https://en.wikipedia.org/wiki/Progressive_conservatism)者<font size=1 >（[这是什么？](javascript:alert(\"进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。\"))） </font>
 - 轻度焦虑症、重度拖延症患者 
@@ -64,7 +64,7 @@ author: w568w
 ## 人类语种
 - 中文: 母语
 - 英语(English): 约 CET4 水平
-- 日语(日本語): 约 N5 水平
+- 日语(日本語): 约 N5 水平(目前在狂背单词中ww)
 - 世界语(Esperanto): 仅基本语法
 - 塔语(Hymmnos): 仅基本语法(想音句)    
    
