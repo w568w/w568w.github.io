@@ -14,10 +14,12 @@ type: page
 
 ---
   
-(以下按友情链接的添加/更新时间降序排列)  
+(以下按 友情链接的添加/更新时间 从新到旧排序)  
 
 
 # 200 OK
+## [KYLN](https://kyln24.github.io/)
+KYLN 的一隅小站  
 ## [残页的小博客](https://blog.canyie.top/)
 16岁的少年，喜欢编程，喜欢航空。  
 ## [欢迎委员](https://hywy.baklib.com/)  
@@ -30,7 +32,7 @@ type: page
 某一中高一学生/啥也不会的萌新小白白  
 ## [Tsuasahi](http://tsuasahi.com/)
 静海一中高二学生/大概是一条咸鱼了吧...  
-(__PS:已超过一年未更新内容__)  
+(__PS:已超过2年未更新内容__)  
 ## [853](http://blog.853lab.com/)   
 目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。
 ## [一块小板子](https://oboard.github.io/index.html)  
