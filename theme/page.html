@@ -11,7 +11,7 @@
     <title>{{.Site.Title}}</title>
 </head>
 
-<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto">
 
     <article class="container">
         {{template "header" .}}
@@ -47,7 +47,7 @@
                         </section>
                     </li> -->
 
-                <div class="mdui-card">
+                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
 
                     <div class="mdui-card-header">
                         <img class="mdui-card-header-avatar" src="{{.Author.Avatar}}" />
@@ -82,14 +82,11 @@
                 {{end}}
             </ul>
             <section>
-                {{if .Prev}}<a class="prev mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-btn-block"
-                    href="{{.Site.Root}}/{{.Prev}}">{{i18n "prev_page"}}</a>{{end}} 
-                    {{if ne .Total 1}}<span class="nav"
-                    style="color: whitesmoke;">{{.Page}} / {{.Total}}</span>
-                    {{end}} 
+                {{if .Prev}}<a class="prev mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn-block mdui-hoverable"
+                    href="{{.Site.Root}}/{{.Prev}}">{{i18n "prev_page"}} {{.Page}} / {{.Total}}</a>{{end}} 
                     {{if .Next}}<a
-                    class="next mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-btn-block"
-                    href="{{.Site.Root}}/{{.Next}}">{{i18n "next_page"}}</a>{{end}}
+                    class="next mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn-block mdui-hoverable"
+                    href="{{.Site.Root}}/{{.Next}}">{{i18n "next_page"}} {{.Page}} / {{.Total}}</a>{{end}}
             </section>
         </article>
     </article>

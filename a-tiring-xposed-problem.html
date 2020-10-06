@@ -54,7 +54,10 @@
 
 
 
-
+<link
+    rel="stylesheet"
+    href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 <link href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css" rel="stylesheet" ></link>
 <script src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js" ></script>
 <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
@@ -89,9 +92,10 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 
-
-
 <script>
+    
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+    
     $(function() {
         var now = new Date();
         if ((now.getMonth() == 11 && now.getDate() == 13) ||
@@ -99,7 +103,7 @@
             document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
         }
     });
-
+    
     function search_close() {
         s = $("#search")[0];
         var ev = new Event('input', {
@@ -109,6 +113,13 @@
         s.value = '';
         s.dispatchEvent(ev);
     }
+    
+    
+    
+    
+    
+    
+    
 </script>
 <header>
     
@@ -139,7 +150,7 @@
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
     <div class="mdui-grid-tile">
-        <a href="javascript:;"><img src="https://source.unsplash.com/random/800x600" loading="lazy" alt="" /></a>
+        <a><img src="https://source.unsplash.com/random/400x300" alt="" /></a>
         <div class="mdui-grid-tile-actions">
             <div class="mdui-grid-tile-text">
                 <div class="mdui-grid-tile-title">行云小站</div>
@@ -240,8 +251,8 @@
     </div>
     
 </div>
-
-        <div class="mdui-card" style="  position: relative;margin: 5% auto;">
+        <div style="padding: 5% 0 5% 0; ">
+        <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
             <div class="mdui-card-header">
                 <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
                 <a class="mdui-card-header-title"
@@ -361,6 +372,7 @@ white-space: nowrap;
 
 
             </article>
+        </div>
         </div>
         </div>
     </article>
