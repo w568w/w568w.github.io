@@ -1,7 +1,7 @@
 title: "大学教会了我什么"
 date: 2020-10-14 09:08:25 +0800
 author: w568w
-cover: images/fudan.jpg
+cover: images/fudan.webp
 preview: 大学的生活，比想象中要精彩，比想象中更无趣。
 ---
 进入大学生活有一个月了。  

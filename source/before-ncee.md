@@ -1,7 +1,7 @@
 title: "向往的彼方"
 date: 2020-07-24 21:04:00 +0800
 author: w568w
-cover: images/gaokao.jpg
+cover: images/gaokao.webp
 preview: 写于高考前夜…以及高考后
 ---
 ![图片来源:https://www.zcool.com.cn/work/ZMjkzMTA1Mg==.html](images/gaokao.jpg)  
