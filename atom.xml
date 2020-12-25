@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-12-21T15:22:38Z</updated>
+  <updated>2020-12-25T23:34:41+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -13,6 +13,16 @@
     <id>tag:w568w.github.io,2020-12-21:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/todo-list.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>2021年，一年又一年</title>
+    <updated>2020-12-25T23:33:25+08:00</updated>
+    <id>tag:w568w.github.io,2020-12-25:/2021-future.html</id>
+    <content type="html">&lt;p&gt;时间似水如月，捉摸不定&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.github.io/2021-future.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.github.io,2020-03-11:/2020-hopes.html</id>
     <content type="html">&lt;p&gt;为什么我在今年高考？！！&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/2020-hopes.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>如何联系到失联的博主</title>
-    <updated>2019-04-19T15:49:19+08:00</updated>
-    <id>tag:w568w.github.io,2019-04-19:/how-to-contact-me.html</id>
-    <content type="html">&lt;p&gt;关于博主的一些联系方式&amp;hellip;&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.github.io/how-to-contact-me.html"></link>
     <author>
       <name>w568w</name>
     </author>

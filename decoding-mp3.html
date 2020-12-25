@@ -63,7 +63,7 @@
 
 <script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js" ></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-<script async src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
 
 
 
@@ -588,7 +588,7 @@ public class MP3ToPCMTest extends AndroidTestCase {
         public void run() {
             try {
                 PCMdata = new MP3ToPCM()
-						.convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
+                        .convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
                 System.out.println(&quot;size:&quot; + PCMdata.length);
             } catch (IOException e) {
                 e.printStackTrace();
