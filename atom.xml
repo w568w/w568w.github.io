@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.github.io</id>
-  <updated>2020-12-25T15:36:18Z</updated>
+  <updated>2020-12-26T05:36:19Z</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.github.io"></link>
   <author>
@@ -19,8 +19,8 @@
   </entry>
   <entry>
     <title>2021年，一年又一年</title>
-    <updated>2020-12-25T23:33:25+08:00</updated>
-    <id>tag:w568w.github.io,2020-12-25:/2021-future.html</id>
+    <updated>2020-12-26T13:33:25+08:00</updated>
+    <id>tag:w568w.github.io,2020-12-26:/2021-future.html</id>
     <content type="html">&lt;p&gt;时间似水如月，捉摸不定&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.github.io/2021-future.html"></link>
     <author>
