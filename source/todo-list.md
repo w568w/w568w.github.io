@@ -1,11 +1,15 @@
 ﻿title: "博主的Todo List"
-date: 2020-12-21 23:12:25 +0800
+date: 2020-12-28 11:41:25 +0800
 author: w568w
 top: true
 cover: images/nikita-kachanovsky-445394-unsplash.jpg
 preview: 看看这家伙最近在搞什么大新闻？
 ---
 ![Photo by Nikita Kachanovsky on Unsplash](images/nikita-kachanovsky-445394-unsplash.jpg)
+
+这是个**更新很少，更新很慢的博主**，但请相信**Ta不会弃坑、Ta不会弃坑、Ta不会弃坑!!**   
+  
+(详细联系方式[请点这里](about.w568w.html))
 
 > ## 博主存活状态指示器
 > (用不怎么熟的JavaScript做的... 可以检查博主是不是弃坑了)
