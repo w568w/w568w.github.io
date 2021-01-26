@@ -1,5 +1,5 @@
 title: "博主的Todo List"
-date: 2021-01-25 23:41:25 +0800
+date: 2021-01-26 10:41:25 +0800
 author: w568w
 top: true
 cover: images/nikita-kachanovsky-445394-unsplash.jpg
@@ -22,7 +22,8 @@ preview: 看看这家伙最近在搞什么大新闻？
 + ~~写一个夜间模式App~~<span style="color:green;">(已初步完成，尚未发布)</span>
 + 写一个Android上的IDE  <span style="color:red;">(心有余而力不足，弃坑)</span>
 + ~~写一个叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:green;">(基本完成)</span>
-+ 准备期末考试<span style="color:red;">(进行中)</span>
++ ~~准备期末考试~~<span style="color:green;">(完成)</span>
++ 假期摸鱼<span style="color:red;">(进行中)</span>
 
 # 妄想部分
 + ~~[净眼](https://www.coolapk.com/apk/149408)达到20w下载量~~<span style="color:green;">(Get!但是被莫名其妙下架了 所以没法给人显摆)</span>
