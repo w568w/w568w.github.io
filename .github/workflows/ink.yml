@@ -52,7 +52,7 @@ jobs:
         env:
           GH_REF: github.com/w568w/w568w.github.io.git 
           ttoken:  ${{ secrets.TOKEN }}
-        uses: |
+        run: |
           git add .
           if [ $(git log -1 | grep -c "Update") -gt 0 ]; then echo "true";else git commit -m "Update"&&git push "https://${ttoken}@${GH_REF}" HEAD:master;fi
           
