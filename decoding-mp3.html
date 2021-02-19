@@ -52,6 +52,7 @@
 
 
 
+<script src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.1.3/lazyload.min.js"></script>
 
 
 <link
@@ -588,7 +589,7 @@ public class MP3ToPCMTest extends AndroidTestCase {
         public void run() {
             try {
                 PCMdata = new MP3ToPCM()
-						.convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
+                        .convert(getContext().getResources().openRawResourceFd(R.raw.mp3).getFileDescriptor());
                 System.out.println(&quot;size:&quot; + PCMdata.length);
             } catch (IOException e) {
                 e.printStackTrace();
