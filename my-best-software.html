@@ -67,6 +67,29 @@
 <script src='valine.min.js'></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
     <meta name="keywords" content="">
     <meta name="description" content="我心中的最佳软件合集">
@@ -412,18 +435,19 @@ PS:当然，各个人喜好不同，下面列出的只是鄙人在反复比较�
     </article>
     <footer class="footer">
     <span class="copyright">
-        行云小站 © 2015 - 
+        行云小站 © 2015 - <text id="thisyear"></text>
         <script type="text/javascript">
-            document.write(new Date().getFullYear());
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
         </script>
-		使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a> | 
-		 <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌えサイトの記録</a><a href="https://icp.gov.moe/?keyword=20203115" target="_blank" rel="noreferrer"> #20203115</a>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a> |
+        <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌えサイトの記録</a><a
+            href="https://icp.gov.moe/?keyword=20203115" target="_blank" rel="noreferrer"> #20203115</a>
     </span>
-   
-    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a> 和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank">InkMaterial</a> 主题</span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
     
 </footer>
-
     <script src="/bundle/index.js"></script>
 </body>
 

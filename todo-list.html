@@ -67,6 +67,29 @@
 <script src='valine.min.js'></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
     <meta name="keywords" content="">
     <meta name="description" content="博主的Todo List">
@@ -261,7 +284,7 @@
                 <a class="mdui-card-header-title"
                     href="/about.w568w.html">w568w</a> 
                 
-                <span id="date" class="date mdui-card-header-subtitle" data-time="1611628885"><span
+                <span id="date" class="date mdui-card-header-subtitle" data-time="1616458825"><span
                         class="from">创建时间被隐藏</span></span>
                 
 
@@ -301,7 +324,8 @@
 <li>写一个Android上的IDE  <span style="color:red;">(心有余而力不足，弃坑)</span></li>
 <li><del>写一个叫<a href="https://www.coolapk.com/apk/190247">Xposed Checker</a>的App</del><span style="color:green;">(基本完成)</span></li>
 <li><del>准备期末考试</del><span style="color:green;">(完成)</span></li>
-<li>假期摸鱼<span style="color:red;">(进行中)</span></li>
+<li>开学摸鱼<span style="color:red;">(进行中)</span></li>
+<li>写一个叫<a href="https://github.com/w568w/DanXi/">旦兮</a>的App<span style="color:red;">(进行中)</span></li>
 </ul>
 
 <h1>妄想部分</h1>
@@ -355,18 +379,19 @@
     </article>
     <footer class="footer">
     <span class="copyright">
-        行云小站 © 2015 - 
+        行云小站 © 2015 - <text id="thisyear"></text>
         <script type="text/javascript">
-            document.write(new Date().getFullYear());
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
         </script>
-		使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a> | 
-		 <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌えサイトの記録</a><a href="https://icp.gov.moe/?keyword=20203115" target="_blank" rel="noreferrer"> #20203115</a>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a> |
+        <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌えサイトの記録</a><a
+            href="https://icp.gov.moe/?keyword=20203115" target="_blank" rel="noreferrer"> #20203115</a>
     </span>
-   
-    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a> 和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank">InkMaterial</a> 主题</span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
     
 </footer>
-
     <script src="/bundle/index.js"></script>
 </body>
 
