@@ -1,39 +1,40 @@
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<meta http-equiv="Cache-Control" content="no-siteapp"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1"/>
-<meta name="renderer" content="webkit"/>
-<meta name="google" value="notranslate"/>
-<meta name="robots" content="index,follow"/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta name="google" value="notranslate" />
+<meta name="robots" content="index,follow" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="{{.Site.Title}}"/>
-<meta name="twitter:description" content="{{.Site.Subtitle}}"/>
-<meta name="twitter:image:src" content="{{.Site.Url}}{{.Site.Logo}}"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{.Site.Title}}" />
+<meta name="twitter:description" content="{{.Site.Subtitle}}" />
+<meta name="twitter:image:src" content="{{.Site.Url}}{{.Site.Logo}}" />
 <!-- Facebook -->
-<meta property="og:url" content="{{.Site.Url}}"/>
-<meta property="og:title" content="{{.Site.Title}}"/>
-<meta property="og:description" content="{{.Site.Subtitle}}"/>
-<meta property="og:site_name" content="{{.Site.Title}}"/>
-<meta property="og:image" content="{{.Site.Url}}{{.Site.Logo}}"/>
-<meta property="og:type" content="website"/>
-<meta name="robots" content="noodp"/>
+<meta property="og:url" content="{{.Site.Url}}" />
+<meta property="og:title" content="{{.Site.Title}}" />
+<meta property="og:description" content="{{.Site.Subtitle}}" />
+<meta property="og:site_name" content="{{.Site.Title}}" />
+<meta property="og:image" content="{{.Site.Url}}{{.Site.Logo}}" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noodp" />
 <!-- Google Plus -->
-<meta itemprop="name" content="{{.Site.Title}}"/>
-<meta itemprop="description" content="{{.Site.Subtitle}}"/>
-<meta itemprop="image" content="{{.Site.Url}}{{.Site.Logo}}"/>
+<meta itemprop="name" content="{{.Site.Title}}" />
+<meta itemprop="description" content="{{.Site.Subtitle}}" />
+<meta itemprop="image" content="{{.Site.Url}}{{.Site.Logo}}" />
 <!-- Canonical URL -->
-<link rel="canonical" href="{{.Site.Url}}"/>
+<link rel="canonical" href="{{.Site.Url}}" />
 
-<link rel="shortcut icon" href="{{.Site.Root}}/favicon.png"/>
-<link rel="apple-itouch-icon" href="{{.Site.Root}}/favicon.png"/>
-<link rel="stylesheet" href="{{.Site.Root}}/bundle/index.css"/>
+<link rel="shortcut icon" href="{{.Site.Root}}/favicon.png" />
+<link rel="apple-itouch-icon" href="{{.Site.Root}}/favicon.png" />
+<link rel="stylesheet" href="{{.Site.Root}}/bundle/index.css" />
 <!--Keep it load faster.-->
-<link rel="preconnect" href="https://cdn.bootcdn.net"/>
-<link rel="preconnect" href="https://busuanzi.ibruce.info"/>
-<link rel="dns-prefetch" href="https://cdn.bootcdn.net"/>
-<link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+<link rel="preconnect" href="https://cdn.bootcdn.net" />
+<link rel="preconnect" href="https://busuanzi.ibruce.info" />
+<link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+<link rel="dns-prefetch" href="https://busuanzi.ibruce.info" />
 <script type="text/javascript">
     var timeSinceLang = {
         year: '{{i18n "since_year"}}',
@@ -48,36 +49,34 @@
 
 
 
-<script src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.1.3/lazyload.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
 <!--MDUI加载-->
 
-<link
-    rel="stylesheet"
-    href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css" rel="stylesheet" ></link>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css" rel="stylesheet">
+</link>
 <!--Material Design 2.0-->
 <!-- <link href="https://cdn.w3cbus.com/mdui.org/static/theme/material/index.6c9202ea.css" rel="stylesheet" ></link> -->
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js" ></script>
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src='valine.min.js'></script>
 
 {{if .Develop}}
 <script type="text/javascript">
     var conn, reloadTimer, connectTimer;
-    var connect = function() {
+    var connect = function () {
         conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
+        conn.onmessage = function (event) {
             if (event.data === 'change') {
                 if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
+                reloadTimer = setTimeout(function () {
                     window.location.reload();
                 }, 200);
             }
         };
-        conn.onclose = function() {
+        conn.onclose = function () {
             if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
+            connectTimer = setTimeout(function () {
                 connect();
             }, 1000);
         };

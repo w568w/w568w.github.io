@@ -1,5 +1,5 @@
 <script>
-    var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();
+    var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s) })();
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
@@ -8,7 +8,7 @@
     //Set the animation duration
     document.documentElement.style.setProperty('--animate-duration', '.5s');
     //Check whether bad days or not
-    $(function() {
+    $(function () {
         var now = new Date();
         if ((now.getMonth() == 11 && now.getDate() == 13) ||
             (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
@@ -32,6 +32,12 @@
     //             clearInterval(f);
     //         }
     //     }, 500);
+
+    // Load images
+    window.addEventListener("load", function (event) {
+        console.log("LOAD!");
+        lazyload();
+    });
 </script>
 <header>
     <!-- <a class="index" href="{{.Site.Root}}/">
@@ -42,35 +48,39 @@
         <div class="mdui-toolbar mdui-color-theme">
             <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-icon material-icons">
-					menu
-				</i>
+                    menu
+                </i>
             </a>
             <a href="{{.Site.Root}}/" class="mdui-typo-title">
-				{{.Site.Title}}
-			</a>
+                {{.Site.Title}}
+            </a>
             <div class="mdui-toolbar-spacer">
             </div>
             <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">search</i></button>
                 <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange="" />
-                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
+                        class="mdui-icon material-icons">close</i></button>
             </div>
             <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
                 <i class="mdui-icon material-icons">
-					refresh
-				</i>
+                    refresh
+                </i>
             </a>
         </div>
     </div>
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
     <div class="mdui-grid-tile">
-        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300" />
         <div class="mdui-grid-tile-actions">
             <div class="mdui-grid-tile-text">
                 <div class="mdui-grid-tile-title">{{.Site.Title}}</div>
                 <div class="mdui-grid-tile-subtitle">{{.Site.Subtitle}}</div>
-                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a
+                        href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a>
+                </div>
 
             </div>
         </div>
@@ -79,8 +89,8 @@
         <a href="{{.Site.Root}}/">
             <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-icon material-icons mdui-list-item-icon">
-			home
-			</i>
+                    home
+                </i>
                 <div class="mdui-list-item-content">
 
                     主页
@@ -91,8 +101,8 @@
         <a href="{{.Site.Root}}/archive.html">
             <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-icon material-icons mdui-list-item-icon">
-			archive
-			</i>
+                    archive
+                </i>
                 <div class="mdui-list-item-content">
 
                     {{i18n "archive"}}
@@ -103,8 +113,8 @@
         <a href="{{.Site.Root}}/tag.html">
             <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-icon material-icons mdui-list-item-icon">
-			apps
-			</i>
+                    apps
+                </i>
                 <div class="mdui-list-item-content">
 
                     {{i18n "tag"}}
@@ -116,8 +126,8 @@
             <li class="mdui-list-item mdui-ripple">
 
                 <i class="mdui-icon material-icons mdui-list-item-icon">
-			people
-			</i>
+                    people
+                </i>
                 <div class="mdui-list-item-content">
 
                     好基友
@@ -129,8 +139,8 @@
         <a href="{{.Site.Root}}/about.w568w.html">
             <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-icon material-icons mdui-list-item-icon">
-			account_circle
-			</i>
+                    account_circle
+                </i>
                 <div class="mdui-list-item-content">
 
                     关于我
@@ -143,8 +153,8 @@
             <li class="mdui-list-item mdui-ripple">
 
                 <i class="mdui-icon material-icons mdui-list-item-icon">
-			rss_feed
-			</i>
+                    rss_feed
+                </i>
                 <div class="mdui-list-item-content">
 
                     {{i18n "rss"}}

@@ -1,5 +1,5 @@
 title: "博主的Todo List"
-date: 2021-03-23 08:20:25 +0800
+date: 2021-06-27 14:42:25 +0800
 author: w568w
 top: true
 cover: images/nikita-kachanovsky-445394-unsplash.jpg
@@ -23,7 +23,7 @@ preview: 看看这家伙最近在搞什么大新闻？
 + 写一个Android上的IDE  <span style="color:red;">(心有余而力不足，弃坑)</span>
 + ~~写一个叫[Xposed Checker](https://www.coolapk.com/apk/190247)的App~~<span style="color:green;">(基本完成)</span>
 + ~~准备期末考试~~<span style="color:green;">(完成)</span>
-+ 开学摸鱼<span style="color:red;">(进行中)</span>
++ 期末复习中<span style="color:red;">(进行中)</span>
 + 写一个叫[旦兮](https://github.com/w568w/DanXi/)的App<span style="color:red;">(进行中)</span>
 
 # 妄想部分
