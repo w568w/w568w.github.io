@@ -1,0 +1,29 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>复旦教务系统课程表导入辅助工具</title>
+</head>
+
+<body>
+    <h1>复旦教务系统课程表导入辅助工具</h1>
+    <h2>为什么你会看到这个页面？</h2>
+    <p>一切都是因为教务系统的页面有巨大的兼容性问题，导致它压根没办法在小米设备里正确显示。这个工具是为了使得你可以通过小爱课程表的内置浏览器导入课程表~</p>
+    <h2>我该怎么做？</h2>
+    <ol>
+        <li>查看一下<a href="">使用说明</a></li>
+        <li>在下面粘贴你获得的源码，然后按一下确定:<p><textarea id="message"></textarea>
+            </p>
+            <p><input type="button"
+                    onclick="document.getElementById('value_box').innerHTML = document.getElementById('message').value"
+                    value="确定"></input></p>
+        </li>
+        <li>大骂一声信息办，然后按下面的[一键导入]即可</li>
+    </ol>
+
+    <div id="value_box" style="display: none;"></div>
+</body>
+
+</html>
