@@ -18,6 +18,9 @@ type: page
 
 
 # 200 OK
+
+## [imlk’s blog](https://blog.imlk.top/)
+无家可归的北邮人/怀柔蹲监狱/学啥啥不会/Rustacean  
 ## [鱼雨昱](https://yuu.ink/)
 知道要干什么，但是却没有完全知道。  
 ## [KYLN](https://kyln24.github.io/)
