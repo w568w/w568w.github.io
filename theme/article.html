@@ -12,7 +12,7 @@
                 width: auto;
             }
         }
-
+        
         @media only screen and (min-width: 768px) {
             .mdui-card {
                 width: max-content;
@@ -26,56 +26,53 @@
     <article class="container">
         {{template "header" .}}
         <div style="padding: 5% 0 5% 0; ">
-        <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
-            <div class="mdui-card-header">
-                {{if .Author.Avatar}}<img class="mdui-card-header-avatar" src="{{.Author.Avatar}}" />{{end}}
-                {{if .Author.Name}}<a class="mdui-card-header-title"
-                    href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}} 
-                {{if .Update}}
-                <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from">创建时间被隐藏</span></span>
-                {{else}}
-                <span id="date" class="date mdui-card-header-subtitle" data-time="{{.Date}}"><span
+            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    {{if .Author.Avatar}}<img class="mdui-card-header-avatar" src="{{.Author.Avatar}}" />{{end}} {{if .Author.Name}}<a class="mdui-card-header-title" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}} {{if .Update}}
+                    <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from">创建时间被隐藏</span></span>
+                    {{else}}
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="{{.Date}}"><span
                         class="from">创建时间被隐藏</span></span>
-                {{end}}
+                    {{end}}
 
-            </div>
-            <article class="main article">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">{{.Title}}</div>
-                    <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
-                        本文已被读<span id="busuanzi_value_page_pv"></span>次
-                    </span>
                 </div>
-                <div class="mdui-card-content">
-                    <!-- <h1 class="title">{{.Title}}</h1> -->
-                    <section class="info">
-                        <span class="tags">{{range .Tags}}<a class="tag"
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">{{.Title}}</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        <!-- <h1 class="title">{{.Title}}</h1> -->
+                        <section class="info">
+                            <span class="tags">{{range .Tags}}<a class="tag"
                                 href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
-                    </section>
-                    <article class="content">{{.Content}}</article>
-                    <section class="author">
-                        {{if .Author.Avatar}}
-                        <div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
-                        <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>
-                        <div class="intro">{{.Author.Intro}}</div>
-                    </section>
-                    <section class="recommend">
-                        {{if .Prev}}
-                        <section class="nav prev{{if .Next}} more{{end}}">
-                            <div class="head">{{i18n "prev_reading"}}</div>
-                            <a class="link" href="{{.Site.Root}}/{{.Prev.Link}}">{{.Prev.Title}}</a>
                         </section>
-                        {{end}} {{if .Next}}
-                        <section class="nav next{{if .Prev}} more{{end}}">
-                            <div class="head">{{i18n "next_reading"}}</div>
-                            <a class="link" href="{{.Site.Root}}/{{.Next.Link}}">{{.Next.Title}}</a>
+                        <article class="content">{{.Content}}</article>
+                        <section class="author">
+                            {{if .Author.Avatar}}
+                            <div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
+                            <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>
+                            <div class="intro">{{.Author.Intro}}</div>
                         </section>
-                        {{end}}
-                    </section>
-                    {{template "comment" .}}
-            </article>
-        </div>
-        </div>
+                        <section class="recommend">
+                            {{if .Prev}}
+                            <section class="nav prev{{if .Next}} more{{end}}">
+                                <div class="head">{{i18n "prev_reading"}}</div>
+                                <a class="link" href="{{.Site.Root}}/{{.Prev.Link}}">{{.Prev.Title}}</a>
+                            </section>
+                            {{end}} {{if .Next}}
+                            <section class="nav next{{if .Prev}} more{{end}}">
+                                <div class="head">{{i18n "next_reading"}}</div>
+                                <a class="link" href="{{.Site.Root}}/{{.Next.Link}}">{{.Next.Title}}</a>
+                            </section>
+                            {{end}}
+                        </section>
+                        {{template "comment" .}}
+                </article>
+                </div>
+            </div>
         </div>
     </article>
     {{template "footer" .}}

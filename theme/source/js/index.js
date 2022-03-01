@@ -142,6 +142,11 @@ $(function() {
   // append image description
   $('img').each(function(idx, item) {
     $item = $(item)
+    console.log($item)
+    if($item.attr('alt')=='no-link'){
+      console.log("No link found! no link is pressed")
+      return;
+    }
     if ($item.attr('data-src')) {
       $item.wrap('<a href="' + $item.attr('data-src') + '" target="_blank"></a>')
       var imageAlt = $item.prop('alt')

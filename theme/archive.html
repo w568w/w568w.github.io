@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {{template "head" .}}
-        <meta name="keywords" content="{{.Site.Title}}, {{.Site.Subtitle}}">
-        <meta name="description" content="{{.Site.Subtitle}}">
-        <meta name="author" content="{{.Author.Name}}">
-        <title>{{.Site.Title}}</title>
-        <style>
-            @media (max-width: 767px) {
-                .mdui-card {
-                    width: auto;
-                }
+
+<head>
+    {{template "head" .}}
+    <meta name="keywords" content="{{.Site.Title}}, {{.Site.Subtitle}}">
+    <meta name="description" content="{{.Site.Subtitle}}">
+    <meta name="author" content="{{.Author.Name}}">
+    <title>{{.Site.Title}}</title>
+    <style>
+        @media (max-width: 767px) {
+            .mdui-card {
+                width: auto;
             }
-    
-            @media only screen and (min-width: 768px) {
-                .mdui-card {
-                    width: max-content;
-                }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .mdui-card {
+                width: max-content;
             }
-        </style>
-    </head>
-    <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
-	
-        <article class="container">
-            {{template "header" .}}
-            <div class="mdui-card" style="position: relative;margin: 5% auto;">
+        }
+    </style>
+</head>
+
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+
+    <article class="container">
+        {{template "header" .}}
+        <div style="padding: 5% 0 5% 0; ">
+            <div class="mdui-card" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     <!-- <header class="header"> -->
-                        <span class="mdui-card-header-title">{{i18n "archive"}}</span>
-                        <span class="mdui-card-header-subtitle">{{.Total}} {{i18n "articles"}}</span>
+                    <span class="mdui-card-header-title">{{i18n "archive"}}</span>
+                    <span class="mdui-card-header-subtitle">{{.Total}} {{i18n "articles"}}</span>
                     <!-- </header> -->
                 </div>
-            <article class="main archive" style="padding: 0;">
-                <!-- <header class="site">
+                <article class="main archive" style="padding: 0;">
+                    <!-- <header class="site">
                     <h1 class="title" style="color: whitesmoke;">{{.Site.Title}}</h1>
                     <h2 class="subtitle" style="color: white;">{{.Site.Subtitle}}</h2>
                 </header> -->
-                
-            <div class="mdui-card-content">
-                <ul class="archive-list">
-                    {{range .Archive}}
-                    <li class="archive-item">
-                        <div class="archive-year">{{.Year}}</div>
-                        <ul class="article-list">
-                            {{range .Articles}}
-                            <li class="article-item">
-                                <span class="date">{{.Date}}</span>
-                                <a href="{{.Link}}">{{.Title}}</a>
+
+                    <div class="mdui-card-content">
+                        <ul class="archive-list">
+                            {{range .Archive}}
+                            <li class="archive-item">
+                                <div class="archive-year">{{.Year}}</div>
+                                <ul class="article-list">
+                                    {{range .Articles}}
+                                    <li class="article-item">
+                                        <span class="date">{{.Date}}</span>
+                                        <a href="{{.Link}}">{{.Title}}</a>
+                                    </li>
+                                    {{end}}
+                                </ul>
                             </li>
                             {{end}}
                         </ul>
-                    </li>
-                    {{end}}
-                </ul>
+                    </div>
+                </article>
             </div>
-            </article>
         </div>
-        </article>
-        {{template "footer" .}}
-    </body>
-    <script src="{{.Site.Root}}/bundle/index.js"></script>
+    </article>
+    {{template "footer" .}}
+</body>
+<script src="{{.Site.Root}}/bundle/index.js"></script>
+
 </html>

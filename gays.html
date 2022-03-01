@@ -53,7 +53,7 @@
 
 
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
 
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -66,6 +66,29 @@
 <script src='valine.min.js'></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function () {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function (event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function () {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function () {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function () {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
     <meta name="keywords" content="">
     <meta name="description" content="我的朋友们">
     <meta name="author" content="w568w">
@@ -75,7 +98,7 @@
                 width: auto;
             }
         }
-
+        
         @media only screen and (min-width: 768px) {
             .mdui-card {
                 width: max-content;
@@ -263,30 +286,27 @@
     
 </div>
         <div style="padding: 5% 0 5% 0; ">
-        <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
-            <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                <a class="mdui-card-header-title"
-                    href="/about.w568w.html">w568w</a> 
-                
-                <span id="date" class="date mdui-card-header-subtitle" data-time="0"><span
+            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="0"><span
                         class="from">创建时间被隐藏</span></span>
-                
-
-            </div>
-            <article class="main article">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">我的朋友们</div>
-                    <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
-                        本文已被读<span id="busuanzi_value_page_pv"></span>次
-                    </span>
-                </div>
-                <div class="mdui-card-content">
                     
-                    <section class="info">
-                        <span class="tags"></span>
-                    </section>
-                    <article class="content"><blockquote>
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">我的朋友们</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><blockquote>
 <p>远来即是客，朋友，加个友链？</p>
 
 <ul>
@@ -301,9 +321,13 @@
 
 <hr />
 
-<p>(以下按 友情链接的添加/更新时间 从新到旧排序，最后更新时间：<strong>2021年6月27日</strong>)</p>
+<p>(以下按 友情链接的添加/更新时间 从新到旧排序，最后更新时间：<strong>2022年3月1日</strong>)</p>
 
 <h1>200 OK</h1>
+
+<h2><a href="https://www.xinmoe.cn">萌新的小窝</a></h2>
+
+<p>萌新的小窝</p>
 
 <h2><a href="https://blog.imlk.top/">imlk’s blog</a></h2>
 
@@ -321,21 +345,19 @@
 
 <p>16岁的少年，喜欢编程，喜欢航空。</p>
 
-<h2><a href="https://hywy.baklib.com/">欢迎委员</a></h2>
-
-<p>这个人很懒，什么都没有留下</p>
-
 <h2><a href="https://takuron.top/">PasserBlog</a></h2>
 
 <p>不务正业的逗比大学生</p>
 
 <h2><a href="https://n-a.date/">UNKNOWN date</a></h2>
 
-<p>啥也不懂的萌新</p>
+<p>啥也不懂的萌新<br />
+(<strong>PS:已超过2年未更新内容</strong>)</p>
 
 <h2><a href="https://jambing.cn/">小姜饼</a></h2>
 
-<p>某一中高一学生/啥也不会的萌新小白白</p>
+<p>某一中高一学生/啥也不会的萌新小白白<br />
+(<strong>PS:无博客，仅个人主页</strong>)</p>
 
 <h2><a href="http://tsuasahi.com/">Tsuasahi</a></h2>
 
@@ -344,11 +366,13 @@
 
 <h2><a href="http://blog.853lab.com/">853</a></h2>
 
-<p>目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。</p>
+<p>目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。
+(<strong>PS:已超过半年未更新内容</strong>)</p>
 
 <h2><a href="https://oboard.github.io/index.html">一块小板子</a></h2>
 
-<p>就是一块小板子。</p>
+<p>就是一块小板子。<br />
+(<strong>PS:已超过3年未更新内容</strong>)</p>
 
 <h2><a href="http://fols.top/">这是个小博客</a></h2>
 
@@ -361,7 +385,10 @@
 
 <blockquote>
 <p>PS:这里记录的是一些已经无法正常访问的友链。</p>
-</blockquote>
+
+<h2><a href="https://hywy.baklib.com/">欢迎委员</a></h2>
+
+<p>这个人很懒，什么都没有留下</p>
 
 <h2><a href="https://imlk.ink/">imlk</a></h2>
 
@@ -393,27 +420,26 @@
 
 <p>(由于未知原因，到现在为止不能访问，无法联系到博主)</p>
 
-<blockquote>
 <p>插句题外话，一点个人感慨 : 如果把互联网比作灯光的海洋，那么个人博客仅仅是其中一点微弱的烛光。</p>
 
 <p><strong>“微茫的光，请守护好它”</strong></p>
 </blockquote>
 </article>
-                    <section class="author">
-                        
-                        <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
-                        <a class="name" href="/about.w568w.html">w568w</a>
-                        <div class="intro">梦想改变自己的疯子。</div>
-                    </section>
-                    <section class="recommend">
-                        
-                        <section class="nav prev">
-                            <div class="head">上篇文章</div>
-                            <a class="link" href="/about_w568w_en.html">About me</a>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
                         </section>
-                         
-                    </section>
-                    
+                        <section class="recommend">
+                            
+                            <section class="nav prev">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/about_w568w_en.html">About me</a>
+                            </section>
+                             
+                        </section>
+                        
 
 
 
@@ -427,9 +453,9 @@
         })
     </script>
 
-            </article>
-        </div>
-        </div>
+                </article>
+                </div>
+            </div>
         </div>
     </article>
     <footer class="footer">

@@ -9,10 +9,15 @@ author: w568w
 
 一个梦想改变自己的疯子。  
 
-安徽 复旦大一学生 Android业余开发者  
+安徽 复旦大二学生 Android业余开发者  
 
-使用系统：Windows 10 Home Edition  
-开发工具：Android Studio 4.0.1 Stable  
+使用系统：`Windows 10 Home China Edition 21H1`  
+开发工具：
+```text
+Android Studio 2021.1.1 Patch 2
+PyCharm Professional 2021.3.2
+Visual Studio Code 1.64.2
+```
 
   
 [在Github上找我](https://github.com/w568w/)   
@@ -45,8 +50,11 @@ author: w568w
 虽然周围的同龄人都在看番、刷抖音、刷微博、刷B站、买手办，但是我一个也不喜欢(/ ω \\)  
 ~~可能我已经步入老年了吧~~  
 # 有啥作品么？
-有的有的！ 
- 
+有的有的！   
+
+[旦夕](https://danxi.fduhole.com/): 给复旦同学准备的第三方校园服务 APP。
+
+
 [Xposed Checker](https://www.coolapk.com/apk/190247): 一个小工具，从抖音、微信等等热门app中截取出了`Xposed`检测的代码片段，可以检测你的`Xposed隐藏、屏蔽模块`究竟能不能起到隐藏作用。  
   
 [净眼](https://github.com/w568w/fuckView): Xposed模块，类似于`Android`中的`AdBlocker`，可以手动标记、屏蔽 _任意_ App中的指定`View(控件)`，就像屏蔽网页中的广告一样容易。**但是…由于作品年久失修，暂不支持`Android 7.1`之后的系统。**  
@@ -63,13 +71,14 @@ author: w568w
 # 掌握哪些语言？
 ## 人类语种
 - 中文: 母语
-- 英语(English): 约 CET4 水平
-- 日语(日本語): 约 N5 水平(目前在狂背单词中ww)
-- 世界语(Esperanto): 仅基本语法
+- 英语(English): 约 CET4~CET6 水平
+- 日语(日本語): 约 N4 水平
+- 世界语(Esperanto): 仅基本语法(已经忘光啦)
 - 塔语(Hymmnos): 仅基本语法(想音句)    
    
 ## 计算机语种
 - Java(Android): 中高阶，但对 Android 6.0 之后的 API 不甚熟悉
+- Dart(Flutter)：初阶
 - 易语言: 中阶
 - Python: 初阶，会写爬虫/基本神经网络/统计分析
 - Java(J2ME): 初阶，学习它仅仅为了怀旧

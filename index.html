@@ -56,7 +56,7 @@
 
 
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
 
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -67,6 +67,29 @@
 <script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src='valine.min.js'></script>
+
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function () {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function (event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function () {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function () {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function () {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
 
 
     <meta name="keywords" content="Say hello to you!">
@@ -268,52 +291,59 @@
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/todo-list.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1637145625"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1646107165"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/todo-list.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/nikita-kachanovsky-445394-unsplash.jpg"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/nikita-kachanovsky-445394-unsplash.jpg" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
-                                    <div class="mdui-card-primary-title"><span
-                                            class="top">[置顶]</span>博主的Todo List</div>
+                                    <div class="mdui-card-primary-title"><span class="top">[置顶]</span>博主的Todo List</div>
                                     <div class="mdui-card-primary-subtitle"><p>看看这家伙最近在搞什么大新闻？</p>
 </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/2021-future.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1609428925"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1609428925"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/2021-future.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/yohan-cho-Mwvhyd22Lyw-unsplash.webp"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/yohan-cho-Mwvhyd22Lyw-unsplash.webp" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">2021年，一年又一年</div>
@@ -322,28 +352,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/what-college-taught-me.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1602637705"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1602637705"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/what-college-taught-me.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/fudan.webp"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/fudan.webp" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">大学教会了我什么</div>
@@ -352,28 +386,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/atri-galgame.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1600082880"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1600082880"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/atri-galgame.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/atri-wp.webp"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/atri-wp.webp" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">《ATRI -My Dear Moments-》通关后感想</div>
@@ -382,28 +420,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/before-ncee.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1595595840"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1595595840"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/before-ncee.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/gaokao.webp"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/gaokao.webp" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">向往的彼方</div>
@@ -412,28 +454,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/my-j2me-game.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1594810225"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1594810225"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/my-j2me-game.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/nokia-2617880_1280.jpg"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/nokia-2617880_1280.jpg" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">一些相当棒的Java游戏</div>
@@ -442,28 +488,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/ink-material-theme.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1588952160"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1588952160"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/ink-material-theme.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="/images/example-en.png"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="/images/example-en.png" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">纸小墨的 MD 主题 0.1版发布</div>
@@ -472,28 +522,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/my-best-software.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1587044820"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1587044820"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/my-best-software.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="/images/my-software.jpg"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="/images/my-software.jpg" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">我心中的最佳软件合集</div>
@@ -502,28 +556,32 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/travis-ci-for-blog.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1584094380"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1584094380"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/travis-ci-for-blog.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="images/sai-kiran-anagani-555972-unsplash.jpg"  class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/> 
+                            <img data-src="images/sai-kiran-anagani-555972-unsplash.jpg" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">用 Travis CI 实现博客持续集成</div>
@@ -532,28 +590,31 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
                 
 
-                <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft " style="--animate-delay: 0.5s;">
+                <a href="/2020-hopes.html">
+                    <div class="mdui-card mdui-ripple animate__animated animate__fadeInLeft "
+                        style="--animate-delay: 0.5s;">
 
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                        <div class="mdui-card-header-title">w568w</div>
-                        
-                        <span class="date mdui-card-header-subtitle" data-time="1583909785"><span
-                                class="from"></span></span>
-                        
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1583909785"><span
+                                    class="from"></span></span>
+                            
 
-                    </div>
-                    <a href="/2020-hopes.html">
+                        </div>
+
                         <div class="mdui-card-media">
                             
-                            <img data-src="/images/sidebar_header.jpg" class="lazyload" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" />
+                            <img data-src="/images/sidebar_header.jpg" class="lazyload" alt="no-link"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
                             
                             <div class="mdui-card-media-covered mdui-card-media-covered">
                                 <div class="mdui-card-primary">
@@ -563,15 +624,15 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div style="height:24px"></div>
 
                 
             </ul>
             <section>
-                 
-                    <a
+                
+                <a
                     class="next mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn-block mdui-hoverable"
                     href="/page2.html">下一页 1 / 2</a>
             </section>

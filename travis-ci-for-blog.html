@@ -53,7 +53,7 @@
 
 
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
 
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -66,6 +66,29 @@
 <script src='valine.min.js'></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function () {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function (event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function () {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function () {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function () {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
     <meta name="keywords" content="">
     <meta name="description" content="用 Travis CI 实现博客持续集成">
     <meta name="author" content="w568w">
@@ -75,7 +98,7 @@
                 width: auto;
             }
         }
-
+        
         @media only screen and (min-width: 768px) {
             .mdui-card {
                 width: max-content;
@@ -263,30 +286,27 @@
     
 </div>
         <div style="padding: 5% 0 5% 0; ">
-        <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
-            <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                <a class="mdui-card-header-title"
-                    href="/about.w568w.html">w568w</a> 
-                
-                <span id="date" class="date mdui-card-header-subtitle" data-time="1584094380"><span
+            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1584094380"><span
                         class="from">创建时间被隐藏</span></span>
-                
-
-            </div>
-            <article class="main article">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">用 Travis CI 实现博客持续集成</div>
-                    <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
-                        本文已被读<span id="busuanzi_value_page_pv"></span>次
-                    </span>
-                </div>
-                <div class="mdui-card-content">
                     
-                    <section class="info">
-                        <span class="tags"></span>
-                    </section>
-                    <article class="content"><h1>什么是CI？</h1>
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">用 Travis CI 实现博客持续集成</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><h1>什么是CI？</h1>
 
 <p>CI，即Continues Integration，是一种软件开发实践，如一个团队的开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试）来验证，从而尽早地发现集成错误。<br />
 通俗的解释就是每次提交代码到 Github，都会触发某种自动化过程(如自动编译,测试等)，以跟进开发过程。<br />
@@ -442,26 +462,26 @@ fi
 <p>现在想起来其实这种做法挺蠢的，为什么不在一开始就分出<code>master</code>和<code>source</code>两个分支呢？<br />
 <del>还是暴力出奇迹好哇</del></p>
 </article>
-                    <section class="author">
-                        
-                        <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
-                        <a class="name" href="/about.w568w.html">w568w</a>
-                        <div class="intro">梦想改变自己的疯子。</div>
-                    </section>
-                    <section class="recommend">
-                        
-                        <section class="nav prev more">
-                            <div class="head">上篇文章</div>
-                            <a class="link" href="/my-best-software.html">我心中的最佳软件合集</a>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
                         </section>
-                         
-                        <section class="nav next more">
-                            <div class="head">下篇文章</div>
-                            <a class="link" href="/2020-hopes.html">2020年，展望</a>
+                        <section class="recommend">
+                            
+                            <section class="nav prev more">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/my-best-software.html">我心中的最佳软件合集</a>
+                            </section>
+                             
+                            <section class="nav next more">
+                                <div class="head">下篇文章</div>
+                                <a class="link" href="/2020-hopes.html">2020年，展望</a>
+                            </section>
+                            
                         </section>
                         
-                    </section>
-                    
 
 
 
@@ -475,9 +495,9 @@ fi
         })
     </script>
 
-            </article>
-        </div>
-        </div>
+                </article>
+                </div>
+            </div>
         </div>
     </article>
     <footer class="footer">

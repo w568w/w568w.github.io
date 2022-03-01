@@ -14,11 +14,12 @@ type: page
 
 ---
   
-(以下按 友情链接的添加/更新时间 从新到旧排序，最后更新时间：**2021年6月27日**)  
+(以下按 友情链接的添加/更新时间 从新到旧排序，最后更新时间：**2022年3月1日**)  
 
 
 # 200 OK
-
+## [萌新的小窝](https://www.xinmoe.cn)
+萌新的小窝
 ## [imlk’s blog](https://blog.imlk.top/)
 无家可归的北邮人/怀柔蹲监狱/学啥啥不会/Rustacean  
 ## [鱼雨昱](https://yuu.ink/)
@@ -27,21 +28,23 @@ type: page
 KYLN 的一隅小站  
 ## [残页的小博客](https://blog.canyie.top/)
 16岁的少年，喜欢编程，喜欢航空。  
-## [欢迎委员](https://hywy.baklib.com/)  
-这个人很懒，什么都没有留下  
 ## [PasserBlog](https://takuron.top/)  
 不务正业的逗比大学生  
 ## [UNKNOWN date](https://n-a.date/)
-啥也不懂的萌新
+啥也不懂的萌新  
+(__PS:已超过2年未更新内容__)  
 ## [小姜饼](https://jambing.cn/)
 某一中高一学生/啥也不会的萌新小白白  
+(**PS:无博客，仅个人主页**)
 ## [Tsuasahi](http://tsuasahi.com/)
 静海一中高二学生/大概是一条咸鱼了吧...  
 (__PS:已超过2年未更新内容__)  
 ## [853](http://blog.853lab.com/)   
 目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。
+(__PS:已超过半年未更新内容__)  
 ## [一块小板子](https://oboard.github.io/index.html)  
 就是一块小板子。  
+(__PS:已超过3年未更新内容__)
 ## [这是个小博客](http://fols.top/)  
 嗯，这就是个小博客。  
 (**PS:无博客，仅个人主页**)
@@ -50,7 +53,8 @@ KYLN 的一隅小站
   
 # 404 Not Found
 > PS:这里记录的是一些已经无法正常访问的友链。  
-
+## [欢迎委员](https://hywy.baklib.com/)  
+这个人很懒，什么都没有留下  
 ## [imlk](https://imlk.ink/)  
 快要成年/有女票脱单/伪程序员/就读于北邮  
 (可能无法不科学访问，请自备梯子)  
