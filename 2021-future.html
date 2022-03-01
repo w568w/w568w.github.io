@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="viewport"
-    content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
 <meta name="renderer" content="webkit" />
 <meta name="google" value="notranslate" />
 <meta name="robots" content="index,follow" />
@@ -57,36 +56,13 @@
 
 
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 </link>
 
 
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src='valine.min.js'></script>
-
-
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function () {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function (event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function () {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function () {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function () {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
 
 
     <meta name="keywords" content="">
