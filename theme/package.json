@@ -1,28 +1,29 @@
 {
-  "name": "InkMaterialTheme",
-  "version": "0.0.1",
-  "scripts": {
-    "start": "./node_modules/.bin/webpack --progress --colors --watch",
-    "build": "./node_modules/.bin/webpack --progress --colors"
-  },
-  "description": "InkPaper Material Theme By w568w(github.com/w568w)",
-  "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "css-loader": "^0.22.0",
-    "extract-text-webpack-plugin": "^0.9.1",
-    "file-loader": "^0.8.4",
-    "postcss-import": "^8.1.2",
-    "postcss-loader": "^0.9.1",
-    "precss": "^1.4.0",
-    "raw-loader": "^0.5.1",
-    "source-map-loader": "^0.1.5",
-    "style-loader": "^0.13.0",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.12.2",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.10.0"
-  },
-  "dependencies": {
-    "jquery": "^2.1.4"
-  }
+    "name": "InkMaterialTheme",
+    "version": "0.0.1",
+    "scripts": {
+        "start": ".\\node_modules\\.bin\\webpack --watch",
+        "build": ".\\node_modules\\.bin\\webpack"
+    },
+    "description": "InkPaper Material Theme By w568w(github.com/w568w)",
+    "devDependencies": {
+        "autoprefixer": "^10.4.2",
+        "css-loader": "^6.6.0",
+        "file-loader": "^6.2.0",
+        "mini-css-extract-plugin": "^2.6.0",
+        "postcss": "^8.4.7",
+        "postcss-import": "^14.0.2",
+        "postcss-loader": "^6.2.1",
+        "precss": "^4.0.0",
+        "raw-loader": "^4.0.2",
+        "source-map-loader": "^3.0.1",
+        "style-loader": "^3.3.1",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.69.1",
+        "webpack-cli": "^4.9.2"
+    },
+    "dependencies": {
+        "highlight.js": "^11.4.0",
+        "jquery": "^3.6.0"
+    }
 }

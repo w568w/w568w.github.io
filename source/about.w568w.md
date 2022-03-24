@@ -13,10 +13,9 @@ author: w568w
 
 使用系统：`Windows 10 Home China Edition 21H1`  
 开发工具：
-```text
-Android Studio 2021.1.1 Patch 2
-PyCharm Professional 2021.3.2
-Visual Studio Code 1.64.2
+```c
+void main(){}
+void main(){}
 ```
 
   

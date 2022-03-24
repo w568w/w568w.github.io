@@ -65,6 +65,29 @@
 <script src='valine.min.js'></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
     <meta name="keywords" content="">
     <meta name="description" content="关于作者">
     <meta name="author" content="w568w">
@@ -293,9 +316,8 @@
 <p>使用系统：<code>Windows 10 Home China Edition 21H1</code><br />
 开发工具：</p>
 
-<pre><code class="language-text">Android Studio 2021.1.1 Patch 2
-PyCharm Professional 2021.3.2
-Visual Studio Code 1.64.2
+<pre><code class="language-c">void main(){}
+void main(){}
 </code></pre>
 
 <p><a href="https://github.com/w568w/">在Github上找我</a><br />

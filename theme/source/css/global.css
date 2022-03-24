@@ -1,81 +1,149 @@
-@define-mixin font-main{font-family:"Helvetica Neue",Arial,"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif;}@define-mixin font-code{font-family:consolas,monaco,"Source Code Pro",hack,monospace;}html,body,input{margin:0;@mixin font-main;}html,body{height:100%;}ul{list-style:none;margin:0;padding:0;}a{text-decoration:none;&:hover{opacity:.9;}}*::selection{background-color:$black;color:$whiteLighter;}.clearfix:before,.clearfix:after{content:" ";display:table;}.clearfix:after{clear:both;}.clearfix{zoom:1;}
-.container{background-image:url(/images/ev000a.webp);background-attachment:fixed;background-position:center;background-size:cover}
+@define-mixin font-main {
+    font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+} @define-mixin font-code {
+    font-family: consolas, monaco, "Source Code Pro", hack, monospace;
+} html, body, input {
+      margin: 0;
+      @mixin font-main;
+  }
+
+html, body {
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+
+&
+:hover {
+    opacity: .9;
+}
+
+}
+*::selection {
+    background-color: $ black;
+    color: $ whiteLighter;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/*.container {*/
+/*    background-image: url(/images/ev000a.webp);*/
+/*    background-attachment: fixed;*/
+/*    background-position: center;*/
+/*    background-size: cover*/
+/*}*/
 
 .mc-drawer {
-	display:flex;
-	flex-direction:column
+    display: flex;
+    flex-direction: column
 }
+
 .mc-drawer .mdui-list {
-	box-sizing:border-box;
-	flex:1
+    box-sizing: border-box;
+    flex: 1
 }
+
 .mc-drawer .mdui-list-item {
-	padding-left:20px;
-	border-radius:0 50px 50px 0
+    padding-left: 20px;
+    border-radius: 0 50px 50px 0
 }
+
 .mc-drawer .mdui-list-item-icon {
-	transform:scale(.875)
+    transform: scale(.875)
 }
+
 .mc-drawer .mdui-list-item-content {
-	font-weight:400;
-	font-size:14px
+    font-weight: 400;
+    font-size: 14px
 }
+
 .mc-drawer .mdui-list-item-active {
-	color:#1a73e8;
-	background-color:#e8f0fe
+    color: #1a73e8;
+    background-color: #e8f0fe
 }
+
 .mdui-theme-layout-dark .mc-drawer .mdui-list-item-active {
-	color:#fff;
-	background-color:#424242
+    color: #fff;
+    background-color: #424242
 }
+
 .mc-drawer .mdui-list-item-active .mdui-list-item-icon {
-	color:#1a73e8
+    color: #1a73e8
 }
+
 .mdui-theme-layout-dark .mc-drawer .mdui-list-item-active .mdui-list-item-icon {
-	color:#fff
+    color: #fff
 }
+
 .mc-drawer .copyright {
-	box-sizing:border-box;
-	width:100%;
-	padding:20px 16px
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 16px
 }
+
 .mc-drawer .copyright p {
-	margin:0;
-	overflow:hidden;
-	color:rgba(0,0,0,.38);
-	font-size:13px;
-	line-height:20px;
-	white-space:nowrap;
-	text-overflow:ellipsis
+    margin: 0;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .38);
+    font-size: 13px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis
 }
+
 .mdui-theme-layout-dark .mc-drawer .copyright p {
-	color:hsla(0,0%,100%,.38)
+    color: hsla(0, 0%, 100%, .38)
 }
+
 .mc-drawer .copyright a {
-	color:rgba(0,0,0,.52);
-	text-decoration:none
+    color: rgba(0, 0, 0, .52);
+    text-decoration: none
 }
+
 .mdui-theme-layout-dark .mc-drawer .copyright a {
-	color:hsla(0,0%,100%,.52)
+    color: hsla(0, 0%, 100%, .52)
 }
+
 .mc-drawer .copyright a:hover {
-	text-decoration:underline
+    text-decoration: underline
 }
+
 .mdui-card {
-	position:relative;
-	box-sizing:border-box;
-	border:0px solid rgba(0,0,0,.0);
-	border-radius:8px
+    position: relative;
+    box-sizing: border-box;
+    border: 0px solid rgba(0, 0, 0, .0);
+    border-radius: 8px
 }
+
 .mdui-theme-layout-dark .mdui-card {
-	color:#fff;
-	border-color:hsla(0,0%,100%,.12)
+    color: #fff;
+    border-color: hsla(0, 0%, 100%, .12)
 }
+
 .mdui-card-shadow {
-	border:none;
-	box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15)
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15)
 }
+
 .mdui-theme-layout-dark .mdui-card-shadow {
-	border:1px solid hsla(0,0%,100%,.12);
-	box-shadow:none
+    border: 1px solid hsla(0, 0%, 100%, .12);
+    box-shadow: none
 }
