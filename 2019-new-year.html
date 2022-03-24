@@ -34,9 +34,9 @@
 <link rel="apple-itouch-icon" href="/favicon.png" />
 <link rel="stylesheet" href="/bundle/index.css" />
 
-<link rel="preconnect" href="https://cdn.bootcdn.net" />
+<link rel="preconnect" href="https://cdn.staticfile.org" />
 <link rel="preconnect" href="https://busuanzi.ibruce.info" />
-<link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+<link rel="dns-prefetch" href="https://cdn.staticfile.org" />
 <link rel="dns-prefetch" href="https://busuanzi.ibruce.info" />
 <script type="text/javascript">
     var timeSinceLang = {
@@ -55,12 +55,12 @@
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
 
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/2.0/animate.min.css" />
+<link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 </link>
 
 
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script defer src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src='valine.min.js'></script>
 
@@ -88,6 +88,7 @@
 </script>
 
 
+
     <meta name="keywords" content="">
     <meta name="description" content="Hello 2019">
     <meta name="author" content="w568w">
@@ -110,45 +111,37 @@
 <body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
     <article class="container">
         <script>
-    var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s) })();
-</script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
 </script>
 
 <script>
     
     document.documentElement.style.setProperty('--animate-duration', '.5s');
     
-    $(function () {
-        var now = new Date();
-        if ((now.getMonth() == 11 && now.getDate() == 13) ||
-            (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
-            document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
         }
-    });
-    
-    function search_close() {
-        s = $("#search")[0];
-        var ev = new Event('input', {
-            bubbles: true
-        });
-        ev.simulated = true;
-        s.value = '';
-        s.dispatchEvent(ev);
-    }
-    
-    
-    
-    
-    
-    
-    
+    })
 
     
-    window.addEventListener("load", function (event) {
-        console.log("LOAD!");
-        lazyload();
-    });
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
 </script>
 <header>
     
@@ -167,7 +160,7 @@
             <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
                 <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
                         class="mdui-icon material-icons">search</i></button>
-                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange="" />
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
                 <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
                         class="mdui-icon material-icons">close</i></button>
             </div>
@@ -181,7 +174,7 @@
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
     <div class="mdui-grid-tile">
-        <img loading="lazy" src="https://source.unsplash.com/random/400x300" />
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
         <div class="mdui-grid-tile-actions">
             <div class="mdui-grid-tile-text">
                 <div class="mdui-grid-tile-title">行云小站</div>
@@ -280,10 +273,10 @@
 
             </div>
         </li>
-        </li>
     </div>
     
 </div>
+
         <div style="padding: 5% 0 5% 0; ">
             <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">

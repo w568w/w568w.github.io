@@ -34,9 +34,9 @@
 <link rel="apple-itouch-icon" href="/favicon.png" />
 <link rel="stylesheet" href="/bundle/index.css" />
 
-<link rel="preconnect" href="https://cdn.bootcdn.net" />
+<link rel="preconnect" href="https://cdn.staticfile.org" />
 <link rel="preconnect" href="https://busuanzi.ibruce.info" />
-<link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+<link rel="dns-prefetch" href="https://cdn.staticfile.org" />
 <link rel="dns-prefetch" href="https://busuanzi.ibruce.info" />
 <script type="text/javascript">
     var timeSinceLang = {
@@ -55,12 +55,12 @@
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
 
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/2.0/animate.min.css" />
+<link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 </link>
 
 
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script defer src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src='valine.min.js'></script>
 
@@ -88,6 +88,7 @@
 </script>
 
 
+
     <meta name="keywords" content="">
     <meta name="description" content="博主的Todo List">
     <meta name="author" content="w568w">
@@ -110,45 +111,37 @@
 <body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
     <article class="container">
         <script>
-    var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s) })();
-</script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
 </script>
 
 <script>
     
     document.documentElement.style.setProperty('--animate-duration', '.5s');
     
-    $(function () {
-        var now = new Date();
-        if ((now.getMonth() == 11 && now.getDate() == 13) ||
-            (now.getFullYear() == 2020 && now.getMonth() == 3 && now.getDate() == 4)) {
-            document.body.style = "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none";
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
         }
-    });
-    
-    function search_close() {
-        s = $("#search")[0];
-        var ev = new Event('input', {
-            bubbles: true
-        });
-        ev.simulated = true;
-        s.value = '';
-        s.dispatchEvent(ev);
-    }
-    
-    
-    
-    
-    
-    
-    
+    })
 
     
-    window.addEventListener("load", function (event) {
-        console.log("LOAD!");
-        lazyload();
-    });
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
 </script>
 <header>
     
@@ -167,7 +160,7 @@
             <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
                 <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
                         class="mdui-icon material-icons">search</i></button>
-                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange="" />
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
                 <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
                         class="mdui-icon material-icons">close</i></button>
             </div>
@@ -181,7 +174,7 @@
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
     <div class="mdui-grid-tile">
-        <img loading="lazy" src="https://source.unsplash.com/random/400x300" />
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
         <div class="mdui-grid-tile-actions">
             <div class="mdui-grid-tile-text">
                 <div class="mdui-grid-tile-title">行云小站</div>
@@ -280,15 +273,15 @@
 
             </div>
         </li>
-        </li>
     </div>
     
 </div>
+
         <div style="padding: 5% 0 5% 0; ">
             <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
-                    <span id="date" class="date mdui-card-header-subtitle" data-time="1646107165"><span
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1648109065"><span
                         class="from">创建时间被隐藏</span></span>
                     
 
@@ -322,7 +315,7 @@
 <h1>任务列表</h1>
 
 <ul>
-<li>写一个<a href="https://zybuluo.com/w568w/note/1081202">关于微积分的入门教程</a><span style="color:green;">(在填了在填了)</span></li>
+<li>写一个<a href="https://zybuluo.com/w568w/note/1081202">关于微积分的入门教程</a><span style="color:green;">(在填了在填了，周末更新)</span></li>
 <li><del>学习，备战高考</del><span style="color:green;">(完成)</span></li>
 <li><del>写一个夜间模式App</del><span style="color:green;">(已初步完成，尚未发布)</span></li>
 <li>写一个Android上的IDE  <span style="color:red;">(心有余而力不足，弃坑)</span></li>
@@ -336,7 +329,7 @@
 <ul>
 <li><del><a href="https://www.coolapk.com/apk/149408">净眼</a>达到20w下载量</del><span style="color:green;">(Get!但是被莫名其妙下架了 所以没法给人显摆)</span></li>
 <li>看完《机器学习》</li>
-<li><del>学习深度学习课程</del><span style="color:green;">(Get!但是显卡太烂最后作罢)</span>
+<li><del>学习深度学习课程</del><span style="color:green;">(Get! 但是显卡太烂最后作罢)</span>
 <img src="data:image/gif;base64,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" data-src="images/huaji.png" alt="" />
 
 <br /></li>
@@ -357,7 +350,7 @@
                              
                             <section class="nav next">
                                 <div class="head">下篇文章</div>
-                                <a class="link" href="/2021-future.html">2021年，一年又一年</a>
+                                <a class="link" href="/2022-and-about-me.html">2022 和我自己</a>
                             </section>
                             
                         </section>

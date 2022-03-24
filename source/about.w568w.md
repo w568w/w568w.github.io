@@ -12,11 +12,7 @@ author: w568w
 安徽 复旦大二学生 Android业余开发者  
 
 使用系统：`Windows 10 Home China Edition 21H1`  
-开发工具：
-```c
-void main(){}
-void main(){}
-```
+开发工具：`Android Studio Bumblebee 2021.1.1 Patch 2`
 
   
 [在Github上找我](https://github.com/w568w/)   
@@ -76,8 +72,8 @@ void main(){}
 - 塔语(Hymmnos): 仅基本语法(想音句)    
    
 ## 计算机语种
-- Java(Android): 中高阶，但对 Android 6.0 之后的 API 不甚熟悉
-- Dart(Flutter)：初阶
+- Java(Android): 中阶，但对 Android 6.0 之后的 API 不甚熟悉
+- Dart(Flutter)：中阶
 - 易语言: 中阶
 - Python: 初阶，会写爬虫/基本神经网络/统计分析
 - Java(J2ME): 初阶，学习它仅仅为了怀旧

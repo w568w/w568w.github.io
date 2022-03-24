@@ -2,7 +2,7 @@
     "name": "InkMaterialTheme",
     "version": "0.0.1",
     "scripts": {
-        "start": ".\\node_modules\\.bin\\webpack --watch",
+        "start": ".\\node_modules\\.bin\\webpack --watch --mode=development",
         "build": ".\\node_modules\\.bin\\webpack"
     },
     "description": "InkPaper Material Theme By w568w(github.com/w568w)",

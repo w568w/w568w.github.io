@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.eu.org</id>
-  <updated>2022-03-24T10:38:19+08:00</updated>
+  <updated>2022-03-24T16:08:04+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.eu.org"></link>
   <author>
@@ -9,10 +9,20 @@
   </author>
   <entry>
     <title>博主的Todo List</title>
-    <updated>2022-03-01T11:59:25+08:00</updated>
-    <id>tag:w568w.eu.org,2022-03-01:/todo-list.html</id>
+    <updated>2022-03-24T16:04:25+08:00</updated>
+    <id>tag:w568w.eu.org,2022-03-24:/todo-list.html</id>
     <content type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.eu.org/todo-list.html"></link>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>2022 和我自己</title>
+    <updated>2022-03-24T15:46:25+08:00</updated>
+    <id>tag:w568w.eu.org,2022-03-24:/2022-and-about-me.html</id>
+    <content type="html">&lt;p&gt;关于我鸽了一年多这件事&lt;/p&gt;&#xA;</content>
+    <link href="https://w568w.eu.org/2022-and-about-me.html"></link>
     <author>
       <name>w568w</name>
     </author>
@@ -93,16 +103,6 @@
     <id>tag:w568w.eu.org,2020-03-13:/travis-ci-for-blog.html</id>
     <content type="html">&lt;p&gt;…实在懒得build静态网页了…&lt;/p&gt;&#xA;</content>
     <link href="https://w568w.eu.org/travis-ci-for-blog.html"></link>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>2020年，展望</title>
-    <updated>2020-03-11T14:56:25+08:00</updated>
-    <id>tag:w568w.eu.org,2020-03-11:/2020-hopes.html</id>
-    <content type="html">&lt;p&gt;为什么我在今年高考？！！&lt;/p&gt;&#xA;</content>
-    <link href="https://w568w.eu.org/2020-hopes.html"></link>
     <author>
       <name>w568w</name>
     </author>

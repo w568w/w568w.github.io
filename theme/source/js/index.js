@@ -1,12 +1,9 @@
 import '../css/index.css'
 import $ from 'jquery'
 //import hljs from 'highlight.js'
-
 window.hljs = require('./highlight.pack.js')
-require('./jquery.unveil.js')
-
-let searchTpl = require('raw-loader!./searchTpl.html')
-
+import './jquery.unveil'
+import searchTpl from './searchTpl.html'
 // pick from underscore
 let debounce = function (func, wait, immediate) {
     let timeout, args, context, timestamp, result;
@@ -96,7 +93,7 @@ let initSearch = function () {
             let keyword = event.data.keyword
             if (keyword) {
                 $('.page-nav').hide()
-                $('.article-list').html('<div class="empty">未搜索到 "<span>' + keyword + '</span>"</div>')
+                $('.article-list').html('<div>未搜索到 "<span>' + keyword + '</span>"</div>')
             } else {
                 $('.page-nav').show()
                 $('.article-list').html(oriHtml)
@@ -127,6 +124,7 @@ let initSearch = function () {
 }
 
 $(function () {
+    console.log($.fn)
     // render date
     $('.date').each(function (idx, item) {
         let $date = $(item)
@@ -142,6 +140,7 @@ $(function () {
         hljs.highlightBlock(block)
     })
     let images = $('img');
+    console.log(images.unveil)
     // append image description
     images.each(function (idx, item) {
         let $item = $(item)
@@ -157,8 +156,9 @@ $(function () {
     })
     // lazy load images
     if (images.unveil) {
+        console.log("Found image.unveil!")
         images.unveil(200, function () {
-            $(this).load(function () {
+            $(this).on("load", function () {
                 this.style.opacity = 1
             })
         })
