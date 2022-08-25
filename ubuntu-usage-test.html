@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta name="google" value="notranslate" />
+<meta name="robots" content="index,follow" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="行云小站" />
+<meta name="twitter:description" content="Say hello to you!" />
+<meta name="twitter:image:src" content="https://w568w.eu.org/images/avatar.gif" />
+
+<meta property="og:url" content="https://w568w.eu.org" />
+<meta property="og:title" content="行云小站" />
+<meta property="og:description" content="Say hello to you!" />
+<meta property="og:site_name" content="行云小站" />
+<meta property="og:image" content="https://w568w.eu.org/images/avatar.gif" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noodp" />
+
+<meta itemprop="name" content="行云小站" />
+<meta itemprop="description" content="Say hello to you!" />
+<meta itemprop="image" content="https://w568w.eu.org/images/avatar.gif" />
+
+<link rel="canonical" href="https://w568w.eu.org" />
+
+<link rel="shortcut icon" href="/favicon.png" />
+<link rel="apple-itouch-icon" href="/favicon.png" />
+<link rel="stylesheet" href="/bundle/index.css" />
+
+<link rel="preconnect" href="https://cdn.staticfile.org" />
+<link rel="preconnect" href="https://busuanzi.ibruce.info" />
+<link rel="dns-prefetch" href="https://cdn.staticfile.org" />
+<link rel="dns-prefetch" href="https://busuanzi.ibruce.info" />
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/2.0/animate.min.css" />
+<link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+</link>
+
+
+<script defer src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src='valine.min.js'></script>
+
+
+
+    <meta name="keywords" content="">
+    <meta name="description" content="2022 年，为什么我依然不推荐 Linux 作为日用环境">
+    <meta name="author" content="w568w">
+    <style>
+        @media (max-width: 767px) {
+            .mdui-card {
+                width: auto;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .mdui-card {
+                width: max-content;
+            }
+        }
+    </style>
+    <title>2022 年，为什么我依然不推荐 Linux 作为日用环境</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+
+<script>
+    
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+    
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
+        }
+    })
+
+    
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
+</script>
+<header>
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
+                    menu
+                </i>
+            </a>
+            <a href="/" class="mdui-typo-title">
+                行云小站
+            </a>
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
+                        class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
+                    refresh
+                </i>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+    <div class="mdui-grid-tile">
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a
+                        href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mc-drawer mdui-list" style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    home
+                </i>
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    archive
+                </i>
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    apps
+                </i>
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    people
+                </i>
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    account_circle
+                </i>
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    rss_feed
+                </i>
+                <div class="mdui-list-item-content">
+
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">NodeCache</span>&nbsp;提供
+
+            </div>
+        </li>
+    </div>
+    
+</div>
+
+        <div style="padding: 5% 0 5% 0; ">
+            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1661414605"><span
+                        class="from">创建时间被隐藏</span></span>
+                    
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">2022 年，为什么我依然不推荐 Linux 作为日用环境</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><p><img src="data:image/gif;base64,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" data-src="images/photo-1629654297299-c8506221ca97.webp" alt="Photo by Gabriel Heinzer on Unsplash" />
+本文分为两部分，第一部分阐明问题，第二部分则列出博主个人的 Linux 配置记录。</p>
+
+<hr />
+
+<p>上个月把各个备受互联网推崇的 Linux 发行版试用了一遍。浅浅地发表一下个人感想。</p>
+
+<p>作为一个有 Linux 4 年使用史的老用户，自然也有将 Linux 完全充当日常使用操作系统的经历。从最大众的 Ubuntu、Mint，到（当时）更为小众的 Arch Linux，再到国产的 Start OS、Deepin、UOS，如果要用两个字形容 Linux 相比于 Windows 的使用体验，那就是「<strong>折腾</strong>」：安装要折腾分区，开机要折腾图形驱动，使用要折腾软件包源、桌面管理器、输入法、Wine……</p>
+
+<p>2022 年，已经有一众的 Linux 桌面版号称能给用户带来大众级的桌面体验。那么，这些平台的体验到底如何呢？</p>
+
+<p>鉴于互联网上吹嘘 Linux 优点的文章、视频已经多到让人审美疲劳，<strong>本文仅限于记录部分 Linux 发行版的缺点和不足，以便帮助读者擦亮眼睛，认清现状，减少折腾。</strong> 也希望社区不断查漏补缺，让「Linux 桌面年」别再永远是「下一年」。</p>
+
+<p><img src="data:image/gif;base64,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" data-src="images/Snipaste_2022-08-25_14-37-58.png" alt="Linux 桌面元年来了吗？" /></p>
+
+<p><em>PS：</em> 当然，下文中大部分问题，都与系统环境、个人配置有关，可能你根本不会碰到，因此仅供参考。也欢迎在评论区分享你自己的 Linux 使用体验。</p>
+
+<h1>Ubuntu 22.04 的问题</h1>
+
+<p>Ubuntu 作为目前号称拥有最高支持率、最全驱动厂家支持和最活跃社区支持的发行版，自然被放在试用的第一位。</p>
+
+<h2>第一次开机就报错</h2>
+
+<p>第一次开机后提示系统更新。点击「立即更新」后，报错如下：</p>
+
+<pre><code>无法解决软件包依赖
+这个错误可能是需要不存在或不可安装的软件包引起的。或者可能在软件包之间有冲突，它们不能同时安装。
+Transaction failed: 无法解决软件包依赖
+ 下列软件包未满足的依赖关系：
+
+libmutter-10-0: Depends: mutter-common (&gt;= 42.2-0ubuntu1) 但是将要安装 42.2-0ubuntu1
+                Depends: libgudev-1.0-0 (&gt;= 232) 但是将要安装 1:237-2build1
+                Depends: libice6 (&gt;= 1:1.0.0) 但是将要安装 2:1.0.10-1build2
+                Depends: libsystemd0 (&gt;= 226) 但是将要安装 249.11-0ubuntu3
+                Depends: libudev1 (&gt;= 183) 但是将要安装 249.11-0ubuntu3
+                Depends: libx11-6 (&gt;= 2:1.7.0) 但是将要安装 2:1.7.5-1
+                Depends: libx11-xcb1 (&gt;= 2:1.7.5) 但是将要安装 2:1.7.5-1
+                Depends: libxau6 (&gt;= 1:1.0.9) 但是将要安装 1:1.0.9-1build5
+                Depends: libxcomposite1 (&gt;= 1:0.4.5) 但是将要安装 1:0.4.5-1build2
+                Depends: libxdamage1 (&gt;= 1:1.1) 但是将要安装 1:1.1.5-2build2
+                Depends: libxext6 (&gt;= 2:1.3.0) 但是将要安装 2:1.3.4-1build1
+                Depends: libxfixes3 (&gt;= 1:6.0.0) 但是将要安装 1:6.0.0-1
+                Depends: libxi6 (&gt;= 2:1.6.99.1) 但是将要安装 2:1.8-1build1
+                Depends: libxinerama1 (&gt;= 2:1.1.4) 但是将要安装 2:1.1.4-3
+                Depends: libxkbfile1 (&gt;= 1:1.1.0) 但是将要安装 1:1.1.0-1build3
+                Depends: libxrandr2 (&gt;= 2:1.5.0) 但是将要安装 2:1.5.2-1build1
+</code></pre>
+
+<p>这个问题<strong>自从 Ubuntu 有「系统更新」的图形化程序以来，就从未得到真正的解决。</strong> 每一次尝试「系统更新」，就像玩俄罗斯轮盘，你永远不知道这次更新又要爆出什么稀奇古怪的错误。</p>
+
+<p>而这一错误信息，即便对于有经验的用户也是非常棘手的。考虑到第一次进入桌面就「开门见山」地报错，一般的桌面用户很难对这样一个操作系统有非常高的评价。</p>
+
+<h2>大批中英文混杂</h2>
+
+<p>系统设置、桌面右键菜单、商店显然都没有做到完全的翻译，在各个不主要的页面上基本都是中英文参半，或者干脆报出中英文混杂的错误信息。</p>
+
+<p>尽管 Windows 11 在 21 年 6 月发行之初，也有过<a href="https://www.appinn.com/windows-11-insider-preview-10-0-22000-51/">汉化不完全</a>的问题，但在之后的正式版中很快就补全了所有细枝末节位置的本地化语言。相比之下，Ubuntu 作为正式版发行的 22.04 版，依然大面积出现「三明治」语言页，让人不禁疑问：Ubuntu 的语言社区贡献人力真的足够吗？</p>
+
+<h2>应用商店差强人意</h2>
+
+<p>相比于我使用 Ubuntu 16.04 时，Ubuntu 自带的应用商店有了比较大的改观。主要在两点：
+1. <strong>可以打开。</strong> 是的，在 16.04 中，我甚至无法在不科学上网的情况下打开商店，常常展示为白屏或者直接闪退。现在？或许是添加了镜像源吧；
+2. <strong>可以安装软件。</strong> 直到 Ubuntu 的第 20 版，我都从未成功在软件商店里安装过一个软件——它在下载时卡住，安装中崩溃，报出莫名其妙的未知错误，白屏，或者干脆在点击「安装」按钮时没有任何反应。我很高兴在 22.04 上，我*终于*可以使用它安装软件了。</p>
+
+<p>然而，令人恼火的问题依旧存在。例如，当我在应用商店的更新页面选择「全部更新」后，<strong>它只更新了一半的软件，在没有任何错误提示的情况下，自己停止更新了</strong>。而且，当我再次尝试点击「全部更新」时，<strong>整个页面直接白屏</strong>。关闭重开才恢复正常。</p>
+
+<p>即便反复这个恼人的过程几次、全部升级好后，应用商店仍继续白屏，再一次关闭重开后才显示「All Update to date」（全部最新）的字样——是的，在中文系统里仍是英文提示，即便应用商店其他文本都是中文！</p>
+
+<p>其他的小问题数不胜数，我甚至有些担心社区开发人员能否修复它们——<strong>包括对部分自带软件点击「卸载」总是提示「未安装」、切换安装版本（Snap 和 APT）时白屏</strong>，等等。</p>
+
+<h2>高分屏效果感人</h2>
+
+<p>由于显卡驱动，或者是由于窗口管理器的年久失修，Ubuntu 无法很好地支持 150% 缩放。在系统设置里只能选择 100%、200% 等整数倍窗口缩放，分数倍数的缩放则只有软件支持，非常模糊且消耗性能。在我的 15 吋显示屏上，<strong>要么字太小无法辨清，要么字太大影响阅读。</strong></p>
+
+<p>有人说，可以自行安装 gnome-tweak，设置字体缩放比例。但是，仅仅设置字体缩放会使得按钮和其他控件的视觉大小过小，而且<strong>部分软件（如网易云音乐）甚至都不遵循系统的字体缩放设置，而是自己决定缩放比例。</strong></p>
+
+<h2>其他瑕疵</h2>
+
+<p>零零散散的小问题还有很多，试举几例：
+1. 点「注销」直接黑屏，回到 Linux 终端模式，而不是「切换用户」界面。
+2. 部分主要应用不支持暗色模式，如 Edge、Gedit（是的，Gnome 自家出的编辑器不适配自家桌面环境的暗色模式！）。</p>
+
+<p>还有一些比较强迫症的，比如「应用程序」的文件夹内的项目数超过一页时，第一列的图标左半边显示不全，等等。</p>
+
+<h1>OpenSUSE Tumbleweed、Linux Mint 的问题</h1>
+
+<p>OpenSUSE 被部分爱好者评价为「最新、最稳定的桌面操作系统」，Linux Mint 则是「最接近 Windows 的桌面体验的发行版」。</p>
+
+<p>然而，这两款发行版在我的笔记本上都吃了「闭门羹」。具体来说，两者都在第一步，也就是安装上就跌了跟头：<strong>OpenSUSE 在安装界面直接控件重叠、中文字间距怪异且缺字，按钮全部无法点击，根本不能进行下一步安装；Linux Mint 则更进一步，安装界面直接黑屏，连 Live 版系统都无法进入。</strong></p>
+
+<p>我尝试了一些常见的解决办法，例如 Safe graphic 或者禁用独显，但均以失败告终。或许是天时地利人和均不沾，God (<del>Linus</del>) 也不想让我使用吧。</p>
+
+<h1>Deepin 20 的问题</h1>
+
+<p>Deepin 作为国产发行版，也是 UOS 的公用开源版本，自然对本地化有着完全的支持，但这并不代表 Deepin 是完全有能力替代 Windows、macOS 使用体验的作品。实际上，它的问题也有不少。</p>
+
+<h2>托盘体验差</h2>
+
+<p>Deepin 有自己的桌面环境 <a href="https://www.deepin.org/zh/dde/">DDE</a>，这很好。但在 Linux 桌面永远的痛——Wine 托盘图标上，依旧问题不断。</p>
+
+<p>例如，Deepin QQ 挂在后台，托盘图标一会儿就自己消失了，而实际上还在运行（重新登录提示已经登录）。这时没有任何办法，只能自行在进程管理器中寻找</p>
+
+<h2>UI 混乱</h2>
+
+<p>Deepin 在 15 前后有过一次非常棒的 <a href="https://blog.csdn.net/qq_33154343/article/details/106195055">UI 变更</a>，直接让我爱上了 DDE 的质感。但在目前的 20 版本中，或许是为了迎合大众感受，或许是为了「深度抄袭」macOS，换用了现在的 UI 风格。</p>
+
+<p>而这套风格，给我整体感受是：<strong>不伦不类</strong>。任务栏图标风格严重不统一（<strong>黑白扁平、彩色拟物风混杂</strong>），使用字体不抗锯齿；<strong>任何按钮、图标均无悬停、点击动效</strong>，只能通过是否弹出新窗口来判断是否点击上了、是否打开了相应功能；最离谱的是，默认是半透明任务栏、暗色系壁纸，任务栏和开始菜单字体颜色却默认也是黑色，你细品能不能看得见字。</p>
+
+<p><img src="data:image/gif;base64,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" data-src="images/deepin-20.png" alt="Deepin 20 桌面现状" /></p>
+
+<h2>应用商店同样略有瑕疵</h2>
+
+<p>虽然 Deepin 的应用商店为国人使用习惯下足了功夫，但并不意味着它已经完美无瑕。除了从很多个版本之前以来就有的「常常安装失败，且无任何错误信息」的问题，这一版本也仍未修复一些更难察觉、但一旦察觉使用体验就会打折扣的问题。</p>
+
+<p>例如，<strong>在系统更新时，于应用商店下载任何软件均立刻安装失败，且点击「查看失败详情」无任何反应</strong>。必须等到更新完成，并且重新打开应用商店才恢复正常。</p>
+
+<p>由于 Linux 的系统更新频率远胜于 Windows 和 macOS，很难说诸如此类的设计缺陷是用户友好的。</p>
+
+<hr />
+
+<p>下面是第二部分，列出了个人的 Ubuntu 常用软件的配置流程，希望对执意体验 Linux 的你有帮助。</p>
+
+<h1>个人 Ubuntu 配置过程</h1>
+
+<h2>安装 VSCode</h2>
+
+<p>应用商店为 Snap 版本，性能低。到官网下载 deb 包安装。</p>
+
+<h2>安装 Git</h2>
+
+<p>apt 安装。使用 Git Pull 时若提醒：</p>
+
+<pre><code>$ git pull --tags origin master
+ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory
+Host key verification failed.
+fatal: 无法读取远程仓库。
+
+请确认您有正确的访问权限并且仓库存在。
+</code></pre>
+
+<p>安装提示的库后即恢复正常。</p>
+
+<h2>安装 Edge</h2>
+
+<p>使用 Edge 的主要原因是我在 Windows 上也是 Edge 主力，方便同步；另一个原因是，Ubuntu 预装的 Firefox 是 Snap 版，打开速度慢不说，由于用到了沙盒机制还无法连接到外部应用程序，比如 Keepass、Gnome Extension 等。</p>
+
+<p>直接到官网下载即可。</p>
+
+<p>实际使用时，第一次登录账号后崩溃了一下，之后就没啥问题了。</p>
+
+<h2>安装 Clash</h2>
+
+<p>到 <a href="https://github.com/Fndroid/clash_for_windows_pkg">https://github.com/Fndroid/clash_for_windows_pkg</a> 下载即可。</p>
+
+<h2>替换软件源</h2>
+
+<p>官方源问题一堆，选择了中国依然连接不上。到「软件与更新」里切换到清华源（或者别的）。</p>
+
+<h2>安装 Onedrive</h2>
+
+<p>从 <a href="https://github.com/abraunegg/onedrive">https://github.com/abraunegg/onedrive</a> 安装 Onedrive。注意查看它关于 Ubuntu 的特别安装提醒，应当安装来自 OpenSUSE 的包。</p>
+
+<p>还可以安装 <a href="https://github.com/bpozdena/OneDriveGUI/">https://github.com/bpozdena/OneDriveGUI/</a> 的 GUI。</p>
+
+<blockquote>
+<p><strong>注意：</strong> 若使用 AppImage，首先要根据执行 AppImage 时的提示安装 Fuse；其次，首次运行该工具时必须通过命令行创建 profile，再导入 GUI 工具中。GUI 工具本身不支持直接创建。</p>
+
+<p>详见 OneDriveGUI 的官方文档。</p>
+</blockquote>
+
+<h2>安装 Keepass</h2>
+
+<p>应用商店下载 <code>KeePassXC</code> 即可，注意不要选择 Snap 版。浏览器安装 <code>KeePassXC-Browser</code> 集成。</p>
+
+<h2>安装 QQ</h2>
+
+<p>使用 <code>Icalingua-plus-plus</code> 项目，初步实际体验较佳。但由于是基于 Electron，系统占用相比 Windows 原生版有过之而无不及。</p>
+
+<h2>安装飞书</h2>
+
+<p>直接去官网下载就好了。</p>
+
+<h2>安装 uTools</h2>
+
+<p>直接去官网下载就好了。</p>
+
+<p>uTools 安装后出现打不开的问题。根据<a href="https://yuanliao.info/d/5224-ubuntu-2204/22">官方论坛</a>，安装旧版 <code>libssl1.1</code> 的 DEB 包后可解。</p>
+
+<h2>安装网易云音乐</h2>
+
+<p>直接去官网下载。</p>
+
+<p>安装后也出现打不开的问题。根据 <a href="https://blog.csdn.net/u010457081/article/details/124544601">https://blog.csdn.net/u010457081/article/details/124544601</a> 的解决办法，在启动脚本中加一行命令就行了。</p>
+
+<h2>调整字体大小</h2>
+
+<p>apt 安装 <code>gnome-tweaks</code>。在 <code>字体</code> 页面调整缩放比例即可。</p>
+
+<h2>安装独显驱动以及调节亮度</h2>
+
+<p>安装独显驱动很容易，装完后不能调节亮度很痛苦。根据 <a href="https://zhuanlan.zhihu.com/p/348624522">https://zhuanlan.zhihu.com/p/348624522</a> 设置一下就行了。</p>
+
+<h2>关闭 Bracketed paste mode</h2>
+
+<p>它使得你在粘贴文本到终端时，会在首部添加类似于 <code>^[[200~</code> 的东西。根据 <a href="https://askubuntu.com/questions/662222/why-bracketed-paste-mode-is-enabled-sporadically-in-my-terminal-screen">https://askubuntu.com/questions/662222/why-bracketed-paste-mode-is-enabled-sporadically-in-my-terminal-screen</a> 关闭即可。</p>
+
+<hr />
+
+<h1>后记</h1>
+
+<p>在试用了一圈主流 Linux 发行版后，我有些泄气：Linux 发行版在最近几年，大多数只能以「毫无长进」来形容。</p>
+
+<p>但我又安慰自己：毕竟，这是由爱好者组成的开源社区志愿开发的。没有厂家的官方驱动，没有商业的资金支持，大多数开发者都寸步难行，取得<a href="http://healthnews.sohu.com/a/575728185_223764">这样的成就</a>实属不易。</p>
+
+<p>不过，我个人认为，<strong>Linux 各个发行版目前最大的问题是</strong>：发行版的数量实在太多，光是包管理器就有数十种：apt、pacman、yum、pkg、apk…… 碎片化情况比 Android 还严重，几乎每月都有新的发行版出现，又有老旧的发行版宣布停止开发。新的发行版带来了新的包格式、新的窗口管理器、新的桌面环境……需要花大量开发者的人力物力予以适配；而老的则让一部分应用程序的运行机会又消失在历史的长河中。如此下去，没有哪一个发行版真正有机会覆盖每一种需求、修复每一个 Bug、添加每一项支持，只是重复「出现——造轮子——失去资金/社区支持——倒闭」的循环，Linux 桌面系统也会一直原地踏步，无法前进。</p>
+
+<p>坚信 Linux 越变越好并不会让它越变越好，自由软件也不是所有问题的答案。只有 Linux 这些桌面发行版愿意抛弃各自建立的代码堡垒、联合起来，制定统一的标准，发出一致的声音，才会有厂家愿意提供驱动支持，有大众消费者愿意接受这一崭新的平台。</p>
+</article>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
+                        </section>
+                        <section class="recommend">
+                            
+                            <section class="nav prev more">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/todo-list.html">博主的Todo List</a>
+                            </section>
+                             
+                            <section class="nav next more">
+                                <div class="head">下篇文章</div>
+                                <a class="link" href="/2022-and-about-me.html">2022 和我自己</a>
+                            </section>
+                            
+                        </section>
+                        
+
+
+
+
+ <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
+            appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
+        })
+    </script>
+
+                </article>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+    <span class="copyright">
+        行云小站 © 2015 - <text id="thisyear"></text>
+        <script type="text/javascript">
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
+        </script>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a> |
+        <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌えサイトの記録</a><a
+            href="https://icp.gov.moe/?keyword=20203115" target="_blank" rel="noreferrer"> #20203115</a>
+    </span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
+    
+</footer>
+    <script src="/bundle/index.js"></script>
+</body>
+
+</html>
