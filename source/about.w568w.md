@@ -12,23 +12,22 @@ author: w568w
 安徽 复旦大二学生 Android业余开发者  
 
 使用系统：`Windows 10 Home China Edition 21H1`  
-开发工具：`Android Studio Bumblebee 2021.1.1 Patch 2`
+开发工具：`Jetbrains 全家桶！`
 
   
-[在Github上找我](https://github.com/w568w/)   
-[在Gitlab上找我](https://gitlab.com/w568w)  
-[在V2EX上找我](https://www.v2ex.com/member/w568w)  
-[在QQ上找我](javascript:alert(\"直接复制QQ号吧...\"))(QQ: 1278297578)  
+[在 Github 上找我](https://github.com/w568w/)   
+[在 Gitlab 上找我](https://gitlab.com/w568w)  
+[在 V2EX 上找我](https://www.v2ex.com/member/w568w)  
+[在 QQ 上找我](javascript:alert(\"直接复制QQ号吧...\"))(QQ: 1278297578)  
 [在酷安上找我](https://www.coolapk.com/n/w568w)  
 [在网易云音乐上找我](https://music.163.com/#/user/home?id=322083123)  
 
 # 一个怎样的人?
-刚刚高考结束的大一狗，正在忙着上大学...   
+刚刚走完本科一半时光的大二狗，正在忙着学习专业知识...   
   
 - [进步保守主义](https://en.wikipedia.org/wiki/Progressive_conservatism)者<font size=1 >（[这是什么？](javascript:alert(\"进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。\"))） </font>
 - 轻度焦虑症、重度拖延症患者 
-- [上网无聊症](https://baike.baidu.com/item/%E4%B8%8A%E7%BD%91%E6%97%A0%E8%81%8A%E7%97%87)重度患者
-- 虚假的`OIer`<font size=1 >（从来没有学过算法 ~~但是敢于在真正的`OIer`面前吹牛逼~~）</font>
+- 虚假的 `OIer`<font size=1 >（从来没有学过算法 ~~但是敢于在真正的 `OIer` 面前吹牛逼~~）</font>
 - 高度近视<font size=1 >（真的很高的那种）</font>
 - 极客主义<font size=1 >（什么东西都想捣鼓捣鼓）</font>
 - 不擅长体育<font size=1 >（从各种意义上来说都是）</font>
@@ -36,13 +35,13 @@ author: w568w
 - 段子手<font size=1 >（无论是线上还是线下）</font>
 - 胆小<font size=1 >（从来不敢一个人看鬼片 ~~白天也不行！~~）</font>
 
-# w568w是什么意思?
+# w568w 是什么意思?
 (/ ω \\)这个嘛  
 以前脸滚键盘打出来的，我也不知道有什么含义在里面...
+
+你可以叫我 568，或者[五六八](https://jisho.org/search/%E3%81%94%E3%82%8D%E3%81%AF%E3%81%A1)（ごろはち，Gorohachi）
 # 喜欢干啥?
-刚刚高考完的高中生当然是学习学习学习啊！  
-唔，偶尔会写点代码自娱自乐一下...  
-虽然周围的同龄人都在看番、刷抖音、刷微博、刷B站、买手办，但是我一个也不喜欢(/ ω \\)  
+虽然周围的同龄人都在看番、刷抖音、刷微博、刷 B 站、买手办，但是我一个也不喜欢(/ ω \\)  
 ~~可能我已经步入老年了吧~~  
 # 有啥作品么？
 有的有的！   
@@ -72,12 +71,13 @@ author: w568w
 - 塔语(Hymmnos): 仅基本语法(想音句)    
    
 ## 计算机语种
-- Java(Android): 中阶，但对 Android 6.0 之后的 API 不甚熟悉
+- Kotlin/Java(Android): 中阶，但对 Android 6.0 之后的 API 不甚熟悉
 - Dart(Flutter)：中阶
 - 易语言: 中阶
+- Rust：初阶，写点后端
 - Python: 初阶，会写爬虫/基本神经网络/统计分析
 - Java(J2ME): 初阶，学习它仅仅为了怀旧
-- 汇编语言: 初阶，仅 8086 相关(~~不过都快忘光了ww~~)
+- 汇编语言: 初阶，仅 8086 相关(~~不过已经忘光了~~)
 - C/C++: 初阶，仅拿来刷题
 - Lua: 初阶，仅用于阅读源码
 - PHP: 初阶，仅用于阅读源码
