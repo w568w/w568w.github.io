@@ -5,7 +5,7 @@
         "start": ".\\node_modules\\.bin\\webpack --watch --mode=development",
         "build": ".\\node_modules\\.bin\\webpack"
     },
-    "description": "InkPaper Material Theme By w568w(github.com/w568w)",
+    "description": "InkPaper Material Theme By w568w (github.com/w568w)",
     "devDependencies": {
         "autoprefixer": "^10.4.2",
         "css-loader": "^6.6.0",

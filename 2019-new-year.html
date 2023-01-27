@@ -65,6 +65,29 @@
 <script src='valine.min.js'></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
     <meta name="keywords" content="">
     <meta name="description" content="Hello 2019">
@@ -297,7 +320,7 @@
                              
                             <section class="nav next more">
                                 <div class="head">下篇文章</div>
-                                <a class="link" href="/calculus-1st.html">零基础微积分入门基本教程（一）</a>
+                                <a class="link" href="/calculus-1st.html">零基础微积分入门基本教程</a>
                             </section>
                             
                         </section>
