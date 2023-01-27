@@ -18,7 +18,9 @@ type: page
 
 
 # 200 OK
-## [萌新的小窝](https://www.xinmoe.cn)
+## [墨染繁星のHOME](https://blog.th-mc.cn)
+所有的将来都从现在开始
+## [萌新的小窝](http://www.moexin.cn)
 萌新的小窝
 ## [imlk’s blog](https://blog.imlk.top/)
 无家可归的北邮人/怀柔蹲监狱/学啥啥不会/Rustacean  
@@ -26,22 +28,23 @@ type: page
 知道要干什么，但是却没有完全知道。  
 ## [KYLN](https://kyln24.github.io/)
 KYLN 的一隅小站  
+(__PS:已超过1年未更新内容__)  
 ## [残页的小博客](https://blog.canyie.top/)
 16岁的少年，喜欢编程，喜欢航空。  
 ## [PasserBlog](https://takuron.top/)  
 不务正业的逗比大学生  
+(__PS:已超过2年未更新内容__)  
 ## [UNKNOWN date](https://n-a.date/)
 啥也不懂的萌新  
-(__PS:已超过2年未更新内容__)  
+(__PS:已超过3年未更新内容__)  
 ## [小姜饼](https://jambing.cn/)
 某一中高一学生/啥也不会的萌新小白白  
 (**PS:无博客，仅个人主页**)
 ## [Tsuasahi](http://tsuasahi.com/)
 静海一中高二学生/大概是一条咸鱼了吧...  
-(__PS:已超过2年未更新内容__)  
+(__PS:已超过3年未更新内容__)  
 ## [853](http://blog.853lab.com/)   
-目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。
-(__PS:已超过半年未更新内容__)  
+目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。 
 ## [一块小板子](https://oboard.github.io/index.html)  
 就是一块小板子。  
 (__PS:已超过3年未更新内容__)
