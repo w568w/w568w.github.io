@@ -1,5 +1,5 @@
 title: "博主的Todo List"
-date: 2022-08-25 16:04:25 +0800
+date: 2023-01-27 11:20:25 +0800
 author: w568w
 top: true
 cover: images/nikita-kachanovsky-445394-unsplash.jpg
@@ -17,7 +17,7 @@ preview: 看看这家伙最近在搞什么大新闻？
 > 当前状态: <div id="tips" style="color:grey; border-bottom:1px solid #000"/></div>  
 
 # 任务列表
-+ 写一个[关于微积分的入门教程](https://zybuluo.com/w568w/note/1081202)<span style="color:green;">(20220825：在填了在填了，周末更新)</span>
++ 写一个[关于微积分的入门教程](https://zybuluo.com/w568w/note/1081202)<span style="color:green;">(20230127：在填了在填了，周末更新)</span>
 + ~~学习，备战高考~~<span style="color:green;">(完成)</span>
 + ~~写一个夜间模式App~~<span style="color:green;">(已初步完成，尚未发布)</span>
 + 写一个 Android 上的 IDE  <span style="color:red;">(心有余而力不足，弃坑)</span>
