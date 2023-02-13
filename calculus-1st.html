@@ -54,7 +54,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
-
 <link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/2.0/animate.min.css" />
 <link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 </link>
@@ -64,28 +63,8 @@
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src='valine.min.js'></script>
 
-
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 
@@ -281,7 +260,7 @@
             <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
-                    <span class="date mdui-card-header-subtitle" data-time="1674795120"><span class="from">创建时间被隐藏</span></span>
+                    <span class="date mdui-card-header-subtitle" data-time="1676265360"><span class="from">创建时间被隐藏</span></span>
                     
 
                 </div>
@@ -297,37 +276,69 @@
                         <section class="info">
                             <span class="tags"></span>
                         </section>
-                        <article class="content"><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"></p>
+                        <article class="content"><nav>
 
-<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<ul>
+<li><a href="#toc_0">前言</a></li>
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+<li><a href="#toc_1">参考书籍</a></li>
 
-<!-- To automatically render math in text elements, include the auto-render extension: -->
+<li><a href="#toc_2">我是否适合看下去?</a></li>
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<li><a href="#toc_3">What’s calculus?</a></li>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          // customised options
-          // • auto-render specific keys, e.g.:
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: "\\(", right: "\\)", display: false},
-              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-              {left: "\\begin{align}", right: "\\end{align}", display: true},
-              {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
-              {left: "\\begin{gather}", right: "\\end{gather}", display: true},
-              {left: "\\begin{CD}", right: "\\end{CD}", display: true},
-              {left: "\\[", right: "\\]", display: true}
-          ],
-          // • rendering keys, e.g.:
-          throwOnError : false
-        });
-    });
-</script>
+<li><a href="#toc_4">一、导数</a>
+<ul>
+<li><a href="#toc_5">1.1 First Blood —— 斜率</a>
+<ul>
+<li><a href="#toc_6">1.1.1 [选读]斜率的严格定义</a></li>
+</ul></li>
+
+<li><a href="#toc_7">1.2 点的斜率？</a></li>
+
+<li><a href="#toc_8">1.3 极限？</a>
+<ul>
+<li><a href="#toc_9">1.3.1 小练习</a>
+<ul>
+<li><a href="#toc_10">第一题</a></li>
+
+<li><a href="#toc_11">第二题</a></li>
+
+<li><a href="#toc_12">第三题</a></li>
+
+<li><a href="#toc_13">第四题</a></li>
+</ul></li>
+
+<li><a href="#toc_14">1.3.2 额外的问答时间</a></li>
+</ul></li>
+
+<li><a href="#toc_15">1.4 斜率的计算</a>
+<ul>
+<li><a href="#toc_16">1.4.1 小结</a></li>
+
+<li><a href="#toc_17">1.4.2 通式</a></li>
+
+<li><a href="#toc_18">1.4.3 求斜率有什么用？</a></li>
+</ul></li>
+
+<li><a href="#toc_19">1.5 导函数</a>
+<ul>
+<li><a href="#toc_20">1.5.1 导数的表示方法</a></li>
+
+<li><a href="#toc_21">1.5.2 小结&amp;补充</a></li>
+
+<li><a href="#toc_22">1.5.3 五年高考，三年模拟(雾)</a></li>
+
+<li><a href="#toc_23">1.5.4 导函数的四则运算</a></li>
+
+<li><a href="#toc_24">1.5.5 复合函数的导函数</a></li>
+
+<li><a href="#toc_25">1.5.6 导函数的除法运算</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+</nav>
 
 <blockquote>
 <p><strong>2023 年 1 月 27 日更新：</strong></p>
@@ -335,13 +346,13 @@
 <p>本文正在施工中，将原<a href="https://zybuluo.com/w568w/note/1081202">作业部落</a>的文章迁移到这里。<br>
 因为早年撰文不注意，本文中格式存在各种问题（如中英文标点乱用、数学符号不规范、中英文间无空格等等），需要修复完毕后才能继续更新，预计会于最近几天完成。敬请关注。</p>
 </blockquote>
-<p><span class="math display">\[\lim\_{学习 \to 坚持} 学习=成功\]</span></p>
-<h1>前言</h1>
+<p><span class="math display">\[\lim_{学习 \to 坚持} 学习=成功\]</span></p>
+<h1 id="toc_0">前言</h1>
 
 <p>非常高兴你能浏览到这篇文章。
 我也不太清楚我写作的动机，可能纯属兴趣使然吧。</p>
 
-<h1>参考书籍</h1>
+<h1 id="toc_1">参考书籍</h1>
 
 <ol>
 <li><strong>《高等数学（第六版）》上册</strong><br>
@@ -357,7 +368,7 @@ Walter Rudin 著<br>
 McGraw-Hill Education 出版</li>
 </ol>
 
-<h1>我是否适合看下去?</h1>
+<h1 id="toc_2">我是否适合看下去?</h1>
 
 <p>在看这篇文章前，你至少需要掌握以下知识：</p>
 
@@ -369,7 +380,7 @@ McGraw-Hill Education 出版</li>
 <li>这条也是</li>
 </ol>
 
-<h1>What’s calculus?</h1>
+<h1 id="toc_3">What’s calculus?</h1>
 
 <p>在正式开始学习微积分前，首先我们得明白微积分是啥。</p>
 
@@ -393,7 +404,7 @@ McGraw-Hill Education 出版</li>
 
 <p>废话不多说，马上上干货~~</p>
 
-<h1>一、导数</h1>
+<h1 id="toc_4">一、导数</h1>
 
 <p><code>导数</code>是微分学的主要内容。翻回去看看百度百科对导数的解释：</p>
 
@@ -403,7 +414,7 @@ McGraw-Hill Education 出版</li>
 
 <p>这是啥么意思呢？变化率是个什么东西？</p>
 
-<h2>1.1 First Blood —— 斜率</h2>
+<h2 id="toc_5">1.1 First Blood —— 斜率</h2>
 
 <p>先来看个函数图像：</p>
 
@@ -459,7 +470,7 @@ McGraw-Hill Education 出版</li>
 
 <p>如果你就是没办法把<span class="math inline">\(k\)</span>和斜率联系起来，稍微喘口气，再往下看吧。</p>
 
-<h3>1.1.1 [选读]斜率的严格定义</h3>
+<h3 id="toc_6">1.1.1 [选读]斜率的严格定义</h3>
 
 <p>（对于初三及以上水平的读者，可以有选择性地阅读这些标有「<code>[选读]</code>」文字的部分，因为这些部分可以加深对一些知识的理解。如果你不想看，<strong>跳过也没关系</strong>。</p>
 
@@ -481,7 +492,7 @@ McGraw-Hill Education 出版</li>
 
 <hr>
 
-<h2>1.2 点的斜率？</h2>
+<h2 id="toc_7">1.2 点的斜率？</h2>
 
 <p>到现在为止，我们所讨论的函数都仅限于一次函数。你可能觉得数学家们真是一群闲得蛋疼的人，一个简单的<span class="math inline">\(k\)</span>值都要起个难听的名字。况且，这和微积分有个卵关系？</p>
 
@@ -555,7 +566,7 @@ McGraw-Hill Education 出版</li>
 
 <p>OK，那么接下来，让我们正式开始导数的学&hellip;哦不！可能还要加点料才行&hellip;.</p>
 
-<h2>1.3 极限？</h2>
+<h2 id="toc_8">1.3 极限？</h2>
 
 <p>在介绍导数之前，我们还得弄懂另外一个概念:极限。
 极限，顾名思义，就是到达了极点的状态。比如说，考试还有1分钟就要结束时题目还没有答完时的感觉，或者暑假开学前的晚上猛补作业时的感受。人们在遇到极限时通常都会想:&ldquo;不行了!不行了!&rdquo;</p>
@@ -586,26 +597,32 @@ McGraw-Hill Education 出版</li>
 0.0000000000000000000000000001m
 </code></pre>
 
-<p>可以看到，小明与学校之间的距离越来越小，越来越靠近于 0m，但是就是到达不了 0m（<del>因为他不想上学</del>），于是我们就可以说$<span class="math inline">\(\lim\_{距离 \to 0\ m}\)</span><span class="math inline">\(
-突然给出这么一个数学式子，你可能会一脸蒙蔽：这是个啥？  
-查查英汉词典可得知：*Lim* 原来是 *Limit* 的缩写，而 *Limit* 就是「极限」的意思。下面的小字里的「\)</span>\to$」表示「向 xxx 靠近」，所以这里的意思是&rdquo;让 距离 这个值给我向 0m 尽可能地靠近!&rdquo;</p>
+<p>可以看到，小明与学校之间的距离越来越小，越来越靠近于 0m，但是就是到达不了 0m（<del>因为他不想上学</del>），于是我们就可以说</p>
+<p><span class="math display">\[\lim_{距离 \to 0 m}\]</span></p><p>突然给出这么一个数学式子，你可能会一脸蒙蔽：这是个啥？<br>
+查查英汉词典可得知：<em>Lim</em> 原来是 <em>Limit</em> 的缩写，而 <em>Limit</em> 就是「极限」的意思。下面的小字里的「<span class="math inline">\(\to\)</span>」表示「向 xxx 靠近」，所以这里的意思是&rdquo;让 距离 这个值给我向 0m 尽可能地靠近!&rdquo;</p>
 
 <p>上面这个式子就表示<strong>距离 无限地向<span class="math inline">\(0\ m\)</span>靠近</strong>(但是就是到达不了<span class="math inline">\(0\ m\)</span>!)</p>
 
-<p>OKOK，理解了，那么让我们在式子上再加点花样吧!$<span class="math inline">\(\lim\_{x \to a} f(x)=b\)</span>$
-诶&hellip;更晕了&hellip;你可能会想：「这东西&hellip;现在我连符号都看不懂了！」<br>
+<p>OKOK，理解了，那么让我们在式子上再加点花样吧!</p>
+<p><span class="math display">\[\lim_{x \to a} f(x)=b\]</span></p><p>诶&hellip;更晕了&hellip;你可能会想：「这东西&hellip;现在我连符号都看不懂了！」<br>
 别急，让我再给你挨个儿解释解释！</p>
 
 <hr>
 
-<p>首先看这个<span class="math inline">\(f(x)\)</span>，这里的<span class="math inline">\(f\)</span>是啥意思呢？其实很简单，f是单词“function”开头第一个字母，“function”就是函数的意思，所以<span class="math inline">\(f\)</span>就是指某个函数。比如说一次函数，在初中学习中我们表示成$<span class="math inline">\(y=2x\)</span><span class="math inline">\(想表示\)</span>x=1<span class="math inline">\(时的值，我们得说\)</span><span class="math inline">\(当x=1时,y=2\)</span><span class="math inline">\(但是到了高中数学以及高等数学中，因为这样写起来太麻烦了，所以同一个函数，我们表示成\)</span><span class="math inline">\(f(x)=2x\)</span><span class="math inline">\(想表示\)</span>x=1<span class="math inline">\(时的值，就可以简练地写成\)</span><span class="math inline">\(f(1)=2\)</span><span class="math inline">\(是不是很方便？  
-（顺便说一句，这里不一定必须用\)</span>f<span class="math inline">\(作为函数的标识，如果你喜欢，也可以写\)</span><span class="math inline">\(我真是酷毙了(x)=2x,我真是酷毙了(1)=2\)</span>$）</p>
+<p>首先看这个<span class="math inline">\(f(x)\)</span>，这里的<span class="math inline">\(f\)</span>是啥意思呢？其实很简单，f是单词“function”开头第一个字母，“function”就是函数的意思，所以<span class="math inline">\(f\)</span>就是指某个函数。比如说一次函数，在初中学习中我们表示成</p>
+<p><span class="math display">\[y=2x\]</span></p><p>想表示<span class="math inline">\(x=1\)</span>时的值，我们得说</p>
+<p><span class="math display">\[当x=1时,y=2\]</span></p><p>但是到了高中数学以及高等数学中，因为这样写起来太麻烦了，所以同一个函数，我们表示成</p>
+<p><span class="math display">\[f(x)=2x\]</span></p><p>想表示<span class="math inline">\(x=1\)</span>时的值，就可以简练地写成</p>
+<p><span class="math display">\[f(1)=2\]</span></p><p>是不是很方便？</p>
+
+<p>（顺便说一句，这里不一定必须用<span class="math inline">\(f\)</span>作为函数的标识，如果你喜欢，也可以写</p>
+<p><span class="math display">\[我真是酷毙了(x)=2x,我真是酷毙了(1)=2\]</span></p><p>）</p>
 
 <hr>
 
 <p>回到上面的式子。<strong><span class="math inline">\(f(x)\)</span>就是以x为自变量的某个函数</strong>，在这里它到底是什么，我们不管它。<br>
 继续往下，下面的&rdquo;<span class="math inline">\(x \to a\)</span>&ldquo;意思应该是&rdquo;自变量x向a无限地靠近&rdquo;。<br>
-这样，这个式子我们至少弄懂一半了，<span class="math inline">\(\lim\_{x \to a} f(x)\)</span>就是表示&rdquo;对于<span class="math inline">\(f(x)\)</span>这个函数，让<span class="math inline">\(x\)</span>无限地逼近<span class="math inline">\(a\)</span>&ldquo;。<br>
+这样，这个式子我们至少弄懂一半了，<span class="math inline">\(\lim_{x \to a} f(x)\)</span>就是表示&rdquo;对于<span class="math inline">\(f(x)\)</span>这个函数，让<span class="math inline">\(x\)</span>无限地逼近<span class="math inline">\(a\)</span>&ldquo;。<br>
 奇怪的是，式子的后面居然出现了等于号&hellip;小明上学时，与学校的距离也是一直在不停地变小啊&hellip;如果说是无限靠近<span class="math inline">\(a\)</span>，又哪来的等于不等于呢？难道<span class="math inline">\(f(x)\)</span>这么神奇，可以一边靠近，一边等于某个值吗？</p>
 
 <p>这里就要提醒一下了:含有<span class="math inline">\(lim\)</span>的式子里，所有&rdquo;<span class="math inline">\(=\)</span>&ldquo;的意思都有一点小小的变动，不再表示&rdquo;等于什么&rdquo;，而是“靠近什么”。</p>
@@ -613,33 +630,35 @@ McGraw-Hill Education 出版</li>
 <p>所以啊，上面这个式子表示<strong>&ldquo;当<span class="math inline">\(x\)</span>无限地靠近<span class="math inline">\(a\)</span>的时候，<span class="math inline">\(f(x)\)</span>无限地靠近<span class="math inline">\(b\)</span>&rdquo;</strong>。<br>
 啪啪啪！第一个奇怪的数学符号，终于是被我们弄明白了！</p>
 
-<h3>1.3.1 小练习</h3>
+<h3 id="toc_9">1.3.1 小练习</h3>
 
 <p>稍微弄几道关于极限的题来做做吧&hellip;我们来找找感觉。</p>
 
-<h4>第一题</h4>
-<p><span class="math display">\[\lim\_{x \to 1} x=？\]</span></p><p>唉&hellip;没什么难度嘛，直接把1代入进<span class="math inline">\(x\)</span>算一下，结果就是<span class="math inline">\(1\)</span>。</p>
+<h4 id="toc_10">第一题</h4>
+<p><span class="math display">\[\lim_{x \to 1} x=？\]</span></p><p>唉&hellip;没什么难度嘛，直接把1代入进<span class="math inline">\(x\)</span>算一下，结果就是<span class="math inline">\(1\)</span>。</p>
 
 <hr>
 
-<h4>第二题</h4>
-<p><span class="math display">\[\lim\_{x \to 3} x^2=？\]</span></p><p>稍微需要一点计算了，<span class="math inline">\(3^2=3*3=9\)</span>，所以答案是<span class="math inline">\(9\)</span>。</p>
+<h4 id="toc_11">第二题</h4>
+<p><span class="math display">\[\lim_{x \to 3} x^2=？\]</span></p><p>稍微需要一点计算了，<span class="math inline">\(3^2=3*3=9\)</span>，所以答案是<span class="math inline">\(9\)</span>。</p>
 
 <hr>
 
-<h4>第三题</h4>
-<p><span class="math display">\[\lim\_{x \to 0} (2x^2+5x+8)=？\]</span></p><p>似乎和第二题差不多么，只是计算有点麻烦了，列个式子算一下，<span class="math inline">\(2x^2+5x+8=2*0^2+5*0+8=8\)</span>，结果是<span class="math inline">\(8\)</span>。</p>
+<h4 id="toc_12">第三题</h4>
+<p><span class="math display">\[\lim_{x \to 0} (2x^2+5x+8)=？\]</span></p><p>似乎和第二题差不多么，只是计算有点麻烦了，列个式子算一下，<span class="math inline">\(2x^2+5x+8=2*0^2+5*0+8=8\)</span>，结果是<span class="math inline">\(8\)</span>。</p>
 
 <hr>
 
-<h4>第四题</h4>
+<h4 id="toc_13">第四题</h4>
 
 <p>你可能纳闷：这和一般的函数计算有什么区别？从哪里能体现出这个<span class="math inline">\(lim\)</span>的特殊性？<br>
 来看这题：</p>
-<p><span class="math display">\[\lim\_{x \to 1} \frac{x^2-3x+2}{x-1}=？\]</span></p><p>妈呀，这题好像不能代入计算了？难道答案是<span class="math inline">\(\frac2 0\)</span>吗？<br>
+<p><span class="math display">\[\lim_{x \to 1} \frac{x^2-3x+2}{x-1}=？\]</span></p><p>妈呀，这题好像不能代入计算了？难道答案是<span class="math inline">\(\frac2 0\)</span>吗？<br>
 不可能，分数的分母不能为0的&hellip;<br>
 那要怎么算呢？没有结果吗？<br>
-实际上，我们发现这个式子可以因式分解:$<span class="math inline">\(\frac{x^2-3x+2}{x-1}=\frac{(x-2)(x-1)}{x-1}=x-2\)</span><span class="math inline">\(所以上面的题目就相当于\)</span><span class="math inline">\(\lim\_{x \to 1} (x-2)=？\)</span><span class="math inline">\(答案就是\)</span>-1$。</p>
+实际上，我们发现这个式子可以因式分解:</p>
+<p><span class="math display">\[\frac{x^2-3x+2}{x-1}=\frac{(x-2)(x-1)}{x-1}=x-2\]</span></p><p>所以上面的题目就相当于</p>
+<p><span class="math display">\[\lim_{x \to 1} (x-2)=？\]</span></p><p>答案就是<span class="math inline">\(-1\)</span>。</p>
 
 <p>这里你可能会说：<span class="math inline">\(x-1\)</span>既然为0了，又怎么能约分上面的分数呢？<br>
 我们需要再看一遍极限的概念：<strong>一个数值尽可能地向另一个数靠近。</strong>这里的<span class="math inline">\(x-1\)</span>准确地说，应该是一个非常非常接近于0，但不是0的值，所以是可以约分的。<br>
@@ -647,7 +666,7 @@ McGraw-Hill Education 出版</li>
 
 <hr>
 
-<h3>1.3.2 额外的问答时间</h3>
+<h3 id="toc_14">1.3.2 额外的问答时间</h3>
 
 <p>你可能还有一些问题..让我尝试解答一下。</p>
 
@@ -655,13 +674,12 @@ McGraw-Hill Education 出版</li>
 
 <p>答：这个问题比较难以解释，需要牵扯到函数的连续性之类的。我们还是按下不表，以免影响了本文的易懂性。</p>
 
-<p>问：上面说极限的格式是 <span class="math inline">\(\lim\limits\_{x\to a} f(x)=b\)</span>，怎么后面又写成 <span class="math inline">\(\lim\limits\_{x\to 1} x=1\)</span> 了呢？</p>
+<p>问：上面说极限的格式是 <span class="math inline">\(\lim\limits_{x\to a} f(x)=b\)</span>，怎么后面又写成 <span class="math inline">\(\lim\limits_{x\to 1} x=1\)</span> 了呢？</p>
 
-<p>答：格式里给出的写法是大概的、通用的写法，实际使用中我们不会写成 $<span class="math inline">\(f(x)=x,\lim\_{x \to 1} f(x)=1\)</span>$</p>
+<p>答：格式里给出的写法是大概的、通用的写法，实际使用中我们不会写成</p>
+<p><span class="math display">\[f(x)=x,\lim\limits_{x \to 1} f(x)=1\]</span></p><p>这么麻烦，直接用<span class="math inline">\(x\)</span>代替极限格式中的<span class="math inline">\(f(x)\)</span>，其潜台词也就是默认<span class="math inline">\(f(x)=x\)</span>了。</p>
 
-<p>这么麻烦，直接用<span class="math inline">\(x\)</span>代替极限格式中的<span class="math inline">\(f(x)\)</span>，其潜台词也就是默认<span class="math inline">\(f(x)=x\)</span>了。</p>
-
-<h2>1.4 斜率的计算</h2>
+<h2 id="toc_15">1.4 斜率的计算</h2>
 
 <p>嗯，讲完了斜率的画法和极限的概念，我们可以综合一下这两个知识，开始真正的导数之旅了。</p>
 
@@ -669,22 +687,21 @@ McGraw-Hill Education 出版</li>
 <img src="data:image/gif;base64,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" alt="" data-src="https://s1.ax1x.com/2018/03/24/9qJkFg.png" title="" />
 我们仍然以这个函数图像<span class="math inline">\(f(x)=x^2\)</span>为例。<br>
 如果我们设A点的坐标为<span class="math inline">\((x,f(x))\)</span>，那么C点坐标可以表示成<span class="math inline">\((x+h,f(x+h))\)</span> (h是某个值)，这没问题吧？<br>
-那么$<span class="math inline">\(AC的斜率=\frac{C点纵坐标-A点纵坐标}{C点横坐标-A点横坐标}\)</span><span class="math inline">\(如果你看到这个式子感到一脸懵，那么你得重新看看这张图了:  
-![][16]
-一次函数的斜率是某两点的竖直高度差除以水平高度差。类似地，AC的斜率我们也可以这么写。  
-继续我们的计算：\)</span><span class="math inline">\(AC的斜率=\frac{C点纵坐标-A点纵坐标}{C点横坐标-A点横坐标}=\frac{f(x+h)-f(x)}{(x+h)-x}=\frac{f(x+h)-f(x)}{h}\)</span>$这样，我们就得到了两点之间的斜率公式。</p>
+那么</p>
+<p><span class="math display">\[AC的斜率=\frac{C点纵坐标-A点纵坐标}{C点横坐标-A点横坐标}\]</span></p><p>如果你看到这个式子感到一脸懵，那么你得重新看看这张图了:<br>
+<img src="data:image/gif;base64,R0lGODlhGAAYAPQAAP///wAAAM7Ozvr6+uDg4LCwsOjo6I6OjsjIyJycnNjY2KioqMDAwPLy8nd3d4aGhri4uGlpaQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkHAAAAIf4aQ3JlYXRlZCB3aXRoIGFqYXhsb2FkLmluZm8AIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAGAAYAAAFriAgjiQAQWVaDgr5POSgkoTDjFE0NoQ8iw8HQZQTDQjDn4jhSABhAAOhoTqSDg7qSUQwxEaEwwFhXHhHgzOA1xshxAnfTzotGRaHglJqkJcaVEqCgyoCBQkJBQKDDXQGDYaIioyOgYSXA36XIgYMBWRzXZoKBQUMmil0lgalLSIClgBpO0g+s26nUWddXyoEDIsACq5SsTMMDIECwUdJPw0Mzsu0qHYkw72bBmozIQAh+QQJBwAAACwAAAAAGAAYAAAFsCAgjiTAMGVaDgR5HKQwqKNxIKPjjFCk0KNXC6ATKSI7oAhxWIhezwhENTCQEoeGCdWIPEgzESGxEIgGBWstEW4QCGGAIJEoxGmGt5ZkgCRQQHkGd2CESoeIIwoMBQUMP4cNeQQGDYuNj4iSb5WJnmeGng0CDGaBlIQEJziHk3sABidDAHBgagButSKvAAoyuHuUYHgCkAZqebw0AgLBQyyzNKO3byNuoSS8x8OfwIchACH5BAkHAAAALAAAAAAYABgAAAW4ICCOJIAgZVoOBJkkpDKoo5EI43GMjNPSokXCINKJCI4HcCRIQEQvqIOhGhBHhUTDhGo4diOZyFAoKEQDxra2mAEgjghOpCgz3LTBIxJ5kgwMBShACREHZ1V4Kg1rS44pBAgMDAg/Sw0GBAQGDZGTlY+YmpyPpSQDiqYiDQoCliqZBqkGAgKIS5kEjQ21VwCyp76dBHiNvz+MR74AqSOdVwbQuo+abppo10ssjdkAnc0rf8vgl8YqIQAh+QQJBwAAACwAAAAAGAAYAAAFrCAgjiQgCGVaDgZZFCQxqKNRKGOSjMjR0qLXTyciHA7AkaLACMIAiwOC1iAxCrMToHHYjWQiA4NBEA0Q1RpWxHg4cMXxNDk4OBxNUkPAQAEXDgllKgMzQA1pSYopBgonCj9JEA8REQ8QjY+RQJOVl4ugoYssBJuMpYYjDQSliwasiQOwNakALKqsqbWvIohFm7V6rQAGP6+JQLlFg7KDQLKJrLjBKbvAor3IKiEAIfkECQcAAAAsAAAAABgAGAAABbUgII4koChlmhokw5DEoI4NQ4xFMQoJO4uuhignMiQWvxGBIQC+AJBEUyUcIRiyE6CR0CllW4HABxBURTUw4nC4FcWo5CDBRpQaCoF7VjgsyCUDYDMNZ0mHdwYEBAaGMwwHDg4HDA2KjI4qkJKUiJ6faJkiA4qAKQkRB3E0i6YpAw8RERAjA4tnBoMApCMQDhFTuySKoSKMJAq6rD4GzASiJYtgi6PUcs9Kew0xh7rNJMqIhYchACH5BAkHAAAALAAAAAAYABgAAAW0ICCOJEAQZZo2JIKQxqCOjWCMDDMqxT2LAgELkBMZCoXfyCBQiFwiRsGpku0EshNgUNAtrYPT0GQVNRBWwSKBMp98P24iISgNDAS4ipGA6JUpA2WAhDR4eWM/CAkHBwkIDYcGiTOLjY+FmZkNlCN3eUoLDmwlDW+AAwcODl5bYl8wCVYMDw5UWzBtnAANEQ8kBIM0oAAGPgcREIQnVloAChEOqARjzgAQEbczg8YkWJq8nSUhACH5BAkHAAAALAAAAAAYABgAAAWtICCOJGAYZZoOpKKQqDoORDMKwkgwtiwSBBYAJ2owGL5RgxBziQQMgkwoMkhNqAEDARPSaiMDFdDIiRSFQowMXE8Z6RdpYHWnEAWGPVkajPmARVZMPUkCBQkJBQINgwaFPoeJi4GVlQ2Qc3VJBQcLV0ptfAMJBwdcIl+FYjALQgimoGNWIhAQZA4HXSpLMQ8PIgkOSHxAQhERPw7ASTSFyCMMDqBTJL8tf3y2fCEAIfkECQcAAAAsAAAAABgAGAAABa8gII4k0DRlmg6kYZCoOg5EDBDEaAi2jLO3nEkgkMEIL4BLpBAkVy3hCTAQKGAznM0AFNFGBAbj2cA9jQixcGZAGgECBu/9HnTp+FGjjezJFAwFBQwKe2Z+KoCChHmNjVMqA21nKQwJEJRlbnUFCQlFXlpeCWcGBUACCwlrdw8RKGImBwktdyMQEQciB7oACwcIeA4RVwAODiIGvHQKERAjxyMIB5QlVSTLYLZ0sW8hACH5BAkHAAAALAAAAAAYABgAAAW0ICCOJNA0ZZoOpGGQrDoOBCoSxNgQsQzgMZyIlvOJdi+AS2SoyXrK4umWPM5wNiV0UDUIBNkdoepTfMkA7thIECiyRtUAGq8fm2O4jIBgMBA1eAZ6Knx+gHaJR4QwdCMKBxEJRggFDGgQEREPjjAMBQUKIwIRDhBDC2QNDDEKoEkDoiMHDigICGkJBS2dDA6TAAnAEAkCdQ8ORQcHTAkLcQQODLPMIgIJaCWxJMIkPIoAt3EhACH5BAkHAAAALAAAAAAYABgAAAWtICCOJNA0ZZoOpGGQrDoOBCoSxNgQsQzgMZyIlvOJdi+AS2SoyXrK4umWHM5wNiV0UN3xdLiqr+mENcWpM9TIbrsBkEck8oC0DQqBQGGIz+t3eXtob0ZTPgNrIwQJDgtGAgwCWSIMDg4HiiUIDAxFAAoODwxDBWINCEGdSTQkCQcoegADBaQ6MggHjwAFBZUFCm0HB0kJCUy9bAYHCCPGIwqmRq0jySMGmj6yRiEAIfkECQcAAAAsAAAAABgAGAAABbIgII4k0DRlmg6kYZCsOg4EKhLE2BCxDOAxnIiW84l2L4BLZKipBopW8XRLDkeCiAMyMvQAA+uON4JEIo+vqukkKQ6RhLHplVGN+LyKcXA4Dgx5DWwGDXx+gIKENnqNdzIDaiMECwcFRgQCCowiCAcHCZIlCgICVgSfCEMMnA0CXaU2YSQFoQAKUQMMqjoyAglcAAyBAAIMRUYLCUkFlybDeAYJryLNk6xGNCTQXY0juHghACH5BAkHAAAALAAAAAAYABgAAAWzICCOJNA0ZVoOAmkY5KCSSgSNBDE2hDyLjohClBMNij8RJHIQvZwEVOpIekRQJyJs5AMoHA+GMbE1lnm9EcPhOHRnhpwUl3AsknHDm5RN+v8qCAkHBwkIfw1xBAYNgoSGiIqMgJQifZUjBhAJYj95ewIJCQV7KYpzBAkLLQADCHOtOpY5PgNlAAykAEUsQ1wzCgWdCIdeArczBQVbDJ0NAqyeBb64nQAGArBTt8R8mLuyPyEAOw==" alt="" data-src="https://s1.ax1x.com/2018/03/21/97LKtf.png" title="" />
+一次函数的斜率是某两点的竖直高度差除以水平高度差。类似地，AC的斜率我们也可以这么写。<br>
+继续我们的计算：</p>
+<p><span class="math display">\[AC的斜率=\frac{C点纵坐标-A点纵坐标}{C点横坐标-A点横坐标}=\frac{f(x+h)-f(x)}{(x+h)-x}=\frac{f(x+h)-f(x)}{h}\]</span></p><p>这样，我们就得到了两点之间的斜率公式。</p>
 
 <p>再进一步想想，我们要求出的是点A的斜率，光有两点的斜率公式要怎么办呢？</p>
 
-<p>不管三七二十一，咱们先把数值代进式子里面再说。A点的坐标是（1,1），所以有$<span class="math inline">\(AC的斜率=\frac{f(1+h)-f(1)}{h}\)</span>$</p>
+<p>不管三七二十一，咱们先把数值代进式子里面再说。A点的坐标是（1,1），所以有</p>
+<p><span class="math display">\[AC的斜率=\frac{f(1+h)-f(1)}{h}\]</span></p><p>这个式子看起来还是没法算啊&hellip;让我们稍微再化简一下，可以发现<span class="math inline">\(f(1)=1^2=1，f(1+h)=(1+h)^2\)</span>。</p>
 
-<p>这个式子看起来还是没法算啊&hellip;让我们稍微再化简一下，可以发现<span class="math inline">\(f(1)=1^2=1，f(1+h)=(1+h)^2\)</span>。</p>
-
-<p>所以这个式子还可以进一步化简：$<span class="math inline">\(AC的斜率=\frac{f(1+h)-f(1)}{h}=\frac{(1+h)^2-1}{h}\)</span>$</p>
-
-<p>根据刚学到的完全平方公式，还可以再展开:$<span class="math inline">\(AC的斜率=\frac{(1+h)^2-1}{h}=\frac{h^2+2h+1-1}{h}=\frac{h^2+2h}{h}=h+2\)</span>$</p>
-
-<p>这里的<span class="math inline">\(h\)</span>是多少呢？</p>
+<p>所以这个式子还可以进一步化简：</p>
+<p><span class="math display">\[AC的斜率=\frac{f(1+h)-f(1)}{h}=\frac{(1+h)^2-1}{h}\]</span></p><p>根据刚学到的完全平方公式，还可以再展开:</p>
+<p><span class="math display">\[AC的斜率=\frac{(1+h)^2-1}{h}=\frac{h^2+2h+1-1}{h}=\frac{h^2+2h}{h}=h+2\]</span></p><p>这里的<span class="math inline">\(h\)</span>是多少呢？</p>
 
 <p>刚才讲到，<span class="math inline">\(h\)</span>表示的是A点与C点横坐标的距离。而这两点，在前面就说到是非常非常接近的，所以<span class="math inline">\(h\)</span>应该是一个很小很小的值。</p>
 
@@ -704,34 +721,32 @@ McGraw-Hill Education 出版</li>
 。<br>
 没错！就是在 <a href="#极限">极限？</a> 这一节里，我们简要地讲了如何正确处理数学里很接近的值。</p>
 
-<p>关键的地方来了！<strong><span class="math inline">\(h\)</span>既然很小，我们就可以把上式加上<span class="math inline">\(\lim\)</span>写成</strong>：$<span class="math inline">\(AC的斜率=\lim\_{h \to 0}(h+2)\)</span><span class="math inline">\(
-然后，后面这个式子的计算方式已经略熟悉啦，直接算出\)</span><span class="math inline">\(AC的斜率=\lim\_{h \to 0}(h+2)=2\)</span><span class="math inline">\(
-这样，我们就终于得出了**点A(1,1)在\)</span>f(x)=x^2<span class="math inline">\(上的切线AC的斜率**，也就是**点A(1,1)在\)</span>f(x)=x^2$上的斜率**。<br>
+<p>关键的地方来了！<strong><span class="math inline">\(h\)</span>既然很小，我们就可以把上式加上<span class="math inline">\(\lim\)</span>写成</strong>：</p>
+<p><span class="math display">\[AC的斜率=\lim_{h \to 0}(h+2)\]</span></p><p>然后，后面这个式子的计算方式已经略熟悉啦，直接算出</p>
+<p><span class="math display">\[AC的斜率=\lim_{h \to 0}(h+2)=2\]</span></p><p>这样，我们就终于得出了<strong>点A(1,1)在<span class="math inline">\(f(x)=x^2\)</span>上的切线AC的斜率</strong>，也就是<strong>点A(1,1)在<span class="math inline">\(f(x)=x^2\)</span>上的斜率</strong>。<br>
 看起来，计算一个点的斜率也没那么困难嘛！</p>
 
-<h3>1.4.1 小结</h3>
+<h3 id="toc_16">1.4.1 小结</h3>
 
 <p>上面求斜率的过程可以概括成这几步：</p>
 
 <ol>
 <li>在要求斜率的点<span class="math inline">\((x,f(x))\)</span>附近找出一个与它很靠近的点<span class="math inline">\((x+h,f(x+h))\)</span>！</li>
 <li>把斜率用<span class="math inline">\(\frac{C点纵坐标-A点纵坐标}{C点横坐标-A点横坐标}\)</span>表示出来！</li>
-<li>在式子前面加上<span class="math inline">\(\lim\_{h \to 0}\)</span>，代入进去计算斜率！</li>
+<li>在式子前面加上<span class="math inline">\(\lim_{h \to 0}\)</span>，代入进去计算斜率！</li>
 </ol>
 
-<h3>1.4.2 通式</h3>
+<h3 id="toc_17">1.4.2 通式</h3>
 
 <p>从上面的过程中我们可以看出，求某个点的斜率有固定的步骤和方法。依照这个方法，理论上来说我们可以求出任何函数上点的斜率。<br>
 接下来让我们试着找出这样一个公式，来表示任何函数<span class="math inline">\(f(x)\)</span>上任意的点<span class="math inline">\((x,f(x))\)</span>的斜率，这样，以后进行计算时就很方便了。<br>
-这个过程并不困难。让我们用<span class="math inline">\(f(x)\)</span>来代替上面的<span class="math inline">\(1\)</span>就可以了。
-$<span class="math inline">\(斜率=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{(x+h)-x}}=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span>$</p>
-
-<p>这就是<strong>任意函数在某一点的一般斜率公式</strong>。
+这个过程并不困难。让我们用<span class="math inline">\(f(x)\)</span>来代替上面的<span class="math inline">\(1\)</span>就可以了。</p>
+<p><span class="math display">\[斜率=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{(x+h)-x}}=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\]</span></p><p>这就是<strong>任意函数在某一点的一般斜率公式</strong>。
 呼，<del>讲了这么多废话</del>，我们总算开始步入正轨<del>，而不是在各种概念上原地打转</del>了。（哈哈）</p>
 
 <p>记不住完整的公式也不要紧，需要用到的时候现场推导就可以了，理解这个有点复杂的式子才是关键。</p>
 
-<h3>1.4.3 求斜率有什么用？</h3>
+<h3 id="toc_18">1.4.3 求斜率有什么用？</h3>
 
 <p>我们已经基本掌握了求某一个点的斜率的方法。那么，这个东西有什么用处呢？<br>
 毕竟，如果没有实际用途的话，这样的数学工具看起来也没有什么意义啊&hellip;<br>
@@ -741,9 +756,13 @@ $<span class="math inline">\(斜率=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{(x+h)-x}}
 
 <p>依然以上面一节中的<span class="math inline">\(f(x)=x^2\)</span>和点<span class="math inline">\(A(1,1)\)</span>为例，我们来求一下A点的切线方程。</p>
 
-<p>已经知道A点的斜率为2了，所以立即有$<span class="math inline">\(g(x)=2x+b\)</span>$是A点的切线方程。</p>
+<p>已经知道A点的斜率为2了，所以立即有</p>
+<p><span class="math display">\[g(x)=2x+b\]</span></p><p>是A点的切线方程。</p>
 
-<p>又知道这个方程经过A点，故使用待定系数法：$<span class="math inline">\(g(1)=2*1+b=1\)</span><span class="math inline">\(解得\)</span><span class="math inline">\(b=-1\)</span><span class="math inline">\(所以A点的切线方程就是\)</span><span class="math inline">\(g(x)=2x-1\)</span>$这个结果对不对？画出来看看就知道有没有问题了。<img src="data:image/gif;base64,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" alt="" data-src="https://s1.ax1x.com/2018/09/15/iVKj1g.png" title="" />
+<p>又知道这个方程经过A点，故使用待定系数法：</p>
+<p><span class="math display">\[g(1)=2*1+b=1\]</span></p><p>解得</p>
+<p><span class="math display">\[b=-1\]</span></p><p>所以A点的切线方程就是</p>
+<p><span class="math display">\[g(x)=2x-1\]</span></p><p>这个结果对不对？画出来看看就知道有没有问题了。<img src="data:image/gif;base64,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" alt="" data-src="https://s1.ax1x.com/2018/09/15/iVKj1g.png" title="" />
 图中红色的线就是我们刚刚求出的直线。看起来它的确是A点的切线。</p>
 
 <p>另一个用途是<strong>求函数的最大/最小值</strong>。容易看出，上面这个函数的顶点<span class="math inline">\(O(0,0)\)</span>的斜率为0。<br>
@@ -752,12 +771,12 @@ $<span class="math inline">\(斜率=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{(x+h)-x}}
 
 <p>在接下来的 导函数 一节里，我们会讲得更多。</p>
 
-<h2>1.5 导函数</h2>
+<h2 id="toc_19">1.5 导函数</h2>
 
 <p>了解了导数和函数，这个&rdquo;导函数&rdquo;是个什么东西啊？别急，听我慢慢道来。</p>
 
-<p>再看一眼这个式子：
-$<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><span class="math inline">\(其实，这个式子就是**\)</span>f(x)$的导函数**。</p>
+<p>再看一眼这个式子：</p>
+<p><span class="math display">\[\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\]</span></p><p>其实，这个式子就是<strong><span class="math inline">\(f(x)\)</span>的导函数</strong>。</p>
 
 <p>函数是什么？我们复习一下函数的定义：</p>
 
@@ -782,12 +801,16 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 <hr>
 
 <p>继续以<span class="math inline">\(f(x)=x^2\)</span>为例，我们看看它的导函数长什么样子。<br>
-这次我们不代入任何值，直接运用上面的公式：$<span class="math inline">\(f^{\prime}(x)=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}=\lim\_{h \to 0}{\frac{(x+h)^2-x^2}{h}}\)</span><span class="math inline">\(然后是\)</span><span class="math inline">\(=\lim\_{h \to 0}{\frac{x^2+2xh+h^2-x^2}{h}}=\lim\_{h \to 0}{\frac{2xh+h^2}{h}}\)</span><span class="math inline">\(最后\)</span><span class="math inline">\(=\lim\_{h \to 0}(2x+h)\)</span><span class="math inline">\(
-又因为h靠近0，所以直接舍去，得到：\)</span><span class="math inline">\(=\lim\_{h \to 0}(2x+0)=2x\)</span><span class="math inline">\(
-所以\)</span>f^{\prime}(x)=2x$。</p>
+这次我们不代入任何值，直接运用上面的公式：</p>
+<p><span class="math display">\[f^{\prime}(x)=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}=\lim_{h \to 0}{\frac{(x+h)^2-x^2}{h}}\]</span></p><p>然后是</p>
+<p><span class="math display">\[=\lim_{h \to 0}{\frac{x^2+2xh+h^2-x^2}{h}}=\lim_{h \to 0}{\frac{2xh+h^2}{h}}\]</span></p><p>最后</p>
+<p><span class="math display">\[=\lim_{h \to 0}(2x+h)\]</span></p><p>又因为h靠近0，所以直接舍去，得到：</p>
+<p><span class="math display">\[=\lim_{h \to 0}(2x+0)=2x\]</span></p><p>所以<span class="math inline">\(f^{\prime}(x)=2x\)</span>。</p>
 
 <p>仔细观察这个式子，我们发现它很有特点。<br>
-比如说想求<span class="math inline">\(A(1,1)\)</span>斜率，我们也不用重新计算了，直接用导函数就行了。$<span class="math inline">\(A的斜率=f^{\prime}(1)=2\)</span><span class="math inline">\(同理，想求\)</span>B(2,4)<span class="math inline">\(斜率的话:\)</span><span class="math inline">\(B的斜率=f^{\prime}(2)=4\)</span>$是不是很方便？</p>
+比如说想求<span class="math inline">\(A(1,1)\)</span>斜率，我们也不用重新计算了，直接用导函数就行了。</p>
+<p><span class="math display">\[A的斜率=f^{\prime}(1)=2\]</span></p><p>同理，想求<span class="math inline">\(B(2,4)\)</span>斜率的话:</p>
+<p><span class="math display">\[B的斜率=f^{\prime}(2)=4\]</span></p><p>是不是很方便？</p>
 
 <hr>
 
@@ -870,7 +893,7 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 <p>这样就把<span class="math inline">\(f(x)=x^2+2\)</span>的图像大概描出来了。<br>
 这题中导函数的优势还不能充分体现出来。遇到一些比较复杂的函数，一般结合导函数这样画图比较方便。</p>
 
-<h3>1.5.1 导数的表示方法</h3>
+<h3 id="toc_20">1.5.1 导数的表示方法</h3>
 
 <p>前面说到，导函数一般记作<span class="math inline">\(f^{\prime}(x)\)</span>。<br>
 但是，实际上导函数还有一些常见的表示方法，这里介绍两种，以备后面的<del>装逼</del>使用。</p>
@@ -881,8 +904,8 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 
 <p>这种表示方法非常常见，因为它写起来很容易，加个撇号只要花上你半秒钟的时间。</p>
 
-<p>但是，它的弊端在于，如果有这么一个函数：$<span class="math inline">\(y=a+b\)</span><span class="math inline">\(
-那么\)</span>y^{\prime}$表示什么？</p>
+<p>但是，它的弊端在于，如果有这么一个函数：</p>
+<p><span class="math display">\[y=a+b\]</span></p><p>那么<span class="math inline">\(y^{\prime}\)</span>表示什么？</p>
 
 <p><span class="math inline">\(a\)</span>和<span class="math inline">\(b\)</span>，到底谁才是自变量？谁是常量？</p>
 
@@ -893,21 +916,21 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 <p>要是有一种表示方法可以体现出对谁求导就好了。</p>
 
 <p>这时，我们就需要第二种表示方法，也就是 戈特弗里德·威廉·莱布尼茨 ，另一个德国大叔的写法。他也是微积分的主要创始人，他生活在17世纪，比上面那位要早几百年。<br>
-对<span class="math inline">\(y=f(x)\)</span>关于<span class="math inline">\(x\)</span>求导可以表示成：$<span class="math inline">\(\frac{dy}{dx},\frac{d}{dx}y,\frac{df(x)}{dx},\frac{d}{dx}f(x)\)</span><span class="math inline">\(
-这些式子看起来很让人头晕...  
-(~~正因如此，他的符号至今仍在大学数学中频频现身。~~)  
-这里的\)</span>d$是<code>Derivative(导数)</code>的首字母。<br>
+对<span class="math inline">\(y=f(x)\)</span>关于<span class="math inline">\(x\)</span>求导可以表示成：</p>
+<p><span class="math display">\[\frac{dy}{dx},\frac{d}{dx}y,\frac{df(x)}{dx},\frac{d}{dx}f(x)\]</span></p><p>这些式子看起来很让人头晕&hellip;<br>
+(<del>正因如此，他的符号至今仍在大学数学中频频现身。</del>)<br>
+这里的<span class="math inline">\(d\)</span>是<code>Derivative(导数)</code>的首字母。<br>
 式子的含义是对分母上的自变量，求分子上的函数的导数。</p>
 
 <p>其中，<strong><span class="math inline">\(\frac{d}{dx}\)</span>可以看成是一个整体，它乘以谁，就是对谁求导。</strong><br>
-例如：$<span class="math inline">\(\frac{d}{dx}x^2=2x\)</span>$</p>
+例如：</p>
+<p><span class="math display">\[\frac{d}{dx}x^2=2x\]</span></p><p>所以，如果我们想要表示导数的导数，也就是<span class="math inline">\(f^{\prime\prime}(x)\)</span>，要怎么写呢？</p>
 
-<p>所以，如果我们想要表示导数的导数，也就是<span class="math inline">\(f^{\prime\prime}(x)\)</span>，要怎么写呢？</p>
-
-<p>就是：$<span class="math inline">\(f^{\prime\prime}(x)=\frac{d}{dx}\*\frac{d}{dx}\*y=\frac{d^2y}{dx^2}\)</span>$分子上加平方的位置看起来怪怪的。而且d似乎也不遵循乘法定律。<br>
+<p>就是：</p>
+<p><span class="math display">\[f^{\prime\prime}(x)=\frac{d}{dx}\times\frac{d}{dx}\times y=\frac{d^2y}{dx^2}\]</span></p><p>分子上加平方的位置看起来怪怪的。而且d似乎也不遵循乘法定律。<br>
 你可能觉得莱布尼兹的方法很麻烦，但是在后面的章节里，你会逐渐明白这样表示的优点。</p>
 
-<h3>1.5.2 小结&amp;补充</h3>
+<h3 id="toc_21">1.5.2 小结&amp;补充</h3>
 
 <p>到现在为止，我们已经学会了：</p>
 
@@ -927,13 +950,14 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 
 <p><strong>尤其是最后一个，堪称初等函数大杀器&hellip;</strong></p>
 
-<p>举个例子，要求出<span class="math inline">\(y=2x^{999}\)</span>的导函数，直接用上面的公式：$<span class="math inline">\(y^{\prime}=2*999*x^{999-1}=1998x^{998}\)</span>$是不是贼方便？</p>
+<p>举个例子，要求出<span class="math inline">\(y=2x^{999}\)</span>的导函数，直接用上面的公式：</p>
+<p><span class="math display">\[y^{\prime}=2*999*x^{999-1}=1998x^{998}\]</span></p><p>是不是贼方便？</p>
 
 <blockquote>
-<p>[选读]这里还有一些为学过三角函数的同学补充的： $<span class="math inline">\((sinx)^\prime=cosx\)</span><span class="math inline">\( \)</span><span class="math inline">\((cosx)^\prime=-sinx\)</span>$$<span class="math inline">\((tanx)^\prime=\frac{1}{(cosx)^2}\)</span>$</p>
-</blockquote>
+<p>[选读]这里还有一些为学过三角函数的同学补充的：</p>
+<p><span class="math display">\[(sinx)^\prime=cosx\]</span></p><p><span class="math display">\[(cosx)^\prime=-sinx\]</span></p><p><span class="math display">\[(tanx)^\prime=\frac{1}{(cosx)^2}\]</span></p></blockquote>
 
-<h3>1.5.3 五年高考，三年模拟(雾)</h3>
+<h3 id="toc_22">1.5.3 五年高考，三年模拟(雾)</h3>
 
 <p>总觉得应该来几道题目练练手&hellip;<br>
 虽然这样有点像老师上课的模式，有悖本文的初衷，但是练习一下真的能掌握不少&hellip;<br>
@@ -966,7 +990,7 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 
 <hr>
 
-<h3>1.5.4 导函数的四则运算</h3>
+<h3 id="toc_23">1.5.4 导函数的四则运算</h3>
 
 <p>上面那几题已经让你晕头转向了？没关系！看完本节和下一节之后，你将可以很快地计算出它们<del>从而去装B</del>！</p>
 
@@ -991,11 +1015,10 @@ $<span class="math inline">\(\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><spa
 
 <p>然而事实是怎样呢？事实是……<strong>我们的猜测是对的。</strong>导数的加法就是可以这么拆开计算的。</p>
 
-<p>写成公式的方式就是：
-$<span class="math inline">\((A+B)^\prime=A^\prime+B^\prime\)</span><span class="math inline">\(
-（别忘了一撇「\)</span>\prime$」的含义哦，它是指对这个式子求导。）</p>
+<p>写成公式的方式就是：</p>
+<p><span class="math display">\[(A+B)^\prime=A^\prime+B^\prime\]</span></p><p>（别忘了一撇「<span class="math inline">\(\prime\)</span>」的含义哦，它是指对这个式子求导。）</p>
 
-<p>那么，这是为啥呢？这个问题我们稍微往后放放。</p>
+<p>那么，这是为啥呢？这个问题我们稍微往后放放，你在后面的选读部分会看到它的证明。</p>
 
 <p>我们先看看利用这个，能不能做出上面的题了。</p>
 
@@ -1012,33 +1035,28 @@ $<span class="math inline">\((A+B)^\prime=A^\prime+B^\prime\)</span><span class=
 
 <p>当然，这种<strong>暴力算法</strong>虽然不能实用，但是至少是可以算出来的。如果遇到这样的函数，展开是最差劲的选择，<strong>但起码是一种选择</strong>……起码是可以算出来的，是吧？</p>
 
-<p>这种方法显然太蠢了。有没有更妙的方法来计算第二题呢？这就进入到咱们今天的重头戏：<strong>复合运算</strong>！</p>
+<p>这种方法显然太蠢了。有没有更妙的方法来计算第二题呢？这就进入到咱们今天的重头戏：复合运算！</p>
 
 <p>。<br>
 。<br>
 。</p>
 
-<p><strong>诶还没进呢</strong><em>（顶级拉扯）</em></p>
+<p><strong>诶还没进呢，没看到标题是「四则运算」吗？等下一节吧（顶级拉扯）</strong></p>
 
-<p>因为标题是「四则运算」，加法已经说完了，我们来看看<strong>乘法</strong>吧。</p>
+<p>加法已经说完了，我们来看看<strong>乘法</strong>吧。</p>
 
 <p>（大家读到这里可能比较突兀，因为上面的练习里面忘了出相关的题了。偏偏这个乘法运算又很重要，还是希望大家快速过一遍！不要跳过哈，不然你待会儿会后悔的，哼哼）</p>
 
-<p>什么叫乘法运算呢？举个例子：$<span class="math inline">\(f(x)=(x^3+3x+3)(x^2+2x+2)\)</span><span class="math inline">\(
-这个函数怎么求导呢？有同学可能会说：**加法是分开加，那我乘法也分开乘嘛！先对\)</span>x^3+3x+3<span class="math inline">\(求导，再对\)</span>x^2+2x+2$求导，然后乘起来就好了吧？**</p>
+<p>什么叫乘法运算呢？举个例子：</p>
+<p><span class="math display">\[f(x)=(x^3+3x+3)(x^2+2x+2)\]</span></p><p>这个函数怎么求导呢？有同学可能会说：<strong>加法是分开加，那我乘法也分开乘嘛！先对<span class="math inline">\(x^3+3x+3\)</span>求导，再对<span class="math inline">\(x^2+2x+2\)</span>求导，然后乘起来就好了吧？</strong></p>
 
 <p>但是，But，<strong>这样是完全错误的哦！</strong>不如再想想？先乘开自己求导一下，再找找规律？</p>
 
-<p>算啦算啦，我知道你很想知道，先把正解放在这里：<br>
-$<span class="math inline">\(f^\prime(x)=(x^3+3x+3)^\prime(x^2+2x+2)+(x^3+3x+3)(x^2+2x+2)^\prime\)</span><span class="math inline">\(
-\)</span><span class="math inline">\(=(3x^2+3)(x^2+2x+2)+(x^3+3x+3)(2x+2)\)</span>$</p>
-
-<p>这就是说，<strong>乘法的规则和加法完全不同，它的导数是对第一个式子求导，乘第二个；再对第二个式子求导，乘第一个。然后加起来。</strong><br>
-写成公式的方式就是：
-$<span class="math inline">\((AB)^\prime=AB^\prime+A^\prime B\)</span><span class="math inline">\(
-或者写得再「专业」一点：
-\)</span><span class="math inline">\((f(x)g(x))^\prime=f^\prime(x)g(x)+f(x)g^\prime(x)\)</span>$
-先尝试理解一下这个式子哈。<br>
+<p>算啦算啦，我知道你很想知道，先把正解放在这里：</p>
+<p><span class="math display">\[f^\prime(x)=(x^3+3x+3)^\prime(x^2+2x+2)+(x^3+3x+3)(x^2+2x+2)^\prime\]</span></p><p><span class="math display">\[=(3x^2+3)(x^2+2x+2)+(x^3+3x+3)(2x+2)\]</span></p><p>这就是说，<strong>乘法的规则和加法完全不同，它的导数是对第一个式子求导，乘第二个；再对第二个式子求导，乘第一个。然后加起来。</strong><br>
+写成公式的方式就是：</p>
+<p><span class="math display">\[(AB)^\prime=AB^\prime+A^\prime B\]</span></p><p>或者写得再「专业」一点：</p>
+<p><span class="math display">\[(f(x)g(x))^\prime=f^\prime(x)g(x)+f(x)g^\prime(x)\]</span></p><p>先尝试理解一下这个式子哈。<br>
 我知道你的心里肯定装满了大大的问号：凭啥这么算？你这是个啥计算方法？你这样算出来，真的是对的嘛？</p>
 
 <p>很不幸的是，它确实是对的。凭什么呢？<br>
@@ -1048,10 +1066,11 @@ $<span class="math inline">\((AB)^\prime=AB^\prime+A^\prime B\)</span><span clas
 <blockquote>
 <p>[选读] 加法求导公式的证明<br>
 要证明对两个函数<span class="math inline">\(f(x)\)</span>和<span class="math inline">\(g(x)\)</span>，可以推出<span class="math inline">\((f(x)+g(x))^\prime=f^{\prime}(x)+g^{\prime}(x)\)</span>。<br>
-先回顾公式：$<span class="math inline">\(f^{\prime}(x)=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\)</span><span class="math inline">\(，  
-所以写出\)</span>(f(x)+g(x))^\prime<span class="math inline">\(的求导式子，然后摆弄一下式子的加法顺序：
-\)</span><span class="math inline">\(\begin{aligned}(f(x)+g(x))^\prime\\\\&amp;=\lim\_{h \to 0}{\frac{(f(x+h)+g(x+h))-(f(x)+g(x))}{h}}\\\\&amp;=\lim\_{h \to 0}{\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}}\\\\&amp;=\lim\_{h \to 0}{\frac{(f(x+h)-f(x))+(g(x+h)-g(x))}{h}}\\\\&amp;=\lim\_{h \to 0}{\frac{f(x+h)-f(x)}{h}}+{\frac{g(x+h)-g(x)}{h}}\\\\&amp;=f^{\prime}(x)+g^{\prime}(x)\end{aligned}\)</span>$
-这就证完了！</p>
+先回顾公式：</p>
+<p><span class="math display">\[f^{\prime}(x)=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}\]</span></p><p>，</p>
+
+<p>所以写出<span class="math inline">\((f(x)+g(x))^\prime\)</span>的求导式子，然后摆弄一下式子的加法顺序：</p>
+<p><span class="math display">\[\begin{aligned}(f(x)+g(x))^\prime\\&amp;=\lim_{h \to 0}{\frac{(f(x+h)+g(x+h))-(f(x)+g(x))}{h}}\\&amp;=\lim_{h \to 0}{\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}}\\&amp;=\lim_{h \to 0}{\frac{(f(x+h)-f(x))+(g(x+h)-g(x))}{h}}\\&amp;=\lim_{h \to 0}{\frac{f(x+h)-f(x)}{h}}+{\frac{g(x+h)-g(x)}{h}}\\&amp;=f^{\prime}(x)+g^{\prime}(x)\end{aligned}\]</span></p><p>这就证完了！</p>
 </blockquote>
 
 <hr>
@@ -1059,16 +1078,232 @@ $<span class="math inline">\((AB)^\prime=AB^\prime+A^\prime B\)</span><span clas
 <blockquote>
 <p>[选读] 乘法求导公式的证明<br>
 要证明对两个函数<span class="math inline">\(f(x)\)</span>和<span class="math inline">\(g(x)\)</span>，可以推出<span class="math inline">\((f(x)g(x))^{\prime}=f^{\prime}(x)g(x)+f(x)g^{\prime}(x)\)</span>。<br>
-还是写出<span class="math inline">\((f(x)g(x))^{\prime}\)</span>的求导式子：$<span class="math inline">\((f(x)g(x))^{\prime}=\lim\_{h \to 0}{\frac{f(x+h)g(x+h)-f(x)g(x)}{h}}\)</span><span class="math inline">\(
-呃，这里不太好办了……只有两项，怎么玩它呢？  
-**其实可以试试「凑项」！**具体来说，就是加一个什么东西，再减去它，这样式子依然不会变，就像\)</span>123+1-1<span class="math inline">\(还是\)</span>123$一样！</p>
+还是写出<span class="math inline">\((f(x)g(x))^{\prime}\)</span>的求导式子：</p>
+<p><span class="math display">\[(f(x)g(x))^{\prime}=\lim_{h \to 0}{\frac{f(x+h)g(x+h)-f(x)g(x)}{h}}\]</span></p><p>呃，这里不太好办了……只有两项，怎么玩它呢？<br>
+<strong>其实可以试试「凑项」！</strong>具体来说，就是加一个什么东西，再减去它，这样式子依然不会变，就像<span class="math inline">\(123+1-1\)</span>还是<span class="math inline">\(123\)</span>一样！</p>
 
-<p>我们这里要凑进去的是<span class="math inline">\(f(x+h)g(x)\)</span>，详细地说就是凑成下面这样：<br>
-$<span class="math inline">\(\begin{aligned}(f(x)g(x))^{\prime}\\\\&amp;=\lim\_{h \to 0}{\frac{f(x+h)g(x+h)-f(x)g(x)}{h}}\\\\&amp;=\lim\_{h \to 0}{\frac{f(x+h)g(x+h)-f(x+h)g(x)+f(x+h)g(x)-f(x)g(x)}{h}}\\\\&amp;=\lim\_{h \to 0}{\frac{f(x+h)(g(x+h)-g(x))+(f(x+h)-f(x))g(x)}{h}}\\\\&amp;=\lim\_{h \to 0}{f(x+h)\frac{g(x+h)-g(x)}{h}}+\frac{f(x+h)-f(x)}{h}g(x)\\\\&amp;=f(x+h)g^{\prime}(x)+f^{\prime}(x)g(x)\end{aligned}\)</span><span class="math inline">\(
-注意，**h是无限趋近于0的，所以上式也就是**\)</span>f(x)g^{\prime}(x)+f^{\prime}(x)g(x)$<strong>了。</strong></p>
+<p>我们这里要凑进去的是<span class="math inline">\(f(x+h)g(x)\)</span>，详细地说就是凑成下面这样：</p>
+<p><span class="math display">\[\begin{aligned}(f(x)g(x))^{\prime}\\&amp;=\lim_{h \to 0}{\frac{f(x+h)g(x+h)-f(x)g(x)}{h}}\\&amp;=\lim_{h \to 0}{\frac{f(x+h)g(x+h)-f(x+h)g(x)+f(x+h)g(x)-f(x)g(x)}{h}}\\&amp;=\lim_{h \to 0}{\frac{f(x+h)(g(x+h)-g(x))+(f(x+h)-f(x))g(x)}{h}}\\&amp;=\lim_{h \to 0}{f(x+h)\frac{g(x+h)-g(x)}{h}}+\frac{f(x+h)-f(x)}{h}g(x)\\&amp;=f(x+h)g^{\prime}(x)+f^{\prime}(x)g(x)\end{aligned}\]</span></p><p>注意，<strong>h是无限趋近于0的，所以上式也就是</strong><span class="math inline">\(f(x)g^{\prime}(x)+f^{\prime}(x)g(x)\)</span><strong>了。</strong></p>
 </blockquote>
 
 <p>PS：这两个证明乍一看很麻烦，但是自己动手写一遍，你会发现还挺简洁的……</p>
+
+<hr>
+
+<p>2023年2月13日更新：啊，迟来的更新！</p>
+
+<p>到这里为止，我们已经介绍了含有加法和乘法的导数计算，总结一下：</p>
+
+<ol>
+<li>对于加法，我们可以用加法求导公式：
+<span class="math inline">\(\begin{aligned}(f(x)+g(x))^\prime&amp;=f^{\prime}(x)+g^{\prime}(x)\end{aligned}\)</span>；</li>
+<li>对于乘法，我们可以用乘法求导公式：<br>
+<span class="math inline">\(\begin{aligned}(f(x)g(x))^{\prime}&amp;=f^{\prime}(x)g(x)+f(x)g^{\prime}(x)\end{aligned}\)</span>。</li>
+</ol>
+
+<p>接下来是减法和除法。加法和减法是一对同胞兄弟，掌握了带加法的求导，带减法的求导就非常顺理成章了：</p>
+<p><span class="math display">\[(f(x)-g(x))^\prime=f^{\prime}(x)-g^{\prime}(x)\]</span></p><p>为什么是这样呢？因为减法可以转化为加法，比如<span class="math inline">\(3-2=3+(-2)\)</span>，所以和加法的求导公式非常类似，只不过是把加号换成了减号而已。</p>
+
+<p>更严格的证明可以这么想：利用负数，我们就可以把减法全部变成加法：</p>
+<p><span class="math display">\[f(x)-g(x)=f(x)+(-1)\times g(x),\]</span></p><p>而这时就可以利用加法求导公式了。</p>
+
+<blockquote>
+<p>如果你问 <span class="math inline">\(\left[(-1)\times g(x)\right]'\)</span> 是什么，不妨再看看 1.5.2 节给你的简单实用的公式？<br>
+（然后你就会知道 <span class="math inline">\(\left[(-1)\times g(x)\right]'=-1\times g'(x)=-g'(x)\)</span> 了。要时常回顾之前学过的东西哦！）</p>
+</blockquote>
+
+<p>只要利用一下加法求导公式，其实就已经得到上面的减法求导公式了。这样，四则运算里的三个求导公式就都证明完了！</p>
+
+<p>然而，除法这个看起来平平无奇的运算，求导却是最难的。为了证明它，上面所有的知识甚至都还不够，我们还需要用到一个（刚刚提了一嘴的）新概念：<strong>复合函数</strong>。下一节我们就来讲讲复合函数和它的求导。</p>
+
+<h3 id="toc_24">1.5.5 复合函数的导函数</h3>
+
+<p>你也许火急火燎地翻过了上面的证明，想要知道复合函数的求导公式是什么。在了解求导公式之前，我们先来看看复合函数是什么。</p>
+
+<p>最直观地说，复合函数就是把一个函数「塞」到另一个函数里面去，然后把它们合并成一个新的函数。</p>
+
+<p>比如，我们把函数<span class="math inline">\(f(x)=x^2\)</span>「塞」到函数<span class="math inline">\(g(x)=x+1\)</span>里面去，就得到了一个新的函数<span class="math inline">\(h(x)=g(f(x))=x^2+1\)</span>。这个新函数<span class="math inline">\(h(x)\)</span>就被称为<span class="math inline">\(f(x)\)</span>和<span class="math inline">\(g(x)\)</span>的复合函数。</p>
+
+<p>这里，<span class="math inline">\(f(x)\)</span>替代了<span class="math inline">\(g(x)\)</span>的式子里的<span class="math inline">\(x\)</span>的位置，所以才写成了<span class="math inline">\(g(f(x))\)</span>。意思就是：<strong><span class="math inline">\(g\)</span>这个因变量，它的自变量现在不叫<span class="math inline">\(x\)</span>了，而是全部替换成<span class="math inline">\(f(x)\)</span></strong>。既然 <span class="math inline">\(g(x)\)</span> 是</p>
+<p><span class="math display">\[g(x)=x+1,\]</span></p><p>那<span class="math inline">\(g(f(x))\)</span>的式子理应是：</p>
+<p><span class="math display">\[g(f(x))=f(x)+1.\]</span></p><p>既然 <span class="math inline">\(f(x)=x^2\)</span>，那么<span class="math inline">\(g(f(x))\)</span>的式子就进一步可以代换成：</p>
+<p><span class="math display">\[g(f(x))=x^2+1.\]</span></p><p>有人可能会问：你把自变量从<span class="math inline">\(x\)</span>换成了<span class="math inline">\(f(x)\)</span>，那原来的因变量 <span class="math inline">\(g\)</span> 不就变了吗？这么说对也不对。</p>
+
+<blockquote>
+<p><strong>[提示]</strong></p>
+
+<p>下面这一部分是对函数的深入讲解，如果你觉得有些难以理解，可以先跳过，等到后面再回来看。</p>
+</blockquote>
+
+<p>在高等数学里，我们不再提「因变量」和「自变量」这两个概念了，而是用「函数」和「变量」来代替。<strong>函数的括号里一定是一个字母吗？未必。函数括号里的就得是一个变量吗？也未必。</strong>我们已经见过很多种写法：</p>
+
+<ol>
+<li><span class="math inline">\(f(x)\)</span>：代表一个<strong>函数</strong>，它的自变量是<span class="math inline">\(x\)</span>；</li>
+<li><span class="math inline">\(f(1)\)</span>：代表令函数<span class="math inline">\(f(x)\)</span>的自变量<span class="math inline">\(x\)</span>等于1时的<strong>函数值</strong>；</li>
+<li><span class="math inline">\(f(g(x))\)</span>：代表令函数<span class="math inline">\(f(x)\)</span>的自变量<span class="math inline">\(x\)</span>等于另一个函数<span class="math inline">\(g(x)\)</span>时的<strong>函数</strong>。</li>
+</ol>
+
+<p>说白了，函数只是一个黑盒子，你不清楚里面的计算过程，只能往里面塞一个东西，然后得知它计算出的东西。</p>
+
+<p>它的括号里是你可以塞进去的东西，你想塞什么都可以。你塞进去一个变量 <span class="math inline">\(x\)</span>，根据计算结果就知道这个函数和 <span class="math inline">\(x\)</span> 有什么关系了；你塞进去一个函数 <span class="math inline">\(g(x)\)</span>，根据计算结果就知道这个函数和 <span class="math inline">\(g(x)\)</span> 有什么关系了；你塞进去一个值 <span class="math inline">\(1\)</span>，根据计算结果就知道这个函数和 <span class="math inline">\(1\)</span> 有什么关系了。</p>
+
+<p>注意，这里的「计算结果」并不一定和你塞进去的东西直接有关系。不是说你塞进去值就一定得到值，也不是说塞进去变量就一定还是函数。比如这个函数：<span class="math inline">\(f(x)=x^2+y\)</span>。把 1 塞进去，你会得到：</p>
+<p><span class="math display">\[f(1)=1^2+y=1+y.\]</span></p><p>你可能会奇怪：<span class="math inline">\(f(1)\)</span> 怎么不是一个数字，而是含有一个未知字母 <span class="math inline">\(y\)</span> 的式子呢？这也能被称为一个函数吗？答案是：当然可以。函数这个黑盒子只能保证两条规则：</p>
+
+<ol>
+<li><strong>你塞进去一个未知量，就一定能得知黑盒子的全貌。</strong>比如你塞进去一个变量 <span class="math inline">\(x\)</span>，就能得知这个函数和其他任何量有什么关系，也清楚明白地知道黑盒子的运作原理了：<span class="math inline">\(f\)</span> 其实就是把塞进去的东西平方，然后再加上一个未知量 <span class="math inline">\(y\)</span> 嘛！</li>
+<li><strong>它计算出的东西一定是一个式子。</strong>当然，这个式子里可能有整数，有小数，有加减乘除，甚至有未知量，但它一定是一个式子。除此之外，函数不会给你任何保证。<strong>你塞进去一个值，它或许会给你一个值，也或许会给你一个式子。</strong></li>
+</ol>
+
+<p>这就是为什么我们可以写出<span class="math inline">\(g(f(x))\)</span>这种东西的原因。<span class="math inline">\(g\)</span>是一个黑盒子，我们把<span class="math inline">\(f(x)\)</span>塞给它（或者说，把<span class="math inline">\(x^2\)</span>塞给它），它根据和塞给它<span class="math inline">\(x\)</span>时一样的工作原理，计算出了一个式子。这个式子里有一个未知量 <span class="math inline">\(x\)</span>，所以我们说<span class="math inline">\(g(f(x))=x^2+1\)</span>。</p>
+
+<hr>
+
+<p>回归正题，讲讲复合函数的求导。这个求导公式是：</p>
+<p><span class="math display">\[\left[g(f(x))\right]'=g'(f(x))f'(x).\]</span></p><p>这个公式的意思是：<strong>复合函数的导数等于里面的函数的导数乘以外面的函数的导数。</strong></p>
+
+<p>啊，又是一个和乘法求导公式一样拗口的公式！</p>
+
+<blockquote>
+<p>[选读] 复合函数求导公式的证明</p>
+
+<p>它的证明过程也是很复杂的，考虑到网上两三步证完的基本都是错误证明（包括高中课本上的），而在严格的分析法里需要考虑诸多细节，可能你也不想看（即便是高中数学水平，硬着头皮也未必能看懂），所以这里只能扔个链接给你：<a href="https://www.zhihu.com/question/57712227">复合函数求导公式的证明</a>，如果闲着没事，可以看看。</p>
+
+<p>PS：说复杂，其实也不复杂，主要是有很多边边角角的情况需要分类讨论，每一种单独证明，因此汇成了一篇长篇大论……</p>
+</blockquote>
+
+<p>不过，这个公式的意思其实很简单。我们继续说上面<span class="math inline">\(f(x)=x^2, g(x)=x+1\)</span>的例子。要分几步走来计算：</p>
+
+<ol>
+<li>先计算<span class="math inline">\(f(x)\)</span>的导数，得到<span class="math inline">\(f'(x)=2x\)</span>；</li>
+<li>再计算<span class="math inline">\(g(x)\)</span>的导数，得到<span class="math inline">\(g'(x)=1\)</span>；</li>
+<li>然后计算<span class="math inline">\(g'(f(x))\)</span>，得到<span class="math inline">\(g'(f(x))=1\)</span>（因为 <span class="math inline">\(g'(x)\)</span> 是一个常函数，你把 <span class="math inline">\(x\)</span> 换成任何值，它都给你 <span class="math inline">\(1\)</span>！）；</li>
+<li>最后，计算<span class="math inline">\(g'(f(x))f'(x)\)</span>，得到<span class="math inline">\(g'(f(x))\times f'(x)=1\times 2x=2x\)</span>；</li>
+<li>所以，最终的答案是<span class="math inline">\(\left[g(f(x))\right]'=2x\)</span>。</li>
+</ol>
+
+<p>这个结果和我们直接对<span class="math inline">\(g(f(x))=x^2+1\)</span>等式右边的<span class="math inline">\(x^2+1\)</span>求导数的结果是一样的。</p>
+
+<hr>
+
+<p>现在，让我们再试试前一节的问题：<span class="math inline">\((x+2)^{11}\)</span>的导数是多少？我们可以把它<strong>拆</strong>成复合函数的形式：</p>
+<p><span class="math display">\[f(x)=x+2, g(x)=x^{11},\]</span></p><p>那么<span class="math inline">\(g(f(x))\)</span>就是<span class="math inline">\((x+2)^{11}\)</span>。这下我们只要计算<span class="math inline">\(g(f(x))\)</span>这个复合函数的导数就可以了：</p>
+
+<ol>
+<li>先计算<span class="math inline">\(f(x)\)</span>的导数，得到<span class="math inline">\(f'(x)=1\)</span>；</li>
+<li>再计算<span class="math inline">\(g(x)\)</span>的导数，得到<span class="math inline">\(g'(x)=11x^{10}\)</span>；</li>
+<li>然后计算<span class="math inline">\(g'(f(x))\)</span>，得到<span class="math inline">\(g'(f(x))=11(x+2)^{10}\)</span>；</li>
+<li>最后，计算<span class="math inline">\(g'(f(x))f'(x)\)</span>，得到<span class="math inline">\(g'(f(x))\times f'(x)=11(x+2)^{10}\times 1=11(x+2)^{10}\)</span>；</li>
+<li>所以，最终的答案是<span class="math inline">\(\left[g(f(x))\right]'=11(x+2)^{10}\)</span>。</li>
+</ol>
+
+<p>这样，我们就把复合函数的求导问题转化成了两个简单的函数求导问题，然后几步就完成了这个函数的求导。<strong>化繁为简，这就是复合函数的求导的核心意义。</strong></p>
+
+<h3 id="toc_25">1.5.6 导函数的除法运算</h3>
+
+<p>虽然除法和乘法也是一对反义词，但它们的求导公式是完全不同的。除法的求导可以说是最难的，所以我们单独拿出来讲。</p>
+
+<p>它为什么困难呢？上面我们证明减法求导的时候，是把减法转化成加法和乘负一（更「专业」的说法是乘 <em>相反数</em> ，如果你学过这个词的话），然后利用加法求导公式得到的。你肯定很容易想到：那么，除法求导的时候，我们是不是可以把除法转化成乘法和乘一个什么东西呢？</p>
+
+<p>答案是：不可以。<strong>首先我们要知道，运算是有好几个不同层次的，最低级的是加减，而乘除是比它们俩高一层的。</strong> 注意注意！看「减法可以转化成加法和乘负一」这句话里的几个词：</p>
+
+<p><center><strong>减</strong>法可以转化成<strong>加</strong>法和<strong>乘</strong>负一</center></p>
+
+<p>这里的「<strong>减</strong>」和「<strong>加</strong>」是相对应的，而「<strong>乘</strong>」是<strong>比加减更高一层</strong>的计算！</p>
+
+<p>而我们想象的：</p>
+
+<p><center><strong>除</strong>法可以转化成<strong>乘</strong>法和<strong>乘</strong>一个什么东西</center></p>
+
+<p>这里的「<strong>除</strong>」和「<strong>乘</strong>」是相对应的，但是「<strong>乘</strong>」不是<strong>比乘除更高一层</strong>的计算！</p>
+
+<p>所以，想要对应上前一节的思考方式，也应该是：</p>
+
+<p><center><strong>除</strong>法可以转化成<strong>乘</strong>法和 <strong>XXX</strong> 一个什么东西</center></p>
+
+<p>其中的「XXX」必须得是一种比乘除法还要高一层的计算才合理。</p>
+
+<p>这个超高级的计算是什么呢？就是<strong>幂运算</strong>！所以，除法求导的时候，我们应当把除法转化成乘法和乘一个幂运算的结果：</p>
+
+<p><center><strong>除</strong>法可以转化成<strong>乘</strong>法和对负一的<strong>幂</strong>运算</center></p>
+
+<p>或者用更简单的数学语言来说，就是：</p>
+<p><span class="math display">\[\frac{f(x)}{g(x)}=f(x)\times \left[g(x)\right]^{-1}.\]</span></p>
+<blockquote>
+<p><strong>注意</strong></p>
+
+<p><span class="math inline">\(\left[g(x)\right]^{\text{xxx}}\)</span> 我们习惯上简写成 <span class="math inline">\(g^{\text{xxx}}(x)\)</span>，这里用方括号括起来是方便你理解的。后面我们就不再用方括号，直接写成 <span class="math inline">\(g^{\text{xxx}}(x)\)</span> 了。</p>
+</blockquote>
+
+<p>接下来让我们仿照算减法求导公式时的做法，利用一下乘法求导公式！我们知道，<strong>乘法的规则是对第一个式子求导，乘第二个；再对第二个式子求导，乘第一个。然后加起来</strong>。</p>
+
+<p>「对第一个式子求导，乘第二个」是：</p>
+<p><span class="math display">\[f^{\prime}(x)\times g^{-1}(x),\]</span></p><p>唔，这部分看起来很简单嘛！</p>
+
+<p>「对第二个式子求导，乘第一个」是：</p>
+<p><span class="math display">\[f(x)\times \left[g^{-1}(x)\right]',\]</span></p><p>新问题又来了，这里的 <span class="math inline">\(g^{-1}(x)\)</span> 怎么求导呢？我们好像没有学过这个东西啊！</p>
+
+<p>别急，再想想，既然气氛都烘托到这了，肯定是有办法的。</p>
+
+<p>我们到底在哪里提过关于幂的求导呢？<br>
+我们到底在哪里提过关于幂的求导呢？<br>
+我们到底在哪里提过关于幂的求导呢？</p>
+
+<p>在继续之前，请你再三思考一下，翻一翻之前的内容，看看有没有提到过，然后再往下看。</p>
+
+<p>。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。<br>
+。</p>
+
+<p>没错，还是在 1.5.2 节给你的简单实用的公式表里面，有关于幂的求导公式，而且当时我们还叫它「<strong>初等函数大杀器</strong>」呢：</p>
+<p><span class="math display">\[(ax^n)'=nax^{n-1}.\]</span></p><p>这个式子是说，对于 <span class="math inline">\(ax^n\)</span> 这个式子，它的导数是 <span class="math inline">\(nax^{n-1}\)</span>。比如，对于 <span class="math inline">\(x^2\)</span>，它的导数是 <span class="math inline">\(2x^{2-1}\)</span>；对于 <span class="math inline">\(2x^3\)</span>，它的导数是 <span class="math inline">\(2\times 3x^{3-1}\)</span>。</p>
+
+<p>所以，看起来我们可以对于 <span class="math inline">\([g(x)]^{-1}\)</span> 用上面的公式求导。有个小问题是：<span class="math inline">\(g(x)\)</span> 并不是 <span class="math inline">\(x\)</span> 啊？那我们怎么用呢？</p>
+
+<p>这里要用到我们的另一个大杀器了：<strong>复合函数</strong>。我们可以令 <span class="math inline">\(f(x)=x^{-1}\)</span>，<strong>那 <span class="math inline">\([g(x)]^{-1}\)</span> 不就是 <span class="math inline">\(f(g(x))\)</span> 了吗？</strong></p>
+
+<p>来试试看！我们把复合函数的求导公式代入进去。首先计算 <span class="math inline">\(f(x)\)</span> 的导数：</p>
+<p><span class="math display">\[f'(x)=\left(x^{-1}\right)'=-1\times x^{-2} = -x^{-2}.\]</span></p><p>注意，这里的 <span class="math inline">\(x^{-2}\)</span> 其实就是 <span class="math inline">\(\frac{1}{x^2}\)</span>，所以 <span class="math inline">\(f'(x)=-\frac{1}{x^2}\)</span>。那么，<span class="math inline">\(f'(g(x))=-\frac{1}{g^2(x)}\)</span>。</p>
+
+<p>所以呢，我们可以继续按照复合函数的求导公式来计算：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\left(\left[g(x)\right]^{-1}\right)'&amp;=[f(g(x))]'\\
+&amp;=f'(g(x))g'(x)\\
+&amp;=-\frac{1}{g^2(x)}\times g'(x)\\
+\end{aligned}
+\]</span></p><p>看起来我们终于解决了 <span class="math inline">\([g(x)]^{-1}\)</span> 的导数，它就是 <span class="math inline">\(-\frac{1}{g^2(x)}g'(x)\)</span>。耶✌！</p>
+
+<p>乘胜追击，让我们完成这个绕了山路十八弯的除法求导公式。「对第二个式子求导，乘第一个」现在就是：</p>
+<p><span class="math display">\[f(x)\times \left[g^{-1}(x)\right]'=-f(x)\frac{1}{g^2(x)}g'(x).\]</span></p><p>所以，最终的除法求导公式是把它和「对第一个式子求导，乘第二个」加起来，也就是下面两个加起来：</p>
+<p><span class="math display">\[-f(x)\frac{1}{g^2(x)}g'(x)+f^{\prime}(x)\times g^{-1}(x)\]</span></p><p>经过一串草稿纸上的暴力分母通分，我们得到了最终的除法求导公式：</p>
+<p><span class="math display">\[\left[\frac{f(x)}{g(x)}\right]'=\frac{f^{\prime}(x)g(x)-f(x)g^{\prime}(x)}{g^2(x)}.\]</span></p><p>真是「道路阻且长」啊。折腾了这么多得到的除法公式，结果还这么复杂，大概可以排进我们心目中「我最讨厌的导数公式」前三名了吧？</p>
+
+<hr>
+
+<p>再小结一下，到目前为止，我们已经学会了求导的以下几种方法：</p>
+
+<ol>
+<li>一些通用的求导公式</li>
+<li>加减乘除的求导公式</li>
+<li>复合函数的求导公式</li>
+</ol>
+
+<p>对于水平稍高的同学，现在已经可以回头完成我们的「五年高考，三年模拟」了。快去试试吧（笑）下次更新会公布正确答案。</p>
+
+<p>PS：下一次更新将在本周内，敬请期待~</p>
 </article>
                         <section class="author">
                             
