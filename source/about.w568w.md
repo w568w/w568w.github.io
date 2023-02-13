@@ -9,9 +9,9 @@ author: w568w
 
 一个梦想改变自己的疯子。  
 
-安徽 复旦大二学生 Android业余开发者  
+安徽 复旦大三学生 Android业余开发者  
 
-使用系统：`Windows 10 Home China Edition 21H1`  
+使用系统：`Windows 10 Home Edition 22H2`  
 开发工具：`Jetbrains 全家桶！`
 
   
@@ -23,7 +23,7 @@ author: w568w
 [在网易云音乐上找我](https://music.163.com/#/user/home?id=322083123)  
 
 # 一个怎样的人?
-刚刚走完本科一半时光的大二狗，正在忙着学习专业知识...   
+走完本科一大半时光的大三狗，正在忙着学习专业知识...   
   
 - [进步保守主义](https://en.wikipedia.org/wiki/Progressive_conservatism)者<font size=1 >（[这是什么？](javascript:alert(\"进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。\"))） </font>
 - 轻度焦虑症、重度拖延症患者 
@@ -74,7 +74,7 @@ author: w568w
 - Kotlin/Java(Android): 中阶，但对 Android 6.0 之后的 API 不甚熟悉
 - Dart(Flutter)：中阶
 - 易语言: 中阶
-- Rust：初阶，写点后端
+- Rust：中阶，努力学习中
 - Python: 初阶，会写爬虫/基本神经网络/统计分析
 - Java(J2ME): 初阶，学习它仅仅为了怀旧
 - 汇编语言: 初阶，仅 8086 相关(~~不过已经忘光了~~)
