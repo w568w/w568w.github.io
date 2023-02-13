@@ -1,4 +1,3 @@
-const cssimport = require("postcss-import");
 module.exports = {
     plugins: [
         require('autoprefixer')({

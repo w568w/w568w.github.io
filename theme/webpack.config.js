@@ -11,7 +11,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/i, use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
-        }, {test: /\.woff|\.woff2|\.svg|.eot|\.ttf/, use: ['url-loader?limit=8192']}, {
+        }, { test: /\.woff|\.woff2|\.svg|.eot|\.ttf/, use: ['url-loader?limit=8192'] }, {
             test: /\.html$/i, use: [{
                 loader: 'raw-loader',
             },],
