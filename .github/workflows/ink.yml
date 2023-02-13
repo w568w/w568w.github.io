@@ -28,7 +28,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Paper Ink
         run: |
-          wget https://imeoer.github.io/release/ink_linux_386.tar.gz
+          wget https://github.com/InkProject/ink/releases/download/nightly/ink_linux_386.tar.gz
           tar -zxvf ink_linux_386.tar.gz
           sudo mv ./ink /usr/local/bin/
           
