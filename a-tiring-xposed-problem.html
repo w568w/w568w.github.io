@@ -279,14 +279,14 @@
                         </section>
                         <article class="content"><h1>引子</h1>
 
-<p>在写净眼(一个Xposed模块)时，遇到一个问题，App本体的设置参数如何传给Hook类？<br>
-之前我一直用的是文件读写的方式，但在调试中我发现：如果被Hook的应用本身无此权限，那么就无法读到这个文件。<br>
+<p>在写净眼(一个Xposed模块)时，遇到一个问题，App本体的设置参数如何传给Hook类？<br />
+之前我一直用的是文件读写的方式，但在调试中我发现：如果被Hook的应用本身无此权限，那么就无法读到这个文件。<br />
 经过多次(两三个小时而已)的查找，找到了一个解决方案。</p>
 
 <h1>XSharedPreferences</h1>
 
-<p>XSharedPreferences是XposedBridge的一部分。它可以读取任意应用的SharedPreferences。<br>
-於是就可以在App本体中写入SharedPreferences，然后从Hook类中读取&hellip;<br>
+<p>XSharedPreferences是XposedBridge的一部分。它可以读取任意应用的SharedPreferences。<br />
+於是就可以在App本体中写入SharedPreferences，然后从Hook类中读取&hellip;<br />
 程序本体中：</p>
 
 <pre><code>        SharedPreferences mSharedPreferences = getSharedPreferences(&quot;data&quot;, Context.MODE_WORLD_READABLE);
@@ -304,10 +304,8 @@
 <h1>注意</h1>
 
 <ol>
-<li><strong>必须</strong>使用<code>Context.MODE_WORLD_READABLE</code>得到的<code>SharedPreferences</code>，<code>makeWorldReadable()</code>并不能让你可以随意限定<code>SharedPreferences</code>的读取权限。<br>
-</li>
-<li>尽可能地不使用<code>PreferenceManager.getDefaultSharedPreferences(this);</code>或者<code>PreferenceActivity</code>得到的<code>SharedPreferences</code>（我在这里被坑了好久&hellip;）<br>
-</li>
+<li><strong>必须</strong>使用<code>Context.MODE_WORLD_READABLE</code>得到的<code>SharedPreferences</code>，<code>makeWorldReadable()</code>并不能让你可以随意限定<code>SharedPreferences</code>的读取权限。<br /></li>
+<li>尽可能地不使用<code>PreferenceManager.getDefaultSharedPreferences(this);</code>或者<code>PreferenceActivity</code>得到的<code>SharedPreferences</code>（我在这里被坑了好久&hellip;）<br /></li>
 <li>即便这么做，获得的<code>XSharedPreferences</code>仍然是只读的&hellip;因此，Hook类依旧不能向模块本体传递信息&hellip;</li>
 </ol>
 </article>
