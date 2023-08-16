@@ -299,23 +299,23 @@
 &lt;/android.support.v4.widget.SwipeRefreshLayout&gt;
 </code></pre>
 
-<p>但是！下拉时啥都没有显示，根据Debugger显示，<code>OnRefresh</code>方法<strong>几乎</strong>也不被调用。<br />
+<p>但是！下拉时啥都没有显示，根据Debugger显示，<code>OnRefresh</code>方法<strong>几乎</strong>也不被调用。<br>
 这TM就很闹心了。。。各种调试无果，只好求助度娘。</p>
 
 <h1>解决</h1>
 
-<p>网上的解决方法也是种类繁多。。。总的来说有这几种：<br />
-1. 用<code>ScrollView</code>或者<code>ListView</code>作为<code>SwipeRefreshLayout</code>的子控件。<br />
-2. 导入了两个不同版本<code>android.support.v4</code>支持包，用<code>resolutionStrategy</code>强制指定版本。(<a href="https://www.jianshu.com/p/2a1897fdc041">原文章在这里</a>)<br />
+<p>网上的解决方法也是种类繁多。。。总的来说有这几种：<br>
+1. 用<code>ScrollView</code>或者<code>ListView</code>作为<code>SwipeRefreshLayout</code>的子控件。<br>
+2. 导入了两个不同版本<code>android.support.v4</code>支持包，用<code>resolutionStrategy</code>强制指定版本。(<a href="https://www.jianshu.com/p/2a1897fdc041">原文章在这里</a>)<br>
 3. 给子布局设置<code>onTouchEvent</code>，屏蔽事件。</p>
 
-<hr />
+<hr>
 
-<p>前两种压根没遇到。。。所以果断选择第3种，嘿，还真有效！<br />
-<a href="http://blog.csdn.net/u013673799/article/details/70755747">原文章</a>里是这么说的:<br />
+<p>前两种压根没遇到。。。所以果断选择第3种，嘿，还真有效！<br>
+<a href="http://blog.csdn.net/u013673799/article/details/70755747">原文章</a>里是这么说的:<br>
 <blockquote>
-当使用ListView，下拉刷新时，<code>SwipeRefreshLayout</code>的down事件被子View消费了，当Move时，才会调用自身的<code>onTouchEvent</code>方法。<br />
-而不使用ListView，显示<code>TextView</code>时，<code>SwipeRefreshLayout</code>的down事件没有被子View消费，需要调用自己的<code>onTouchEvent</code>方法 。这个就是导致问题的原因。<br />
+当使用ListView，下拉刷新时，<code>SwipeRefreshLayout</code>的down事件被子View消费了，当Move时，才会调用自身的<code>onTouchEvent</code>方法。<br>
+而不使用ListView，显示<code>TextView</code>时，<code>SwipeRefreshLayout</code>的down事件没有被子View消费，需要调用自己的<code>onTouchEvent</code>方法 。这个就是导致问题的原因。<br>
 根据上面的原因，可以有一种解决方式，如下:</p>
 
 <pre><code>mTextView.setOnTouchListener(new View.OnTouchListener() {
@@ -329,7 +329,7 @@
 });
 </code></pre>
 
-<p></blockquote><br />
+<p></blockquote><br>
 於是这个问题就解决了。。。浪费了我半个小时的时间QAQ</p>
 </article>
                         <section class="author">
