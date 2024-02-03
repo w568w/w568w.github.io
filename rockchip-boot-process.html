@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta name="google" value="notranslate" />
+<meta name="robots" content="index,follow" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="行云小站" />
+<meta name="twitter:description" content="Say hello to you!" />
+<meta name="twitter:image:src" content="https://w568w.eu.org/images/avatar.gif" />
+
+<meta property="og:url" content="https://w568w.eu.org" />
+<meta property="og:title" content="行云小站" />
+<meta property="og:description" content="Say hello to you!" />
+<meta property="og:site_name" content="行云小站" />
+<meta property="og:image" content="https://w568w.eu.org/images/avatar.gif" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noodp" />
+
+<meta itemprop="name" content="行云小站" />
+<meta itemprop="description" content="Say hello to you!" />
+<meta itemprop="image" content="https://w568w.eu.org/images/avatar.gif" />
+
+<link rel="canonical" href="https://w568w.eu.org" />
+
+<link rel="shortcut icon" href="/favicon.png" />
+<link rel="apple-itouch-icon" href="/favicon.png" />
+<link rel="stylesheet" href="/bundle/index.css" />
+
+<link rel="preconnect" href="https://cdn.staticfile.org" />
+<link rel="preconnect" href="https://busuanzi.ibruce.info" />
+<link rel="dns-prefetch" href="https://cdn.staticfile.org" />
+<link rel="dns-prefetch" href="https://busuanzi.ibruce.info" />
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/2.0/animate.min.css" />
+<link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+</link>
+
+
+<script defer src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src='valine.min.js'></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+    <meta name="keywords" content="">
+    <meta name="description" content="瑞芯微 RK 系列芯片启动流程简析">
+    <meta name="author" content="w568w">
+    <style>
+        @media (max-width: 767px) {
+            .mdui-card {
+                width: auto;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .mdui-card {
+                width: max-content;
+            }
+        }
+    </style>
+    <title>瑞芯微 RK 系列芯片启动流程简析</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+
+<script>
+    
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+    
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
+        }
+    })
+
+    
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
+</script>
+<header>
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
+                    menu
+                </i>
+            </a>
+            <a href="/" class="mdui-typo-title">
+                行云小站
+            </a>
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
+                        class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
+                    refresh
+                </i>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+    <div class="mdui-grid-tile">
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a
+                        href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mc-drawer mdui-list" style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    home
+                </i>
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    archive
+                </i>
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    apps
+                </i>
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    people
+                </i>
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    account_circle
+                </i>
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    rss_feed
+                </i>
+                <div class="mdui-list-item-content">
+
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">NodeCache</span>&nbsp;提供
+
+            </div>
+        </li>
+    </div>
+    
+</div>
+
+        <div style="padding: 5% 0 5% 0; ">
+            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1706932800"><span
+                        class="from">创建时间被隐藏</span></span>
+                    
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">瑞芯微 RK 系列芯片启动流程简析</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><p>这篇是关于瑞芯微 RockChip 系列芯片启动流程的简析，基本是基于官网过于杂乱的 <a href="https://opensource.rock-chips.com/wiki_Boot_option">Wiki</a>。很多东西并没有说明白，所以我在这里做一个<del>并不</del>简单的总结。</p>
+
+<h2>启动流程</h2>
+
+<p>RockChip 系列芯片的启动流程大致分成五个阶段，分别为：</p>
+
+<h3>1. 一级程序载入器（Primary Program Loader）</h3>
+
+<p>这一部分位于不可擦除的 ROM 中（又名 BootROM），主要负责初始化一些硬件设备，以及加载第二阶段的启动程序。其地位相当于电脑上的 BIOS 或 UEFI。</p>
+
+<p>如果第二阶段的启动程序加载失败了，它会负责启动 MaskROM 烧写模式，以便用户可以线刷固件。</p>
+
+<h3>2. 二级程序载入器（Secondary Program Loader）</h3>
+
+<p>这一部分（和以下部分）均是可以自定义（也就是说，位于普通用户可以擦写的位置，例如 SPI Flash、eMMC、SD 卡等）的，主要负责加载下一阶段的启动程序（如 U-Boot）。</p>
+
+<p>常用文件名是 <code>idbloader.img</code>。</p>
+
+<p>它有两个不同的实现，一个是开源的 U-Boot TPL/SPL，一个是瑞芯微自己的 MiniLoader。</p>
+
+<blockquote>
+<p><strong>备注</strong></p>
+
+<p><strong>U-Boot TPL/SPL 说是开源，其实使用时不完全开源。</strong>因为有一些组件的源码依然是闭源的，需要从瑞芯微的仓库中下载。</p>
+
+<p>试举例来说，RK3566 编译 U-Boot TPL/SPL 时依赖 <a href="https://github.com/rockchip-linux/rkbin">rkbin 仓库</a>中的 <code>rk3566_ddr_1056MHz_v1.10.bin</code> 这个二进制文件，它是 TPL/SPL 用于初始化 DDR（DRAM）的程序，而这个程序并没有开源。</p>
+</blockquote>
+
+<h3>3. U-Boot</h3>
+
+<p><a href="https://docs.u-boot.org/">U-Boot</a> 是一个开源的启动程序，它可以从各种设备中加载内核镜像，然后启动操作系统内核。其地位相当于电脑上的 GRUB 或者「Windows 启动管理器」。</p>
+
+<blockquote>
+<p><strong>备注</strong></p>
+
+<p>U-Boot 有一些组件的源码也是闭源的，需要从瑞芯微的仓库中下载。</p>
+
+<p>依然以 RK3566 为例，编译 U-Boot 时依赖 <code>rkbin</code> 仓库中的 <code>rk3568_bl31_v1.32.elf</code>，它是 TF-A（Trusted Firmware-A）固件，用于初始化 AArch64 处理器的安全状态。对另一些型号来说，可以从 <a href="https://github.com/ARM-software/arm-trusted-firmware.git">ARM 的仓库</a> 中自行编译，但至少 RK3566 是不行的，没开源。</p>
+</blockquote>
+
+<p><strong>二级程序载入器一般和 U-Boot 一起打包成一个镜像</strong>，然后写入一个设备中。U-Boot 也支持直接编译出单个可以烧写的、同时包含 SPL 和 U-Boot 的镜像，<strong>无需编译两次</strong>。</p>
+
+<p>有关如何编译 SPL 和 U-Boot，可以参考<a href="https://github.com/w568w/u-boot-orangepi-3b">我的仓库</a>。<a href="https://docs.u-boot.org/en/latest/board/rockchip/rockchip.html">U-Boot 的 Wiki 页</a>中提供了更多关于如何编译、如何烧写的信息。</p>
+
+<h3>4. 引导分区（内核）</h3>
+
+<p>U-Boot 会从设备（即 Flash、eMMC、SD 卡等）中扫描所有分区，找到标记为可引导的分区，然后加载其中的内核镜像。</p>
+
+<blockquote>
+<p><strong>备注</strong></p>
+
+<p>从这里开始，启动程序已经有能力理解「分区」和「文件系统」的概念，也可以任意读写文件了，所以<strong>第 4 和 5 阶段都只是普通的文件系统上的俩分区而已（甚至可以在网络上，TFTP 了解一下？）</strong>，可以任意规划，可以用你喜欢的分区工具，而不像前面几个阶段那样需要特定的格式和烧写工具。</p>
+</blockquote>
+
+<p>引导分区一般是一个 FAT32 分区，里面包含了 <code>zImage</code> 或 <code>Image</code> 内核镜像、<code>dtb</code> 设备树文件、<code>extlinux.conf</code> 引导配置文件等。在 Linux 系统中，这个分区一般会被挂载在叫 <code>/boot</code> 的目录下。</p>
+
+<h3>5. 根分区（文件系统）</h3>
+
+<p>这已经是特定于 Linux 操作系统的内容了。它可能包含了你操作系统上一切重要的配置文件和关键程序，例如 <code>/etc</code>、<code>/usr</code> 等等。</p>
+
+<p><strong>所谓的「制作一个发行版」，其本质一般就是制作一个根分区而已</strong>。Ubuntu、Debian、ArchLinux、OpenWrt 等等，<strong>它们的区别主要就是这个分区的内容不同</strong>。</p>
+
+<h2>官网示意图勘误</h2>
+
+<p>下面是官网 Wiki 上的一张图，展示了这个启动流程：</p>
+
+<p><img src="data:image/gif;base64,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" alt="RockChip Boot Process" data-src="images/Rockchip_bootflow20181122.webp" /></p>
+
+<p>这张图其实有些地方画得很清楚，有些地方画得很烂。比如说：</p>
+
+<ol>
+<li>并没有人规定说 BOOT 分区和 ROOTFS 分区必须从 0x8000 和 0x40000 开始，这可能只是官方的推荐值而已；</li>
+<li>loader1 是指「二级程序载入器」，不是「一级程序载入器」，loader2 是指 U-Boot；</li>
+<li>loader1 的部分画得模糊不清：使用右边的 U-Boot TPL/SPL 时，也可能需要 DDR 程序（见上面的备注）；</li>
+</ol>
+
+<p>另外，这张图也没有详细解释左边蓝色的 <code>rkxx_loader_vxxx.xxx.bin</code> 是什么东西，它其实是一个临时的启动器。</p>
+
+<p>当你用官方的烧写工具烧写镜像时，通常需要选择一个叫 <code>MiniLoaderAll.bin</code> 的文件，它就是这个临时的启动器。它的作用是，当你按下烧写工具上的「烧写」按钮时，这个临时的启动器会被首先直接复制到内存里开始执行，然后它会负责完成接下来的烧写工作（因为 BootROM 没有写设备的能力，必须有额外的程序来读写这些设备）。这个临时的启动器本身也是闭源的。</p>
+
+<p>最后，这张图中展示了两个不同的启动流程，一个是使用 MiniLoader，一个是使用 U-Boot TPL/SPL。它们的区别在于左边闭源，右边开源，<strong>通常我们推荐尽可能开源的解决方案，方便进一步开发调试。</strong></p>
+
+<h2>Orange Pi 的 U-Boot 启动缺陷</h2>
+
+<p>在使用 Orange Pi 的 RockChip 开发板时，你可能常常遇到无法启动的问题，官方建议都是「清空 SPI Flash」，但没有解释为什么。</p>
+
+<p>实际上，这个问题的根源在于 <strong>Orange Pi 的 OpiOS 镜像（以及 SPI Flash）中的使用的 U-Boot TPL/SPL 过于古老，导致表现出奇怪的行为</strong>。</p>
+
+<p>例如，它以以下顺序尝试启动下一阶段（即 U-Boot）：</p>
+
+<ol>
+<li>SPI Flash</li>
+<li>TF 卡</li>
+<li>eMMC</li>
+<li>USB / NVMe</li>
+</ol>
+
+<p>对于其中任何一个设备，只要存在（且不为空），它似乎就会尝试启动 U-Boot，<strong>而且一旦失败，就不再继续下一步。比如，如果你的 TF 卡插上了，那么它就会尝试从 TF 卡启动，然后直接失败卡住，而不管 eMMC 上有没有系统。</strong></p>
+
+<p>更糟糕的是 Orange Pi 系列的开发板出厂时 SPI Flash 里面已经预装了 U-Boot（和镜像里的版本一样古老）和一个微型 Linux 系统，这个系统启动后什么都不做。这意味着，<strong>如果你不清空 SPI Flash，那么你的板子就会一直启动到这个系统，而不管你的 TF 卡或 eMMC 上有没有系统</strong>。</p>
+
+<p>而即使清空之后也有问题。假设你的目的是「系统放在 eMMC 里、TF 卡作为储存空间」，所以往 eMMC 里烧写了一个 OpiOS（包括 U-Boot），那么这个 eMMC 上的 U-Boot TPL/SPL 也会直接去尝试启动 TF 卡，然后失败。</p>
+
+<p>这个问题的目前的解决方案有两个：</p>
+
+<ol>
+<li>自己编译一个新的 U-Boot（回忆我们说的，编译 U-Boot 其实是指编译一个 SPL+U-Boot 的镜像），然后烧写到 eMMC；</li>
+<li>把 eMMC 上的 U-Boot 部分复制到 TF 卡里。</li>
+</ol>
+
+<blockquote>
+<p><strong>备注</strong></p>
+
+<p>有网友反馈把 eMMC 上的 BOOT 分区复制到 TF 卡上才能解决这个问题，复制 U-Boot 不行，这意味着我的推理可能是错误的。但是，通过控制变量我认为这个问题的根源在于 U-Boot 的问题，所以这个解决方案的原理是一样的。</p>
+</blockquote>
+</article>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
+                        </section>
+                        <section class="recommend">
+                            
+                            <section class="nav prev more">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/todo-list.html">博主的Todo List</a>
+                            </section>
+                             
+                            <section class="nav next more">
+                                <div class="head">下篇文章</div>
+                                <a class="link" href="/how-to-fix-bricked-lenovo-laptop.html">我如何修好一个变砖的笔记本电脑</a>
+                            </section>
+                            
+                        </section>
+                        
+
+
+
+
+ <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
+            appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
+        })
+    </script>
+
+                </article>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+    <span class="copyright">
+        行云小站 © 2015 - <text id="thisyear"></text>
+        <script type="text/javascript">
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
+        </script>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a> |
+        <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌えサイトの記録</a><a
+            href="https://icp.gov.moe/?keyword=20203115" target="_blank" rel="noreferrer"> #20203115</a>
+    </span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
+    
+</footer>
+    <script src="/bundle/index.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.eu.org</id>
-  <updated>2023-08-16T08:39:42Z</updated>
+  <updated>2024-02-03T12:13:06+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.eu.org"></link>
   <author>
@@ -9,8 +9,8 @@
   </author>
   <entry>
     <title>博主的Todo List</title>
-    <updated>2023-08-16T13:18:25+08:00</updated>
-    <id>tag:w568w.eu.org,2023-08-16:/todo-list.html</id>
+    <updated>2023-10-27T12:38:25+08:00</updated>
+    <id>tag:w568w.eu.org,2023-10-27:/todo-list.html</id>
     <link href="https://w568w.eu.org/todo-list.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</summary>
     <author>
@@ -18,8 +18,18 @@
     </author>
   </entry>
   <entry>
+    <title>瑞芯微 RK 系列芯片启动流程简析</title>
+    <updated>2024-02-03T12:00:00+08:00</updated>
+    <id>tag:w568w.eu.org,2024-02-03:/rockchip-boot-process.html</id>
+    <link href="https://w568w.eu.org/rockchip-boot-process.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;基于 RK3566 开发板分析&lt;/p&gt;&#xA;</summary>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
     <title>我如何修好一个变砖的笔记本电脑</title>
-    <updated>2023-08-16T16:05:08Z</updated>
+    <updated>2023-08-16T16:05:08+08:00</updated>
     <id>tag:w568w.eu.org,2023-08-16:/how-to-fix-bricked-lenovo-laptop.html</id>
     <link href="https://w568w.eu.org/how-to-fix-bricked-lenovo-laptop.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;而且只花了不到 30 块钱&lt;/p&gt;&#xA;</summary>
@@ -93,16 +103,6 @@
     <id>tag:w568w.eu.org,2020-07-24:/before-ncee.html</id>
     <link href="https://w568w.eu.org/before-ncee.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;写于高考前夜…以及高考后&lt;/p&gt;&#xA;</summary>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>一些相当棒的Java游戏</title>
-    <updated>2020-07-15T18:50:25+08:00</updated>
-    <id>tag:w568w.eu.org,2020-07-15:/my-j2me-game.html</id>
-    <link href="https://w568w.eu.org/my-j2me-game.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;扔掉老年机前，对过往的追念&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
