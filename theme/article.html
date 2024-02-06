@@ -26,7 +26,7 @@
     <article class="container">
         {{template "header" .}}
         <div style="padding: 5% 0 5% 0; ">
-            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+            <div class="mdui-card" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     {{if .Author.Avatar}}<img class="mdui-card-header-avatar" src="{{.Author.Avatar}}" />{{end}} {{if .Author.Name}}<a class="mdui-card-header-title" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>{{end}} {{if .Update}}
                     <span class="date mdui-card-header-subtitle" data-time="{{.Update}}"><span class="from">创建时间被隐藏</span></span>
