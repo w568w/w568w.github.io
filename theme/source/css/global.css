@@ -1,13 +1,20 @@
 @define-mixin font-main {
     font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
-} @define-mixin font-code {
-    font-family: consolas, monaco, "Source Code Pro", hack, monospace;
-} html, body, input {
-      margin: 0;
-      @mixin font-main;
-  }
+}
 
-html, body {
+@define-mixin font-code {
+    font-family: consolas, monaco, "Source Code Pro", hack, monospace;
+}
+
+html,
+body,
+input {
+    margin: 0;
+    @mixin font-main;
+}
+
+html,
+body {
     height: 100%;
 }
 
@@ -20,18 +27,19 @@ ul {
 a {
     text-decoration: none;
 
-&
-:hover {
-    opacity: .9;
-}
+    &:hover {
+        opacity: .9;
+    }
 
 }
+
 *::selection {
-    background-color: $ black;
-    color: $ whiteLighter;
+    background-color: $black;
+    color: $whiteLighter;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
     content: " ";
     display: table;
 }
@@ -146,4 +154,11 @@ a {
 .mdui-theme-layout-dark .mdui-card-shadow {
     border: 1px solid hsla(0, 0%, 100%, .12);
     box-shadow: none
+}
+
+.container {
+    background-image: url(/images/ev000a.webp);
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover
 }

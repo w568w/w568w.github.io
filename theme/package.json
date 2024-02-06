@@ -2,28 +2,27 @@
     "name": "InkMaterialTheme",
     "version": "0.0.1",
     "scripts": {
-        "start": ".\\node_modules\\.bin\\webpack --watch --mode=development",
-        "build": ".\\node_modules\\.bin\\webpack"
+        "start": "webpack --watch --mode=development",
+        "build": "webpack --mode=production"
     },
+    "type": "module",
     "description": "InkPaper Material Theme By w568w (github.com/w568w)",
     "devDependencies": {
-        "autoprefixer": "^10.4.2",
-        "css-loader": "^6.6.0",
-        "file-loader": "^6.2.0",
-        "mini-css-extract-plugin": "^2.6.0",
-        "postcss": "^8.4.7",
-        "postcss-import": "^14.0.2",
-        "postcss-loader": "^6.2.1",
-        "precss": "^4.0.0",
-        "raw-loader": "^4.0.2",
-        "source-map-loader": "^3.0.1",
-        "style-loader": "^3.3.1",
-        "url-loader": "^4.1.1",
-        "webpack": "^5.69.1",
-        "webpack-cli": "^4.9.2"
+        "autoprefixer": "^10.4.17",
+        "css-loader": "^6.10.0",
+        "css-minimizer-webpack-plugin": "^6.0.0",
+        "mini-css-extract-plugin": "^2.8.0",
+        "postcss": "^8.4.34",
+        "postcss-advanced-variables": "^3.0.1",
+        "postcss-import": "^16.0.0",
+        "postcss-loader": "^8.1.0",
+        "source-map-loader": "^5.0.0",
+        "webpack": "^5.90.1",
+        "webpack-cli": "^5.1.4",
+        "yarn-upgrade-all": "^0.7.2"
     },
     "dependencies": {
-        "highlight.js": "^11.4.0",
-        "jquery": "^3.6.0"
+        "highlight.js": "^11.9.0",
+        "jquery": "^3.7.1"
     }
 }

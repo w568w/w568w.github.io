@@ -1,9 +1,8 @@
 import '../css/index.css'
 import $ from 'jquery'
-//import hljs from 'highlight.js'
-window.hljs = require('./highlight.pack.js')
-import './jquery.unveil'
+import './jquery.unveil.js'
 import searchTpl from './searchTpl.html'
+
 // pick from underscore
 let debounce = function (func, wait, immediate) {
     let timeout, args, context, timestamp, result;
@@ -136,8 +135,10 @@ $(function () {
         }
     })
     // render highlight
-    $('pre code').each(function (i, block) {
-        hljs.highlightBlock(block)
+    import('highlight.js').then(hljs => {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block)
+        })
     })
     let images = $('img');
     console.log(images.unveil)
@@ -151,7 +152,7 @@ $(function () {
         if ($item.attr('data-src')) {
             $item.wrap('<a href="' + $item.attr('data-src') + '" target="_blank"></a>')
             let imageAlt = $item.prop('alt')
-            if ($.trim(imageAlt)) $item.parent('a').after('<div class="image-alt">' + imageAlt + '</div>')
+            if (imageAlt.trim()) $item.parent('a').after('<div class="image-alt">' + imageAlt + '</div>')
         }
     })
     // lazy load images
