@@ -52,16 +52,13 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 
-<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/2.0/animate.min.css" />
 <link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 </link>
 
 <script defer src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src='valine.min.js'></script>
-
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -256,7 +253,7 @@
 </div>
 
         <div style="padding: 5% 0 5% 0; ">
-            <div class="mdui-card animate__animated animate__fadeInUp animate__faster" style="position: relative;margin: auto;">
+            <div class="mdui-card" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
                     <span id="date" class="date mdui-card-header-subtitle" data-time="0"><span
@@ -364,14 +361,15 @@ Well, sometimes I code a bit for my own amusement&hellip;</p>
                             
                         </section>
                         
- <div id="vcomments"></div>
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
-            appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
-        })
-    </script>
+<script src='valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
+        appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
+    })
+</script>
 
                 </article>
                 </div>
