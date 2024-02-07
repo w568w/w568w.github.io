@@ -8,6 +8,10 @@ cover: images/rockchip.webp
 preview: 基于 RK3566 开发板分析
 ---
 
+> **2024-02-07 更新**
+>
+> 昨晚读到了[瑞芯微的技术手册（Technical Reference Manual）](https://github.com/heitbaum/rk3568/)，发现本文中**我的说法存在一些错误，尚未修正**。我会在近期抽空修正这些错误，同时也会对本文进行一些补充。
+
 这篇是关于瑞芯微 RockChip 系列芯片启动流程的简析，基本是基于官网过于杂乱的 [Wiki](https://opensource.rock-chips.com/wiki_Boot_option)。很多东西并没有说明白，所以我在这里做一个~~并不~~简单的总结。
 
 ## 启动流程
