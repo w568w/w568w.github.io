@@ -11,8 +11,18 @@ preview: 基于 RK3566 开发板分析
 > **2024-02-07 更新**
 >
 > 昨晚读到了[瑞芯微的技术手册（Technical Reference Manual）](https://github.com/heitbaum/rk3568/)，发现本文中**我的说法存在一些错误，尚未修正**。我会在近期抽空修正这些错误，同时也会对本文进行一些补充。
+> 
+> **2024-02-29 更新**
+>
+> 错误的部分已经修复。
 
 这篇是关于瑞芯微 RockChip 系列芯片启动流程的简析，基本是基于官网过于杂乱的 [Wiki](https://opensource.rock-chips.com/wiki_Boot_option)。很多东西并没有说明白，所以我在这里做一个~~并不~~简单的总结。
+
+## 参考信息
+
+- [RK3399 boot sequence](https://wiki.pine64.org/wiki/RK3399_boot_sequence)
+- Rockchip TRM
+
 
 ## 启动流程
 
@@ -21,12 +31,23 @@ RockChip 系列芯片的启动流程大致分成五个阶段，分别为：
 ### 1. 一级程序载入器（Primary Program Loader）
 这一部分位于不可擦除的 ROM 中（又名 BootROM），主要负责初始化一些硬件设备，以及加载第二阶段的启动程序。其地位相当于电脑上的 BIOS 或 UEFI。
 
-如果第二阶段的启动程序加载失败了，它会负责启动 MaskROM 烧写模式，以便用户可以线刷固件。
+BootROM 本身在上电时会被加载到内存 `0xFFFF0000` 处，然后执行。
+
+它按如下顺序搜索设备中是否存在有效的 ID Block：
+
+1. SPI NOR Flash
+2. SPI NAND Flash
+3. eMMC
+4. SD 卡
+
+ID Block 是一个 Rockchip 定义的 512 字节的数据结构，用于标识设备的可启动性。一般以 0x3b 8c dc fc 开头，包含二级程序载入器的起始地址、大小等信息。
+
+如果第二阶段的启动程序加载失败了（例如，在以上设备中均未找到），它会负责启动 MaskROM 烧写模式，以便用户可以线刷固件。
 
 ### 2. 二级程序载入器（Secondary Program Loader）
-这一部分（和以下部分）均是可以自定义（也就是说，位于普通用户可以擦写的位置，例如 SPI Flash、eMMC、SD 卡等）的，主要负责加载下一阶段的启动程序（如 U-Boot）。
+这一部分（和以下部分）均是可以自定义（也就是说，位于 SPI Flash、eMMC、SD 卡等）的，主要负责初始化 DDR 并加载下一阶段的启动程序（如 U-Boot）。
 
-常用文件名是 `idbloader.img`。
+常用文件名是 `idbloader.img`，意为 Initial Device Boot Loader。
 
 它有两个不同的实现，一个是开源的 U-Boot TPL/SPL，一个是瑞芯微自己的 MiniLoader。
 

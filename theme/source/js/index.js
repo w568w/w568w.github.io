@@ -135,11 +135,14 @@ $(function () {
         }
     })
     // render highlight
-    import('highlight.js').then(hljs => {
-        $('pre code').each(function (i, block) {
-            hljs.highlightBlock(block)
+    // if any $('pre code') exists, then import highlight.js and highlight all code
+    if ($('pre code').length > 0) {
+        import('highlight.js').then(hljs => {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block)
+            })
         })
-    })
+    }
     let images = $('img');
     console.log(images.unveil)
     // append image description
