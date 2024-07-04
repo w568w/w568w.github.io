@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.eu.org</id>
-  <updated>2024-02-07T04:30:37Z</updated>
+  <updated>2024-07-04T19:47:01+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.eu.org"></link>
   <author>
@@ -18,8 +18,28 @@
     </author>
   </entry>
   <entry>
+    <title>在 Wayland 上实现类似 SpaceDesk 的平板副屏</title>
+    <updated>2024-07-04T19:46:00+08:00</updated>
+    <id>tag:w568w.eu.org,2024-07-04:/spacedesk-on-linux.html</id>
+    <link href="https://w568w.eu.org/spacedesk-on-linux.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;把 Android 平板当成 Linux (Wayland) 的扩展屏幕&lt;/p&gt;&#xA;</summary>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>如何在 U-Boot 中启动 Linux 内核</title>
+    <updated>2024-07-04T18:08:00+08:00</updated>
+    <id>tag:w568w.eu.org,2024-07-04:/boot-from-uboot.html</id>
+    <link href="https://w568w.eu.org/boot-from-uboot.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;字面意思的短文&lt;/p&gt;&#xA;</summary>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
     <title>Arm 相关术语辨析</title>
-    <updated>2024-02-07T12:28:00Z</updated>
+    <updated>2024-02-07T12:28:00+08:00</updated>
     <id>tag:w568w.eu.org,2024-02-07:/arm-disambiguation.html</id>
     <link href="https://w568w.eu.org/arm-disambiguation.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;Arm？Armv8？armhf？AArch64？这些术语是什么意思？&lt;/p&gt;&#xA;</summary>
@@ -29,7 +49,7 @@
   </entry>
   <entry>
     <title>瑞芯微 RK 系列芯片启动流程简析</title>
-    <updated>2024-02-03T12:00:00Z</updated>
+    <updated>2024-02-03T12:00:00+08:00</updated>
     <id>tag:w568w.eu.org,2024-02-03:/rockchip-boot-process.html</id>
     <link href="https://w568w.eu.org/rockchip-boot-process.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;基于 RK3566 开发板分析&lt;/p&gt;&#xA;</summary>
@@ -39,7 +59,7 @@
   </entry>
   <entry>
     <title>我如何修好一个变砖的笔记本电脑</title>
-    <updated>2023-08-16T16:05:08Z</updated>
+    <updated>2023-08-16T16:05:08+08:00</updated>
     <id>tag:w568w.eu.org,2023-08-16:/how-to-fix-bricked-lenovo-laptop.html</id>
     <link href="https://w568w.eu.org/how-to-fix-bricked-lenovo-laptop.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;而且只花了不到 30 块钱&lt;/p&gt;&#xA;</summary>
@@ -83,26 +103,6 @@
     <id>tag:w568w.eu.org,2020-12-31:/2021-future.html</id>
     <link href="https://w568w.eu.org/2021-future.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;时间似水如月，捉摸不定&lt;/p&gt;&#xA;</summary>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>大学教会了我什么</title>
-    <updated>2020-10-14T09:08:25+08:00</updated>
-    <id>tag:w568w.eu.org,2020-10-14:/what-college-taught-me.html</id>
-    <link href="https://w568w.eu.org/what-college-taught-me.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;大学的生活，比想象中要精彩，比想象中更无趣。&lt;/p&gt;&#xA;</summary>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>《ATRI -My Dear Moments-》通关后感想</title>
-    <updated>2020-09-14T19:28:00+08:00</updated>
-    <id>tag:w568w.eu.org,2020-09-14:/atri-galgame.html</id>
-    <link href="https://w568w.eu.org/atri-galgame.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;无剧透评价，放心观看&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>

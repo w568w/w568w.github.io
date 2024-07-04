@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://w568w.eu.org</loc>
-    <lastmod>2024-02-07T04:30:37.169739661Z</lastmod>
+    <lastmod>2024-07-04T19:47:01.225028841+08:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -11,18 +11,28 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://w568w.eu.org/spacedesk-on-linux.html</loc>
+    <lastmod>2024-07-04T19:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://w568w.eu.org/boot-from-uboot.html</loc>
+    <lastmod>2024-07-04T18:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://w568w.eu.org/arm-disambiguation.html</loc>
-    <lastmod>2024-02-07T12:28:00Z</lastmod>
+    <lastmod>2024-02-07T12:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://w568w.eu.org/rockchip-boot-process.html</loc>
-    <lastmod>2024-02-03T12:00:00Z</lastmod>
+    <lastmod>2024-02-03T12:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://w568w.eu.org/how-to-fix-bricked-lenovo-laptop.html</loc>
-    <lastmod>2023-08-16T16:05:08Z</lastmod>
+    <lastmod>2023-08-16T16:05:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>

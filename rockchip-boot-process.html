@@ -34,10 +34,6 @@
 <link rel="apple-itouch-icon" href="/favicon.png" />
 <link rel="stylesheet" href="/bundle/index.css" />
 
-<link rel="preconnect" href="https://cdn.staticfile.org" />
-<link rel="preconnect" href="https://busuanzi.ibruce.info" />
-<link rel="dns-prefetch" href="https://cdn.staticfile.org" />
-<link rel="dns-prefetch" href="https://busuanzi.ibruce.info" />
 <script type="text/javascript">
     var timeSinceLang = {
         year: '年前',
@@ -52,12 +48,12 @@
 
 
 
-<script async src="https://cdn.bootcdn.net/ajax/libs/lazyload/2.0.3/lazyload-min.js"></script>
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/lazyload/2.0.3/lazyload-min.js"></script>
 
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"></link>
+<script async src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/js/mdui.min.js"></script>
+<link async href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"></link>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script id="MathJax-script" async src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+<script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
 
 
 
@@ -253,7 +249,7 @@
             <div class="mdui-card" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
-                    <span id="date" class="date mdui-card-header-subtitle" data-time="1706961600"><span
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1706932800"><span
                         class="from">创建时间被隐藏</span></span>
                     
 
@@ -274,9 +270,20 @@
 <p><strong>2024-02-07 更新</strong></p>
 
 <p>昨晚读到了<a href="https://github.com/heitbaum/rk3568/">瑞芯微的技术手册（Technical Reference Manual）</a>，发现本文中<strong>我的说法存在一些错误，尚未修正</strong>。我会在近期抽空修正这些错误，同时也会对本文进行一些补充。</p>
+
+<p><strong>2024-02-29 更新</strong></p>
+
+<p>错误的部分已经修复。</p>
 </blockquote>
 
 <p>这篇是关于瑞芯微 RockChip 系列芯片启动流程的简析，基本是基于官网过于杂乱的 <a href="https://opensource.rock-chips.com/wiki_Boot_option">Wiki</a>。很多东西并没有说明白，所以我在这里做一个<del>并不</del>简单的总结。</p>
+
+<h2>参考信息</h2>
+
+<ul>
+<li><a href="https://wiki.pine64.org/wiki/RK3399_boot_sequence">RK3399 boot sequence</a></li>
+<li>Rockchip TRM</li>
+</ul>
 
 <h2>启动流程</h2>
 
@@ -286,13 +293,26 @@
 
 <p>这一部分位于不可擦除的 ROM 中（又名 BootROM），主要负责初始化一些硬件设备，以及加载第二阶段的启动程序。其地位相当于电脑上的 BIOS 或 UEFI。</p>
 
-<p>如果第二阶段的启动程序加载失败了，它会负责启动 MaskROM 烧写模式，以便用户可以线刷固件。</p>
+<p>BootROM 本身在上电时会被加载到内存 <code>0xFFFF0000</code> 处，然后执行。</p>
+
+<p>它按如下顺序搜索设备中是否存在有效的 ID Block：</p>
+
+<ol>
+<li>SPI NOR Flash</li>
+<li>SPI NAND Flash</li>
+<li>eMMC</li>
+<li>SD 卡</li>
+</ol>
+
+<p>ID Block 是一个 Rockchip 定义的 512 字节的数据结构，用于标识设备的可启动性。一般以 0x3b 8c dc fc 开头，包含二级程序载入器的起始地址、大小等信息。</p>
+
+<p>如果第二阶段的启动程序加载失败了（例如，在以上设备中均未找到），它会负责启动 MaskROM 烧写模式，以便用户可以线刷固件。</p>
 
 <h3>2. 二级程序载入器（Secondary Program Loader）</h3>
 
-<p>这一部分（和以下部分）均是可以自定义（也就是说，位于普通用户可以擦写的位置，例如 SPI Flash、eMMC、SD 卡等）的，主要负责加载下一阶段的启动程序（如 U-Boot）。</p>
+<p>这一部分（和以下部分）均是可以自定义（也就是说，位于 SPI Flash、eMMC、SD 卡等）的，主要负责初始化 DDR 并加载下一阶段的启动程序（如 U-Boot）。</p>
 
-<p>常用文件名是 <code>idbloader.img</code>。</p>
+<p>常用文件名是 <code>idbloader.img</code>，意为 Initial Device Boot Loader。</p>
 
 <p>它有两个不同的实现，一个是开源的 U-Boot TPL/SPL，一个是瑞芯微自己的 MiniLoader。</p>
 
