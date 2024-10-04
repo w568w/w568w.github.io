@@ -59,6 +59,29 @@
 <script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
     <meta name="keywords" content="Say hello to you!">
     <meta name="description" content="Say hello to you!">
@@ -248,6 +271,40 @@
  
             </header>
             <ul class="article-list">
+                
+                
+
+                <a href="/2019-new-year.html">
+                    <div class="mdui-card mdui-ripple"
+                        style="--animate-delay: 0.5s;">
+
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1546699684"><span
+                                    class="from"></span></span>
+                            
+
+                        </div>
+
+                        <div class="mdui-card-media">
+                            
+                            <img data-src="images/trent-szmolnik-1262773-unsplash.jpg" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">Hello 2019</div>
+                                    <div class="mdui-card-primary-subtitle"><p>新的一年，新的开始</p>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div style="height:24px"></div>
+
                 
                 
 

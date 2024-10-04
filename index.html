@@ -59,6 +59,29 @@
 <script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
 
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
 
     <meta name="keywords" content="Say hello to you!">
     <meta name="description" content="Say hello to you!">
@@ -285,6 +308,40 @@
                 
                 
 
+                <a href="/ryzen-ai-llm.html">
+                    <div class="mdui-card mdui-ripple"
+                        style="--animate-delay: 0.5s;">
+
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
+                            <div class="mdui-card-header-title">w568w</div>
+                            
+                            <span class="date mdui-card-header-subtitle" data-time="1728023760"><span
+                                    class="from"></span></span>
+                            
+
+                        </div>
+
+                        <div class="mdui-card-media">
+                            
+                            <img data-src="images/amd.webp" alt="no-link" class="lazyload"
+                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
+                            
+                            <div class="mdui-card-media-covered mdui-card-media-covered">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">[EN] Running LLMs on AMD Ryzen AI Processor</div>
+                                    <div class="mdui-card-primary-subtitle"><p>An exploration of running Large Language Models on recent AMD CPUs with AI accelerators</p>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div style="height:24px"></div>
+
+                
+                
+
                 <a href="/spacedesk-on-linux.html">
                     <div class="mdui-card mdui-ripple"
                         style="--animate-delay: 0.5s;">
@@ -361,7 +418,7 @@
                             <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
                             <div class="mdui-card-header-title">w568w</div>
                             
-                            <span class="date mdui-card-header-subtitle" data-time="1707308880"><span
+                            <span class="date mdui-card-header-subtitle" data-time="1707280080"><span
                                     class="from"></span></span>
                             
 
@@ -395,7 +452,7 @@
                             <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
                             <div class="mdui-card-header-title">w568w</div>
                             
-                            <span class="date mdui-card-header-subtitle" data-time="1706961600"><span
+                            <span class="date mdui-card-header-subtitle" data-time="1706932800"><span
                                     class="from"></span></span>
                             
 
@@ -429,7 +486,7 @@
                             <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
                             <div class="mdui-card-header-title">w568w</div>
                             
-                            <span class="date mdui-card-header-subtitle" data-time="1692201908"><span
+                            <span class="date mdui-card-header-subtitle" data-time="1692173108"><span
                                     class="from"></span></span>
                             
 
@@ -546,40 +603,6 @@
                                 <div class="mdui-card-primary">
                                     <div class="mdui-card-primary-title">2022 和我自己</div>
                                     <div class="mdui-card-primary-subtitle"><p>关于我鸽了一年多这件事</p>
-</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div style="height:24px"></div>
-
-                
-                
-
-                <a href="/2021-future.html">
-                    <div class="mdui-card mdui-ripple"
-                        style="--animate-delay: 0.5s;">
-
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="/images/avatar.gif" />
-                            <div class="mdui-card-header-title">w568w</div>
-                            
-                            <span class="date mdui-card-header-subtitle" data-time="1609428925"><span
-                                    class="from"></span></span>
-                            
-
-                        </div>
-
-                        <div class="mdui-card-media">
-                            
-                            <img data-src="images/yohan-cho-Mwvhyd22Lyw-unsplash.webp" alt="no-link" class="lazyload"
-                                src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="/>
-                            
-                            <div class="mdui-card-media-covered mdui-card-media-covered">
-                                <div class="mdui-card-primary">
-                                    <div class="mdui-card-primary-title">2021年，一年又一年</div>
-                                    <div class="mdui-card-primary-subtitle"><p>时间似水如月，捉摸不定</p>
 </div>
                                 </div>
                             </div>

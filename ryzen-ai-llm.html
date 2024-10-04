@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta name="google" value="notranslate" />
+<meta name="robots" content="index,follow" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="行云小站" />
+<meta name="twitter:description" content="Say hello to you!" />
+<meta name="twitter:image:src" content="https://w568w.eu.org/images/avatar.gif" />
+
+<meta property="og:url" content="https://w568w.eu.org" />
+<meta property="og:title" content="行云小站" />
+<meta property="og:description" content="Say hello to you!" />
+<meta property="og:site_name" content="行云小站" />
+<meta property="og:image" content="https://w568w.eu.org/images/avatar.gif" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noodp" />
+
+<meta itemprop="name" content="行云小站" />
+<meta itemprop="description" content="Say hello to you!" />
+<meta itemprop="image" content="https://w568w.eu.org/images/avatar.gif" />
+
+<link rel="canonical" href="https://w568w.eu.org" />
+
+<link rel="shortcut icon" href="/favicon.png" />
+<link rel="apple-itouch-icon" href="/favicon.png" />
+<link rel="stylesheet" href="/bundle/index.css" />
+
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/lazyload/2.0.3/lazyload-min.js"></script>
+
+<script async src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/js/mdui.min.js"></script>
+<link async href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"></link>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
+
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
+
+    <meta name="keywords" content="">
+    <meta name="description" content="[EN] Running LLMs on AMD Ryzen AI Processor">
+    <meta name="author" content="w568w">
+    <style>
+        @media (max-width: 767px) {
+            .mdui-card {
+                width: auto;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .mdui-card {
+                width: max-content;
+            }
+        }
+    </style>
+    <title>[EN] Running LLMs on AMD Ryzen AI Processor</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+
+<script>
+    
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+    
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
+        }
+    })
+
+    
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
+</script>
+<header>
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
+                    menu
+                </i>
+            </a>
+            <a href="/" class="mdui-typo-title">
+                行云小站
+            </a>
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
+                        class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
+                    refresh
+                </i>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+    <div class="mdui-grid-tile">
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a
+                        href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mc-drawer mdui-list" style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    home
+                </i>
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    archive
+                </i>
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    apps
+                </i>
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    people
+                </i>
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    account_circle
+                </i>
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    rss_feed
+                </i>
+                <div class="mdui-list-item-content">
+
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">Github Pages</span>&nbsp;提供
+
+            </div>
+        </li>
+    </div>
+    
+</div>
+
+        <div style="padding: 5% 0 5% 0; ">
+            <div class="mdui-card" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1728023760"><span
+                        class="from">创建时间被隐藏</span></span>
+                    
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">[EN] Running LLMs on AMD Ryzen AI Processor</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><p><img data-src="images/amd.webp" src="data:image/gif;base64,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" alt="Image by: &lt;a href=https://www.maketecheasier.com/assets/uploads/2023/12/amd-ryzen-ai-featured.jpeg&gt;source&lt;/a&gt;" data-src="images/amd.webp" /></p>
+
+<p>AMD has been making some noise in the AI space recently, with the determination to catch up with <a href="https://www.intel.com/content/www/us/en/products/details/processors/core-ultra.html">Intel</a> and <a href="https://www.qualcomm.com/products/mobile/snapdragon/smartphones/mobile-ai">Qualcomm</a> in the personal AI computing market. The company has released a series of processors with AI accelerators, including the Ryzen 7000, 8000 and AI 300 series, equipped with the so-called <a href="https://www.amd.com/en/products/processors/consumer/ryzen-ai.html">AMD Ryzen™ AI</a> technology. These processors are designed to accelerate AI workloads, especially on Windows, such as <a href="https://learn.microsoft.com/en-us/windows/ai/npu-devices/">Windows Copilot+</a> features, allowing users to upscale images, generate text, and more on the local device.</p>
+
+<p>When we talk about AMD&rsquo;s <strong><em>competence</em></strong> in its software stacks, I have never failed to be impressed by the company&rsquo;s <strong><em>incompetence</em></strong> in providing a comprehensive software ecosystem, after such a mess with the <a href="https://rocmdocs.amd.com/en/latest/">ROCm</a> project: a joke of a project developed by AMD but not even compatible with the AMD consumer GPUs except for a few recent models, and <a href="https://www.tomshardware.com/pc-components/gpus/amd-asks-developer-to-take-down-open-source-zluda-dev-vows-to-rebuild-his-project">a corporate competition and personal career upheaval</a> concerning <a href="https://github.com/vosen/ZLUDA">ZLUDA</a>, a hobby project that simulates CUDA on AMD GPUs and beats ROCm in terms of compatibility and <a href="https://opendata.blender.org/benchmarks/query/?device_name=AMD%20Radeon%20RX%207900%20XT&amp;compute_type=OPTIX&amp;compute_type=CUDA&amp;compute_type=HIP&amp;compute_type=METAL&amp;compute_type=ONEAPI&amp;blender_version=4.2.0&amp;group_by=device_name">performance</a>.</p>
+
+<p>Thus, when it comes to new AI infrastructure, I am always skeptical about AMD&rsquo;s ability to provide a good software stack, and they don&rsquo;t fail to disappoint me. The Ryzen AI processors are published with a brand new architecture called <a href="https://www.amd.com/en/technologies/xdna.html">AMD XDNA™</a>, kind of a NPU with its own on-chip memory tiles and VLIW SMID instructions. And - <strong><em>surprise!</em></strong> - a totally novel SDK called <a href="https://ryzenai.docs.amd.com/">Ryzen AI SDK</a> is provided to developers to utilize the AI accelerators on these processors (did I mention that ROCm is the abbreviation of &ldquo;Radeon Open Compute&rdquo;, which uses HIP (Heterogeneous-Compute Interface for <strong>Portability</strong>) as its programming model?). No compatibility with ROCm or OpenCL. Oh yeah, portability, that&rsquo;s what AMD is <strong><em>good</em></strong> at.</p>
+
+<p>Putting aside the nonsense, I decided to give it a try and see how well these processors can run some LLMs. It came out that <strong>it just works</strong>, if you are willing to put up with the lack of documentation and the poor software support. Here is a brief documentation of my experience.</p>
+
+<h2>1. System requirements</h2>
+
+<ul>
+<li><strong>A Ryzen AI processor.</strong> I used a <a href="https://www.amd.com/en/products/processors/laptop/ryzen/8000-series/amd-ryzen-7-8845hs.html">Ryzen™ 7 8845HS</a> in my test. Check the product page for whether your processor is supported.
+
+<ul>
+<li><strong>Note:</strong> Also check what family your processor is in on the product page. For pre-STX (i.e. Phoenix and Hawk Point) processors, you need to use the PHX variant of the SDK. For STX (Strix) processors, you need to use the STX variant of the SDK.</li>
+</ul></li>
+<li><strong>A Windows 11 device.</strong> The Ryzen AI SDK and documentation is only available on Windows, although <a href="https://github.com/amd/xdna-driver">a Linux kernel driver</a> is recently published.</li>
+<li><strong>Conda.</strong> The SDK heavily relies on Conda for package management.</li>
+<li><strong>A model in GGUF format.</strong> The SDK is said to support ONNX, AWQ and SmoothQuant models, but I only tested the GGUF format. Note that the SDK only supports models with <code>Q4_0</code> quantization.</li>
+</ul>
+
+<h2>2. Install the driver</h2>
+
+<p>First, you need to install the NPU driver from the <a href="https://ryzenai.docs.amd.com/en/latest/inst.html">official website</a>.</p>
+
+<p>At the moment, the driver is gated behind a registration wall, so you need to sign up for an AMD account to download it.</p>
+
+<blockquote>
+<p><strong>Note</strong></p>
+
+<p>You don&rsquo;t need to install <code>Ryzen AI Software</code> on the website above. That SDK is for image processing tasks, not for running LLMs.</p>
+</blockquote>
+
+<p>After installation, you can check if the driver is installed correctly by check <code>Device Manager</code> in Windows. You should see a new device called <code>NPU Compute Accelerator Device</code> under <code>Neural processors</code> category. And in the <code>Task Manager</code>, you should see a new device called <code>NPU</code> in the <code>Performance</code> tab.</p>
+
+<blockquote>
+<p><strong>Tip</strong></p>
+
+<p>The NPU driver also comes with a command-line tool called <code>xrt-smi</code>, similar to <code>nvidia-smi</code> for NVIDIA GPUs. You can use it to monitor the NPU usage and temperature.</p>
+
+<p>By default, the tool is installed at <code>C:\Windows\System32\AMD\xrt-smi.exe</code> and not added to the system PATH. You can add it to the PATH manually or run it with the full path.</p>
+</blockquote>
+
+<h2>3. Build the environment</h2>
+
+<p>Most of our following steps will be done with the offical SDK <a href="https://github.com/amd/RyzenAI-SW">amd/RyzenAI-SW</a>; to be specific, the llama.cpp fork at <code>example/transformers/ext/llama.cpp</code>.</p>
+
+<p>Clone the repository first in your PowerShell:</p>
+
+<pre><code class="language-powershell">git lfs install # Install Git LFS if you haven't
+git clone https://github.com/amd/RyzenAI-SW.git # Clone the repository. Be patient, it's a large repository around 2~3 GB
+</code></pre>
+
+<p>Then, build the llama.cpp following the instructions at <code>example/transformers/models/llm_gguf</code>:</p>
+
+<pre><code class="language-powershell"># 1. Create the Conda environment. Be patient, it could take a while
+cd RyzenAI-SW/example/transformers/
+$TRANSFORMERS_ROOT=$PWD
+conda env create --file=env.yaml
+conda activate ryzenai-transformers
+
+# 2. Setup the environment variables. Use the correct setup script according to your processor family
+.\setup_&lt;phx/stx&gt;.ps1
+
+# 3. Build &amp; Install the RyzenAI C++ Library
+cd $TRANSFORMERS_ROOT\ops\cpp
+cmake -B build\ -DCMAKE_INSTALL_PREFIX=&quot;$env:CONDA_PREFIX&quot;
+cmake --build build\ --config=Release
+cmake --install build\ --config=Release
+
+# 4. Build the llama.cpp
+cd $TRANSFORMERS_ROOT\ext\llama.cpp
+cmake -B build\ -DCMAKE_PREFIX_PATH=&quot;$env:CONDA_PREFIX;$env:XRT_PATH&quot; -DLLAMA_RYZENAI=ON
+cmake --build build\ --config=Release
+</code></pre>
+
+<p>And that&rsquo;s it! You can now obtain the llama.cpp executable with RyzenAI support at <code>$TRANSFORMERS_ROOT\ext\llama.cpp\build\bin\Release\main.exe</code>.</p>
+
+<h2>4. Run the model</h2>
+
+<p>Let&rsquo;s have a try:</p>
+
+<pre><code class="language-powershell">.\main.exe -m Meta-Llama-3-8b-Instruct.Q4_0.gguf -e -t 4 -n 400 -p &quot;Building a website can be done in 10 simple steps:\nStep 1:&quot;
+</code></pre>
+
+<p>And here it is. Bam!</p>
+
+<p><img data-src="images/llm-on-npu-screenshot.webp" src="data:image/gif;base64,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" alt="Your-CPU-Is-Secretly-A-GPU™" data-src="images/llm-on-npu-screenshot.webp" /></p>
+
+<h1>Conclusion</h1>
+
+<p>Honestly speaking, the NPU performance is not impressive. The model I tested is a 7B parameter model with <code>Q4_0</code> quantization, and it took around 70 seconds to load the model and 80 seconds to generate ~400 tokens:</p>
+
+<pre><code>llama_print_timings:        load time =   68599.20 ms
+llama_print_timings:      sample time =      13.88 ms /   400 runs   (    0.03 ms per token, 28818.44 tokens per second)
+llama_print_timings: prompt eval time =     773.69 ms /    19 tokens (   40.72 ms per token,    24.56 tokens per second)
+llama_print_timings:        eval time =   79234.49 ms /   399 runs   (  198.58 ms per token,     5.04 tokens per second)
+llama_print_timings:       total time =   80166.82 ms /   418 tokens
+</code></pre>
+
+<p>The performance is around 5 tokens per second, which is far from the performance of an ordinary GPU or a TPU. I would say it is slower than running AVX512 or Vulkan Compute on its CPU or iGPU, Radeon 780M Graphics (did I mention that it is the most powerful consumer iGPU at the moment?).</p>
+
+<p>However, RyzenAI-SW is said to be a <a href="https://ryzenai.docs.amd.com/en/latest/llm_flow.html">proof-of-concept project</a> with bare minimum functionality and no optimization. The performance could be improved in the future with better optimization and more features. AMD already has several <a href="https://account.amd.com/en/member/ryzenai-sw-ea.html">highly-optimized models in their hands</a>, but they are not open to the public yet and require enterprise contracts to access. <a href="https://www.amd.com/en/developer/resources/technical-articles/model-pipelining-on-npu-and-gpu-using-ryzen-ai-software.html">The image processing tasks are said to be more mature and optimized</a>, so if you are interested in image processing tasks, you might want to <a href="https://github.com/amd/RyzenAI-SW/tree/main/demo/NPU-GPU-Pipeline">give it a try</a>.</p>
+
+<p>In conclusion, the Ryzen AI processors are a promising start for AMD to catch up with the AIPC hype, but they still have a long way to go to catch up with Intel in terms of software support and performance. If you are a researcher or a developer, you might want to wait for a while before investing in these processors. But if you are just a hobbyist like me, it&rsquo;s still fun to play around with these new toys.</p>
+</article>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
+                        </section>
+                        <section class="recommend">
+                            
+                            <section class="nav prev more">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/todo-list.html">博主的Todo List</a>
+                            </section>
+                             
+                            <section class="nav next more">
+                                <div class="head">下篇文章</div>
+                                <a class="link" href="/spacedesk-on-linux.html">在 Wayland 上实现类似 SpaceDesk 的平板副屏</a>
+                            </section>
+                            
+                        </section>
+                        
+<script src='valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
+        appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
+    })
+</script>
+
+                </article>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+    <span class="copyright">
+        行云小站 © 2015 - <text id="thisyear"></text>
+        <script type="text/javascript">
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
+        </script>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a>
+    </span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
+</footer>
+    <script src="/bundle/index.js"></script>
+</body>
+
+</html>

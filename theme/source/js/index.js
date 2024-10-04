@@ -139,7 +139,7 @@ $(function () {
     if ($('pre code').length > 0) {
         import('highlight.js').then(hljs => {
             $('pre code').each(function (i, block) {
-                hljs.highlightBlock(block)
+                hljs.HighlightJS.highlightElement(block)
             })
         })
     }
