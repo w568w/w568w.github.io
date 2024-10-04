@@ -56,29 +56,6 @@
 <script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
 
 
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
-
-
 
     <meta name="keywords" content="">
     <meta name="description" content="我如何修好一个变砖的笔记本电脑">
@@ -272,7 +249,7 @@
             <div class="mdui-card" style="position: relative;margin: auto;">
                 <div class="mdui-card-header">
                     <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
-                    <span id="date" class="date mdui-card-header-subtitle" data-time="1692173108"><span
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1692201908"><span
                         class="from">创建时间被隐藏</span></span>
                     
 
