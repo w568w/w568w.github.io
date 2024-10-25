@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta name="google" value="notranslate" />
+<meta name="robots" content="index,follow" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="行云小站" />
+<meta name="twitter:description" content="Say hello to you!" />
+<meta name="twitter:image:src" content="https://w568w.eu.org/images/avatar.gif" />
+
+<meta property="og:url" content="https://w568w.eu.org" />
+<meta property="og:title" content="行云小站" />
+<meta property="og:description" content="Say hello to you!" />
+<meta property="og:site_name" content="行云小站" />
+<meta property="og:image" content="https://w568w.eu.org/images/avatar.gif" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noodp" />
+
+<meta itemprop="name" content="行云小站" />
+<meta itemprop="description" content="Say hello to you!" />
+<meta itemprop="image" content="https://w568w.eu.org/images/avatar.gif" />
+
+<link rel="canonical" href="https://w568w.eu.org" />
+
+<link rel="shortcut icon" href="/favicon.png" />
+<link rel="apple-itouch-icon" href="/favicon.png" />
+<link rel="stylesheet" href="/bundle/index.css" />
+
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/lazyload/2.0.3/lazyload-min.js"></script>
+
+<script async src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/js/mdui.min.js"></script>
+<link async href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"></link>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
+
+
+
+    <meta name="keywords" content="">
+    <meta name="description" content="[EN] Notes on Java ME Development in 2024">
+    <meta name="author" content="w568w">
+    <style>
+        @media (max-width: 767px) {
+            .mdui-card {
+                width: auto;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .mdui-card {
+                width: max-content;
+            }
+        }
+    </style>
+    <title>[EN] Notes on Java ME Development in 2024</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+
+<script>
+    
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+    
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
+        }
+    })
+
+    
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
+</script>
+<header>
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
+                    menu
+                </i>
+            </a>
+            <a href="/" class="mdui-typo-title">
+                行云小站
+            </a>
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
+                        class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
+                    refresh
+                </i>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+    <div class="mdui-grid-tile">
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a
+                        href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mc-drawer mdui-list" style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    home
+                </i>
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    archive
+                </i>
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    apps
+                </i>
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    people
+                </i>
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    account_circle
+                </i>
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    rss_feed
+                </i>
+                <div class="mdui-list-item-content">
+
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">Github Pages</span>&nbsp;提供
+
+            </div>
+        </li>
+    </div>
+    
+</div>
+
+        <div style="padding: 5% 0 5% 0; ">
+            <div class="mdui-card" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1729849500"><span
+                        class="from">创建时间被隐藏</span></span>
+                    
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">[EN] Notes on Java ME Development in 2024</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><p><img data-src="images/j2me_phone.webp" src="data:image/gif;base64,R0lGODlhGAAYAPQAAP///wAAAM7Ozvr6+uDg4LCwsOjo6I6OjsjIyJycnNjY2KioqMDAwPLy8nd3d4aGhri4uGlpaQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkHAAAAIf4aQ3JlYXRlZCB3aXRoIGFqYXhsb2FkLmluZm8AIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAGAAYAAAFriAgjiQAQWVaDgr5POSgkoTDjFE0NoQ8iw8HQZQTDQjDn4jhSABhAAOhoTqSDg7qSUQwxEaEwwFhXHhHgzOA1xshxAnfTzotGRaHglJqkJcaVEqCgyoCBQkJBQKDDXQGDYaIioyOgYSXA36XIgYMBWRzXZoKBQUMmil0lgalLSIClgBpO0g+s26nUWddXyoEDIsACq5SsTMMDIECwUdJPw0Mzsu0qHYkw72bBmozIQAh+QQJBwAAACwAAAAAGAAYAAAFsCAgjiTAMGVaDgR5HKQwqKNxIKPjjFCk0KNXC6ATKSI7oAhxWIhezwhENTCQEoeGCdWIPEgzESGxEIgGBWstEW4QCGGAIJEoxGmGt5ZkgCRQQHkGd2CESoeIIwoMBQUMP4cNeQQGDYuNj4iSb5WJnmeGng0CDGaBlIQEJziHk3sABidDAHBgagButSKvAAoyuHuUYHgCkAZqebw0AgLBQyyzNKO3byNuoSS8x8OfwIchACH5BAkHAAAALAAAAAAYABgAAAW4ICCOJIAgZVoOBJkkpDKoo5EI43GMjNPSokXCINKJCI4HcCRIQEQvqIOhGhBHhUTDhGo4diOZyFAoKEQDxra2mAEgjghOpCgz3LTBIxJ5kgwMBShACREHZ1V4Kg1rS44pBAgMDAg/Sw0GBAQGDZGTlY+YmpyPpSQDiqYiDQoCliqZBqkGAgKIS5kEjQ21VwCyp76dBHiNvz+MR74AqSOdVwbQuo+abppo10ssjdkAnc0rf8vgl8YqIQAh+QQJBwAAACwAAAAAGAAYAAAFrCAgjiQgCGVaDgZZFCQxqKNRKGOSjMjR0qLXTyciHA7AkaLACMIAiwOC1iAxCrMToHHYjWQiA4NBEA0Q1RpWxHg4cMXxNDk4OBxNUkPAQAEXDgllKgMzQA1pSYopBgonCj9JEA8REQ8QjY+RQJOVl4ugoYssBJuMpYYjDQSliwasiQOwNakALKqsqbWvIohFm7V6rQAGP6+JQLlFg7KDQLKJrLjBKbvAor3IKiEAIfkECQcAAAAsAAAAABgAGAAABbUgII4koChlmhokw5DEoI4NQ4xFMQoJO4uuhignMiQWvxGBIQC+AJBEUyUcIRiyE6CR0CllW4HABxBURTUw4nC4FcWo5CDBRpQaCoF7VjgsyCUDYDMNZ0mHdwYEBAaGMwwHDg4HDA2KjI4qkJKUiJ6faJkiA4qAKQkRB3E0i6YpAw8RERAjA4tnBoMApCMQDhFTuySKoSKMJAq6rD4GzASiJYtgi6PUcs9Kew0xh7rNJMqIhYchACH5BAkHAAAALAAAAAAYABgAAAW0ICCOJEAQZZo2JIKQxqCOjWCMDDMqxT2LAgELkBMZCoXfyCBQiFwiRsGpku0EshNgUNAtrYPT0GQVNRBWwSKBMp98P24iISgNDAS4ipGA6JUpA2WAhDR4eWM/CAkHBwkIDYcGiTOLjY+FmZkNlCN3eUoLDmwlDW+AAwcODl5bYl8wCVYMDw5UWzBtnAANEQ8kBIM0oAAGPgcREIQnVloAChEOqARjzgAQEbczg8YkWJq8nSUhACH5BAkHAAAALAAAAAAYABgAAAWtICCOJGAYZZoOpKKQqDoORDMKwkgwtiwSBBYAJ2owGL5RgxBziQQMgkwoMkhNqAEDARPSaiMDFdDIiRSFQowMXE8Z6RdpYHWnEAWGPVkajPmARVZMPUkCBQkJBQINgwaFPoeJi4GVlQ2Qc3VJBQcLV0ptfAMJBwdcIl+FYjALQgimoGNWIhAQZA4HXSpLMQ8PIgkOSHxAQhERPw7ASTSFyCMMDqBTJL8tf3y2fCEAIfkECQcAAAAsAAAAABgAGAAABa8gII4k0DRlmg6kYZCoOg5EDBDEaAi2jLO3nEkgkMEIL4BLpBAkVy3hCTAQKGAznM0AFNFGBAbj2cA9jQixcGZAGgECBu/9HnTp+FGjjezJFAwFBQwKe2Z+KoCChHmNjVMqA21nKQwJEJRlbnUFCQlFXlpeCWcGBUACCwlrdw8RKGImBwktdyMQEQciB7oACwcIeA4RVwAODiIGvHQKERAjxyMIB5QlVSTLYLZ0sW8hACH5BAkHAAAALAAAAAAYABgAAAW0ICCOJNA0ZZoOpGGQrDoOBCoSxNgQsQzgMZyIlvOJdi+AS2SoyXrK4umWPM5wNiV0UDUIBNkdoepTfMkA7thIECiyRtUAGq8fm2O4jIBgMBA1eAZ6Knx+gHaJR4QwdCMKBxEJRggFDGgQEREPjjAMBQUKIwIRDhBDC2QNDDEKoEkDoiMHDigICGkJBS2dDA6TAAnAEAkCdQ8ORQcHTAkLcQQODLPMIgIJaCWxJMIkPIoAt3EhACH5BAkHAAAALAAAAAAYABgAAAWtICCOJNA0ZZoOpGGQrDoOBCoSxNgQsQzgMZyIlvOJdi+AS2SoyXrK4umWHM5wNiV0UN3xdLiqr+mENcWpM9TIbrsBkEck8oC0DQqBQGGIz+t3eXtob0ZTPgNrIwQJDgtGAgwCWSIMDg4HiiUIDAxFAAoODwxDBWINCEGdSTQkCQcoegADBaQ6MggHjwAFBZUFCm0HB0kJCUy9bAYHCCPGIwqmRq0jySMGmj6yRiEAIfkECQcAAAAsAAAAABgAGAAABbIgII4k0DRlmg6kYZCsOg4EKhLE2BCxDOAxnIiW84l2L4BLZKipBopW8XRLDkeCiAMyMvQAA+uON4JEIo+vqukkKQ6RhLHplVGN+LyKcXA4Dgx5DWwGDXx+gIKENnqNdzIDaiMECwcFRgQCCowiCAcHCZIlCgICVgSfCEMMnA0CXaU2YSQFoQAKUQMMqjoyAglcAAyBAAIMRUYLCUkFlybDeAYJryLNk6xGNCTQXY0juHghACH5BAkHAAAALAAAAAAYABgAAAWzICCOJNA0ZVoOAmkY5KCSSgSNBDE2hDyLjohClBMNij8RJHIQvZwEVOpIekRQJyJs5AMoHA+GMbE1lnm9EcPhOHRnhpwUl3AsknHDm5RN+v8qCAkHBwkIfw1xBAYNgoSGiIqMgJQifZUjBhAJYj95ewIJCQV7KYpzBAkLLQADCHOtOpY5PgNlAAykAEUsQ1wzCgWdCIdeArczBQVbDJ0NAqyeBb64nQAGArBTt8R8mLuyPyEAOw==" alt="Photo by &lt;a href=https://unsplash.com/@wtrsnvc?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&gt;wtrsnvc _&lt;/a&gt; on &lt;a href=https://unsplash.com/photos/a-cell-phone-sitting-on-top-of-a-table-EE7NvZ9klZo?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&gt;Unsplash&lt;/a&gt;" data-src="images/j2me_phone.webp" /></p>
+
+<h1>1. History Time (Skip if not interested)</h1>
+
+<h2>1.1. The Rise of Java ME, and…</h2>
+
+<p>Back in 2001, game developers gathered at the JavaOne conference in San Francisco to hear about the latest in Java technology, where they saw a famous hedgehog running on a mobile phone screen, moving faster than anything they had ever seen before. This was the first time that Java ME was introduced to the world, and as Gameloft put it, “a revolution was coming”.</p>
+
+<p>In the next couple of years, this technology would bring us some of the most iconic games in the history of mobile gaming, such as the famous Snake game on Nokia phones, Prince of Persia, and the legendary Asphalt series. It was such a huge success that old protocols like WAP and <a href="https://en.wikipedia.org/wiki/Binary_Runtime_Environment_for_Wireless">Qualcomm’s BREW</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> were quickly forgotten, and Java ME became the standard for mobile game development. In 2013, there were over 3 billion devices running Java ME. From Nokia to Sony Ericsson, from Motorola to Samsung, every phone manufacturer was advertising their Java ME compatibility.</p>
+
+<p>Java ME consists of two profiles:</p>
+
+<ol>
+<li><strong>CLDC</strong> (Connected Limited Device Configuration), which defines the minimum language features and libraries that a Java ME device must have, and</li>
+<li><strong>MIDP</strong> (Mobile Information Device Profile), which defines the APIs to manipulate the device&rsquo;s GUI, messaging and storage capabilities.</li>
+</ol>
+
+<p>Besides, most devices also support the <strong>JSR</strong> (Java Specification Requests) APIs and their own proprietary APIs (Nokia, Samsung, Siemens, and Sprint to name a few) to extend the capabilities of bluetooth, camera, 3D graphics, etc.</p>
+
+<p>Currently, most J2ME phones you find are with MIDP 2.1 and CLDC 1.1, which is the most common configuration for J2ME game developers. Both of them are published before 2006<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>.</p>
+
+<h2>1.2. …the Fall of Java ME</h2>
+
+<p>The next big step in the mobile games market would come in 2007, Apple, at this point in time, was very successful, with their computers as the main commercial competitor to Microsoft’s Windows and their iPod brand being the biggest MP4 brand in the market, yet it was a fraction of what it is today. The iPhone was described then by Steve Jobs as “an iPod, a Phone and an internet communicator”, it was “not a smartphone” because those are “complicated to use” and the iPhone was meant for everyone, making it perfect for mobile games.</p>
+
+<p>Not long after the release of the iPhone, Google would release their response, the Android was developed by the Open Handset Alliance, a consortium of firms from different fields mostly related to mobile phones, with its biggest contributor being Google. It was the open source version of what Apple was doing with the iPhone, the Linux to their OS X.<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup></p>
+
+<p>The after story is well known, the iPhone and Android dominated the market, Windows Phone and BlackBerry OS rapidly lost market share, and Java ME was left behind. The last version of Java ME, Oracle Java ME 8.3, was released in 2018, and the last phone to support Java ME was <a href="https://www.reddit.com/r/dumbphones/comments/ut4vko/probably_the_last_nokia_phone_to_support_java/">said to be</a> the Nokia 3310 3G, released in 2017.</p>
+
+<h1>2. How to Build a Java ME Game in 2024</h1>
+
+<p>Out of curiosity, I decided to try building a Java ME application a few days ago. Although most links and resources are no longer available, with some persistence, I managed to find a way to build it on my Windows 11 24H2 machine. Here’s a step-by-step guide.</p>
+
+<h2>2.1. Prerequisites</h2>
+
+<p>You need to meet the following system requirements:</p>
+
+<ul>
+<li>Windows (any version, as long as you can run Oracle JDK 8), or</li>
+<li>Linux (I haven’t tested it, but it should work)</li>
+<li>32-bit is better; 64-bit requires some extra steps to run the emulator</li>
+</ul>
+
+<h2>2.2. Install Oracle JDK 8</h2>
+
+<p>The Java ME SDK requires Oracle JDK to run, and it has only been officially tested with Oracle JDK 5. Since Oracle JDK 5 is no longer available, I installed <strong>Oracle JDK 8</strong> instead. You can download it <a href="https://www.oracle.com/jp/java/technologies/javase/javase8-archive-downloads.html">here</a>.</p>
+
+<h2>2.3. Install Java ME SDK</h2>
+
+<p>Originally, the J2ME SDK was called &ldquo;<em>Java Wireless Toolkit (WTK)</em>&rdquo;, which was formly known as &ldquo;<em>J2ME Wireless Toolkit</em>&rdquo;, developed by Sun Microsystems. Later it was integrated into Oracle Java ME SDK 3.0.</p>
+
+<p>Since our development tools don&rsquo;t support Oracle Java ME SDK 8.3 and only have some partial support for Oracle Java ME SDK 8.0 (believe it or not, the previous version of 8.0 is 3.x!), and I&rsquo;m very disappointed with the Java ME SDK after several failed attempts, I decided to use the old &ldquo;<em>Java Wireless Toolkit</em>&rdquo; instead. <strong>If you managed to get Oracle Java ME SDK 8.3 working, please let me know!</strong></p>
+
+<p>Google <em>Sun Java Wireless Toolkit</em> or just download it <a href="https://www.oracle.com/java/technologies/sun-java-wireless-toolkit.html">here</a>.</p>
+
+<p>Run the setup, select where the JDK 8 is installed, and install it to a directory, say, <code>C:\WTK2.5.2_01</code>.</p>
+
+<h2>2.4. Install Eclipse IDE</h2>
+
+<p>There are only two IDEs that support Java ME development: <a href="https://netbeans.apache.org/">NetBeans</a> and <a href="https://eclipseide.org/">Eclipse</a>. I chose Eclipse because it’s more lightweight and I’m more familiar with it.</p>
+
+<p>However, the J2ME plugin for Eclipse is incompatible with the latest version of Eclipse, so you need to download an older version of Eclipse. To be specific, the lastest version that supports J2ME development is <strong>Eclipse 4.5</strong> (Mars). You can download it <a href="https://www.eclipse.org/downloads/packages/release/mars/r/eclipse-ide-java-developers">here</a>.</p>
+
+<h2>2.5. Install MTJ Plugin</h2>
+
+<p><a href="https://projects.eclipse.org/projects/tools.mtj/">MTJ (Mobile Tools for Java™)</a> is a plugin for Eclipse that provides features for developing Java ME applications.</p>
+
+<p>However, it has been <a href="https://gitlab.eclipse.org/eclipsefdn/emo-team/emo//issues/579">archived due to &ldquo;lack of development activity&rdquo;</a> and is no longer available in the Eclipse Marketplace.</p>
+
+<blockquote>
+<p><strong>Notes</strong></p>
+
+<p>If you are experimenting with J2ME SDK 8.3, note that the official <em>Oracle Java ME SDK 8.3 Eclipse Plugins</em> requires MTJ as its dependency (which should be originally automatically fetched from the Eclipse Marketplace), so you need to install MTJ first, or you will meet <a href="https://www.eclipse.org/forums/index.php/t/1114613/">&ldquo;dependency not found&rdquo; errors</a>.</p>
+</blockquote>
+
+<p>Nowadays, you can only download the whole MTJ project archive <a href="http://archive.eclipse.org/archived_projects/mtj.tgz">here</a>, around 2 GB.</p>
+
+<p>After downloading, extract the archive and get the zip archive at <code>downloads/downloads/drops/&lt;version&gt;/org.eclipse.mtj.update-site-&lt;version&gt;.zip</code>. Choose the latest version (i.e. <code>2.0.1</code>) and install it in Eclipse by <code>Help</code> -&gt; <code>Install New Software</code> -&gt; <code>Add</code> -&gt; <code>Archive</code> -&gt; select the zip archive. Restart Eclipse after installation.</p>
+
+<h2>2.6. Configure the Plugin with SDK</h2>
+
+<p>After installing the plugin, you need to configure it before you can start developing. Go to <code>Window</code> -&gt; <code>Preferences</code> -&gt; <code>Java ME</code>, set <code>WTK Root</code> to the directory where you installed the JWT.</p>
+
+<p>Then turn to <code>Device Management</code>, if you see some devices under a group named <code>Sun Java Wireless Toolkit</code>, you are good to go. If not, you need to add WTK devices manually by clicking <code>Manual Install</code> and selecting the root directory of the WTK to scan for devices.</p>
+
+<blockquote>
+<p><strong>Explanation of &ldquo;Device&rdquo; in Java ME</strong></p>
+
+<p>In Java ME, a &ldquo;device&rdquo; is a set of profiles which define the language and API capabilities of a target, where the SDK libraries and tools used to build an application is located, and how the application is run and debugged in an emulator (or a real device). Generally speaking, a device defines everything the build system needs to know about the target platform.</p>
+</blockquote>
+
+<p>There may be some devices named &ldquo;<em>SDK Provider Test Clamp</em>&rdquo;. Do <strong>NOT</strong> use them, as they are dummy devices for testing the SDK itself.</p>
+
+<h2>2.7. Create a New Project</h2>
+
+<p>Now you can create a new project! Start by selecting <code>File</code> -&gt; <code>New</code> -&gt; <code>Java ME Project</code>. You can choose a project name, the MIDP version, and the CLDC version.</p>
+
+<p>Note that you need to select a WTK device you added in the previous step, <strong>NOT</strong> the <em>SDK Provider Test Clamp</em>. In my case, I chose <em>DefaultColorPhone</em>, which seems to be a common device for J2ME development.</p>
+
+<h2>2.8. Write Your Code</h2>
+
+<p>You can now write your code in the <code>src</code> folder. The structure of a J2ME project is similar to an average Java project, with a <code>src</code> folder for source code and a <code>res</code> folder for resources.</p>
+
+<p>You need at least a <code>MIDlet</code> class (like <code>Activity</code> in Android) for a GUI application. I will not go into details about J2ME programming here, and you can find some good tutorials <a href="https://github.com/hstsethi/awesome-j2me">here</a>.</p>
+
+<h2>2.9. Run Your Application</h2>
+
+<p>If you are on a 32-bit system, you can run your application directly in the emulator by right-clicking the project and selecting <code>Run As</code> -&gt; <code>Emulated Java ME MIDlet</code>. But on 64-bit, you might meet the following error:</p>
+
+<pre><code>java.lang.UnsatisfiedLinkError: C:\WTK2.5.2_01\bin\sublime.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1941)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1824)
+	at java.lang.Runtime.load0(Runtime.java:809)
+	at java.lang.System.load(System.java:1086)
+	at com.sun.kvem.Sublime.&lt;init&gt;(Sublime.java:29)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at com.sun.kvem.Lime.createLime(Lime.java:40)
+	at com.sun.kvem.KVMBridge.&lt;init&gt;(KVMBridge.java:46)
+	at com.sun.kvem.KVMBridge.getBridge(KVMBridge.java:37)
+	at com.sun.kvem.midp.MIDP.run(MIDP.java:699)
+	at com.sun.kvem.environment.EmulatorInvoker.runEmulatorImpl(EmulatorInvoker.java:107)
+	at com.sun.kvem.environment.EmulatorInvoker.main(EmulatorInvoker.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.kvem.environment.JVM.main(JVM.java:103)
+</code></pre>
+
+<p>I haven&rsquo;t found a solution for this yet, but you can build the project to a <code>.jar</code> file and run it on a real device or an emulator like <a href="https://archive.org/details/KEmulator103">KEmulator</a> or <a href="https://github.com/nikita36078/J2ME-Loader">J2me Loader</a> on Android. Just click <code>Application Descriptor</code> in the project and select <code>Create Package</code> to build the <code>.jar</code> file under the deploy folder.</p>
+
+<h1>3. Conclusion</h1>
+
+<p>That’s it! You have successfully built a Java ME application in 2024. Although Java ME is no longer popular, it’s still a fun (<em>cough</em>) way to learn old Java programming.</p>
+
+<p>If you have any questions or suggestions, feel free to leave a comment.</p>
+
+<div class="footnotes">
+
+<hr>
+
+<ol>
+<li id="fn:1">Though in some countries (like China), many &ldquo;contract phones&rdquo; (phones that are given to you for free when you sign a contract with a carrier) continued to provide BREW downloading services and Chinese game developers continued to develop casual games for it until 2020s. I remember myself still playing a carrier-supplied version of <a href="https://web.archive.org/web/20031225175439/http://www.nagi-p.com/">NS-Shaft</a> on a <a href="https://baike.baidu.com/item/%E4%B8%AD%E5%85%B4%20R580">ZTE-C R580</a> around 2019.</li>
+
+<li id="fn:2"><a href="https://stackoverflow.com/questions/35430661/java-me-version-history">https://stackoverflow.com/questions/35430661/java-me-version-history</a></li>
+
+<li id="fn:3"><a href="https://exaud.com/blog/the-history-of-mobile-video-games-part-iii">https://exaud.com/blog/the-history-of-mobile-video-games-part-iii</a></li>
+</ol>
+
+</div>
+</article>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
+                        </section>
+                        <section class="recommend">
+                            
+                            <section class="nav prev more">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/todo-list.html">博主的Todo List</a>
+                            </section>
+                             
+                            <section class="nav next more">
+                                <div class="head">下篇文章</div>
+                                <a class="link" href="/ryzen-ai-llm.html">[EN] Running LLMs on AMD Ryzen AI Processor</a>
+                            </section>
+                            
+                        </section>
+                        
+<script src='valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
+        appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
+    })
+</script>
+
+                </article>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+    <span class="copyright">
+        行云小站 © 2015 - <text id="thisyear"></text>
+        <script type="text/javascript">
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
+        </script>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a>
+    </span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
+</footer>
+    <script src="/bundle/index.js"></script>
+</body>
+
+</html>
