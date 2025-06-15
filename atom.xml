@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.eu.org</id>
-  <updated>2024-10-25T09:48:29Z</updated>
+  <updated>2025-06-15T21:58:14+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.eu.org"></link>
   <author>
@@ -9,10 +9,30 @@
   </author>
   <entry>
     <title>博主的Todo List</title>
-    <updated>2024-02-06T23:38:25+08:00</updated>
-    <id>tag:w568w.eu.org,2024-02-06:/todo-list.html</id>
+    <updated>2025-06-15T21:38:25+08:00</updated>
+    <id>tag:w568w.eu.org,2025-06-15:/todo-list.html</id>
     <link href="https://w568w.eu.org/todo-list.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</summary>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>[EN] Stung by Every Language</title>
+    <updated>2025-06-15T16:17:00+08:00</updated>
+    <id>tag:w568w.eu.org,2025-06-15:/stung-by-every-lang.html</id>
+    <link href="https://w568w.eu.org/stung-by-every-lang.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;Programming languages are like a box of chocolates. You never know what you&amp;rsquo;re gonna get&lt;/p&gt;&#xA;</summary>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>通往原生 GUI 之路</title>
+    <updated>2024-11-30T18:50:25+08:00</updated>
+    <id>tag:w568w.eu.org,2024-11-30:/native-gui-framework.html</id>
+    <link href="https://w568w.eu.org/native-gui-framework.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;以及对一批原生 GUI 框架的简单评测&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
@@ -59,7 +79,7 @@
   </entry>
   <entry>
     <title>Arm 相关术语辨析</title>
-    <updated>2024-02-07T12:28:00Z</updated>
+    <updated>2024-02-07T12:28:00+08:00</updated>
     <id>tag:w568w.eu.org,2024-02-07:/arm-disambiguation.html</id>
     <link href="https://w568w.eu.org/arm-disambiguation.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;Arm？Armv8？armhf？AArch64？这些术语是什么意思？&lt;/p&gt;&#xA;</summary>
@@ -69,7 +89,7 @@
   </entry>
   <entry>
     <title>瑞芯微 RK 系列芯片启动流程简析</title>
-    <updated>2024-02-03T12:00:00Z</updated>
+    <updated>2024-02-03T12:00:00+08:00</updated>
     <id>tag:w568w.eu.org,2024-02-03:/rockchip-boot-process.html</id>
     <link href="https://w568w.eu.org/rockchip-boot-process.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;基于 RK3566 开发板分析&lt;/p&gt;&#xA;</summary>
@@ -79,30 +99,10 @@
   </entry>
   <entry>
     <title>我如何修好一个变砖的笔记本电脑</title>
-    <updated>2023-08-16T16:05:08Z</updated>
+    <updated>2023-08-16T16:05:08+08:00</updated>
     <id>tag:w568w.eu.org,2023-08-16:/how-to-fix-bricked-lenovo-laptop.html</id>
     <link href="https://w568w.eu.org/how-to-fix-bricked-lenovo-laptop.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;而且只花了不到 30 块钱&lt;/p&gt;&#xA;</summary>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>2023 和新年</title>
-    <updated>2023-01-27T10:41:25+08:00</updated>
-    <id>tag:w568w.eu.org,2023-01-27:/2023-sweep.html</id>
-    <link href="https://w568w.eu.org/2023-sweep.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;打扫心情，迎接下一年&lt;/p&gt;&#xA;</summary>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>2022 年，为什么我依然不推荐 Linux 作为日用环境</title>
-    <updated>2022-08-25T16:03:25+08:00</updated>
-    <id>tag:w568w.eu.org,2022-08-25:/ubuntu-usage-test.html</id>
-    <link href="https://w568w.eu.org/ubuntu-usage-test.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;因为它并不好用。&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>

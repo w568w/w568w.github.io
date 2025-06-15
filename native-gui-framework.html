@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta name="google" value="notranslate" />
+<meta name="robots" content="index,follow" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="行云小站" />
+<meta name="twitter:description" content="Say hello to you!" />
+<meta name="twitter:image:src" content="https://w568w.eu.org/images/avatar.gif" />
+
+<meta property="og:url" content="https://w568w.eu.org" />
+<meta property="og:title" content="行云小站" />
+<meta property="og:description" content="Say hello to you!" />
+<meta property="og:site_name" content="行云小站" />
+<meta property="og:image" content="https://w568w.eu.org/images/avatar.gif" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noodp" />
+
+<meta itemprop="name" content="行云小站" />
+<meta itemprop="description" content="Say hello to you!" />
+<meta itemprop="image" content="https://w568w.eu.org/images/avatar.gif" />
+
+<link rel="canonical" href="https://w568w.eu.org" />
+
+<link rel="shortcut icon" href="/favicon.png" />
+<link rel="apple-itouch-icon" href="/favicon.png" />
+<link rel="stylesheet" href="/bundle/index.css" />
+
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/lazyload/2.0.3/lazyload-min.js"></script>
+
+<script async src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/js/mdui.min.js"></script>
+<link async href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-d/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"></link>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script id="MathJax-script" async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
+
+
+
+    <meta name="keywords" content="">
+    <meta name="description" content="通往原生 GUI 之路">
+    <meta name="author" content="w568w">
+    <style>
+        @media (max-width: 767px) {
+            .mdui-card {
+                width: auto;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .mdui-card {
+                width: max-content;
+            }
+        }
+    </style>
+    <title>通往原生 GUI 之路</title>
+</head>
+
+<body class=" mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <article class="container">
+        <script>
+    var _hmt = _hmt || [];
+    (function () {
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce65555016ddd913f5a39a943e2df6a4";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+
+<script>
+    
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+    
+    document.addEventListener("onload", function () {
+        const now = new Date();
+        if ((now.getMonth() === 11 && now.getDate() === 13) ||
+            (now.getFullYear() === 2020 && now.getMonth() === 3 && now.getDate() === 4)) {
+            document.body.setAttribute("style", "-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none");
+        }
+    })
+
+    
+    function search_close() {
+        let searchBar = document.querySelector("#search");
+        let closeBarEvent = new Event('input', {
+            bubbles: true
+        });
+        closeBarEvent.simulated = true;
+        searchBar.value = '';
+        searchBar.dispatchEvent(closeBarEvent);
+    }
+</script>
+<header>
+    
+    <div class="mdui-appbar mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">
+                    menu
+                </i>
+            </a>
+            <a href="/" class="mdui-typo-title">
+                行云小站
+            </a>
+            <div class="mdui-toolbar-spacer">
+            </div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">search</i></button>
+                <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i
+                        class="mdui-icon material-icons">close</i></button>
+            </div>
+            <a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">
+                    refresh
+                </i>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+    <div class="mdui-grid-tile">
+        <img loading="lazy" src="https://source.unsplash.com/random/400x300"/>
+        <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+                <div class="mdui-grid-tile-title">行云小站</div>
+                <div class="mdui-grid-tile-subtitle">Say hello to you!</div>
+                <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a
+                        href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mc-drawer mdui-list" style="margin-bottom: 76px;">
+        <a href="/">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    home
+                </i>
+                <div class="mdui-list-item-content">
+
+                    主页
+
+                </div>
+            </li>
+        </a>
+        <a href="/archive.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    archive
+                </i>
+                <div class="mdui-list-item-content">
+
+                    所有文章
+
+                </div>
+            </li>
+        </a>
+        <a href="/tag.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    apps
+                </i>
+                <div class="mdui-list-item-content">
+
+                    标签
+
+                </div>
+            </li>
+        </a>
+        <a href="/gays.html">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    people
+                </i>
+                <div class="mdui-list-item-content">
+
+                    好基友
+
+                </div>
+
+            </li>
+        </a>
+        <a href="/about.w568w.html">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    account_circle
+                </i>
+                <div class="mdui-list-item-content">
+
+                    关于我
+
+                </div>
+            </li>
+        </a>
+        
+        <a href="/atom.xml">
+            <li class="mdui-list-item mdui-ripple">
+
+                <i class="mdui-icon material-icons mdui-list-item-icon">
+                    rss_feed
+                </i>
+                <div class="mdui-list-item-content">
+
+                    订阅
+
+                </div>
+            </li>
+        </a>
+        
+        <li class="mdui-list-item mdui-ripple">
+
+
+            <div class="mdui-list-item-content" style="font-size:12px">
+
+                您的网页由&nbsp;<span id="cdn">Github Pages</span>&nbsp;提供
+
+            </div>
+        </li>
+    </div>
+    
+</div>
+
+        <div style="padding: 5% 0 5% 0; ">
+            <div class="mdui-card" style="position: relative;margin: auto;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="/images/avatar.gif" /> <a class="mdui-card-header-title" href="/about.w568w.html">w568w</a> 
+                    <span id="date" class="date mdui-card-header-subtitle" data-time="1732963825"><span
+                        class="from">创建时间被隐藏</span></span>
+                    
+
+                </div>
+                <article class="main article">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">通往原生 GUI 之路</div>
+                        <span class="mdui-card-primary-subtitle" id="busuanzi_container_page_pv">
+                        本文已被读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                    <div class="mdui-card-content">
+                        
+                        <section class="info">
+                            <span class="tags"></span>
+                        </section>
+                        <article class="content"><nav>
+
+<ul>
+<li><a href="#toc_0">Lazarus</a></li>
+
+<li><a href="#toc_1">ImGui</a></li>
+
+<li><a href="#toc_2">wxWidgets</a></li>
+
+<li><a href="#toc_3">FLTK</a></li>
+
+<li><a href="#toc_4">Fyne</a></li>
+
+<li><a href="#toc_5">Slint</a></li>
+
+<li><a href="#toc_6">SWT</a></li>
+
+<li><a href="#toc_7">GTK4</a></li>
+
+<li><a href="#toc_8">易语言</a></li>
+
+<li><a href="#toc_9">aardio</a></li>
+
+<li><a href="#toc_10">参考</a></li>
+</ul>
+
+</nav>
+
+<h1 id="toc_0">Lazarus</h1>
+
+<ul>
+<li>编程语言：Object Pascal</li>
+<li>支持平台：Windows、Linux、macOS、iOS、FreeBSD、Android、Windows CE、Embedded</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li>有一个所见即所得的界面设计器</li>
+<li>完整的 IDE 支持，在 Lazarus IDE 中即可完成所有开发工作</li>
+<li>编译速度快，生成的可执行文件体积小，不再依赖其他框架</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>Object Pascal 是一种较为陈旧且冗长的语言，不太适合新手。可以说，在 2024 年，提到 Object Pascal 唯一的用途就是 Delphi 和 Lazarus 了，学习该语言的其他用途几乎为零。自然地，你也不可能找到较好的第三方库和模块支持，这就使得对碎片化严重的平台（如 Linux 和 Android）的支持意义变得很小</li>
+<li>Lazarus IDE 功能较为简陋，但整个开发流程又被完全绑定在 Lazarus IDE 上，使得开发效率较低。对于习惯 Visual Studio、Xcode 等现代 IDE 的开发者来说，这绝对是一场灾难：例如，所有设置和菜单项的位置都摆放随意，作为一个接近十年开发经验的开发者，我竟然在 IDE 中花了 10 分钟才找到如何设置编译选项</li>
+</ul>
+
+<h1 id="toc_1">ImGui</h1>
+
+<ul>
+<li>编程语言：C++（以及几乎所有常见语言的绑定，例如 C#、Rust、Go…）</li>
+<li>支持平台：官方维护的后端基本已经支持了所有常见桌面、移动、嵌入式平台（DirectX9/11/12、OpenGL、Metal、SDL、Vulkan、WebGPU…）</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li>足够轻量（本身只有一个头文件和一个 cpp 文件），可以很方便地集成到任何项目中</li>
+<li>兼容性绝对是杀手级别，你可以使用几乎任何语言为任何平台开发基于 ImGui 的应用</li>
+<li>扩展性好，容易迁移到新的设备或平台上</li>
+<li>流行度高，已经被广泛应用于游戏开发、工具开发等领域</li>
+<li>非常精简，编译体积甚至比 Lazarus 生成的可执行文件还要小</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>轻量有的时候意味着简陋。例如，至今没有好办法在 ImGui 中实现一个多行文本框，这在很多应用场景下是必须的（尽管当我们谈到文字处理时，<a href="https://faultlore.com/blah/text-hates-you/">事情总是变得复杂</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>）</li>
+<li>立即模式 GUI 有时候并不是一个好的选择：每帧重新绘制整个界面对复杂应用来说肯定是一个性能瓶颈，而且任何动画和复杂的控件交互都需要自己从头实现</li>
+<li>完全利用图形 API 绘制界面，意味着会有更高的 GPU 占用，并且不利用原生控件也使得其控件风格和系统原生控件有较大差异</li>
+</ul>
+
+<h1 id="toc_2">wxWidgets</h1>
+
+<ul>
+<li>编程语言：C++、Python（还有其他语言的绑定，但要么不完善，要么已经停止维护）</li>
+<li>支持平台：Windows、Linux、macOS</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li>直接使用系统原生控件进行绘制，风格契合度和性能都很好</li>
+<li>控件数量相对比较丰富</li>
+<li>编译体积也相对比较轻量</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>官方教程年久失修，很多函数没有文档注释，很多功能的使用方法也需要查阅第三方教程</li>
+<li>偏向 MFC 时代的 API 设计风格（尽管他们实际上有一套新的不太成熟的 API），对于新手来说学习曲线较陡</li>
+<li>编写布局的方法较为繁琐。其 RAD 工具也不太好用，让本就缓慢的 C++ 编译速度变得更加难以忍受</li>
+</ul>
+
+<h1 id="toc_3">FLTK</h1>
+
+<ul>
+<li>编程语言：C++、Rust</li>
+<li>支持平台：Windows、Linux、macOS</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li><a href="https://szibele.com/memory-footprint-of-gui-toolkits/">内存占用极低</a>、<a href="https://ironoxidizer.github.io/gui-toolkit-benchmarks/">依赖体积较小</a></li>
+<li>简单的、基于代码的布局 API</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>控件数量较少，功能较为简陋</li>
+<li>控件的风格和系统原生控件有较大差异，并且非常原始，看起来像来自 Windows 95 时代（尽管 Rust 绑定的维护者编写了一些新的主题，努力改善这一点）</li>
+<li>中文支持不佳，在 Windows 下的字体渲染效果差</li>
+</ul>
+
+<h1 id="toc_4">Fyne</h1>
+
+<ul>
+<li>编程语言：Go</li>
+<li>支持平台：Windows、Linux、macOS、iOS、FreeBSD、Android</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li>使用 Go 也算是一个优点？</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>编译体积较大，<a href="https://github.com/fyne-io/fyne/issues/2393">即使空项目也有 10~20MB 左右</a></li>
+<li>使用自己的控件风格，与系统原生控件有一定差异（但相对比较现代）</li>
+<li>社区资源较少，学习资料不多，组件数量也不多（实际上维护也不是很活跃）</li>
+</ul>
+
+<h1 id="toc_5">Slint</h1>
+
+<h1 id="toc_6">SWT</h1>
+
+<h1 id="toc_7">GTK4</h1>
+
+<h1 id="toc_8">易语言</h1>
+
+<ul>
+<li>编程语言：易语言</li>
+<li>支持平台：Windows、Linux（仅控制台，不支持 GUI）</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li>语法简单，基本是中文版的 Visual Basic，适合初学者</li>
+<li>有一个所见即所得的界面设计器</li>
+<li>有大量的第三方库和模块支持，诸多优秀的中文教程和社区</li>
+<li>编译体积和 VB 一样小，比 Lazarus 生成的可执行文件还要小</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>很难写出紧凑高效的代码。语言本身的局限性很大，很多功能都需要调用系统 API 才能实现</li>
+<li>难以用 Git 等现代版本控制工具管理代码</li>
+<li>仅支持 Windows 平台</li>
+<li>上一版本以来已停止更新 1 年多，未来前景不明朗</li>
+</ul>
+
+<h1 id="toc_9">aardio</h1>
+
+<ul>
+<li>编程语言：Lua（使用 aardio 标准库，有一定魔改）</li>
+<li>支持平台：Windows</li>
+</ul>
+
+<p><strong>💪优点</strong></p>
+
+<ul>
+<li>完善的中文文档、教程和社区，自称已经有 20 年历史，目前仍在活跃更新</li>
+<li>有一个所见即所得的界面设计器</li>
+<li>语法简单，适合初学者，也支持调用外部语言</li>
+<li>编译体积和易语言类似，专注于 Windows 平台</li>
+</ul>
+
+<p><strong>🤔缺点</strong></p>
+
+<ul>
+<li>仅支持 Windows 平台</li>
+<li>只能使用 aardio IDE 进行开发，功能较为简陋</li>
+</ul>
+
+<h1 id="toc_10">参考</h1>
+
+<ul>
+<li><a href="https://blog.royalsloth.eu/posts/sad-state-of-cross-platform-gui-frameworks/">https://blog.royalsloth.eu/posts/sad-state-of-cross-platform-gui-frameworks/</a></li>
+<li><a href="https://ironoxidizer.github.io/gui-toolkit-benchmarks/">https://ironoxidizer.github.io/gui-toolkit-benchmarks/</a></li>
+<li><a href="https://xylt.github.io/windows-ui/">https://xylt.github.io/windows-ui/</a></li>
+</ul>
+
+<div class="footnotes">
+
+<hr>
+
+<ol>
+<li id="fn:1">另外，<a href="https://lord.io/text-editing-hates-you-too/">文本编辑也讨厌你</a>。</li>
+</ol>
+
+</div>
+</article>
+                        <section class="author">
+                            
+                            <div class="avatar" style="background-image: url(/images/avatar.gif);"></div>
+                            <a class="name" href="/about.w568w.html">w568w</a>
+                            <div class="intro">梦想改变自己的疯子。</div>
+                        </section>
+                        <section class="recommend">
+                            
+                            <section class="nav prev more">
+                                <div class="head">上篇文章</div>
+                                <a class="link" href="/stung-by-every-lang.html">[EN] Stung by Every Language</a>
+                            </section>
+                             
+                            <section class="nav next more">
+                                <div class="head">下篇文章</div>
+                                <a class="link" href="/j2me-2024.html">[EN] Notes on Java ME Development in 2024</a>
+                            </section>
+                            
+                        </section>
+                        
+<script src='valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'rBgBHYPODKNk0l5jgkDv8BOK-gzGzoHsz',
+        appKey: 'fWXOf7hW3WBv4Q8sfuDU6KO0'
+    })
+</script>
+
+                </article>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+    <span class="copyright">
+        行云小站 © 2015 - <text id="thisyear"></text>
+        <script type="text/javascript">
+            document.getElementById("thisyear").innerHTML = new Date().getFullYear();
+        </script>
+        使用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="noreferrer">CC BY-NC 4.0协议</a>
+    </span>
+
+    <span class="publish">自豪地使用 <a href="http://www.inkpaper.io/index-zh.html" target="_blank" rel="noreferrer">Ink</a>
+        和 <a href="https://github.com/w568w/InkMaterialTheme" target="_blank" rel="noreferrer">InkMaterial</a> 主题</span>
+</footer>
+    <script src="/bundle/index.js"></script>
+</body>
+
+</html>

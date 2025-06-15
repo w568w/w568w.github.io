@@ -14,14 +14,16 @@ type: page
 
 ---
   
-(以下按 友情链接的添加/更新时间 从新到旧排序，最后更新时间：**2024 年 02 月 04 日**)  
+(以下按 友情链接的添加/更新时间 从新到旧排序，最后更新时间：**2025 年 06 月 15 日**)  
 
 
 # 200 OK
-## [数字饭团](https://www.szfantuan.cn)
-数字饭团的个人小站    
+## [Integral](https://blog.i7.homes)
+Integral's Blog
+## [数字饭团](https://szfantuan.cn)
+数字饭团的个人小站
 ## [炎忍](https://imyan.ren/)
-前端与安卓开发者。    
+前端与安卓开发者。
 ## [何言的杂货店](https://heyanle.com)
 专业写 Bug 的苦逼社畜一枚  
 ## [小姜饼](https://qaq.icu/)
@@ -40,12 +42,8 @@ KYLN 的一隅小站
 (**PS:无博客，仅个人主页**)  
 ## [残页的小博客](https://blog.canyie.top/)
 16岁的少年，喜欢编程，喜欢航空。  
-## [PasserBlog](https://takuron.top/)  
+## [PasserBlog](https://takuron.com/)  
 不务正业的逗比大学生  
-## [UNKNOWN date](https://n-a.date/)
-啥也不懂的萌新  
-(__PS:自 2020 年未更新内容__)  
-
 ## [一块小板子](https://oboard.github.io/index.html)  
 就是一块小板子。  
 (**PS:无博客，仅个人主页**)
@@ -58,6 +56,9 @@ KYLN 的一隅小站
 # 404 Not Found
 > PS:这里记录的是一些已经无法正常访问的友链。  
 
+## [UNKNOWN date](https://n-a.date/)
+啥也不懂的萌新  
+(由于未知原因，到现在为止不能访问)  
 ## [853](http://blog.853lab.com/)   
 目前是一位没有钱读书在某地做礼宾员来赚学费还被炒鱿鱼的穷逼大学生。  
 (由于未知原因，到现在为止不能访问)  
