@@ -2,13 +2,18 @@ site:
     title: "行云小站"
     subtitle: "Say hello to you!"
     limit: 10
-    theme: theme
+    theme: theme-cream
     lang: zh
     url: "https://w568w.eu.org/"
     comment: username
     logo: "-/images/avatar.gif"
     # link: "{category}/{year}/{month}/{day}/{title}.html"
     # root: "/blog"
+    config:
+        GitHub: "https://github.com/w568w"
+        CustomPage:
+            Link: gays
+            Title: 朋友们
 
 authors:
     w568w:

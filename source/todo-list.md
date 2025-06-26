@@ -1,7 +1,6 @@
 title: "博主的Todo List"
-date: 2025-06-15 21:38:25 +0800
+date: 2025-06-26 18:42:25 +0800
 author: w568w
-top: true
 cover: images/nikita-kachanovsky-445394-unsplash.jpg
 preview: 看看这家伙最近在搞什么大新闻？
 ---
@@ -26,4 +25,4 @@ preview: 看看这家伙最近在搞什么大新闻？
 
 要了解我更多？轻点下面昵称(/ ω \\)
 
-<script src="todo.js"/>
+<script src="todo.js"></script>

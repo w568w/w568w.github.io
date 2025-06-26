@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="keywords" content="{{.Site.Subtitle}}">
+    <meta name="description" content="{{.Site.Subtitle}}">
+    <title>{{.Site.Title}}</title>
+  <script type="module" crossorigin src="/assets/main-BssgSzcA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-B-d-EW6v.css">
+</head>
+
+<body class="bg-blue-50">
+    <!-- 导航栏和背景横幅 -->
+    {{template "header" .}}
+
+    <!-- 内容区域 - 向上移动遮住横幅底部 -->
+    <div class="relative z-20 md:max-w-6xl mx-auto -mt-32 pt-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <main class="w-full md:w-2/3 lg:w-3/4 md:order-2 space-y-4">
+                {{if .TagName}}
+                <!-- 标签筛选 Chip -->
+                <div
+                    class="ml-2 inline-flex items-center gap-2 bg-white text-blue-500 dark:text-blue-300 px-3 py-2 rounded-xl border border-blue-200 dark:border-blue-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    </svg>
+                    <span class="text-sm font-medium">正在按 “{{.TagName}}” 筛选，共 {{.TagCount}} 条</span>
+                    <a href="/" class="ml-1 cream-button hover:bg-blue-200 dark:hover:bg-blue-800" title="返回首页">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </a>
+                </div>
+                {{end}}
+                {{range .Articles}}
+                <div class="block">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden">
+                        <!-- 图片区域 - 在小屏幕时显示在顶部 -->
+                        {{if .Cover}}
+                        <a href="/{{.Link}}" class="group block md:hidden relative">
+                            <img src="{{.Cover}}" alt="Blog post thumbnail"
+                                class="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105"
+                                onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0e0e0/757575?text=Image+Error';">
+                            <!-- 悬停时的遮罩层和箭头 -->
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-200">
+                                <svg class="h-10 w-10 text-white" fill="none" stroke-width="2.5">
+                                    <use href="/icons.svg#right-arrow" />
+                                </svg>
+                            </div>
+                        </a>
+                        {{end}}
+
+                        <!-- 主要内容容器 -->
+                        <div class="flex items-stretch p-6">
+                            <!-- 主要内容区域 -->
+                            <div class="flex-grow">
+                                <!-- 标题组：包含线和标题 -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1 h-5 bg-blue-500 self-center rounded-full"></div>
+                                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">
+                                        <a href="/{{.Link}}"
+                                            class="group hover:text-blue-500 transition-colors inline-flex items-center">
+                                            <span>{{.Title}}</span>
+                                            <svg
+                                                class="h-5 w-5 ml-2 text-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-150 ease-out origin-left">
+                                                <use href="/icons.svg#right-arrow" />
+                                            </svg>
+                                        </a>
+                                    </h2>
+                                </div>
+
+                                <!-- 其他内容，通过pl-5对齐标题文字 -->
+                                <div class="pl-5">
+                                    <!-- 元数据信息 -->
+                                    <div
+                                        class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                        <!-- 日期 -->
+                                        {{if gt .Date 0}}
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="h-4 w-4">
+                                                <use href="/icons.svg#date-calendar" />
+                                            </svg>
+                                            <span class="date-parser" data-timestamp="{{.Date}}" />
+                                        </div>
+                                        {{end}}
+                                        <!-- 标签 -->
+                                        {{if gt (len .Tags) 0}}
+                                        <div class="flex items-center gap-1.5 flex-wrap">
+                                            <span class="font-semibold text-blue-500">#</span>
+                                            {{range .Tags}}
+                                            <a href="/tag/{{.}}/index.html"
+                                                class="px-1.5 py-2 cream-button before:z-10"><span
+                                                    class="z-40">{{.}}</span></a>
+                                            {{end}}
+                                        </div>
+                                        {{end}}
+                                    </div>
+                                    <!-- 摘要 -->
+                                    <p class="text-gray-600 dark:text-gray-300 mt-3 text-base">{{.Preview}}</p>
+                                </div>
+                            </div>
+
+                            <!-- 右侧图片/箭头区域 - 仅在大屏幕显示 -->
+                            {{if .Cover}}
+                            <a href="/{{.Link}}"
+                                class="group relative w-40 md:w-48 flex-shrink-0 hidden md:block transition-transform duration-100 ease-in-out active:scale-95 rounded-lg overflow-hidden ml-6">
+                                <!-- 图片 -->
+                                <img src="{{.Cover}}" alt="Blog post thumbnail"
+                                    class="w-full h-full object-cover aspect-square transition-transform duration-200 group-hover:scale-105"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0e0e0/757575?text=Image+Error';">
+                                <!-- 悬停时的遮罩层和箭头 -->
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-200">
+                                    <svg class="h-10 w-10 text-white" stroke-width="2.5">
+                                        <use href="/icons.svg#right-arrow" />
+                                    </svg>
+                                </div>
+                            </a>
+                            {{else}}
+                            <!-- 无图片时的箭头按钮 - 仅在大屏幕显示 -->
+                            <a href="/{{.Link}}"
+                                class="group ml-6 flex-shrink-0 hidden md:flex transition-transform duration-100 ease-in-out active:scale-95">
+                                <div
+                                    class="flex flex-grow items-center justify-center px-3 bg-gray-100 dark:bg-gray-700 group-hover:bg-blue-100 dark:group-hover:bg-blue-900 rounded-lg transition-colors duration-200">
+                                    <svg class="h-6 w-6 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200"
+                                        stroke-width="2.5">
+                                        <use href="/icons.svg#right-arrow" />
+                                    </svg>
+                                </div>
+                            </a>
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+                {{end}}
+
+                <!-- 分页导航 -->
+                <div class="flex justify-center items-center gap-2 mt-8 pb-4">
+                    {{if .Prev}}
+                    <a href="{{.Site.Root}}/{{.Prev}}"
+                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-white hover:bg-blue-50 border border-gray-200 text-gray-600 hover:text-blue-600 transition-colors">
+                        <svg class="h-5 w-5">
+                            <use href="/icons.svg#left-arrow" />
+                        </svg>
+                    </a>
+                    {{else}}
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center">
+                        <svg class="h-5 w-5 text-gray-400">
+                            <use href="/icons.svg#left-arrow" />
+                        </svg>
+                    </div>
+                    {{end}}
+
+                    <!-- 当前页码 -->
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-500 text-white font-medium">
+                        {{.Page}}
+                    </div>
+
+                    {{if .Next}}
+                    <a href="{{.Site.Root}}/{{.Next}}"
+                        class="flex items-center justify-center w-10 h-10 rounded-xl bg-white hover:bg-blue-50 border border-gray-200 text-gray-600 hover:text-blue-600 transition-colors">
+                        <svg class="h-5 w-5">
+                            <use href="/icons.svg#right-arrow" />
+                        </svg>
+                    </a>
+                    {{else}}
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center">
+                        <svg class="h-5 w-5 text-gray-400">
+                            <use href="/icons.svg#right-arrow" />
+                        </svg>
+                    </div>
+                    {{end}}
+                </div>
+            </main>
+            <!-- 
+              左侧栏: 个人信息卡片
+              - 在 `md` 及以上断点，通过 `md:order-1` 将其排在左侧。
+              - 在移动端，由于父容器是 `flex-col`，它会自然显示在主内容下方。
+            -->
+            <aside class="w-full md:w-1/3 lg:w-1/4 md:order-1">
+                {{template "profile" .}}
+            </aside>
+        </div>
+    </div>
+
+    <!-- 页脚信息 -->
+    {{template "footer" .}}
+</body>
+
+</html>

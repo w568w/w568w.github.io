@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="keywords" content="{{.Site.Subtitle}}">
+    <meta name="description" content="{{.Site.Subtitle}}">
+    <title>{{.Site.Title}}</title>
+  <script type="module" crossorigin src="/assets/main-BssgSzcA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-B-d-EW6v.css">
+</head>
+
+<body class="bg-blue-50">
+    <!-- 导航栏和背景横幅 -->
+    {{template "header" .}}
+
+    <!-- 内容区域 - 向上移动遮住横幅底部 -->
+    <div class="relative z-20 md:max-w-6xl mx-auto -mt-32 pt-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <main class="w-full md:w-2/3 lg:w-3/4 md:order-2 space-y-4">
+                <!-- 归档卡片容器 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden p-8">
+                    <!-- 时间线容器 -->
+                    <div class="relative">
+                        <!-- 主时间线 -->
+                        <div
+                            class="absolute left-4 top-0 bottom-0 w-0.5 border-l-2 border-dashed border-gray-200 dark:border-gray-600 z-40">
+                        </div>
+
+                        {{range $index, $yearData := .Archive}}
+                        <!-- 年份节点 -->
+                        {{if gt $index 0}}<div class="h-8"></div>{{end}}
+                        <div class="relative flex items-center mb-6">
+                            <!-- 年份圆点 -->
+                            <div
+                                class="relative z-50 flex-shrink-0 w-3 h-3 bg-white border-2 border-blue-500 rounded-full dark:bg-gray-800 ml-2.75">
+                            </div>
+                            <!-- 年份标题 -->
+                            <h2 class="ml-6 text-2xl font-bold text-gray-800 dark:text-gray-100">{{$yearData.Year}}</h2>
+                            <span class="ml-4 text-sm text-gray-500 dark:text-gray-400">{{len $yearData.Articles}}
+                                篇文章</span>
+                        </div>
+
+                        {{range $article := $yearData.Articles}}
+                        <!-- 文章项容器 -->
+                        <a href="/{{$article.Link}}" 
+                            class="group relative flex items-start hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-all duration-200 py-3 px-2 no-underline">
+                            <!-- 时间线节点（动画：点变线） -->
+                            <div
+                                class="relative z-50 flex-shrink-0 mr-6 ml-1.25 self-center w-2 h-8 flex justify-center">
+                                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                                    bg-blue-500 transition-all duration-300
+                                    w-1 h-1 rounded-full
+                                    group-hover:h-4 group-hover:rounded-xl">
+                                </div>
+                            </div>
+
+                            <!-- 文章内容 -->
+                            <div
+                                class="flex-grow min-w-0 group-hover:translate-x-2 transition-transform duration-200 z-30 self-center">
+                                <!-- 标题 -->
+                                <h3
+                                    class="font-semibold text-gray-800 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                                    {{$article.Title}} <span
+                                        class="text-sm text-gray-500 dark:text-gray-400 ml-2">{{$article.Date}}</span>
+                                </h3>
+                            </div>
+                        </a>
+                        {{end}}
+                        {{end}}
+                    </div>
+                </div>
+            </main>
+            <!-- 
+              左侧栏: 个人信息卡片
+              - 在 `md` 及以上断点，通过 `md:order-1` 将其排在左侧。
+              - 在移动端，由于父容器是 `flex-col`，它会自然显示在主内容下方。
+            -->
+            <aside class="w-full md:w-1/3 lg:w-1/4 md:order-1">
+                {{template "profile" .}}
+            </aside>
+        </div>
+    </div>
+    </div>
+
+    <!-- 页脚信息 -->
+    {{template "footer" .}}
+</body>
+
+</html>

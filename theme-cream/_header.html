@@ -1,0 +1,100 @@
+<!-- 导航栏 - 固定在顶部 -->
+{{$author := ""}}
+{{if .Author}}
+    {{$author = .Author}}
+{{else if and .Articles (index .Articles 0).Author}}
+    {{$author = (index .Articles 0).Author}}
+{{else if and .Archive (index .Archive 0).Articles (index (index .Archive 0).Articles 0).Author}}
+    {{$author = (index (index .Archive 0).Articles 0).Author}}
+{{end}}
+<nav class="fixed top-0 left-0 right-0 z-30 md:px-4">
+    <div id="navbar" class="md:max-w-6xl mx-auto transition-transform duration-200 ease-in-out">
+        <div class="bg-white rounded-b-xl p-3 px-4 flex items-center justify-between">
+
+            <!-- 左侧 Logo -->
+            <a href="/" class="flex items-center gap-2 font-semibold text-lg">
+                <!-- Home 图标 -->
+                {{if .Site.Logo}} <img src="{{.Site.Logo}}" alt="Logo" class="w-8 h-8 rounded-full">{{end}}
+                <span>{{.Site.Title}}</span>
+            </a>
+
+            <!-- 中间导航链接 -->
+            <div class="hidden md:flex items-center gap-2 font-semibold text-gray-700">
+                <a href="/" class="px-4 py-2 cream-button before:z-10"><span class="z-40">首页</span></a>
+                <a href="/archive.html" class="px-4 py-2 cream-button before:z-10"><span class="z-40">归档</span></a>
+                {{if .Site.Config.CustomPage}}
+                <a href="/{{.Site.Config.CustomPage.Link}}.html" class="px-4 py-2 cream-button before:z-10"><span class="z-40">{{.Site.Config.CustomPage.Title}}</span></a>
+                {{end}}
+                <!-- 暂时不实现标签页面 -->
+                <!-- <a href="/tag.html" class="px-4 py-2 cream-button before:z-10"><span class="z-40">标签</span></a> -->
+                <a href="/about.{{$author.Id}}.html" class="px-4 py-2 cream-button before:z-10"><span class="z-40">关于</span></a>
+            </div>
+
+            <!-- 右侧区域 -->
+            <div class="flex items-center gap-3">
+                <!-- 搜索框 -->
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <!-- 搜索图标 -->
+                        <svg width="20" height="20" class="text-gray-400">
+                            <use href="/icons.svg#magnifying-glass" />
+                        </svg>
+                    </div>
+                    <input type="text" placeholder="Search"
+                        class="bg-gray-100 rounded-lg py-2 pl-10 pr-4 w-40 focus:w-48 transition-all duration-200 outline-none focus:ring-2 focus:ring-blue-300">
+                </div>
+
+                <!-- 移动端汉堡菜单 (仅在小屏幕显示) -->
+                <div class="relative md:hidden">
+                    <button id="mobile-menu-toggle" class="p-2 rounded-xl hover:bg-gray-200 cream-button transition-colors">
+                        <svg width="24" height="24">
+                            <use href="/icons.svg#hamburger-menu" />
+                        </svg>
+                    </button>
+
+                    <!-- 移动端下拉菜单 -->
+                    <div id="mobile-menu" class="absolute top-full right-0 mt-4 w-36 bg-white rounded-xl shadow-lg border border-gray-100 py-2 opacity-0 invisible transition-all duration-150 transform translate-y-2">
+                        <a href="/" class="flex items-center justify-between px-4 py-2 hover:bg-gray-50 transition-colors cream-button">
+                            <span class="text-gray-700 font-medium">首页</span>
+                            <svg width="16" height="16" class="text-blue-500">
+                                <use href="/icons.svg#small-right-arrow" />
+                            </svg>
+                        </a>
+                        {{if .Site.Config.CustomPage}}
+                        <a href="/{{.Site.Config.CustomPage.Link}}.html" class="flex items-center justify-between px-4 py-2 hover:bg-gray-50 transition-colors cream-button">
+                            <span class="text-gray-700 font-medium">{{.Site.Config.CustomPage.Title}}</span>
+                            <svg width="16" height="16" class="text-blue-500">
+                                <use href="/icons.svg#small-right-arrow" />
+                            </svg>
+                        </a>
+                        {{end}}
+                        <a href="/archive.html" class="flex items-center justify-between px-4 py-2 hover:bg-gray-50 transition-colors cream-button">
+                            <span class="text-gray-700 font-medium">归档</span>
+                            <svg width="16" height="16" class="text-blue-500">
+                                <use href="/icons.svg#small-right-arrow" />
+                            </svg>
+                        </a>
+                        <a href="/about.{{$author.Id}}.html" class="flex items-center justify-between px-4 py-2 hover:bg-gray-50 transition-colors cream-button">
+                            <span class="text-gray-700 font-medium">关于</span>
+                            <svg width="16" height="16" class="text-blue-500">
+                                <use href="/icons.svg#small-right-arrow" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- 背景横幅区域 -->
+<div class="relative w-full h-96 md:h-[500px] bg-cover bg-center bg-no-repeat overflow-hidden"
+    style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+
+    <!-- 版权信息 -->
+    <div
+        class="absolute bottom-32 right-4 md:right-[calc((100vw-72rem)/2+1rem)] text-white/70 text-xs bg-black/20 backdrop-blur-sm rounded-xl px-4 py-2">
+        © Unsplash / 2023
+    </div>
+</div>
