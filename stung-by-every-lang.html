@@ -134,7 +134,7 @@
                             <svg class="h-4 w-4">
                                 <use href="/icons.svg#date-calendar" />
                             </svg>
-                            <span class="date-parser" data-timestamp="1749975420" />
+                            <span class="date-parser" data-timestamp="1751052360" />
                         </div>
                         
                         <div class="flex items-center gap-1.5">
@@ -161,115 +161,176 @@
 <li><a href="#toc_0">1. Rust</a></li>
 
 <li><a href="#toc_1">2. Go</a></li>
+
+<li><a href="#toc_2">3. C</a></li>
+
+<li><a href="#toc_3">4. C++</a></li>
+
+<li><a href="#toc_4">5. Java</a></li>
+
+<li><a href="#toc_5">6. Kotlin</a></li>
+
+<li><a href="#toc_6">7. Python</a></li>
+
+<li><a href="#toc_7">8. JavaScript</a></li>
+
+<li><a href="#toc_8">9. TypeScript</a></li>
+
+<li><a href="#toc_9">10. Zig</a></li>
+
+<li><a href="#toc_10">11. V</a></li>
+
+<li><a href="#toc_11">12. Dart</a></li>
+
+<li><a href="#toc_12">13. Lua</a></li>
+
+<li><a href="#toc_13">14. Haskell</a></li>
+
+<li><a href="#toc_14">15. <span class="math inline">\(\LaTeX\)</span></a></li>
+
+<li><a href="#toc_15">16. C#</a></li>
 </ul>
 
 </nav>
 <p><img data-src="images/languages.webp" src="data:image/gif;base64,R0lGODlhGAAYAPQAAP///wAAAM7Ozvr6+uDg4LCwsOjo6I6OjsjIyJycnNjY2KioqMDAwPLy8nd3d4aGhri4uGlpaQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkHAAAAIf4aQ3JlYXRlZCB3aXRoIGFqYXhsb2FkLmluZm8AIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAGAAYAAAFriAgjiQAQWVaDgr5POSgkoTDjFE0NoQ8iw8HQZQTDQjDn4jhSABhAAOhoTqSDg7qSUQwxEaEwwFhXHhHgzOA1xshxAnfTzotGRaHglJqkJcaVEqCgyoCBQkJBQKDDXQGDYaIioyOgYSXA36XIgYMBWRzXZoKBQUMmil0lgalLSIClgBpO0g+s26nUWddXyoEDIsACq5SsTMMDIECwUdJPw0Mzsu0qHYkw72bBmozIQAh+QQJBwAAACwAAAAAGAAYAAAFsCAgjiTAMGVaDgR5HKQwqKNxIKPjjFCk0KNXC6ATKSI7oAhxWIhezwhENTCQEoeGCdWIPEgzESGxEIgGBWstEW4QCGGAIJEoxGmGt5ZkgCRQQHkGd2CESoeIIwoMBQUMP4cNeQQGDYuNj4iSb5WJnmeGng0CDGaBlIQEJziHk3sABidDAHBgagButSKvAAoyuHuUYHgCkAZqebw0AgLBQyyzNKO3byNuoSS8x8OfwIchACH5BAkHAAAALAAAAAAYABgAAAW4ICCOJIAgZVoOBJkkpDKoo5EI43GMjNPSokXCINKJCI4HcCRIQEQvqIOhGhBHhUTDhGo4diOZyFAoKEQDxra2mAEgjghOpCgz3LTBIxJ5kgwMBShACREHZ1V4Kg1rS44pBAgMDAg/Sw0GBAQGDZGTlY+YmpyPpSQDiqYiDQoCliqZBqkGAgKIS5kEjQ21VwCyp76dBHiNvz+MR74AqSOdVwbQuo+abppo10ssjdkAnc0rf8vgl8YqIQAh+QQJBwAAACwAAAAAGAAYAAAFrCAgjiQgCGVaDgZZFCQxqKNRKGOSjMjR0qLXTyciHA7AkaLACMIAiwOC1iAxCrMToHHYjWQiA4NBEA0Q1RpWxHg4cMXxNDk4OBxNUkPAQAEXDgllKgMzQA1pSYopBgonCj9JEA8REQ8QjY+RQJOVl4ugoYssBJuMpYYjDQSliwasiQOwNakALKqsqbWvIohFm7V6rQAGP6+JQLlFg7KDQLKJrLjBKbvAor3IKiEAIfkECQcAAAAsAAAAABgAGAAABbUgII4koChlmhokw5DEoI4NQ4xFMQoJO4uuhignMiQWvxGBIQC+AJBEUyUcIRiyE6CR0CllW4HABxBURTUw4nC4FcWo5CDBRpQaCoF7VjgsyCUDYDMNZ0mHdwYEBAaGMwwHDg4HDA2KjI4qkJKUiJ6faJkiA4qAKQkRB3E0i6YpAw8RERAjA4tnBoMApCMQDhFTuySKoSKMJAq6rD4GzASiJYtgi6PUcs9Kew0xh7rNJMqIhYchACH5BAkHAAAALAAAAAAYABgAAAW0ICCOJEAQZZo2JIKQxqCOjWCMDDMqxT2LAgELkBMZCoXfyCBQiFwiRsGpku0EshNgUNAtrYPT0GQVNRBWwSKBMp98P24iISgNDAS4ipGA6JUpA2WAhDR4eWM/CAkHBwkIDYcGiTOLjY+FmZkNlCN3eUoLDmwlDW+AAwcODl5bYl8wCVYMDw5UWzBtnAANEQ8kBIM0oAAGPgcREIQnVloAChEOqARjzgAQEbczg8YkWJq8nSUhACH5BAkHAAAALAAAAAAYABgAAAWtICCOJGAYZZoOpKKQqDoORDMKwkgwtiwSBBYAJ2owGL5RgxBziQQMgkwoMkhNqAEDARPSaiMDFdDIiRSFQowMXE8Z6RdpYHWnEAWGPVkajPmARVZMPUkCBQkJBQINgwaFPoeJi4GVlQ2Qc3VJBQcLV0ptfAMJBwdcIl+FYjALQgimoGNWIhAQZA4HXSpLMQ8PIgkOSHxAQhERPw7ASTSFyCMMDqBTJL8tf3y2fCEAIfkECQcAAAAsAAAAABgAGAAABa8gII4k0DRlmg6kYZCoOg5EDBDEaAi2jLO3nEkgkMEIL4BLpBAkVy3hCTAQKGAznM0AFNFGBAbj2cA9jQixcGZAGgECBu/9HnTp+FGjjezJFAwFBQwKe2Z+KoCChHmNjVMqA21nKQwJEJRlbnUFCQlFXlpeCWcGBUACCwlrdw8RKGImBwktdyMQEQciB7oACwcIeA4RVwAODiIGvHQKERAjxyMIB5QlVSTLYLZ0sW8hACH5BAkHAAAALAAAAAAYABgAAAW0ICCOJNA0ZZoOpGGQrDoOBCoSxNgQsQzgMZyIlvOJdi+AS2SoyXrK4umWPM5wNiV0UDUIBNkdoepTfMkA7thIECiyRtUAGq8fm2O4jIBgMBA1eAZ6Knx+gHaJR4QwdCMKBxEJRggFDGgQEREPjjAMBQUKIwIRDhBDC2QNDDEKoEkDoiMHDigICGkJBS2dDA6TAAnAEAkCdQ8ORQcHTAkLcQQODLPMIgIJaCWxJMIkPIoAt3EhACH5BAkHAAAALAAAAAAYABgAAAWtICCOJNA0ZZoOpGGQrDoOBCoSxNgQsQzgMZyIlvOJdi+AS2SoyXrK4umWHM5wNiV0UN3xdLiqr+mENcWpM9TIbrsBkEck8oC0DQqBQGGIz+t3eXtob0ZTPgNrIwQJDgtGAgwCWSIMDg4HiiUIDAxFAAoODwxDBWINCEGdSTQkCQcoegADBaQ6MggHjwAFBZUFCm0HB0kJCUy9bAYHCCPGIwqmRq0jySMGmj6yRiEAIfkECQcAAAAsAAAAABgAGAAABbIgII4k0DRlmg6kYZCsOg4EKhLE2BCxDOAxnIiW84l2L4BLZKipBopW8XRLDkeCiAMyMvQAA+uON4JEIo+vqukkKQ6RhLHplVGN+LyKcXA4Dgx5DWwGDXx+gIKENnqNdzIDaiMECwcFRgQCCowiCAcHCZIlCgICVgSfCEMMnA0CXaU2YSQFoQAKUQMMqjoyAglcAAyBAAIMRUYLCUkFlybDeAYJryLNk6xGNCTQXY0juHghACH5BAkHAAAALAAAAAAYABgAAAWzICCOJNA0ZVoOAmkY5KCSSgSNBDE2hDyLjohClBMNij8RJHIQvZwEVOpIekRQJyJs5AMoHA+GMbE1lnm9EcPhOHRnhpwUl3AsknHDm5RN+v8qCAkHBwkIfw1xBAYNgoSGiIqMgJQifZUjBhAJYj95ewIJCQV7KYpzBAkLLQADCHOtOpY5PgNlAAykAEUsQ1wzCgWdCIdeArczBQVbDJ0NAqyeBb64nQAGArBTt8R8mLuyPyEAOw==" alt="Image by: &lt;a href=https://www.flickr.com/photos/isipeoria/6691167811&gt;isipeoria&lt;/a&gt;, CC BY-NC-ND 2.0" data-src="images/languages.webp" /></p>
 
-<p>Ever since entering university, one of my pleasures has been browsing online, randomly picking up recent programming languages, delving into their features, often hoping to find those &ldquo;dream features&rdquo; I&rsquo;ve envisioned, and attempting to build something practical with them.</p>
+<p>Ever since I started college, one of my favorite pastimes has been to wander around the internet, dipping my toes into new programming languages. I love digging into their features, always hoping to find that &ldquo;holy grail&rdquo; I&rsquo;ve envisioned, and trying to build some practical applications with them.</p>
 
-<p>Over the course of several years exploring this space, I&rsquo;ve gradually come to the realization that <strong>every language has its flaws</strong>. A language that looks promising at first glance will soon reveal its less-than-ideal aspects, even those lauded as &ldquo;elegant&rdquo; or &ldquo;highly modern.&rdquo; My watchlist is now overflowing with such languages. To keep myself from forgetting these issues and potentially falling back into being stung by them, I&rsquo;ve decided to jot down these languages&rsquo; hidden frustrations.</p>
+<p>Through years of this exploration, I&rsquo;ve slowly come to a realization: every language has its flaws. A language that seems promising at first will, before long, inevitably reveal its not-so-pretty side. This is true even for those hailed as &ldquo;elegant&rdquo; or &ldquo;highly modern.&rdquo; At this point, my watchlist is full of them. To prevent myself from forgetting these issues and repeating the same mistakes, I&rsquo;ve decided to write down the hidden pain points behind these languages.</p>
 
 <blockquote>
-<p>(Here is where a meme should be, saying: &ldquo;<em>You decide to pick up a game you haven&rsquo;t played in a year. Ten minutes later, you finally remember why you stopped playing.</em>&rdquo;)</p>
+<p>(Insert meme here: &ldquo;<em>You decide to play a game you haven&rsquo;t touched in a year. Ten minutes later, you remember why you quit.</em>&rdquo;)</p>
 </blockquote>
 
-<p>Consider this blog post a pure rant, and solely reflecting my <em>personal</em> views, as I&rsquo;m not deeply familiar with most languages, nor do I intend to spend months thoroughly researching each one. And I&rsquo;ll intentionally conflate issues of the toolchain and ecosystem with those of the language itself. I&rsquo;ve typically only written simple numerical or GUI programs in each, quickly moving on afterward. So, if anything I say rubs you the wrong way, feel free to tell me!</p>
+<p>Consider this blog post purely a rant; it only reflects my personal opinions. I haven&rsquo;t gone deep with most of these languages, nor do I intend to spend months mastering each one. I will also deliberately lump issues with the toolchain and ecosystem together with problems in the language itself. Typically, I&rsquo;ve only used each language to write simple numerical computing or GUI programs before just scratching the surface and moving on. So, if anything I say rubs you the wrong way, please feel free to call me out on it!</p>
 
-<p>Additionally, some pain points recur across several languages. In such cases, I&rsquo;ll elaborate on them only when discussing the first language they appear in, and merely touch upon them later.</p>
+<p><strong>Update</strong>: I had originally written long-winded descriptions for each language. I realize now that was pointless, so I&rsquo;m just going to summarize the pain points in a sentence or two.</p>
 
 <h1 id="toc_0">1. Rust</h1>
 
-<p>Rust has become a blend of religious fervor and a bit of a witch hunt: some see it as a silver bullet, while others view it as a modern blight and the embodiment of rotten academic ideas, needlessly adding too much complexity. Meanwhile, the majority are quietly using it to build tools and applications.</p>
-
-<p>Despite all the hype and criticism, I have to say that <strong>one of the reasons I feel most confident about an open-source project&rsquo;s quality</strong> (the other being <code>100% Go</code>, which I&rsquo;ll explain later) is <strong>if it&rsquo;s <code>100% Rust</code></strong>. Such projects are typically well-maintained, behave predictably, and are incredibly robust against various erroneous inputs.</p>
-
-<p>(🤦 In contrast, a <code>100% C/C++</code> project often feels like being told: &ldquo;<em>Get ready to download thirty git submodules, then install autotools, visual studio, meson, cmake, xmake, make, or whatever, then pray I haven&rsquo;t relied on features, functions, keywords, or macros specific to a particular compiler, third-party library or Linux kernel version, be prepared to turn off all the compiler warnings and suppress errors because my executable will literally link to EVERYTHING in your system&rsquo;s <code>lib</code> directories, and finally, enjoy my software!</em>&rdquo;)</p>
-
-<p>But anyway, getting back on track. While I am a Rust supporter myself, there are still aspects of Rust that I find uncomfortable:</p>
-
-<p><strong>Lack of specialization.</strong> You cannot implement a trait for <code>MyVec&lt;T&gt;</code> and then specialize it for <code>MyVec&lt;i32&gt;</code>. This is a common feature in many languages, including C++. It allows you to write generic code while still being able to optimize for specific types.</p>
-
-<p>There is a <a href="https://github.com/rust-lang/rust/issues/31844">RFC</a> for it, but it has been stalled for years. The workaround? Go nightly and enable the <code>specialization</code> feature. But this is not a solution, as it is not stable and will unlikely be in the recent future.</p>
-
-<p><strong>Error and async have colors.</strong> When you&rsquo;re defining a trait for others to use, its signature can severely limit what implementations can do. For example, if you write <code>Foo</code>:</p>
-
-<pre><code class="language-rust">trait Foo {
-    fn foo(&amp;self) -&gt; i32;
-}
-</code></pre>
-
-<p>But then someone complains that their <code>Foo</code> is fallible, so you introduce <code>TryFoo</code>:</p>
-
-<pre><code class="language-rust">trait TryFoo {
-    fn try_foo(&amp;self) -&gt; Result&lt;i32, Box&lt;dyn Error&gt;&gt;;
-}
-</code></pre>
-
-<p>But wait, someone else needs their <code>Foo</code> operation to be asynchronous, leading you to create <code>AsyncFoo</code>:</p>
-
-<pre><code class="language-rust">#[async_trait::async_trait]
-trait AsyncFoo {
-    async fn async_foo(&amp;self) -&gt; i32;
-}
-</code></pre>
-
-<p>Ans don&rsquo;t forget <code>TryAsyncFoo</code>! Now, for what was originally just one concept, you might end up needing to declare four different traits. This is ridiculous. A viable solution would be to <a href="https://github.com/rosefromthedead/effing-mad">introduce something like algebraic effects</a>, but that is a whole different topic.</p>
-
-<p><strong>Complex macro system.</strong> Macros are powerful, and everyone loves using them. But have you ever heard of a programming language with so many different types of macros? I&rsquo;m talking about <em>declarative macros</em>, and <em>procedural macros</em> (which further split into <em>function-like</em>, <em>attribute</em>, and <em>derive macros</em>).</p>
-
-<p>For each type, you need to learn and remember complex helper tools, syntax rules, and new concepts, figure out <a href="https://veykril.github.io/tlborm/syntax-extensions/hygiene.html">what &ldquo;Hygiene&rdquo; is</a>, and how to debug a macro expansion. Creating a procedural macro inevitably means creating a new crate and learning how to use libraries like <code>proc-macro2</code>, <code>quote</code>, and <code>syn</code>.</p>
-
-<p>As for complex macro functions, they eventually devolve into an AST parsing, traversal, and manipulation hell that no one, except the original author, can really understand or maintain. (Usually even the original author can&rsquo;t understand it anymore, and they have to spend hours trying to remember what they were thinking when they wrote it.)</p>
-
-<p>Despite excellent resources like <a href="https://veykril.github.io/tlborm/"><em>The Little Book of Rust Macros</em></a>, which attempts to explain these concepts clearly, I still find it regrettable that Rust doesn&rsquo;t make these things easily understandable for a novice. For beginners, how things like <code>println!</code> actually work under the hood remains a mystery. And to understand the internals, they have to climb the entire Rust &ldquo;mountain&rdquo; and read various blogs and tutorials on macros. By then, however, they are no longer beginners. <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
-
-<p><strong>Slow type checking.</strong> I know this is tied to Rust&rsquo;s complexity—every save requires running the borrow checker, expanding all macros, completing all type inference, and meticulously checking the code to provide those insightful error messages—but I sometimes still feel the check process is a bit slow.</p>
-
-<p>What I mean is, they <em>have</em> optimized it really well. But look at Zig (with <a href="https://github.com/zigtools/zls">zls</a>) and Go – they can provide error feedback almost instantly (&lt;=100ms), which really boosts development comfort. In contrast, Rust analyzer typically takes several seconds to check a medium-sized file. This transforms the &ldquo;write code - review code&rdquo; loop into a &ldquo;write code - save file - hands off keyboard while waiting for <code>cargo check</code> - check and fix errors - review code&rdquo; loop. For some people doing actual coding (like myself), this can feel a bit uncomfortable.</p>
+<ul>
+<li>It desperately needs <strong>a more ergonomic macro system</strong>. The current one is too complex to use.</li>
+<li><strong>Cross-compilation</strong> is still a pain because so many libraries simply link to C.</li>
+<li>Both compilation and IntelliSense (which relies on <code>cargo check</code>) are <strong>slow</strong>.</li>
+<li>Everything is great, as long as you don&rsquo;t touch <strong>lifetimes</strong> and <strong>dynamic dispatch</strong>. If you do, you&rsquo;ve fucked up.</li>
+</ul>
 
 <h1 id="toc_1">2. Go</h1>
 
-<p>Go is a language I have a love-hate relationship with. I love its simplicity, its focus on concurrency, and its excellent tooling. Damn, <code>go build</code> is a godsend after dealing with CMake, autotools, and other sh*ts.</p>
+<ul>
+<li><strong>Misusing <em>product</em> types</strong> (<code>return_value AND err</code> instead of <code>return_value OR err</code>) for error handling.</li>
+<li><strong>No much optimization.</strong> Even function inlining is seldom done, let alone a performant GC.</li>
+<li><strong>Many popular libraries are dead.</strong> Things like &ldquo;Last Commit: 8 years ago&rdquo; are much more common than I see in other languages.</li>
+<li><strong>No exhaustive check for <code>switch</code> cases.</strong></li>
+<li>Silently allow <strong>partial initialization of structs</strong>.</li>
+<li>The way of <strong>representing optional/null values</strong> is painful. Have to use <code>**int</code> simply because you want to distinguish absent / null / present states of a JSON integer field.</li>
+<li><strong>Stdlib would pollute your stdout</strong> with arbitrary log messages.</li>
+</ul>
 
-<p>Its &ldquo;<em>errors are return values</em>&rdquo; philosophy is a breath of fresh air compared to the exceptions and try-catch blocks of other languages. And it has proved that even without rigorous error systems like Rust and Haskell, you can still write simple and maintainable code. It does find a good balance between simplicity and robustness.</p>
+<h1 id="toc_2">3. C</h1>
 
-<p>But sometimes it is just way too simple.</p>
+<ul>
+<li><strong>The introduction of new features is painfully slow</strong>. Each generation of the C committee seems to be pulling the language in a different direction.</li>
+<li><strong>Build systems are hellishly complex.</strong> Just take a look at the landscape: Makefiles, the GNU Autotools, generations of CMake, Meson, SCons&hellip; the list goes on. I honestly don&rsquo;t believe any mere mortal can get the hang of a build system they don&rsquo;t already live and breathe in any reasonable amount of time.</li>
+<li><strong>No support for generics.</strong> <code>void *</code> pointers everywhere destroy all semantics. Hope you have good code comments, or good luck to the next maintainer.</li>
+<li><strong>Some ancient quirks prevent optimizations.</strong> There&rsquo;s no Automatic Struct Field Reordering because of concerns about breaking the old code. Auto Vectorization is also too conservative.</li>
+<li>Trying to <strong>static link</strong>? <strong>Glibc</strong> will fight you every step of the way. You&rsquo;d need to recompile every single library you use, and even then, some libraries deliberately use <code>dlopen</code> for loading, which makes <strong>static linking them completely impossible</strong>.</li>
+<li><strong>Dynamic linking</strong> is also a pain. Write once, recompile everywhere.</li>
+<li><strong>Macros are massively overused and abused</strong> in the last 30 years, making code unreadable. You have to constantly jump between different macros and definitions in tons of files just to figure out what <code>CALL_LIB_FN_E(&quot;Class&quot;, foo, 1, 0)</code> is actually doing. This fundamentally destroys C&rsquo;s &ldquo;<em>intuitiveness</em>&rdquo; and &ldquo;<em>simplicity</em>&rdquo;.</li>
+</ul>
 
-<p><strong>Wrong type abstraction.</strong> Go models error returns using a <em>product</em> type – essentially a tuple of <code>(Value, Error)</code> – when arguably, the correct approach is a <em>sum</em> type, representing <em>either</em> a <code>Value</code> <em>or</em> an <code>Error</code>.</p>
+<h1 id="toc_3">4. C++</h1>
 
-<p>Compared to simply returning an error, you now have to write <code>return 0, err</code>, <code>return &quot;&quot;, err</code>, or <code>return nil, err</code>. This is awkward.</p>
+<ul>
+<li><strong>The language is a mess.</strong> It has so many features that it feels like a hodgepodge of ideas from different eras. Java-like Exceptions and OOP, Rust-like Ownership and Smart Pointers, JavaScript-like Lambdas, and so on.</li>
+<li>As for the other drawbacks, refer to C. I&rsquo;m honestly not sure <strong>what problems C++ has solved that C had</strong>. In my opinion, it&rsquo;s just <strong>introduced more headaches</strong>: static compilation is even harder, and the build systems are more complex.</li>
+</ul>
 
-<blockquote>
-<p>I guess someone will argue, &ldquo;But what about the case where you <em>do</em> have both a value and an error? Go&rsquo;s approach is more flexible!&rdquo;</p>
+<h1 id="toc_4">5. Java</h1>
 
-<p>And my point is, that specific situation requires a more complex sum type representing <em>either</em> a <code>Value</code> <em>or</em> an <code>Error</code> <em>or</em> <code>(PartialValue, Error)</code>. A simple <code>(Value, Error)</code> tuple as the <em>standard</em> way to represent success <em>or</em> failure isn&rsquo;t the right model. Even if, by coincidence, the <code>(Value, Error)</code> tuple <em>can</em> represent three different states, you still have to explicitly check for <code>value != nil &amp;&amp; error == nil</code>, <code>value == nil &amp;&amp; error != nil</code>, and potentially <code>value != nil &amp;&amp; error != nil</code> later on.<br>
-See what&rsquo;s happening? You&rsquo;re effectively reinventing a sum type and the simple pattern matching that comes with it.</p>
-</blockquote>
+<ul>
+<li><strong>No null safety</strong>, and the infamous <code>NullPointerException</code>.</li>
+<li><strong>Big and heavy</strong>. I can&rsquo;t understand why my &ldquo;Hello World&rdquo; needs tens of megabytes of memory, and a simple graphical application requires hundreds.</li>
+<li><strong>Spring and Gradle have, in my opinion, should be blamed for the infamous complexity of the ecosystem</strong>. My feelings about Spring are a personal bias: most &ldquo;junior&rdquo; developers simply apply Spring design patterns to every application, complicating simple problems. My stereotype of Java programmers as &ldquo;rigid and inflexible, unwilling to adapt&rdquo; largely stems from this. Gradle, on the other hand, has profoundly shown me that &ldquo;a build system can be so bloated and enormous, taking up tens of gigabytes of disk space and 4 GB of RAM, with a configuration language, Groovy, which is so complex that it&rsquo;s impossible for the human mind to grasp the thousands of classes, tasks, jobs and plugins.&rdquo;</li>
+</ul>
 
-<p>You can see this limitation elsewhere as well. For example, you can&rsquo;t declare a pointer or interface return type that must be non-nil.</p>
+<h1 id="toc_5">6. Kotlin</h1>
 
-<p><strong>Lack of optimization.</strong> Go is advertised as &ldquo;native&rdquo;, &ldquo;minimal&rdquo;, and &ldquo;fast&rdquo;. But in reality, it is not (at least for the last two points). Go does have basic optimizations, like escaping analysis and dead code elimination. But that&rsquo;s about it.</p>
+<ul>
+<li><strong>No checked exception</strong>. I really don&rsquo;t get it. Kotlin designers often justify the removal by saying, &ldquo;they were abused by Java programmers.&rdquo; But shouldn&rsquo;t the right action be to improve it, instead of removing completely? Now, any function can implicitly throw any exception. <strong>Welcome to the minefield where every step could trigger an explosion.</strong></li>
+<li><strong>Kotlin Native is a joke.</strong> To be fair, it should be renamed to &ldquo;Kotlin for iOS.&rdquo; Not even a real cross-platform solution.</li>
+<li>The stdlib is too small. Even <strong>network programming relies on third-party libraries</strong>.</li>
+</ul>
 
-<p>It has a simple GC: no young/old split, no moving, no bump pointer allocation. Latency is low, but throughput is not. Someone is <a href="https://discord.com/blog/why-discord-is-switching-from-go-to-rust">moving away from it</a> because of this. <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup></p>
+<h1 id="toc_6">7. Python</h1>
 
-<p><strong>Generic type is a joke.</strong> I won&rsquo;t go into the details of this. You got my point.</p>
+<ul>
+<li><strong>GIL</strong>. It should, and must, be removed a decade ago. I don&rsquo;t know how it has survived this long. Today, our Python programs are built on top of complex multi-processing and IPC mechanisms that break or hang time to time, just to get around the GIL.</li>
+<li><strong>Terrible package management</strong>. pip is simple, but it&rsquo;s <em>too</em> simple, leading packagers to <strong>abuse its various features to implement behaviors not defined in PEPs</strong>. The bad news is, pip isn&rsquo;t a complete package dependency management solution at all, which has caused significant inconvenience for later reimplementations like <code>uv</code>. And I haven&rsquo;t even mentioned the specification changes in libraries like <code>setup_tools</code>, and the confusion they&rsquo;ve caused for developers and users alike…</li>
+<li><strong>The stdlib is extensive, but many parts feel like missing some key functionalities</strong>. For instance, even today, you still can&rsquo;t perform a select operation across multiple <code>asyncio.Future</code> objects.</li>
+<li><strong>Horribly slow</strong>. Python is not a language for performance, but for productivity, and it <em>does</em> show that by smashing performance to the ground.</li>
+</ul>
 
-<hr>
+<h1 id="toc_7">8. JavaScript</h1>
 
-<p>(To be continued, too lazy to write more right now 😅)</p>
+<p>Nah.</p>
 
-<div class="footnotes">
+<h1 id="toc_8">9. TypeScript</h1>
 
-<hr>
+<ul>
+<li><strong>Still not prepared for applications</strong> other than web development. The ecosystem is yet immature.</li>
+<li>A typed language with schemas that has <strong>no support for runtime schema validation</strong> and encourages you to maintain your own type guards. This is a pain in the ass especially when dealing with network objects.</li>
+</ul>
 
-<ol>
-<li id="fn:1">I know this example is controversial, as beginners in C/C++ and other languages also can&rsquo;t and shouldn&rsquo;t try to understand the internals of standard library functions like <code>printf</code> and <code>iostream</code>, but you get my point.</li>
+<h1 id="toc_9">10. Zig</h1>
 
-<li id="fn:2">Though there are criticisms that Discord team never really reached out to the Go team for optimizing the rare cases on Go sides and just rewrote the whole thing in Rust with more performance consideration. But I&rsquo;m not in favor of this viewpoint: not everyone has the time and resources to communicate with the Go team to understand what they did wrong and who to blame. You are not Discord, nor am I. Are we supposed to just accept these performance degradations when dealing with the tail cases?</li>
-</ol>
+<ul>
+<li>We, need, <strong>async</strong>. I&rsquo;m await. I don&rsquo;t want to reinvent the asynchronous programming in a &ldquo;modern&rdquo; language.</li>
+<li><strong>Error-code handling</strong>, rather than error-handling.</li>
+<li>The <strong>platform target policy is too aggressive and unclear</strong>. For example, it drops support for Linux &lt; 5.10 (which is declared nowhere in documentation, but in a GitHub issue), a decision that could alienate potential users.</li>
+<li><strong>The stdlib is incomplete</strong>.</li>
+</ul>
 
-</div>
+<h1 id="toc_10">11. V</h1>
+
+<ul>
+<li><strong>A history of hype without substantial features</strong>. It&rsquo;s better now, but far from great.</li>
+<li>The <strong>ecosystem is minimal</strong>, if not non-existent.</li>
+</ul>
+
+<h1 id="toc_11">12. Dart</h1>
+
+<ul>
+<li><strong>Depends on Flutter too heavily</strong>. Most libraries in the ecosystem are built specifically for Flutter, making it difficult to find packages for general-purpose Dart development.</li>
+<li><strong>Google seems to be losing interest in Dart</strong>. Can it survive without Google&rsquo;s backing?</li>
+</ul>
+
+<h1 id="toc_12">13. Lua</h1>
+
+<ul>
+<li><strong>Messy package and dependency management</strong>. The ecosystem is fragmented, with multiple package management approaches (although <code>luarocks</code> is the most popular).</li>
+<li><strong>The general-use ecosystem is dead</strong>. For example, you cannot find any threading library that receives updates in the last 5 years. It is still popular in the game modding community, but not much else.</li>
+<li><strong>Error-handling is awkward</strong>. Have to use <code>pcall</code> or <code>xpcall</code> to catch errors. Verbose and not intuitive.</li>
+</ul>
+
+<h1 id="toc_13">14. Haskell</h1>
+
+<ul>
+<li>Is it really <strong>used in production</strong>?</li>
+<li>I heard it has <strong>namespace conflicts</strong>.</li>
+</ul>
+
+<h1 id="toc_14">15. <span class="math inline">\(\LaTeX\)</span></h1>
+
+<p>No, it is cursed. I would rather use <span class="math inline">\(\text{Lua}\TeX\)</span> or Typst.</p>
+
+<h1 id="toc_15">16. C#</h1>
+
+<ul>
+<li><strong>No open-source debugger</strong>.</li>
+<li><strong>Stdlib is tied to Microsoft</strong>. Mono? No, it&rsquo;s imfamous for slow performance and poor maintenance.</li>
+<li><strong>AOT is immature yet.</strong></li>
+</ul>
 
                     </div>
                 </article>
@@ -277,29 +338,27 @@ See what&rsquo;s happening? You&rsquo;re effectively reinventing a sum type and 
                 
                 <div class="flex flex-col gap-4 md:flex-row">
                     
-                    <a href="/todo-list.html"
-                        class="group flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 hover:bg-gray-100 dark:hover:bg-blue-900 transition-all duration-200 active:scale-95">
+                    <div class="flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 opacity-50">
                         <div class="flex items-center gap-3">
-                            <svg class="h-6 w-6 text-gray-400 group-hover:text-blue-500 transition-colors">
+                            <svg class="h-6 w-6 text-gray-400">
                                 <use href="/icons.svg#left-arrow" />
                             </svg>
                             <div class="flex-1">
                                 <div class="text-sm text-gray-500 dark:text-gray-400 mb-1">上一篇文章</div>
-                                <div class="font-semibold text-gray-900 dark:text-white transition-colors">
-                                    博主的Todo List</div>
+                                <div class="font-semibold text-gray-500 dark:text-gray-400">已是最新文章</div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                     
 
                     
-                    <a href="/native-gui-framework.html"
+                    <a href="/todo-list.html"
                         class="group flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 hover:bg-gray-100 dark:hover:bg-blue-900 transition-all duration-200 active:scale-95">
                         <div class="flex items-center gap-3">
                             <div class="flex-1 text-right">
                                 <div class="text-sm text-gray-500 dark:text-gray-400 mb-1">下一篇文章</div>
                                 <div class="font-semibold text-gray-900 dark:text-white transition-colors">
-                                    通往原生 GUI 之路</div>
+                                    博主的Todo List</div>
                             </div>
                             <svg class="h-6 w-6 text-gray-400 group-hover:text-blue-500 transition-colors">
                                 <use href="/icons.svg#right-arrow" />

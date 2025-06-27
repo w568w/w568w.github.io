@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.eu.org</id>
-  <updated>2025-06-27T21:30:07+08:00</updated>
+  <updated>2025-06-28T03:26:15+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.eu.org"></link>
   <author>
     <name>行云小站</name>
   </author>
   <entry>
-    <title>博主的Todo List</title>
-    <updated>2025-06-26T18:42:25+08:00</updated>
-    <id>tag:w568w.eu.org,2025-06-26:/todo-list.html</id>
-    <link href="https://w568w.eu.org/todo-list.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</summary>
+    <title>[EN] Stung by Every Language</title>
+    <updated>2025-06-28T03:26:00+08:00</updated>
+    <id>tag:w568w.eu.org,2025-06-28:/stung-by-every-lang.html</id>
+    <link href="https://w568w.eu.org/stung-by-every-lang.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;Programming languages are like a box of chocolates. You never know what you&amp;rsquo;re gonna get&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
   </entry>
   <entry>
-    <title>[EN] Stung by Every Language</title>
-    <updated>2025-06-15T16:17:00+08:00</updated>
-    <id>tag:w568w.eu.org,2025-06-15:/stung-by-every-lang.html</id>
-    <link href="https://w568w.eu.org/stung-by-every-lang.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;Programming languages are like a box of chocolates. You never know what you&amp;rsquo;re gonna get&lt;/p&gt;&#xA;</summary>
+    <title>博主的Todo List</title>
+    <updated>2025-06-26T18:42:25+08:00</updated>
+    <id>tag:w568w.eu.org,2025-06-26:/todo-list.html</id>
+    <link href="https://w568w.eu.org/todo-list.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
