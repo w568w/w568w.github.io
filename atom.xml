@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>行云小站</title>
   <id>https://w568w.eu.org</id>
-  <updated>2025-06-27T19:26:41Z</updated>
+  <updated>2025-07-06T22:35:59+08:00</updated>
   <subtitle>Say hello to you!</subtitle>
   <link href="https://w568w.eu.org"></link>
   <author>
     <name>行云小站</name>
   </author>
   <entry>
-    <title>[EN] Stung by Every Language</title>
-    <updated>2025-06-28T03:26:00+08:00</updated>
-    <id>tag:w568w.eu.org,2025-06-28:/stung-by-every-lang.html</id>
-    <link href="https://w568w.eu.org/stung-by-every-lang.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;Programming languages are like a box of chocolates. You never know what you&amp;rsquo;re gonna get&lt;/p&gt;&#xA;</summary>
+    <title>博主的Todo List</title>
+    <updated>2025-06-28T13:36:25+08:00</updated>
+    <id>tag:w568w.eu.org,2025-06-28:/todo-list.html</id>
+    <link href="https://w568w.eu.org/todo-list.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
   </entry>
   <entry>
-    <title>博主的Todo List</title>
-    <updated>2025-06-26T18:42:25+08:00</updated>
-    <id>tag:w568w.eu.org,2025-06-26:/todo-list.html</id>
-    <link href="https://w568w.eu.org/todo-list.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;看看这家伙最近在搞什么大新闻？&lt;/p&gt;&#xA;</summary>
+    <title>NVIDIA 驱动等相关软件解惑</title>
+    <updated>2025-07-06T18:28:25+08:00</updated>
+    <id>tag:w568w.eu.org,2025-07-06:/nvidia-demystify.html</id>
+    <link href="https://w568w.eu.org/nvidia-demystify.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;NVIDIA 你坏事做尽！&lt;/p&gt;&#xA;</summary>
+    <author>
+      <name>w568w</name>
+    </author>
+  </entry>
+  <entry>
+    <title>[EN] Stung by Every Language</title>
+    <updated>2025-06-28T03:26:00+08:00</updated>
+    <id>tag:w568w.eu.org,2025-06-28:/stung-by-every-lang.html</id>
+    <link href="https://w568w.eu.org/stung-by-every-lang.html" rel="alternate"></link>
+    <summary type="html">&lt;p&gt;Programming languages are like a box of chocolates. You never know what you&amp;rsquo;re gonna get&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
@@ -79,7 +89,7 @@
   </entry>
   <entry>
     <title>Arm 相关术语辨析</title>
-    <updated>2024-02-07T12:28:00Z</updated>
+    <updated>2024-02-07T12:28:00+08:00</updated>
     <id>tag:w568w.eu.org,2024-02-07:/arm-disambiguation.html</id>
     <link href="https://w568w.eu.org/arm-disambiguation.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;Arm？Armv8？armhf？AArch64？这些术语是什么意思？&lt;/p&gt;&#xA;</summary>
@@ -89,20 +99,10 @@
   </entry>
   <entry>
     <title>瑞芯微 RK 系列芯片启动流程简析</title>
-    <updated>2024-02-03T12:00:00Z</updated>
+    <updated>2024-02-03T12:00:00+08:00</updated>
     <id>tag:w568w.eu.org,2024-02-03:/rockchip-boot-process.html</id>
     <link href="https://w568w.eu.org/rockchip-boot-process.html" rel="alternate"></link>
     <summary type="html">&lt;p&gt;基于 RK3566 开发板分析&lt;/p&gt;&#xA;</summary>
-    <author>
-      <name>w568w</name>
-    </author>
-  </entry>
-  <entry>
-    <title>我如何修好一个变砖的笔记本电脑</title>
-    <updated>2023-08-16T16:05:08Z</updated>
-    <id>tag:w568w.eu.org,2023-08-16:/how-to-fix-bricked-lenovo-laptop.html</id>
-    <link href="https://w568w.eu.org/how-to-fix-bricked-lenovo-laptop.html" rel="alternate"></link>
-    <summary type="html">&lt;p&gt;而且只花了不到 30 块钱&lt;/p&gt;&#xA;</summary>
     <author>
       <name>w568w</name>
     </author>
