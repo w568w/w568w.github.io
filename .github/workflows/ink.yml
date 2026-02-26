@@ -1,58 +1,46 @@
-# This is a basic workflow to help you get started with Actions
+name: Ink build & deploy
 
-name: Ink build
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [master]
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v6
 
-      # Runs a set of commands using the runners shell
-      - name: Install Paper Ink
+      - name: Install Ink
         run: |
-          wget https://github.com/InkProject/ink/releases/download/nightly/ink_linux_386.tar.gz
-          tar -zxvf ink_linux_386.tar.gz
+          wget https://github.com/InkProject/ink/releases/download/nightly/ink_linux_amd64.tar.gz
+          tar -zxvf ink_linux_amd64.tar.gz
           sudo mv ./ink /usr/local/bin/
-          
-      - name: Build pages
+
+      - name: Build
         run: ink build
-      
-      - name: Configue git
-        run: |
-          git config user.name "w568w"
-          git config user.email "1278297578@qq.com"
-          
-      - name: Clean before commit
-        run: |
-          rm -rf ink_linux_386.tar.gz
-          rm -rf ink_linux_386.tar.gz.1
-          rm -rf ink_linux_386.tar.gz.2
-          rm -rf ./blog/
-          rm -rf ./ink
-          
-      - name: Commit changes
-        env:
-          GH_REF: github.com/w568w/w568w.github.io.git 
-          ttoken:  ${{ secrets.TOKEN }}
-        run: |
-          git add .
-          if [ $(git log -1 | grep -c "Update") -gt 0 ]; then echo "true";else git commit -m "Update"&&git push "https://${ttoken}@${GH_REF}" HEAD:master;fi
-          
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

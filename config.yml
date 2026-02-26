@@ -22,7 +22,7 @@ authors:
         avatar: "-/images/avatar.gif"
 
 build:
-    output: "/"
+    output: "public"
     port: 8000
     # Copied files to public folder when build
     copy:
