@@ -9,7 +9,7 @@ author: w568w
 
 一个梦想改变自己的疯子。  
 
-安徽 复旦研一学生 Android业余开发者  
+安徽 复旦研二学生 Android业余开发者  
 
 使用系统：`Archlinux x86_64`  
 开发工具：`Jetbrains 全家桶！`
@@ -22,7 +22,7 @@ author: w568w
 [在网易云音乐上找我](https://music.163.com/#/user/home?id=322083123)  
 
 # 一个怎样的人?
-一个天天被导师压榨的研一学生，对开源感兴趣，喜欢折腾各种东西。我的主要研究方向是 LLM。
+一个天天被导师压榨的研二学生，对开源感兴趣，喜欢折腾各种东西。我的主要研究方向是 LLM。
   
 - [进步保守主义](https://en.wikipedia.org/wiki/Progressive_conservatism)者<font size=1 >（[这是什么？](javascript:alert(\"进步保守主义（Progressive Conservatism）者结合了保守主义和进步主义的主张，支持有限度的社会安全网和财富再分配，以及渐进的社会变革。\"))） </font>
 - 轻度焦虑症、重度拖延症患者 
