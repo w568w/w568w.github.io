@@ -18,7 +18,7 @@ type: page
 
 
 # 200 OK
-## [Integral](https://blog.i7.homes)
+## [Integral](https://blog.i7arch.com)
 Integral's Blog
 ## [数字饭团](https://szfantuan.cn)
 数字饭团的个人小站
