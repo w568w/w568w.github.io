@@ -1,3 +1,5 @@
 ink.exe
 public/
 .vscode/
+.vercel
+.env*.local

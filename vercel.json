@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "wget https://github.com/InkProject/ink/releases/download/nightly/ink_linux_amd64.tar.gz && tar -zxvf ink_linux_amd64.tar.gz && chmod +x ink",
+  "buildCommand": "./ink build",
+  "outputDirectory": "public"
+}
