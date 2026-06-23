@@ -1,5 +1,5 @@
-title: "博主的Todo List"
-date: 2026-06-04 21:12:25 +0800
+title: "博主的 Todo List"
+date: 2026-06-24 03:00:25 +0800
 author: w568w
 top: true
 cover: images/nikita-kachanovsky-445394-unsplash.jpg
@@ -18,9 +18,7 @@ preview: 看看这家伙最近在搞什么大新闻？
 
 # 任务列表
 
-+ 找实习… <span style="color:red;">(进行中)</span>
 + 维护[旦挞](https://github.com/DanXi-Dev/DanXi/) <span style="color:red;">(进行中)</span>
-+ 重写博客主题
 
 ![](images/huaji.png)
 
