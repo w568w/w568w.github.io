@@ -29,6 +29,8 @@ build:
         - "source/images"
     # Excuted command when use 'ink publish'
     publish: |
+        cd ..
         git add . -A
         git commit -m "a"
         git push origin
+        pnpm dlx vercel --prod --yes
