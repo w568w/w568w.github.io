@@ -17,6 +17,10 @@ type: page
 
 # 200 OK
 
+## [T.本秋的自留地](https://blog.texsd.eu.org)
+
+With great power comes great responsibility.
+
 ## [Integral](https://blog.i7arch.com)
 
 Integral's Blog
